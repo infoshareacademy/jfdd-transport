@@ -27,5 +27,7 @@ ul a {
 #socialmedia {
     position: fixed;
     right: 0;
+    top: 50%;
     width: 64px;
+    margin-top: -102px;
 }
