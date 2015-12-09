@@ -8,7 +8,20 @@ ul {
 ul li {
     display:inline;
     float: right;
+    padding: 20px;
 
+}
+
+ul a {
+    text-decoration: none;
+    display: block;
+    color: black;
+
+}
+
+#intro {
+    text-align: center;
+    font-size: 90px;
 }
 
 #socialmedia {
