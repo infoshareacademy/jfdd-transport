@@ -57,8 +57,82 @@
     top: 50%;
     width: 64px;
     margin-top: -102px;
+    overflow: visible;
 }
+
+#socialmedia .social-button {
+    width: 64px;
+    height: 64px;
+    margin-left: 0;
+    display: block;
+    background-size: 64px 64px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#socialmedia .social-button-facebook {
+    background-image: url('../images/icon-socialmedia-facebook.png');
+}
+
+#socialmedia .social-button-googleplus {
+    background-image: url('../images/icon-socialmedia-google-plus.png');
+}
+
+#socialmedia .social-button-twitter {
+    background-image: url('../images/icon-socialmedia-twitter.png');
+}
+
+#socialmedia .social-button:hover {
+    margin-left: -10px;
+}
+
+/* Ania */
 
 body {
     font-family: sans-serif;
+}
+
+.functions h1 {
+    text-align: left;
+
+}
+.function p {
+    font-size: smaller;
+}
+
+.function img {
+    margin: 10px;
+
+}
+
+.function1 {
+    float: left;
+}
+
+.function2 {
+    float: left;
+
+}
+
+.function3 {
+    float: left;
+}
+#opis1 #opis2 #opis3 {
+    width: 256px;
+}
+.contact-form {
+    background: lightcoral;
+
+}
+
+.contact-form .contact-form-row {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.contact-form label {
+    width: 160px;
+    padding-left: 200px;
+    display: inline-block;
+
 }

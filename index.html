@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles/stylesheet.css">
-    <link rel="shortcut icon" href="images/transport_icon.ico" type="image/x-icon" />
-    <title>Title</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <title>Statystyki Komunikacji Miejskiej</title>
+
 </head>
 
 <body>
@@ -27,44 +28,62 @@
 
         </div>
 
-        <div id="functions">
+        <div class="functions">
         <h1>Funkcjonalności</h1>
 
-            <div id="function1"><img src="images/przystanek.jpg">
-            <h2>Mój przystanek</h2>
-                <p>Sprawdź, jak wygląda sytuacja na Twoim przystanku.</p>
+            <div class="function function1"><img src="images/bus_stop_function.png">
+
+            <div id="opis1">
+                <h2>Mój przystanek</h2>
+                <p>Sprawdź, jak wygląda sytuacja <br>na Twoim przystanku.</p>
             </div>
-            <div id="function2"><img src="images/zegar.jpg">
-            <h2>Statystyki spóźnień</h2>
-                <p>Dowiedz się, jakie są statystyki dla wybranego przystanku.</p>
             </div>
-            <div id="function3"><img src="images/mapa.jpg">
-            <h2>Sprawdź na mapie</h2>
-                <p>Zobacz, gdzie jest w tej chwili Twój środek transportu.</p>
+
+            <div class="function function2"><img src="images/clock.png">
+                <div id="opis2">
+                    <h2>Statystyki spóźnień</h2>
+                    <p>Dowiedz się, jakie są statystyki <br> dla wybranego przystanku.</p>
+                </div>
+            </div>
+
+            <div class="function function3"><img src="images/map.png">
+                <div id="opis3">
+                    <h2>Sprawdź na mapie</h2>
+                    <p>Zobacz, gdzie jest w tej chwili <br> Twój środek transportu.</p>
+                </div>
             </div>
 
         </div>
-        <div id="form">
-            <form action="mailto:przebieracz@gmail.com" method="post">
-                <input list="browsers" name="browser">
-                <datalist id="browsers">
-                    <option value="Internet Explorer">
-                    <option value="Firefox">
-                    <option value="Chrome">
-                    <option value="Opera">
-                    <option value="Safari">
-                </datalist>
-                <input type="submit">
-            </form>
-        </div>
+
+        <form action="#" method="post" class="contact-form" id="contact-form" >
+
+            <div class="contact-form-row">
+                <label for="name">Imię i nazwisko:</label>
+                <input type="text" name="name" id="name"><br>
+            </div>
+
+            <div class="contact-form-row">
+                <label for="phoneNumber">Numer telefonu:</label>
+                <input type="text" name="phoneNumber" id="phoneNumber">
+            </div>
+
+            <div class="contact-form-row">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email">
+            </div>
+            <div class="contact-form-row">
+                <input type="submit" value="Wyślij">
+            </div>
+        </form>
+
     </main>
 
     <footer></footer>
 
     <div id="socialmedia">
-        <a href="https://www.facebook.com/infosharepl/"><img src="images/facebook.png" alt="Facebook"></a>
-        <a href="https://plus.google.com/+infoshare"><img src="images/google-plus.png" alt="Google+"></a>
-        <a href="https://twitter.com/infosharepl"><img src="images/square-twitter.png" alt="Twitter"></a>
+        <a class="social-button social-button-facebook" href="https://www.facebook.com/infosharepl/"></a>
+        <a class="social-button social-button-googleplus" href="https://plus.google.com/+infoshare"></a>
+        <a class="social-button social-button-twitter" href="https://twitter.com/infosharepl"></a>
     </div>
 
 </body>
