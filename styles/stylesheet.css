@@ -1,36 +1,56 @@
-ul {
-    display: block;
+.clear {
+    clear: both;
+}
+
+.naglowek-witryny {
+    background-color: red;
+}
+
+.naglowek-witryny .navigation_bar {
+    background-color: rgba(255,255,255,0.9);
+}
+
+.naglowek-witryny .navigation_bar ul {
     list-style: none;
-    margin: 20px;
-    padding: 20px;
-    position: fixed;
-
-}
-
-ul li {
-    display:inline;
     float: right;
+}
+
+.naglowek-witryny .navigation_bar ul li {
+    display:inline;
     padding: 20px;
-
 }
 
-ul a {
+.naglowek-witryny .navigation_bar ul a {
     text-decoration: none;
-    display: block;
     color: black;
-
 }
 
-#intro {
-    padding-top: 150px;
+.naglowek-witryny .logo {
+    float: left;
+}
+
+
+
+
+
+
+
+
+.intro {
+    background-image: url("../images/foto_background1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
     text-align: center;
     font-size: 70px;
+    height: 500px;
+    margin-top: 100px;
 }
 
-.foto1 {
-    width: 50%;
-
+.intro p {
+    padding-top: 400px;
+    color:rgba(255,255,255,0.9);
 }
+
 #socialmedia {
     position: fixed;
     right: 0;
