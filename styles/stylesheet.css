@@ -42,3 +42,20 @@ ul a {
 body {
     font-family: sans-serif;
 }
+
+.contact-form {
+    background: lightcoral;
+
+}
+
+.contact-form .contact-form-row {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.contact-form label {
+    width: 160px;
+    padding-left: 200px;
+    display: inline-block;
+
+}
