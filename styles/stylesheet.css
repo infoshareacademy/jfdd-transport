@@ -39,6 +39,37 @@ ul a {
     margin-top: -102px;
 }
 
+/* Ania */
+
 body {
     font-family: sans-serif;
+}
+
+.functions h1 {
+    text-align: left;
+
+}
+.function p {
+    font-size: smaller;
+}
+
+.function img {
+    margin: 10px;
+
+}
+
+.function1 {
+    float: left;
+}
+
+.function2 {
+    float: left;
+
+}
+
+.function3 {
+    float: left;
+}
+#opis1 #opis2 #opis3 {
+    width: 256px;
 }
