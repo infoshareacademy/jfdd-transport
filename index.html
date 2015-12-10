@@ -42,17 +42,18 @@
             </div>
 
         </div>
-        <div id="form">
-            <form action="mailto:przebieracz@gmail.com" method="post">
-                <input list="browsers" name="browser">
-                <datalist id="browsers">
-                    <option value="Internet Explorer">
-                    <option value="Firefox">
-                    <option value="Chrome">
-                    <option value="Opera">
-                    <option value="Safari">
-                </datalist>
-                <input type="submit">
+        <div id="contact-form" class="contact-form">
+            <form action="#" method="post">
+                <label for="name">Imię i nazwisko:</label>
+                <input type="text" name="name" id="name">
+
+                <label for="phoneNumber">Numer telefonu:</label>
+                <input type="text" name="phoneNumber" id="phoneNumber">
+
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email">
+
+                <input type="submit" value="Wyślij">
             </form>
         </div>
     </main>
