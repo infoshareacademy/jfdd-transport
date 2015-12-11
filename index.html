@@ -67,17 +67,17 @@
 
             <div class="contact-form-row">
                 <label for="name">Imię i nazwisko:</label>
-                <input type="text" name="name" id="name"><br>
+                <input type="text" name="name" id="name" pattern="[a-zA-Z]+[ ][a-zA-Z]+"><br>
             </div>
 
             <div class="contact-form-row">
                 <label for="phoneNumber">Numer telefonu:</label>
-                <input type="text" name="phoneNumber" id="phoneNumber">
+                <input type="text" name="phoneNumber" id="phoneNumber" pattern="[0-9\-]+">
             </div>
 
             <div class="contact-form-row">
                 <label for="email">Email:</label>
-                <input type="email" name="email" id="email">
+                <input type="email" name="email" id="email" pattern="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
             </div>
             <div class="contact-form-row">
                 <input type="submit" value="Wyślij">
