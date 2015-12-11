@@ -172,6 +172,9 @@ body {
     width: 320px;;
     padding-bottom: 20px;
     padding-right: 20px;
+    padding-left: 10px;
+    margin-left: auto;
+    margin-right: auto;
 
 }
 
@@ -189,11 +192,6 @@ body {
 
 }
 
-.contact-form {
-    padding-left: 10px;
-    display: inline-block;
-
-}
 
 .footer_style {
     background-image:linear-gradient(#6a532e, #ebe3bf);
