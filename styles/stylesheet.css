@@ -2,11 +2,9 @@
     clear: both;
 }
 
-body {
-    margin:0px;
-}
 
 .main_header {
+
     height: 80px;
     position: relative;
 
@@ -14,25 +12,23 @@ body {
 .logo {
     position: relative;
     margin-left: 20px;
-    margin-top: -20px;
-    height: 130px;
-}
+    margin-top: -30px;
 
+}
 
 .main_header  nav  ul {
     margin-top: 30px;
-    background-color: white;
+    background-color: rgba(255,255,255,0.9);
     margin-right: 50px;
     float: right;
     font-family: arial, sans-serif;
-    font-size: 20px;
+    font-weight: bold;
 
 }
 
 .main_header nav ul li {
     display:inline;
     padding: 20px;
-
 }
 
 .main_header nav ul a {
@@ -47,6 +43,7 @@ body {
 
 .main_header nav ul a:hover {
     color: #b9a377;
+
 }
 
 
@@ -56,7 +53,7 @@ body {
     background-image: url("../images/foto_background1.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    height: 550px;
+    height: 400px;
     background-size: cover;
 
 }
@@ -77,8 +74,8 @@ body {
 }
 
 .intro_text {
-    margin-top: -180px;
-    background-color: rgba(255, 255, 255, 0.6);
+    margin-top: -170px;
+    background-color: rgba(255,255,245,0.6);
     height: 120px;
 }
 
@@ -156,8 +153,6 @@ body {
 .functions {
     background-color: burlywood;
     width: 100%;
-    height: 100%;
-
 }
 
 /* koniec Ania funkcjonalności */
