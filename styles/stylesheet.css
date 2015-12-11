@@ -57,7 +57,7 @@ body  {
     background-image: url("../images/foto_background1.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    height: 400px;
+    height: 550px;
     background-size: cover;
 
 }
@@ -167,7 +167,15 @@ body {
 /* koniec Ania funkcjonalności */
 
 .contact-form {
-    background: lightcoral;
+    background:white;
+    border: 10px solid black;
+    border-radius: 25px;
+    color: black;
+    font-family: arial, sans-serif;
+    font-weight: bold;
+    width: 320px;;
+    padding-bottom: 20px;
+    padding-right: 20px;
 
 }
 
@@ -176,24 +184,33 @@ body {
     padding-bottom: 10px;
 }
 
-.contact-form label {
-    width: 160px;
-    padding-left: 200px;
-    display: inline-block;
+.contact-form .contact-form-row input {
+   background-color: white;
+    /*outline: 0;*/
+    border: 3px solid black;
+    float:right;
+    clear:both;
 
 }
 
+.contact-form {
+    padding-left: 10px;
+    display: inline-block;
+}
+
 .footer_style {
-    background-image:linear-gradient(#6a532e, #ebe3bf);
+    border-top: solid 1px #b9a377;
+    background-image: url("../images/footer_background1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
     height: 100px;
-    margin-top: -16px;
 }
 
 
 .footer_style p {
-
     text-align: center;
-    padding-top: 48px;
+    padding-top: 25px;
     color: white;
-
 }
