@@ -2,6 +2,9 @@
     clear: both;
 }
 
+body {
+    margin:0px;
+}
 
 .main_header {
     height: 80px;
@@ -13,8 +16,8 @@
     margin-left: 20px;
     margin-top: -20px;
     height: 130px;
-
 }
+
 
 .main_header  nav  ul {
     margin-top: 30px;
@@ -75,7 +78,7 @@
 
 .intro_text {
     margin-top: -180px;
-    background-color: rgba(255,255,245,0.6);
+    background-color: rgba(255, 255, 255, 0.6);
     height: 120px;
 }
 
