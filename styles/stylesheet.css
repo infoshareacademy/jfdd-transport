@@ -4,7 +4,6 @@
 
 
 .main_header {
-
     height: 80px;
     position: relative;
 
@@ -53,7 +52,7 @@
     background-image: url("../images/foto_background1.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    height: 400px;
+    height: 500px;
     background-size: cover;
 
 }
