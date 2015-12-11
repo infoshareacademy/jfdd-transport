@@ -133,15 +133,18 @@ body {
 
 .function1 {
     float: left;
+    padding-left: 10%;
 }
 
 .function2 {
     float: left;
+    padding-left: 20px;
 
 }
 
 .function3 {
     float: left;
+    padding-left: 60px;
 }
 #opis1 #opis2 #opis3 {
     width: 256px;
@@ -149,6 +152,8 @@ body {
 .functions {
     background-color: burlywood;
     width: 100%;
+    padding-top: 50px;
+    margin-top: 28px;
 }
 
 /* koniec Ania funkcjonalności */
