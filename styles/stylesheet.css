@@ -116,7 +116,7 @@
     margin-left: -10px;
 }
 
-/* Ania */
+/* Ania funkcjonalności */
 
 body {
     font-family: sans-serif;
@@ -150,6 +150,15 @@ body {
 #opis1 #opis2 #opis3 {
     width: 256px;
 }
+.functions {
+    background-color: burlywood;
+    width: 100%;
+    height: 100%;
+
+}
+
+/* koniec Ania funkcjonalności */
+
 .contact-form {
     background: lightcoral;
 
