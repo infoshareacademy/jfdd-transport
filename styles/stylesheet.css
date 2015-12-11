@@ -192,34 +192,21 @@ body {
 .contact-form {
     padding-left: 10px;
     display: inline-block;
-
 }
 
-.footer_style:before {
-    content:url("../images/footer_background.jpg");
-    background-image: url("../images/footer_background.jpg");
+.footer_style {
+    border-top: solid 1px #b9a377;
+    background-image: url("../images/footer_background1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
-    margin-top: -60px;
-
-
-    -webkit-filter: blur(5px);
-    -moz-filter: blur(5px);
-    -o-filter: blur(5px);
-    -ms-filter: blur(5px);
-    filter: blur(5px);
-    z-index: -1;
-    position: absolute;
-    display: block;
+    height: 100px;
 }
 
 
-.footer_style {
+.footer_style p {
     text-align: center;
-    padding-top: 60px;
+    padding-top: 25px;
     color: white;
-    z-index: 0;
-
 }
