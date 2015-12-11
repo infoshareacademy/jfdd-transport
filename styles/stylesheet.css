@@ -179,17 +179,31 @@ body {
 
 }
 
-.footer_style {
-    background-image:linear-gradient(#6a532e, #ebe3bf);
-    height: 100px;
-    margin-top: -16px;
+.footer_style:before {
+    content:url("../images/footer_background.jpg");
+    background-image: url("../images/footer_background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    margin-top: -60px;
+
+
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+    z-index: -1;
+    position: absolute;
+    display: block;
 }
 
 
-.footer_style p {
-
+.footer_style {
     text-align: center;
-    padding-top: 48px;
+    padding-top: 60px;
     color: white;
+    z-index: 0;
 
 }
