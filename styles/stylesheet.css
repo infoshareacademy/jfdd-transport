@@ -159,7 +159,15 @@ body {
 /* koniec Ania funkcjonalności */
 
 .contact-form {
-    background: lightcoral;
+    background:white;
+    border: 10px solid black;
+    border-radius: 25px;
+    color: black;
+    font-family: arial, sans-serif;
+    font-weight: bold;
+    width: 320px;;
+    padding-bottom: 20px;
+    padding-right: 20px;
 
 }
 
@@ -168,9 +176,17 @@ body {
     padding-bottom: 10px;
 }
 
-.contact-form label {
-    width: 160px;
-    padding-left: 200px;
+.contact-form .contact-form-row input {
+   background-color: white;
+    /*outline: 0;*/
+    border: 3px solid black;
+    float:right;
+    clear:both;
+
+}
+
+.contact-form {
+    padding-left: 10px;
     display: inline-block;
 
 }
