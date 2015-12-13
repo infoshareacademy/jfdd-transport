@@ -63,26 +63,32 @@
 
         <!--koniec Ania funkcjonalności-->
 
-        <form action="#" method="post" class="contact-form" id="contact-form" >
+        <!-- Contact form -->
+        <div id="form-main">
+            <div id="form-div">
+                <form class="form" id="form1">
 
-            <div class="contact-form-row">
-                <label for="name">Imię i nazwisko:</label>
-                <input type="text" name="name" id="name" pattern="[a-zA-Z]+[ ][a-zA-Z]+"><br>
-            </div>
+                    <p class="name">
+                        <input name="name" type="text" class="feedback-input" placeholder="Imię i Nazwisko" id="name" />
+                    </p>
 
-            <div class="contact-form-row">
-                <label for="phoneNumber">Numer telefonu:</label>
-                <input type="text" name="phoneNumber" id="phoneNumber" pattern="[0-9\-]+">
-            </div>
+                    <p class="email">
+                        <input name="email" type="text" class="feedback-input" id="email" placeholder="Email" />
+                    </p>
 
-            <div class="contact-form-row">
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="email" pattern="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+                    <p class="text">
+                        <input name="phoneNumber" class="feedback-input" id="comment" placeholder="Telefon" />
+                    </p>
+
+
+                    <div class="submit">
+                        <input type="submit" value="WYŚLIJ" id="button-blue"/>
+                        <div class="ease"></div>
+                    </div>
+                </form>
             </div>
-            <div class="contact-form-row">
-                <input type="submit" value="Wyślij">
-            </div>
-        </form>
+        </div>
+        <!-- END of Contact form -->
 
         <div class="clear"></div>
 
