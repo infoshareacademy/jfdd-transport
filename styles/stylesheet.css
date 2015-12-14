@@ -180,43 +180,32 @@ main {
 }
 
 /* Ania funkcjonalności */
-
-body {
-    font-family: sans-serif;
+.function {
+    opacity:0.8;
 }
-
-
+.function:hover {
+    opacity: 1.0;
+}
+.function h2 {
+    font-family: Michroma;
+}
 .function p {
     font-size: smaller;
+    font-family: Michroma;
 }
-
-.function img {
-    margin: 10px;
-
-}
-.function {
-    margin-left: auto;
-}
-
 .function1 {
     float: left;
-    /*padding-left: 400px;*/
-
 }
-
 .function2 {
     float: left;
-    padding-left: 20px;
-
+    padding-left: 70px;
 }
-
 .function3 {
     float: left;
-    padding-left: 60px;
+    padding-left: 70px;
 }
 #opis1, #opis2, #opis3 {
-   /* width: 256px; */
-    padding-left: 50px;
+   /* padding-left: 40px;*/
 }
 .functions {
     padding-top: 50px;
@@ -224,9 +213,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     width: 1000px;
-
 }
-
 /* koniec Ania funkcjonalności */
 
 .contact-form {
