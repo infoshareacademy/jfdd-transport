@@ -15,17 +15,16 @@ html {
 body  {
     margin:0;
     papadding:0;
-    height: 100%;
+    height: 100%; /* nie rozumiem dlaczego*/
     overflow-y:scroll;
-    overflow-x: inherit;
+    /*overflow-x: inherit;*/
     perspective: 1px;
 }
 
 /* Aga header */
 
 .main_header {
-
-    height: 80px;
+    height: 110px;
     position: relative;
 
 }
@@ -44,12 +43,10 @@ body  {
 
 .main_header  nav  ul {
     margin-top: 30px;
-    background-color: rgba(255,255,255,0.9);
     margin-right: 50px;
     float: right;
     font-family: michroma, sans-serif;
     font-weight: normal;
-
 }
 
 .main_header nav ul li {
@@ -69,7 +66,6 @@ body  {
 
 .main_header nav ul a:hover {
     color: #b9a377;
-
 }
 
 
@@ -88,16 +84,17 @@ body  {
 /* Aga zajawka - obraz tła (parallax) i napis */
 
 .intro {
-    box-sizing: border-box;
+    /*box-sizing: border-box;*/
+
     position: relative;
-    min-height: 650px;
+    min-height: 30vw;
 }
 
 .intro:before {
     content:"";
-    bottom: 0;
     left:0;
     right:0;
+    bottom:0;
     position: absolute;
     display: block;
     background-color: #1C1C16;
@@ -105,21 +102,9 @@ body  {
     background-size: cover;
     -webkit-transform: translateZ(-1px) scale(2);
     z-index: -1;
-    min-height: 650px;
+    min-height: 100vh;
 }
 
-.intro_text {
-    background-color: rgba(255,255,255,0.3);
-    font-weight: normal;
-    font-family: Michroma;
-    letter-spacing: 1px;
-    text-align: center;
-    margin-top:70px;
-    margin-bottom: 130px;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    overflow-x: hidden;
-}
 
 .intro_text
 {
@@ -128,8 +113,8 @@ body  {
     font-family: Michroma;
     letter-spacing: 1px;
     text-align: center;
-    margin-top:70px;
-    margin-bottom: 130px;
+    /*margin-top:30px;*/
+    /*margin-bottom: 180px;*/
     padding-bottom: 10px;
     padding-top: 10px;
     /*overflow-x: hidden;*/
