@@ -75,8 +75,8 @@
         <div id="form-main">
 
             <div id="form-div">
-                <p>Skontaktuj się z nami!</p>
-                <form class="form" id="form1">
+                <p class="contact_form_header">Skontaktuj się z nami!</p>
+                <form class="form" id="form1" method="post" action="#">
                     <!--Accept small and capital letters (including Polish diacritics),
                     spaces and hyphens (for hyphenated surnames):-->
                     <p class="name">
@@ -91,12 +91,12 @@
 
                     <!--Accept digits 0-9, hyphens, the plus symbol (for area codes) and spaces:-->
                     <p class="text">
-                        <input name="phoneNumber" class="feedback-input" id="comment" placeholder="Telefon" maxlength="20" pattern="[0-9-+ ]+"/>
+                        <input name="phoneNumber" class="feedback-input" id="phone" placeholder="Telefon" maxlength="20" pattern="[0-9-+ ]+"/>
                     </p>
 
 
                     <div class="submit">
-                        <input type="submit" value="WYŚLIJ" id="button-blue"/>
+                        <input type="submit" value="WYŚLIJ" id="button-gray"/>
                         <div class="ease"></div>
                     </div>
                 </form>
