@@ -244,8 +244,8 @@ body {
 .feedback-input:focus{
     background: #fff; /**/
     box-shadow: 0; /**/
-    border: 3px solid #3498db; /**/
-    color: #3498db;
+    border: 3px solid #282828; /**/
+    color: #282828;
     outline: none; /**/
     padding: 13px 13px 13px 54px;
 }
@@ -272,21 +272,21 @@ body {
 }
 
 #email{
-    background-image: url("../images/1450052792_mail-24.svg");
+    background-image: url("../images/1450072401_Mail.svg");
     background-size: 30px 30px;
     background-position: 11px 8px;
     background-repeat: no-repeat;
 }
 
 #email:focus{
-    background-image: url("../images/1450052792_mail-24.svg");
+    background-image: url("../images/1450072401_Mail.svg");
     background-size: 30px 30px;
     background-position: 11px 8px;
     background-repeat: no-repeat;
 }
 
 #comment{
-    background-image: url("../images/1450052598_viber.svg");
+    background-image: url("../images/1450052574_phone.svg");
     background-size: 30px 30px;
     background-position: 11px 8px;
     background-repeat: no-repeat;

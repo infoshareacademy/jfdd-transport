@@ -63,33 +63,25 @@
 
         <!--koniec Ania funkcjonalności-->
 
-        <form action="#" method="post" class="contact-form" id="contact-form" >
-            <!--Accept small and capital letters (including Polish diacritics),
-            spaces and hyphens (for hyphenated surnames):-->
-            <div class="contact-form-row">
-                <label for="name">Imię i nazwisko:</label>
-                <input type="text" name="name" id="name" maxlength="150"
-                       pattern="[A-Za-ząćęłńóśźżĄĆĘŁŃÓŚŹŻ -]+"><br>
-            </div>
-            <!--Accept digits 0-9, hyphens, the plus symbol (for area codes) and spaces:-->
-            <div class="contact-form-row">
-                <label for="phoneNumber">Numer telefonu:</label>
-                <input type="tel" name="phoneNumber" id="phoneNumber" maxlength="20" pattern="[0-9-+ ]+">
         <!-- Contact form -->
         <div id="form-main">
             <div id="form-div">
                 <form class="form" id="form1">
-
+                    <!--Accept small and capital letters (including Polish diacritics),
+                    spaces and hyphens (for hyphenated surnames):-->
                     <p class="name">
-                        <input name="name" type="text" class="feedback-input" placeholder="Imię i Nazwisko" id="name" />
+                        <input name="name" type="text" class="feedback-input" placeholder="Imię i Nazwisko" id="name" maxlength="150"
+                               pattern="[A-Za-ząćęłńóśźżĄĆĘŁŃÓŚŹŻ -]+"/>
                     </p>
 
+                    <!--Use standard HTML5 validation:-->
                     <p class="email">
-                        <input name="email" type="text" class="feedback-input" id="email" placeholder="Email" />
+                        <input name="email" type="email" class="feedback-input" id="email" placeholder="Email" maxlength="50" />
                     </p>
 
+                    <!--Accept digits 0-9, hyphens, the plus symbol (for area codes) and spaces:-->
                     <p class="text">
-                        <input name="phoneNumber" class="feedback-input" id="comment" placeholder="Telefon" />
+                        <input name="phoneNumber" class="feedback-input" id="comment" placeholder="Telefon" maxlength="20" pattern="[0-9-+ ]+"/>
                     </p>
 
 
@@ -99,15 +91,6 @@
                     </div>
                 </form>
             </div>
-            <!--Use standard HTML5 validation:-->
-            <div class="contact-form-row">
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="email" maxlength="50">
-            </div>
-            <div class="contact-form-row">
-                <input type="submit" value="Wyślij">
-            </div>
-        </form>
         </div>
         <!-- END of Contact form -->
 
