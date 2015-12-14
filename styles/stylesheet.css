@@ -14,26 +14,24 @@ html {
 
 body  {
     margin:0;
-    papadding:0;
-    height: 100%; /* nie rozumiem dlaczego*/
+    padding:0;
+    height: 100%; /*nie rozumiem dlaczego*/
     overflow-y:scroll;
-    /*overflow-x: inherit;*/
     perspective: 1px;
 }
 
 /* Aga header */
 
 .main_header {
-    height: 110px;
+    height: 26vh;
     position: relative;
-
 }
+
 .logo {
     position: relative;
     margin-left: 20px;
     margin-top: -30px;
     opacity: 0.7;
-
 }
 
 .logo:hover {
@@ -43,7 +41,7 @@ body  {
 
 .main_header  nav  ul {
     margin-top: 30px;
-    margin-right: 50px;
+    margin-right: 20px;
     float: right;
     font-family: michroma, sans-serif;
     font-weight: normal;
@@ -71,30 +69,28 @@ body  {
 
 /* Koniec headera */
 
-/* .more_info {
+.more_info {
   font-weight: normal;
   font-family: Michroma;
   letter-spacing: 1px;
   text-align: center;
 	display: block;
-	float: center;
-	margin-bottom: -120px;
-} */
+    position: relative;
+    padding-top: 22vh;
+}
 
 /* Aga zajawka - obraz tła (parallax) i napis */
 
 .intro {
-    /*box-sizing: border-box;*/
-
     position: relative;
-    min-height: 30vw;
 }
 
 .intro:before {
     content:"";
     left:0;
     right:0;
-    bottom:0;
+    bottom: 0;
+    top:0;
     position: absolute;
     display: block;
     background-color: #1C1C16;
@@ -108,16 +104,15 @@ body  {
 
 .intro_text
 {
-    background-color: rgba(255,255,255,0.3);
+    background-color: rgba(255,255,255,0.4);
     font-weight: normal;
     font-family: Michroma;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     text-align: center;
-    /*margin-top:30px;*/
-    /*margin-bottom: 180px;*/
+    margin-top: 22vh;
     padding-bottom: 10px;
     padding-top: 10px;
-    /*overflow-x: hidden;*/
+    z-index: 1;
 }
 
 .intro_text p {
@@ -128,7 +123,6 @@ main {
     background-color: white;
     line-height: 1.7;
     position: relative;
-    z-index: 1;
 }
 
 /*Koniec Zajawki */
@@ -165,43 +159,32 @@ main {
 }
 
 /* Ania funkcjonalności */
-
-body {
-    font-family: sans-serif;
+.function {
+    opacity:0.8;
 }
-
-
+.function:hover {
+    opacity: 1.0;
+}
+.function h2 {
+    font-family: Michroma;
+}
 .function p {
     font-size: smaller;
+    font-family: Michroma;
 }
-
-.function img {
-    margin: 10px;
-
-}
-.function {
-    margin-left: auto;
-}
-
 .function1 {
     float: left;
-    /*padding-left: 400px;*/
-
 }
-
 .function2 {
     float: left;
-    padding-left: 20px;
-
+    padding-left: 70px;
 }
-
 .function3 {
     float: left;
-    padding-left: 60px;
+    padding-left: 70px;
 }
 #opis1, #opis2, #opis3 {
-   /* width: 256px; */
-    padding-left: 50px;
+   /* padding-left: 40px;*/
 }
 .functions {
     padding-top: 50px;
@@ -209,9 +192,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     width: 1000px;
-
 }
-
 /* koniec Ania funkcjonalności */
 
 /**
