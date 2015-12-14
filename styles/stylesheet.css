@@ -221,30 +221,31 @@ body {
     width:500px;/* check */
     margin-right: auto;
     margin-left: auto;
-    padding-top:0px;
 }
 
 #form-div {
-    /*background-color:rgba(72,72,72,0.4);*/
     background-color:rgba(120,120,120,0.4) ; /* rgba - alpha channel */
     padding-left:35px;
     padding-right:35px;
-    padding-top:35px;
     padding-bottom:50px;
     width: 450px;
     float: left; /* check */
     left: 50%;
-    /*position: absolute;*/
     margin-top:30px;
-    /*margin-left: -260px;*/
     -moz-border-radius: 7px; /**/
     -webkit-border-radius: 7px; /**/
 }
 
+.contact_form_header {
+    text-align: center;
+    font-family: Michroma;
+    font-size: 30px;
+}
+
+
 .feedback-input {
-    /*color:#3c3c3c;*/
     color:darkgrey;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Michroma, Helvetica, Arial, sans-serif;
     font-weight:500;
     font-size: 18px;
     border-radius: 0; /* check if absent*/
@@ -304,20 +305,20 @@ body {
     background-repeat: no-repeat;
 }
 
-#comment{
+#phone{
     background-image: url("../images/1450052574_phone.svg");
     background-size: 30px 30px;
     background-position: 11px 8px;
     background-repeat: no-repeat;
 }
 
-input:hover, textarea:hover,
-input:focus, textarea:focus {
+input:hover,
+input:focus {
     background-color:white;
 }
 
-#button-blue{
-    font-family: Arial, Helvetica, sans-serif;
+#button-gray{
+    font-family:Michroma, Arial, Helvetica, sans-serif;
     float:left; /**/
     width: 100%; /**/
     border: #282828 solid 4px;
@@ -334,7 +335,7 @@ input:focus, textarea:focus {
     font-weight:700;
 }
 
-#button-blue:hover{
+#button-gray:hover{
     background-color: rgba(0,0,0,0);
     color: #282828;
 }
@@ -345,7 +346,7 @@ input:focus, textarea:focus {
 
 .ease {
     width: 0px;
-    height: 74px;
+    height: 80px;
     background-color: #fbfbfb;
     -webkit-transition: .3s ease;
     -moz-transition: .3s ease;
