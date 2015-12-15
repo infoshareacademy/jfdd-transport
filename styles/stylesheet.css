@@ -189,11 +189,11 @@ main {
     opacity: 1.0;
 }
 .function h2 {
-    font-family: Michroma;
+    font-family: Michroma, sans-serif;
 }
 .function p {
     font-size: smaller;
-    font-family: Michroma;
+    font-family: Michroma, sans-serif;
 }
 .function1 {
     float: left;
