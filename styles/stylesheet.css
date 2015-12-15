@@ -97,7 +97,7 @@ body  {
 }
 
 .more_info_button:hover {
-    background: rgba(250,250,250,0.8);
+    background: rgba(250,250,250,0.9);
     text-decoration: none;
 }
 /* Aga zajawka - obraz tła (parallax) i napis */
@@ -412,11 +412,23 @@ input:focus, textarea:focus {
 .footer_style {
     margin-top: 60px;
     padding-top: 10px;
-    height: 6vw;
+    height: 120px;
     overflow: hidden;
     position: relative;
     background-color:  #282828;
     border-bottom: solid 10px #0f1214;
+}
+
+.footer_image {
+    height: 10px;
+    position: relative;
+    display: block;
+    text-align: center;
+
+}
+
+.footer_image img {
+    height: 80px;
 }
 /*.footer_style:before {*/
     /*content: "";*/
@@ -439,10 +451,11 @@ input:focus, textarea:focus {
 /*}*/
 
 .footer_style p{
-    padding-top: 20px;
+    padding-top: 50px;
     text-align: center;
     font-family: michroma, sans-serif;
-    color: rgba(250, 250, 250, 0.8);
+    color: black;
+    /*color: rgba(250, 250, 250, 0.8);*/
     letter-spacing: 4px;
     font-size: 15px;
     font-weight: normal;
