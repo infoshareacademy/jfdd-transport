@@ -80,7 +80,7 @@
 
             <div id="form-div">
                 <p class="contact_form_header">Skontaktuj się z nami!</p>
-                <form class="form" id="form1" method="post" action="#">
+                <form class="form" id="form1" method="post" action="http://jfdd.infoshareaca.nazwa.pl/mailer.php">
                     <!--Accept small and capital letters (including Polish diacritics),
                     spaces and hyphens (for hyphenated surnames):-->
                     <p class="name">
@@ -98,7 +98,7 @@
                         <input name="phoneNumber" class="feedback-input" id="phone" placeholder="Telefon" maxlength="20" pattern="[0-9-+ ]+"/>
                     </p>
 
-
+                    <input type="hidden" name="receiver" value="przebieracz@gmail.com">
                     <div class="submit">
                         <input type="submit" value="WYŚLIJ" id="button-gray"/>
                         <div class="ease"></div>
