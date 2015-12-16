@@ -1,6 +1,9 @@
 //Start form validation
 (function (){
-    var form, userName, userEmail, userPhoneNumber;
+    var form, userName, userEmail, userPhoneNumber, submitBtn, isNameValid, isEmailValid, isPhoneValid;
+    isNameValid = true;
+    isEmailValid = true;
+    isPhoneValid = true;
 
     //Disable HTML5 validation
     form = document.getElementById('form1');
@@ -10,61 +13,86 @@
     userName = document.getElementById('name');
     userEmail = document.getElementById('email');
     userPhoneNumber = document.getElementById('phone');
+    submitBtn = document.getElementById('button-gray');
 
     userName.addEventListener('blur', checkName, false);
     userEmail.addEventListener('blur', checkEmail, false);
     userPhoneNumber.addEventListener('blur', checkPhone, false);
 
     function checkName() {
+        isNameValid = true; //Used to reset the value back to true if user clears rejected input.
+        clearValidationMessage(userName);
         if (!userName.value || (userName.value === userName.placeholder)) {
             return;
         }
-        var isValid = /[A-Za-ząćęłńóśźżĄĆĘŁŃÓŚŹŻ -]+/.test(userName.value);
-        if (!isValid) {
-            createValidationMessage('To pole nie akceptuje cyfr ani znaków specjalnych.', userName, userName);
-        } else {
-            clearValidationMessage(userName);
+        isNameValid = /^[A-Za-ząćęłńóśźżĄĆĘŁŃÓŚŹŻ \-]+$/.test(userName.value);
+        if (!isNameValid) {
+            createValidationMessage('To pole nie akceptuje cyfr ani znaków specjalnych.', userName);
         }
     }
 
     function checkEmail() {
-        //TODO
+        isEmailValid = true;
+        clearValidationMessage(userEmail);
+        clearValidationMessage(submitBtn);
+        if (!userEmail.value || (userEmail.value === userEmail.placeholder)) {
+            return;
+        }
+        isEmailValid = /[^@]+@[^@]+/.test(userEmail.value);
+        if (!isEmailValid) {
+            createValidationMessage('Podaj adres e-mail w formacie użytkownik@example.com.', userEmail);
+        }
     }
 
     function checkPhone() {
-        //TODO
+        isPhoneValid = true;
+        clearValidationMessage(userPhoneNumber);
+        clearValidationMessage(submitBtn);
+        if (!userPhoneNumber.value || (userPhoneNumber.value === userPhoneNumber.placeholder)) {
+            return;
+        }
+        isPhoneValid = /^(\+48)? ?[1-9]( |-)?\d( |-)?\d( |-)?\d( |-)?\d( |-)?\d( |-)?\d( |-)?\d( |-)?\d( |-)?/
+            .test(userPhoneNumber.value);
+        if (!isPhoneValid) {
+            createValidationMessage('Podaj numer telefonu stacjonarnego lub komórkowego.', userPhoneNumber);
+        }
     }
 
     //When form is submitted, check whether either an email or a phone number has been provided
     form.addEventListener('submit', validateRequired, false);
     function validateRequired(e) {
-        clearValidationMessage(userPhoneNumber);
+        clearValidationMessage(submitBtn);
+        if(!isNameValid || !isEmailValid || !isPhoneValid) {
+            e.preventDefault();
+            return;
+        }
+
         if ((!userEmail.value || (userEmail.value === userEmail.placeholder)) &&
             (!userPhoneNumber.value || (userPhoneNumber.value === userPhoneNumber.placeholder))) {
-            createValidationMessage('Podaj adres e-mail lub numer telefonu.', userPhoneNumber, userPhoneNumber);
-
+            createValidationMessage('Podaj adres e-mail lub numer telefonu.', submitBtn);
             e.preventDefault();
         } else {
-            alert('Twoje dane zostały wysłane. Dziękujemy!');
-            //TODO disable the submit button on send
+            submitBtn.setAttribute('disabled', 'disabled');
         }
     }
 
-    function createValidationMessage(message, el, newId){
+    //Helper functions for creating and removing validation messages
+    function createValidationMessage(message, el){
         var messageEl, parentEl;
         messageEl = document.createElement('span');
         messageText = document.createTextNode(message);
         messageEl.appendChild(messageText);
         messageEl.className = 'validationTip';
-        messageEl.id = newId;
+        messageEl.id = el.id + 'validationMessage';
         parentEl = el.parentNode;
         parentEl.insertBefore(messageEl, parentEl.lastChild);
     }
 
-    function clearValidationMessage(idToClear) {
-        if(document.getElementById(idToClear)) {
-            var element = document.getElementById(idToClear);
-            element.parentNode.removeChild(element);
+    function clearValidationMessage(el) {
+        var elId;
+        elId = el.id + 'validationMessage';
+        if(document.getElementById(elId)) {
+            document.getElementById(elId).element.parentNode.removeChild(element);
         }
     }
 }());
