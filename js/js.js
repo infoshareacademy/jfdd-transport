@@ -1,28 +1,29 @@
 //Start form validation
 (function (){
-    var form, name, email, phoneNumber;
+    var form, userName, userEmail, userPhoneNumber;
 
     //Disable HTML5 validation
     form = document.getElementById('form1');
     form.noValidate = true;
 
     //Validate user input
-    name = document.getElementById('name');
-    email = document.getElementById('email');
-    phoneNumber = document.getElementById('phone');
+    userName = document.getElementById('name');
+    userEmail = document.getElementById('email');
+    userPhoneNumber = document.getElementById('phone');
 
-    name.addEventListener('blur', checkName, false);
-    email.addEventListener('blur', checkEmail, false);
-    phoneNumber.addEventListener('blur', checkPhone, false);
+    userName.addEventListener('blur', checkName, false);
+    userEmail.addEventListener('blur', checkEmail, false);
+    userPhoneNumber.addEventListener('blur', checkPhone, false);
 
     function checkName() {
-        if (!name.value || (name.value === name.placeholder)) {
+        if (!userName.value || (userName.value === userName.placeholder)) {
             return;
         }
-        var isValid = /[A-Za-ząćęłńóśźżĄĆĘŁŃÓŚŹŻ -]+/.test(name.value);
+        var isValid = /[A-Za-ząćęłńóśźżĄĆĘŁŃÓŚŹŻ -]+/.test(userName.value);
         if (!isValid) {
-            alert('To pole nie akceptuje cyfr ani znaków specjalnych.');
-            //TODO Display tip for the user
+            createValidationMessage('To pole nie akceptuje cyfr ani znaków specjalnych.', userName, userName);
+        } else {
+            clearValidationMessage(userName);
         }
     }
 
@@ -37,31 +38,32 @@
     //When form is submitted, check whether either an email or a phone number has been provided
     form.addEventListener('submit', validateRequired, false);
     function validateRequired(e) {
-        if ((!email.value || (email.value === email.placeholder)) &&
-            (!phoneNumber.value || (phoneNumber.value === phoneNumber.placeholder))) {
-            createValidationMessage('Podaj adres e-mail lub numer telefonu.', phoneNumber);
-            e.preventDefault();
+        clearValidationMessage(userPhoneNumber);
+        if ((!userEmail.value || (userEmail.value === userEmail.placeholder)) &&
+            (!userPhoneNumber.value || (userPhoneNumber.value === userPhoneNumber.placeholder))) {
+            createValidationMessage('Podaj adres e-mail lub numer telefonu.', userPhoneNumber, userPhoneNumber);
 
+            e.preventDefault();
         } else {
-            clearValidationMessage(phoneNumber.name);
             alert('Twoje dane zostały wysłane. Dziękujemy!');
+            //TODO disable the submit button on send
         }
     }
 
-    function createValidationMessage(message, el){
+    function createValidationMessage(message, el, newId){
         var messageEl, parentEl;
         messageEl = document.createElement('span');
         messageText = document.createTextNode(message);
         messageEl.appendChild(messageText);
         messageEl.className = 'validationTip';
-        messageEl.id = el.name;
+        messageEl.id = newId;
         parentEl = el.parentNode;
         parentEl.insertBefore(messageEl, parentEl.lastChild);
     }
 
-    function clearValidationMessage(id) {
-        if(document.getElementById(id)) {
-            var element = document.getElementById(id);
+    function clearValidationMessage(idToClear) {
+        if(document.getElementById(idToClear)) {
+            var element = document.getElementById(idToClear);
             element.parentNode.removeChild(element);
         }
     }
