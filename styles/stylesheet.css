@@ -179,7 +179,7 @@ main {
     margin-left: -52px;
 }
 
-/* Ania funkcjonalności */
+/* Ania functions */
 .function {
     opacity:0.8;
 }
@@ -187,11 +187,11 @@ main {
     opacity: 1.0;
 }
 .function h2 {
-    font-family: Michroma, sans-serif;
+    /*font-family: Michroma, sans-serif;*/
 }
 .function p {
     font-size: smaller;
-    font-family: Michroma, sans-serif;
+    /*font-family: Michroma, sans-serif;*/
 }
 .function1 {
     float: left;
@@ -204,9 +204,6 @@ main {
     float: left;
     padding-left: 70px;
 }
-#opis1, #opis2, #opis3 {
-   /* padding-left: 40px;*/
-}
 .functions {
     padding-top: 50px;
     margin-top: 28px;
@@ -214,7 +211,7 @@ main {
     margin-right: auto;
     width: 1000px;
 }
-/* koniec Ania funkcjonalności */
+/* end Ania functions */
 
 /**
 * Contact form styles
@@ -415,11 +412,10 @@ input:focus {
     font-size: 12px;
     font-weight: normal;
 }
-/*New paragraph for testers*/
+/* New paragraph for testers */
 .testersParagraph {
-    /*background-color: darkgray;*/
     height: 100px;
-    font-family: Michroma, sans-serif;
+    /*font-family: Michroma, sans-serif;*/
     padding-top:50px;
     text-align: center;
     margin-bottom: 0px;
@@ -427,3 +423,4 @@ input:focus {
 .testersParagraph hr {
     width: 684px;
 }
+/* end New paragraph tor testers */
