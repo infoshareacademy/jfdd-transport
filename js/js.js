@@ -72,8 +72,7 @@
             createValidationMessage('Podaj adres e-mail lub numer telefonu.', submitBtn);
             e.preventDefault();
         } else {
-            alert('Twoje dane zostały wysłane. Dziękujemy!');
-            //TODO disable the submit button on send
+            submitBtn.setAttribute('disabled', 'disabled');
         }
     }
 
