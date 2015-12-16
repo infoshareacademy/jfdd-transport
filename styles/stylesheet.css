@@ -8,8 +8,8 @@ html {
 }
 
 @font-face {
-    font-family: Michroma;
-    src:url(fonts/Michroma.ttf);
+    font-family: Smush_demo;
+    src:url(fonts/Smush_demo.otf);
 }
 
 body  {
@@ -19,7 +19,7 @@ body  {
     overflow-y:scroll;
     overflow-x:inherit;
     perspective: 1px;
-    font-family: Michroma, sans-serif;
+    font-family: Smush_demo, sans-serif;
 }
 
 /* header - navigation bar and logo */
@@ -32,6 +32,7 @@ body  {
     margin-top: 20px;
     margin-right: 20px;
     float: right;
+    /*font-family: Smush_demo;*/
     /*font-family: michroma, sans-serif;*/
     font-size: 17px;
 }
@@ -127,7 +128,7 @@ body  {
 .intro_text {
     background-color: rgba(255,255,255,0.4);
     color: black;
-    font-family: Michroma, sans-serif;
+    font-family: Smush_demo;
     letter-spacing: 2px;
     text-align: center;
     position: relative;
