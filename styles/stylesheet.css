@@ -2,10 +2,10 @@
     clear: both;
 }
 
-html {
-    height: 100%;
-    overflow: hidden;
-}
+/*html {*/
+    /*height: 100%;*/
+    /*overflow: hidden;*/
+/*}*/
 
 @font-face {
     font-family: Jura;
@@ -15,10 +15,12 @@ html {
 body  {
     margin:0;
     padding:0;
-    height: 100%;
-    overflow-y:scroll;
-    overflow-x:inherit;
-    perspective: 1px;
+    /*height: 100%;*/
+    /*overflow-y:scroll;*/
+    /*overflow-x:inherit;*/
+    /*perspective: 1px;*/
+    /*-webkit-transform-style: preserve-3d;*/
+    /*transform-style: preserve-3d;*/
     font-family: Jura, sans-serif;
     font-size:130%;
 }
@@ -26,7 +28,7 @@ body  {
 /* header - navigation bar and logo */
 
 .main_header {
-    height: 27vh;
+    height: 70px;
 }
 
 .main_header  nav  ul {
@@ -47,7 +49,8 @@ body  {
     text-decoration: none;
     color: rgba(16, 16, 16, 0.9);
     position: relative;
-    padding-bottom: 10px;
+    /*padding-bottom: 10px;*/
+    font-size: 23px;
 }
 
 .main_header nav ul a:after {
@@ -83,7 +86,7 @@ body  {
     text-align: center;
     margin: auto;
     position: relative;
-    margin-top: 140px;
+    margin-top: 20px;
     margin-bottom: 60px;
     background-color: rgba(250, 250, 250, 0.5);
     width: 220px;
@@ -96,7 +99,8 @@ body  {
     /*font-family: Michroma, sans-serif;*/
     color: #0f1214;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 14px;
+    line-height: 1.2;
 }
 
 .more_info_button:hover {
@@ -111,21 +115,31 @@ body  {
 
 /* main background image with parallax effect */
 
-.intro:before {
-    content:"";
-    left:0;
-    right:0;
-    top:180px;
-    position: absolute;
-    background-color: #1C1C16;
-    background-image: url("../images/foto_background1.jpg");
-    background-size: cover;
-    -webkit-transform: translateZ(-1px) scale(2);
+/*.intro:before {*/
+    /*content:"";*/
+    /*left:0;*/
+    /*right:0;*/
+    /*top:180px;*/
+    /*position: absolute;*/
+    /*background-color: #1C1C16;*/
+    /*background-image: url("../images/foto_background1.jpg");*/
+    /*background-size: cover;*/
+    /*-webkit-transform: translateZ(-1px) scale(2);*/
     /*-moz-transform: translateZ(-1px) scale(2);*/
-    min-height: 100vh;
+    /*min-height: 100vh;*/
+    /*box-sizing: border-box;*/
+    /*-webkit-transform-origin: center center 0;*/
+    /*transform-origin: center center 0;*/
+    /*transform: translateZ(-1px) scale(2);*/
+    /*z-index: -1;*/
+/*}*/
+
+.intro {
+    background-image: url("../images/foto_background1.jpg");
+    background-attachment: fixed;
+    height:90vh;
+    background-size: cover;
 }
-
-
 .intro_text {
     background-color: rgba(255,255,255,0.4);
     color: black;
