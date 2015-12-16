@@ -8,8 +8,8 @@ html {
 }
 
 @font-face {
-    font-family: Michroma;
-    src:url(fonts/Michroma.ttf);
+    font-family: Jura;
+    src:url(fonts/Jura-Medium.ttf);
 }
 
 body  {
@@ -19,7 +19,8 @@ body  {
     overflow-y:scroll;
     overflow-x:inherit;
     perspective: 1px;
-    font-family: Michroma, sans-serif;
+    font-family: Jura, sans-serif;
+    font-size:130%;
 }
 
 /* header - navigation bar and logo */
@@ -32,6 +33,7 @@ body  {
     margin-top: 20px;
     margin-right: 20px;
     float: right;
+    /*font-family: Smush_demo;*/
     /*font-family: michroma, sans-serif;*/
     font-size: 17px;
 }
@@ -127,7 +129,7 @@ body  {
 .intro_text {
     background-color: rgba(255,255,255,0.4);
     color: black;
-    font-family: Michroma, sans-serif;
+    /*font-family: Smush_demo;*/
     letter-spacing: 2px;
     text-align: center;
     position: relative;
@@ -217,27 +219,27 @@ main {
 * Contact form styles
 */
 #form-main{
-    width:500px;/* check */
+    width:500px;
     margin-right: auto;
     margin-left: auto;
 }
 
 #form-div {
-    background-color:rgba(120,120,120,0.4) ; /* rgba - alpha channel */
+    background-color:rgba(120,120,120,0.4) ;
     padding-left:35px;
     padding-right:35px;
     padding-bottom:50px;
     width: 450px;
-    float: left; /* check */
+    float: left;
     left: 50%;
     margin-top:30px;
-    -moz-border-radius: 7px; /**/
-    -webkit-border-radius: 7px; /**/
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
 }
 
 .contact_form_header {
     text-align: center;
-    font-family: Michroma;
+    font-family: Michroma, sans-serif;
     font-size: 30px;
 }
 
@@ -247,30 +249,30 @@ main {
     font-family: Michroma, Helvetica, Arial, sans-serif;
     font-weight:500;
     font-size: 18px;
-    border-radius: 0; /* check if absent*/
-    line-height: 22px; /* ?? */
+    border-radius: 0;
+    line-height: 22px;
     background-color: #fbfbfb;
-    padding: 13px 13px 13px 54px; /* order of paddings */
+    padding: 13px 13px 13px 54px;
     margin-bottom: 10px;
     width:100%;
-    -webkit-box-sizing: border-box; /**/
-    -moz-box-sizing: border-box; /**/
-    -ms-box-sizing: border-box; /**/
-    box-sizing: border-box; /**/
-    border: 3px solid rgba(0,0,0,0); /* black*/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 3px solid rgba(0,0,0,0);
 }
 
 .feedback-input:focus{
-    background: #fff; /**/
-    box-shadow: 0; /**/
-    border: 3px solid #282828; /**/
+    background: #fff;
+    box-shadow: 0;
+    border: 3px solid #282828;
     color: #282828;
-    outline: none; /**/
+    outline: none;
     padding: 13px 13px 13px 54px;
 }
 
 .focused{
-    color:#30aed6; /**/
+    color:#30aed6;
     border:#30aed6 solid 3px;
 }
 
@@ -290,7 +292,6 @@ main {
 #name:focus{
     background-image: url("../images/1450052825_icon-ios7-person.svg");
     background-size: 30px 30px;
-    background-position: 8px 5px;
     background-position: 11px 8px;
     background-repeat: no-repeat;
 }
@@ -349,7 +350,7 @@ input:focus {
 }
 
 .ease {
-    width: 0px;
+    width: 0;
     height: 80px;
     background-color: #fbfbfb;
     -webkit-transition: .3s ease;
@@ -418,9 +419,15 @@ input:focus {
     /*font-family: Michroma, sans-serif;*/
     padding-top:50px;
     text-align: center;
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 .testersParagraph hr {
     width: 684px;
 }
 /* end New paragraph tor testers */
+
+.validationTip {
+    font-size: small;
+    font-style: italic;
+    color: red;
+}
