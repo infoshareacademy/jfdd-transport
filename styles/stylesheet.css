@@ -19,6 +19,7 @@ body  {
     overflow-y:scroll;
     overflow-x:inherit;
     perspective: 1px;
+    font-family: Michroma, sans-serif;
 }
 
 /* header - navigation bar and logo */
@@ -31,7 +32,7 @@ body  {
     margin-top: 20px;
     margin-right: 20px;
     float: right;
-    font-family: michroma, sans-serif;
+    /*font-family: michroma, sans-serif;*/
     font-size: 17px;
 }
 
@@ -52,7 +53,7 @@ body  {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 0%;
+    width: 0;
     border-bottom: 2px solid rgba(16, 16, 16, 0.1);
     transition: 0.4s;
 }
@@ -75,7 +76,7 @@ body  {
 
 /* ---Get more info button--- */
 .more_info_button {
-    font-family: Michroma, sans-serif;
+    /*font-family: Michroma, sans-serif;*/
     letter-spacing: 2px;
     text-align: center;
     margin: auto;
@@ -90,7 +91,7 @@ body  {
 }
 
 .more_info_button a{
-    font-family: Michroma, sans-serif;
+    /*font-family: Michroma, sans-serif;*/
     color: #0f1214;
     text-decoration: none;
     font-size: 12px;
@@ -102,7 +103,6 @@ body  {
     -webkit-transition: background-color 1000ms ease-out;
     -moz-transition: background-color 1000ms ease-out;
     -o-transition: background-color 1000ms ease-out;
-    -ms-transition: background-color 1000ms ease-out;
     transition: background-color 1000ms ease-out;
 }
 /* ---END of Get more info button--- */
@@ -119,12 +119,12 @@ body  {
     background-image: url("../images/foto_background1.jpg");
     background-size: cover;
     -webkit-transform: translateZ(-1px) scale(2);
+    /*-moz-transform: translateZ(-1px) scale(2);*/
     min-height: 100vh;
 }
 
 
-.intro_text
-{
+.intro_text {
     background-color: rgba(255,255,255,0.4);
     color: black;
     font-family: Michroma, sans-serif;
@@ -409,7 +409,7 @@ input:focus {
 .footer_style p{
     padding-top: 50px;
     text-align: center;
-    font-family: michroma, sans-serif;
+    /*font-family: michroma, sans-serif;*/
     color: white;
     letter-spacing: 4px;
     font-size: 12px;
