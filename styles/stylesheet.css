@@ -8,8 +8,8 @@ html {
 }
 
 @font-face {
-    font-family: Smush_demo;
-    src:url(fonts/Smush_demo.otf);
+    font-family: Jura;
+    src:url(fonts/Jura-Medium.ttf);
 }
 
 body  {
@@ -19,7 +19,8 @@ body  {
     overflow-y:scroll;
     overflow-x:inherit;
     perspective: 1px;
-    font-family: Smush_demo, sans-serif;
+    font-family: Jura, sans-serif;
+    font-size:130%;
 }
 
 /* header - navigation bar and logo */
