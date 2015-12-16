@@ -14,28 +14,27 @@ $(document).ready(function(){
 
     /**
      * Hidden honeypot field.
-     * If set to true, form submission will be prevented.
+     * If set to false, form submission will be prevented.
      * @type {boolean}
      */
     var isFormFieldEmpty = false;
 
     var formFillingStartTimeInMilliseconds= null;
+    var form = $('#form1');
 
-    console.log(formFillingStartTimeInMilliseconds);
-
-    $('#form1 input').bind('keypress change click', function () {
+    var inputsInContactForm = form.find('input');
+    inputsInContactForm.bind('keypress change click', function () {
         if (!formFillingStartTimeInMilliseconds) formFillingStartTimeInMilliseconds = Date.now();
-        console.log(formFillingStartTimeInMilliseconds);
     });
 
-    $('#form1 input').bind("paste",function(e) {
+    inputsInContactForm.bind("paste",function(e) {
         e.preventDefault();
     });
 
-    $('#form1').submit(function (event) {
+    form.submit(function (event) {
         var formFillingDurationInMilliseconds = Date.now() - formFillingStartTimeInMilliseconds;
         var formFieldValue = $("#formField").val();
-        isFormFieldEmpty = formFieldValue == "" ? true : false;
+        isFormFieldEmpty = formFieldValue == "";
         if (formFillingDurationInMilliseconds < formFillingTimeThreshold && !isFormFieldEmpty ) {
             event.preventDefault();
             formFillingStartTimeInMilliseconds = null;
