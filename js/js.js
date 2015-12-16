@@ -43,6 +43,7 @@
             e.preventDefault();
 
         } else {
+            clearValidationMessage(phoneNumber.name);
             alert('Twoje dane zostały wysłane. Dziękujemy!');
         }
     }
@@ -53,8 +54,16 @@
         messageText = document.createTextNode(message);
         messageEl.appendChild(messageText);
         messageEl.className = 'validationTip';
+        messageEl.id = el.name;
         parentEl = el.parentNode;
         parentEl.insertBefore(messageEl, parentEl.lastChild);
+    }
+
+    function clearValidationMessage(id) {
+        if(document.getElementById(id)) {
+            var element = document.getElementById(id);
+            element.parentNode.removeChild(element);
+        }
     }
 }());
 //End form validation
