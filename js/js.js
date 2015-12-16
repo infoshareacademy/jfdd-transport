@@ -93,8 +93,7 @@
         var elId;
         elId = el.id + 'validationMessage';
         if(document.getElementById(elId)) {
-            var element = document.getElementById(elId);
-            element.parentNode.removeChild(element);
+            document.getElementById(elId).element.parentNode.removeChild(element);
         }
     }
 }());
