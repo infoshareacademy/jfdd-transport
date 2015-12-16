@@ -20,7 +20,7 @@
     userPhoneNumber.addEventListener('blur', checkPhone, false);
 
     function checkName() {
-        isNameValid = true;
+        isNameValid = true; //Used to reset the value back to true if user clears rejected input.
         clearValidationMessage(userName);
         if (!userName.value || (userName.value === userName.placeholder)) {
             return;
