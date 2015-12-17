@@ -118,17 +118,17 @@ body  {
 }
 
 .intro_text {
-    -moz-animation-name: dropHeader;
+    -moz-animation-name: dropIntro;
     -moz-animation-iteration-count: 1;
     -moz-animation-timing-function: ease-in;
     -moz-animation-duration: 0.8s;
 
-    -webkit-animation-name: dropHeader;
+    -webkit-animation-name: dropIntro;
     -webkit-animation-iteration-count: 1;
     -webkit-animation-timing-function: ease-in;
     -webkit-animation-duration: 0.8s;
 
-    animation-name: dropHeader;
+    animation-name: dropIntro;
     animation-iteration-count: 1;
     animation-timing-function: ease-in;
     animation-duration: 0.8s;
@@ -145,7 +145,7 @@ body  {
 
 }
 
-@-moz-keyframes dropHeader {
+@-moz-keyframes dropIntro {
     0% {
         -moz-transform: translateY(40px);
     }
@@ -153,7 +153,7 @@ body  {
         -moz-transform: translateY(0);
     }
 }
-@-webkit-keyframes dropHeader {
+@-webkit-keyframes dropIntro {
     0% {
         -webkit-transform: translateY(40px);
     }
@@ -161,7 +161,7 @@ body  {
         -webkit-transform: translateY(0);
     }
 }
-@keyframes dropHeader {
+@keyframes dropIntro {
     0% {
         transform: translateY(40px);
     }
