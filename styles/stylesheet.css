@@ -224,10 +224,12 @@ main {
 }
 .function1 {
     float: left;
+    text-align: center;
 }
 .function2, .function3 {
     float: left;
-    padding-left: 70px;
+    margin-left: 70px;
+    text-align: center;
 }
 .functions {
     padding-top: 50px;
