@@ -196,20 +196,25 @@ main {
     height: 64px;
     margin-top: 3px;
     display: block;
+    background-size: 64px 64px;
+    border-radius: 3px;
     background: no-repeat center center;
     transition: margin-left 0.3s ease;
 }
 
 #socialmedia .social-button-facebook {
     background-image: url('../images/icon-socialmedia-facebook.png');
+    background-color: #3B5998;
 }
 
 #socialmedia .social-button-googleplus {
     background-image: url('../images/icon-socialmedia-google-plus.png');
+    background-color: #E02F2F;
 }
 
 #socialmedia .social-button-twitter {
     background-image: url('../images/icon-socialmedia-twitter.png');
+    background-color: #55ACEE;
 }
 
 #socialmedia .social-button:hover {
