@@ -188,6 +188,7 @@ main {
     right: -52px;
     top: 50%;
     margin-top: -102px;
+    z-index: 100;
 }
 
 #socialmedia .social-button {
@@ -221,21 +222,13 @@ main {
 .function:hover {
     opacity: 1.0;
 }
-.function h2 {
-    /*font-family: Michroma, sans-serif;*/
-}
 .function p {
     font-size: smaller;
-    /*font-family: Michroma, sans-serif;*/
 }
 .function1 {
     float: left;
 }
-.function2 {
-    float: left;
-    padding-left: 70px;
-}
-.function3 {
+.function2, .function3 {
     float: left;
     padding-left: 70px;
 }
