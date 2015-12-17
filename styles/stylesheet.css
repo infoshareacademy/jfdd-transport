@@ -227,10 +227,12 @@ main {
 }
 .function1 {
     float: left;
+    text-align: center;
 }
 .function2, .function3 {
     float: left;
-    padding-left: 70px;
+    margin-left: 70px;
+    text-align: center;
 }
 .functions {
     padding-top: 50px;
@@ -369,10 +371,6 @@ input:focus {
 #button-gray:hover{
     background-color: rgba(0,0,0,0);
     color: #282828;
-}
-
-.submit:hover {
-    color: #3498db;
 }
 
 .ease {
