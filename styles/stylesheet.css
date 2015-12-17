@@ -381,7 +381,7 @@ input:focus {
 
 .ease {
     width: 0;
-    height: 80px;
+    height: 76px;
     background-color: #fbfbfb;
     -webkit-transition: .3s ease;
     -moz-transition: .3s ease;
