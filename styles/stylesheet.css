@@ -250,6 +250,12 @@ main {
 /**
 * Contact form styles
 */
+
+.contact_form_header {
+    text-align: center;
+    font-size: 30px;
+}
+
 #form-main{
     width:500px;
     margin-right: auto;
@@ -269,16 +275,9 @@ main {
     -webkit-border-radius: 7px;
 }
 
-.contact_form_header {
-    text-align: center;
-    font-family: Michroma, sans-serif;
-    font-size: 30px;
-}
-
-
 .feedback-input {
     color:darkgrey;
-    font-family: Michroma, Helvetica, Arial, sans-serif;
+    font-family: Jura, sans-serif;
     font-weight:500;
     font-size: 18px;
     border-radius: 0;
@@ -355,7 +354,7 @@ input:focus {
 }
 
 #button-gray{
-    font-family:Michroma, Arial, Helvetica, sans-serif;
+    font-family: Jura, sans-serif;
     float:left; /**/
     width: 100%; /**/
     border: #282828 solid 4px;
