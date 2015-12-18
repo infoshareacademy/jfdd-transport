@@ -117,17 +117,17 @@ body  {
 }
 
 .intro_text {
-    -moz-animation-name: dropHeader;
+    -moz-animation-name: dropIntro;
     -moz-animation-iteration-count: 1;
     -moz-animation-timing-function: ease-in;
     -moz-animation-duration: 0.8s;
 
-    -webkit-animation-name: dropHeader;
+    -webkit-animation-name: dropIntro;
     -webkit-animation-iteration-count: 1;
     -webkit-animation-timing-function: ease-in;
     -webkit-animation-duration: 0.8s;
 
-    animation-name: dropHeader;
+    animation-name: dropIntro;
     animation-iteration-count: 1;
     animation-timing-function: ease-in;
     animation-duration: 0.8s;
@@ -144,7 +144,7 @@ body  {
 
 }
 
-@-moz-keyframes dropHeader {
+@-moz-keyframes dropIntro {
     0% {
         -moz-transform: translateY(40px);
     }
@@ -152,7 +152,7 @@ body  {
         -moz-transform: translateY(0);
     }
 }
-@-webkit-keyframes dropHeader {
+@-webkit-keyframes dropIntro {
     0% {
         -webkit-transform: translateY(40px);
     }
@@ -160,7 +160,7 @@ body  {
         -webkit-transform: translateY(0);
     }
 }
-@keyframes dropHeader {
+@keyframes dropIntro {
     0% {
         transform: translateY(40px);
     }
@@ -195,19 +195,25 @@ main {
     height: 64px;
     margin-top: 3px;
     display: block;
+    background-size: 64px 64px;
+    border-radius: 3px;
     background: no-repeat center center;
+    transition: margin-left 0.3s ease;
 }
 
 #socialmedia .social-button-facebook {
     background-image: url('../images/icon-socialmedia-facebook.png');
+    background-color: #3B5998;
 }
 
 #socialmedia .social-button-googleplus {
     background-image: url('../images/icon-socialmedia-google-plus.png');
+    background-color: #E02F2F;
 }
 
 #socialmedia .social-button-twitter {
     background-image: url('../images/icon-socialmedia-twitter.png');
+    background-color: #55ACEE;
 }
 
 #socialmedia .social-button:hover {
@@ -215,30 +221,29 @@ main {
 }
 
 /* Ania functions */
-.function {
-    opacity:0.8;
-}
-.function:hover {
-    opacity: 1.0;
-}
-.function p {
-    font-size: smaller;
-}
-.function1 {
-    float: left;
-    text-align: center;
-}
-.function2, .function3 {
-    float: left;
-    margin-left: 70px;
-    text-align: center;
-}
-.functions {
+#functionsSection {
     padding-top: 50px;
     margin-top: 28px;
     margin-left: auto;
     margin-right: auto;
     width: 1000px;
+}
+.function {
+    opacity:0.8;
+    text-align: center;
+}
+.function:hover {
+    opacity: 1.0;
+}
+.function1 {
+    float: left;
+}
+.function2, .function3 {
+    float: left;
+    margin-left: 70px;
+}
+.function p {
+    font-size: smaller;
 }
 /* end Ania functions */
 

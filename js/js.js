@@ -22,10 +22,13 @@
     function checkName() {
         isNameValid = true; //Used to reset the value back to true if user clears rejected input.
         clearValidationMessage(userName);
+
         if (!userName.value || (userName.value === userName.placeholder)) {
             return;
         }
+
         isNameValid = /^[A-Za-ząćęłńóśźżĄĆĘŁŃÓŚŹŻ \-]+$/.test(userName.value);
+
         if (!isNameValid) {
             createValidationMessage('To pole nie akceptuje cyfr ani znaków specjalnych.', userName);
         }
@@ -35,10 +38,13 @@
         isEmailValid = true;
         clearValidationMessage(userEmail);
         clearValidationMessage(submitBtn);
+
         if (!userEmail.value || (userEmail.value === userEmail.placeholder)) {
             return;
         }
+
         isEmailValid = /[^@]+@[^@]+/.test(userEmail.value);
+
         if (!isEmailValid) {
             createValidationMessage('Podaj adres e-mail w formacie użytkownik@example.com.', userEmail);
         }
@@ -48,11 +54,14 @@
         isPhoneValid = true;
         clearValidationMessage(userPhoneNumber);
         clearValidationMessage(submitBtn);
+
         if (!userPhoneNumber.value || (userPhoneNumber.value === userPhoneNumber.placeholder)) {
             return;
         }
+
         isPhoneValid = /^(\+48)? ?[1-9]( |-)?\d( |-)?\d( |-)?\d( |-)?\d( |-)?\d( |-)?\d( |-)?\d( |-)?\d( |-)?/
             .test(userPhoneNumber.value);
+
         if (!isPhoneValid) {
             createValidationMessage('Podaj numer telefonu stacjonarnego lub komórkowego.', userPhoneNumber);
         }
@@ -60,8 +69,10 @@
 
     //When form is submitted, check whether either an email or a phone number has been provided
     form.addEventListener('submit', validateRequired, false);
+
     function validateRequired(e) {
         clearValidationMessage(submitBtn);
+
         if(!isNameValid || !isEmailValid || !isPhoneValid) {
             e.preventDefault();
             return;
@@ -89,10 +100,12 @@
     }
 
     function clearValidationMessage(el) {
-        var elId;
+        var elId, element;
         elId = el.id + 'validationMessage';
-        if(document.getElementById(elId)) {
-            document.getElementById(elId).element.parentNode.removeChild(element);
+
+        if (document.getElementById(elId)) {
+            element = document.getElementById(elId);
+            element.parentNode.removeChild(element);
         }
     }
 }());
