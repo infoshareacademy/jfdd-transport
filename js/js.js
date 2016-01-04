@@ -26,7 +26,8 @@
         if (!userName.value || (userName.value === userName.placeholder)) {
             return;
         }
-
+        //Accept small and capital letters (including Polish diacritics),
+        //spaces and hyphens (for hyphenated surnames)
         isNameValid = /^[A-Za-ząćęłńóśźżĄĆĘŁŃÓŚŹŻ \-]+$/.test(userName.value);
 
         if (!isNameValid) {
@@ -58,7 +59,8 @@
         if (!userPhoneNumber.value || (userPhoneNumber.value === userPhoneNumber.placeholder)) {
             return;
         }
-
+        //Accept Polish phone numbers, optionally with the area code of +48,
+        //with optional spaces and/or hyphens between digits
         isPhoneValid = /^(\+48)? ?[1-9]( |-)?\d( |-)?\d( |-)?\d( |-)?\d( |-)?\d( |-)?\d( |-)?\d( |-)?\d( |-)?/
             .test(userPhoneNumber.value);
 
