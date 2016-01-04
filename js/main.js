@@ -17,7 +17,7 @@ $(document).ready(function(){
      * If set to false, form submission will be prevented.
      * @type {boolean}
      */
-    var isFormFieldEmpty = false;
+    var isHiddenFormFieldEmpty = false;
 
     var formFillingStartTimeInMilliseconds= null;
     var form = $('#form1');
@@ -34,8 +34,8 @@ $(document).ready(function(){
     form.submit(function (event) {
         var formFillingDurationInMilliseconds = Date.now() - formFillingStartTimeInMilliseconds;
         var formFieldValue = $("#formField").val();
-        isFormFieldEmpty = formFieldValue == "";
-        if (formFillingDurationInMilliseconds < minimumAcceptedFormFillingTime && !isFormFieldEmpty ) {
+        isHiddenFormFieldEmpty = formFieldValue == "";
+        if (formFillingDurationInMilliseconds < minimumAcceptedFormFillingTime && !isHiddenFormFieldEmpty ) {
             event.preventDefault();
             formFillingStartTimeInMilliseconds = null;
             console.log("Form submission prevented.");
