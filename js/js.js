@@ -71,7 +71,6 @@
 
     //When form is submitted, check whether either an email or a phone number has been provided
     form.addEventListener('submit', validateRequired, false);
-
     function validateRequired(e) {
         clearValidationMessage(submitButton);
 
