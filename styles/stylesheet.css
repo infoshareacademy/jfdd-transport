@@ -80,7 +80,6 @@ body  {
     border-radius: 7px;
 }
 
-
 .moreInfoButton a{
     color: #0f1214;
     text-decoration: none;
@@ -98,7 +97,6 @@ body  {
     -o-transition: background-color 1000ms ease-out;
     transition: background-color 1000ms ease-out;
 }
-
 
 
 .intro {
@@ -137,7 +135,6 @@ body  {
     margin-bottom: 0;
     padding-bottom: 20px;
     padding-top: 20px;
-
 }
 
 @-moz-keyframes dropIntro {
