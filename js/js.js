@@ -1,6 +1,6 @@
 //Start form validation
 (function (){
-    var form, userName, userEmail, userPhoneNumber, submitBtn, isNameValid, isEmailValid, isPhoneValid;
+    var form, userName, userEmail, userPhoneNumber, submitButton, isNameValid, isEmailValid, isPhoneValid;
     isNameValid = true;
     isEmailValid = true;
     isPhoneValid = true;
@@ -13,7 +13,7 @@
     userName = document.getElementById('name');
     userEmail = document.getElementById('email');
     userPhoneNumber = document.getElementById('phone');
-    submitBtn = document.getElementById('button-gray');
+    submitButton = document.getElementById('button-gray');
 
     userName.addEventListener('blur', checkName, false);
     userEmail.addEventListener('blur', checkEmail, false);
@@ -37,7 +37,7 @@
     function checkEmail() {
         isEmailValid = true;
         clearValidationMessage(userEmail);
-        clearValidationMessage(submitBtn);
+        clearValidationMessage(submitButton);
 
         if (!userEmail.value || (userEmail.value === userEmail.placeholder)) {
             return;
@@ -53,7 +53,7 @@
     function checkPhone() {
         isPhoneValid = true;
         clearValidationMessage(userPhoneNumber);
-        clearValidationMessage(submitBtn);
+        clearValidationMessage(submitButton);
 
         if (!userPhoneNumber.value || (userPhoneNumber.value === userPhoneNumber.placeholder)) {
             return;
@@ -71,7 +71,7 @@
     form.addEventListener('submit', validateRequired, false);
 
     function validateRequired(e) {
-        clearValidationMessage(submitBtn);
+        clearValidationMessage(submitButton);
 
         if(!isNameValid || !isEmailValid || !isPhoneValid) {
             e.preventDefault();
@@ -80,10 +80,10 @@
 
         if ((!userEmail.value || (userEmail.value === userEmail.placeholder)) &&
             (!userPhoneNumber.value || (userPhoneNumber.value === userPhoneNumber.placeholder))) {
-            createValidationMessage('Podaj adres e-mail lub numer telefonu.', submitBtn);
+            createValidationMessage('Podaj adres e-mail lub numer telefonu.', submitButton);
             e.preventDefault();
         } else {
-            submitBtn.setAttribute('disabled', 'disabled');
+            submitButton.setAttribute('disabled', 'disabled');
         }
     }
 
