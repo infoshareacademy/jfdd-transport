@@ -16,7 +16,7 @@ body  {
 
 /* header - navigation bar and logo */
 
-.main_header {
+.navigationBar {
     height: 100px;
     -webkit-box-shadow: 0 31px 40px 8px rgba(0,0,0,0.75);
     -moz-box-shadow: 0 31px 40px 8px rgba(0,0,0,0.75);
@@ -25,19 +25,19 @@ body  {
     position: relative;
 }
 
-.main_header  nav  ul {
+.navigationBar  nav  ul {
     margin-top: 20px;
     margin-right: 20px;
     float: right;
     font-size: 17px;
 }
 
-.main_header nav ul li {
+.navigationBar nav ul li {
     display:inline-block;
     padding: 20px;
 }
 
-.main_header nav ul a {
+.navigationBar nav ul a {
     text-decoration: none;
     color: rgba(16, 16, 16, 0.9);
     position: relative;
@@ -45,7 +45,7 @@ body  {
     font-size: 23px;
 }
 
-.main_header nav ul a:after {
+.navigationBar nav ul a:after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -55,7 +55,7 @@ body  {
     transition: 0.4s;
 }
 
-.main_header nav ul a:hover:after {
+.navigationBar nav ul a:hover:after {
     width: 100%;
 }
 
