@@ -20,6 +20,7 @@
     font-size: 30px;
     font-weight: bold;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 #easterEgg.hide {

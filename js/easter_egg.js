@@ -4,4 +4,8 @@ $(function () {
             $('#easterEgg').removeClass('hide');
         }
     });
+
+    $('#closeEasterEgg').on('click', function () {
+        $('#easterEgg').addClass('hide');
+    });
 });
