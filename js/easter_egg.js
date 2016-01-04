@@ -8,4 +8,21 @@ $(function () {
     $('#closeEasterEgg').on('click', function () {
         $('#easterEgg').addClass('hide');
     });
+
+    $('#startEasterEggGame').on('click', function () {
+        gamePlay.startGame();
+    });
+
+    var gameDisplay = {
+        hideGameIntro: function () {
+            $('#easterEggIntro').addClass('hide');
+        }
+    };
+
+    var gamePlay = {
+        startGame: function () {
+            gameDisplay.hideGameIntro();
+            console.log('Bring it on!');
+        }
+    };
 });
