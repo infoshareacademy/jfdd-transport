@@ -7,10 +7,10 @@ $(document).ready(function(){
      * to the form submission in order for the submission to completed.
      *
      * If the time to complete and submit the form is less than
-     * formFillingTimeThreshold, the sumbission will be prevented.
+     * minimumAcceptedFormFillingTime, the sumbission will be prevented.
      * @type {number}
      */
-    var formFillingTimeThreshold = 100;
+    var minimumAcceptedFormFillingTime = 100;
 
     /**
      * Hidden honeypot field.
@@ -35,7 +35,7 @@ $(document).ready(function(){
         var formFillingDurationInMilliseconds = Date.now() - formFillingStartTimeInMilliseconds;
         var formFieldValue = $("#formField").val();
         isFormFieldEmpty = formFieldValue == "";
-        if (formFillingDurationInMilliseconds < formFillingTimeThreshold && !isFormFieldEmpty ) {
+        if (formFillingDurationInMilliseconds < minimumAcceptedFormFillingTime && !isFormFieldEmpty ) {
             event.preventDefault();
             formFillingStartTimeInMilliseconds = null;
             console.log("Form submission prevented.");
