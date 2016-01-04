@@ -1,6 +1,3 @@
-/**
- * Created by wprzebieracz on 15.12.15.
- */
 $(document).ready(function(){
     /**
      * Minimum time that must take a user from initiating the form completion
