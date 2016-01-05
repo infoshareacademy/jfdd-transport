@@ -430,6 +430,11 @@ input:focus {
     font-size: 15px;
     font-weight: normal;
 }
+
+footer span {
+    font-family: Arial sans-serif;
+}
+
 /* New paragraph for testers */
 .testersParagraph {
     height: 100px;
