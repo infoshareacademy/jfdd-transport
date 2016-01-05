@@ -31,17 +31,29 @@ $(function () {
 
     var playGame = function () {
         game.hideGameIntro();
-        game.runBuses();
+        game.runAllBuses();
     };
 
     var game = {
         hideGameIntro: function () {
             $('#easterEggIntro').addClass('hide');
         },
-        runBuses: function () {
-            $('#vehicle1').animate({left: '50px'}, 250);
-            $('#vehicle2').animate({left: '50px'}, 250);
-            $('#vehicle3').animate({left: '50px'}, 250);
+        runAllBuses: function () {
+            $('.vehicles').each(function (index, element) {
+                game.runABus(element, game.generateRandomMilliseconds());
+            });
+            /*$('#vehicle1').animate({left: '50px'}, 250);
+             $('#vehicle2').animate({left: '50px'}, 250);
+             $('#vehicle3').animate({left: '50px'}, 250);*/
+        },
+        runABus: function (whichBus, whenToStartRunning) {
+            var busTimer = window.setTimeout(function () {
+                $(whichBus).animate({left: '50px'}, 250);
+            }, whenToStartRunning);
+        },
+        generateRandomMilliseconds: function() {
+            return (Math.random() * 2000); //From 0 up to 2000 milliseconds so as not to have \
+            // the user waiting too long for the buses to show up.
         }
     };
 });
