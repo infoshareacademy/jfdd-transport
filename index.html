@@ -3,136 +3,121 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Strona ze statystykami komunikacji miejskiej">
+    <meta name="author" content="Fantastic4">
+    <meta name="keywords" content="Fantastic4, statystyki komunikacji miejskiej">
     <link rel="stylesheet" href="styles/stylesheet.css">
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <title>Statystyki Komunikacji Miejskiej</title>
 </head>
 
 <body>
-<header class="navigationBar">
-    <nav>
-        <ul>
-            <li><a href="#">Strona główna</a></li>
-            <li><a href="#functionsSection">Funkcjonalności</a></li>
-            <li><a href="#form-main">Kontakt</a></li>
-        </ul>
-    </nav>
-    <a href="#intro"><img class="logo" src="images/logofinal.png" alt="logo"></a>
-
-    <div class="clear"></div>
-</header>
-
-
-<div id="intro" class="intro">
-    <div class="clear"></div>
-    <div class="more_info_button">
-        <a href="#functionsSection"><h2>DOWIEDZ SIĘ<br>WIĘCEJ!</h2></a>
-    </div>
-
-    <div class="introText">
-        <h1> Statystyki komunikacji miejskiej</h1>
-
-        <p>Z nami nie będziesz czekać!</p>
-
-    </div>
-</div>
-
-
-<main>
-    <!--functions-->
-    <div id="functionsSection">
-        <div class="function function1"><img src="images/bus_stop_function1.png" alt="Autobus">
-
-            <div id="opis1">
-                <h2>Mój przystanek</h2>
-
-                <p>Sprawdź, jak wygląda sytuacja <br>na Twoim przystanku.</p>
-            </div>
-        </div>
-        <div class="function function2"><img src="images/clock.png" alt="Zegar">
-
-            <div id="opis2">
-                <h2>Statystyki spóźnień</h2>
-
-                <p>Dowiedz się, jakie są statystyki <br> dla wybranego przystanku.</p>
-            </div>
-        </div>
-        <div class="function function3"><img src="images/map.png" alt="Mapa">
-
-            <div id="opis3">
-                <h2>Sprawdź na mapie</h2>
-
-                <p>Zobacz, gdzie jest w tej chwili <br> Twój środek transportu.</p>
-            </div>
-        </div>
+    <header class="navigationBar">
+        <nav>
+            <ul>
+                <li><a href="#">Strona główna</a></li>
+                <li><a href="#functionsSection">Funkcjonalności</a></li>
+                <li><a href="#form-main">Kontakt</a></li>
+            </ul>
+        </nav>
+        <a href="#intro"><img class="logo" src="images/logofinal.png" alt="logo"></a>
         <div class="clear"></div>
-    </div>
-    <!--end functions-->
-    <!-- New paragraph for testers-->
-    <div class="testersParagraph">
-        <hr>
-        <p><strong>Jeśli chcesz zostać jednym z pierwszych testerów wersji beta naszej strony - zapraszamy do
-            współpracy!</strong></p>
-        <hr>
-    </div>
-    <!-- end New paragraph for testers-->
-    <!-- Contact form -->
-    <div id="form-main">
+    </header>
 
-        <div id="form-div">
-            <p class="contact_form_header">Skontaktuj się z nami!</p>
 
-            <form class="form" id="form1" method="post" action="http://jfdd.infoshareaca.nazwa.pl/mailer.php">
-                <!--Accept small and capital letters (including Polish diacritics),
-                spaces and hyphens (for hyphenated surnames):-->
-                <p class="name">
-                    <input name="name" type="text" class="feedback-input" placeholder="Imię i nazwisko" id="name"
-                           maxlength="150"
-                           pattern="[A-Za-ząćęłńóśźżĄĆĘŁŃÓŚŹŻ -]+"/>
-                </p>
+        <div id="intro" class="intro">
+            <div class="clear"></div>
+            <div class="more_info_button">
+                <a href="#functionsSection"><h2>DOWIEDZ SIĘ<br>WIĘCEJ!</h2></a>
+            </div>
 
-                <!--Use standard HTML5 validation:-->
-                <p class="email">
-                    <input name="email" type="email" class="feedback-input" id="email" placeholder="E-mail"
-                           maxlength="50"/>
-                </p>
+            <div class="introText">
+                <h1> Statystyki komunikacji miejskiej</h1>
+                <p>Z nami nie będziesz czekać!</p>
 
-                <!--Accept Polish phone numbers, optionally with the area code of +48,
-                with optional spaces and/or hyphens between digits:-->
-                <p class="text">
-                    <input name="phoneNumber" type="tel" class="feedback-input" id="phone" placeholder="Telefon"
-                           maxlength="20"
-                           pattern="^(\+48)? ?[1-9]( |-)?\d( |-)?\d( |-)?\d( |-)?\d( |-)?\d( |-)?\d( |-)?\d( |-)?\d( |-)?"/>
-                </p>
-
-                <input type="hidden" name="receiver" value="wojciech.makurat@infoshareacademy.com">
-                <input type="text" id="formField" placeholder="Leave this field blank.">
-
-                <div class="submit">
-                    <input type="submit" value="WYŚLIJ" id="button-gray"/>
-
-                    <div class="ease"></div>
-                </div>
-            </form>
+            </div>
         </div>
-    </div>
-    <!-- END of Contact form -->
 
+    <main>
+        <!--functions-->
+        <div id="functionsSection">
+            <div class="function function1"><img src="images/bus_stop_function1.png" alt="Autobus">
+                <div id="opis1">
+                    <h2>Mój przystanek</h2>
+                    <p>Sprawdź, jak wygląda sytuacja <br>na Twoim przystanku.</p>
+                </div>
+            </div>
+            <div class="function function2"><img src="images/clock.png" alt="Zegar">
+                <div id="opis2">
+                    <h2>Statystyki spóźnień</h2>
+                    <p>Dowiedz się, jakie są statystyki <br> dla wybranego przystanku.</p>
+                </div>
+            </div>
+            <div class="function function3"><img src="images/map.png" alt="Mapa">
+                <div id="opis3">
+                    <h2>Sprawdź na mapie</h2>
+                    <p>Zobacz, gdzie jest w tej chwili <br> Twój środek transportu.</p>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <!--end functions-->
+        <!-- New paragraph for testers-->
+        <div class = "testersParagraph">
+            <hr>
+            <p><strong>Jeśli chcesz zostać jednym z pierwszych testerów wersji beta naszej strony - zapraszamy do współpracy!</strong></p>
+            <hr>
+        </div>
+        <!-- end New paragraph for testers-->
+        <!-- Contact form -->
+        <div id="form-main">
+
+            <div id="form-div">
+                <p class="contact_form_header">Skontaktuj się z nami!</p>
+                <form class="form" id="form1" method="post" action="http://jfdd.infoshareaca.nazwa.pl/mailer.php">
+                    <!--Accept small and capital letters (including Polish diacritics),
+                    spaces and hyphens (for hyphenated surnames):-->
+                    <p class="name">
+                        <input name="name" type="text" class="feedback-input" placeholder="Imię i nazwisko" id="name" maxlength="150"
+                               pattern="[A-Za-ząćęłńóśźżĄĆĘŁŃÓŚŹŻ -]+"/>
+                    </p>
+
+                    <!--Use standard HTML5 validation:-->
+                    <p class="email">
+                        <input name="email" type="email" class="feedback-input" id="email" placeholder="E-mail" maxlength="50" />
+                    </p>
+
+                    <!--Accept Polish phone numbers, optionally with the area code of +48,
+                    with optional spaces and/or hyphens between digits:-->
+                    <p class="text">
+                        <input name="phoneNumber" type="tel" class="feedback-input" id="phone" placeholder="Telefon" maxlength="20"
+                               pattern="^(\+48)? ?[1-9]( |-)?\d( |-)?\d( |-)?\d( |-)?\d( |-)?\d( |-)?\d( |-)?\d( |-)?\d( |-)?"/>
+                    </p>
+
+                    <input type="hidden" name="receiver" value="wojciech.makurat@infoshareacademy.com">
+                    <input type="text" id="formField" placeholder="Leave this field blank.">
+                    <div class="submit">
+                        <input type="submit" value="WYŚLIJ" id="button-gray"/>
+                        <div class="ease"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- END of Contact form -->
+
+        <div class="clear"></div>
+
+    </main>
+
+    <footer>
+
+        <div class="footer_style">
+            <div class="footer_image"><img src="images/logofinal.png" alt="logo" /></div>
+            <p><span>&copy;</span> 2015 by Fantastic 4</p>
+        </div>
+
+    </footer>
     <div class="clear"></div>
-
-</main>
-
-<footer>
-
-
-    <div class="footer_style">
-        <div class="footer_image"><img src="images/logofinal.png" alt="logo"/></div>
-        <p>&copy; 2015 by Fantastic 4</p>
-    </div>
-
-
-</footer>
-<div class="clear"></div>
 
 <div id="socialmedia">
     <div class="social-button-wrapper"><a class="social-button social-button-facebook"

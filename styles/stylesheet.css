@@ -14,7 +14,6 @@ body  {
     font-size:130%;
 }
 
-/* header - navigation bar and logo */
 
 .navigationBar {
     height: 100px;
@@ -69,9 +68,7 @@ body  {
 .logo:hover {
     opacity:1;
 }
-/* ----End of header--- */
 
-/* ---Get more info button--- */
 
 .more_info_button {
     margin:auto;
@@ -102,9 +99,7 @@ body  {
     transition: background-color 1000ms ease-out;
 }
 
-/* ---END of Get more info button--- */
 
-/* main background image with no parallax effect */
 
 .intro {
     z-index: 1;
@@ -181,7 +176,6 @@ main {
     position: relative;
 }
 
-/*----End of main background image part */
 
 #socialmedia {
     position: fixed;
@@ -227,7 +221,7 @@ main {
     margin-left: -52px;
 }
 
-/* Ania functions */
+/* Functions */
 #functionsSection {
     padding-top: 50px;
     margin-top: 28px;
@@ -252,7 +246,7 @@ main {
 .function p {
     font-size: smaller;
 }
-/* end Ania functions */
+/* end Functions */
 
 /**
 * Contact form styles
@@ -415,7 +409,6 @@ input:focus {
 */
 
 
-/* Aga footer */
 .footer_style {
     margin-top: 60px;
     padding-top: 10px;
@@ -446,6 +439,11 @@ input:focus {
     font-size: 15px;
     font-weight: normal;
 }
+
+footer span {
+    font-family: Arial sans-serif;
+}
+
 /* New paragraph for testers */
 .testersParagraph {
     height: 100px;
