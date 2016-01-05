@@ -40,20 +40,20 @@ $(function () {
         },
         runAllBuses: function () {
             $('.vehicles').each(function (index, element) {
-                game.runABus(element, game.generateRandomMilliseconds());
+                game.runABus(element, game.generateRandomValue(0, 2000)); //From 0 up to 2000 milliseconds \
+                // so as not to have the user waiting too long for the buses to show up at the start \
+                // of the game.
             });
-            /*$('#vehicle1').animate({left: '50px'}, 250);
-             $('#vehicle2').animate({left: '50px'}, 250);
-             $('#vehicle3').animate({left: '50px'}, 250);*/
         },
         runABus: function (whichBus, whenToStartRunning) {
             var busTimer = window.setTimeout(function () {
-                $(whichBus).animate({left: '50px'}, 250);
+                $(whichBus).animate({left: '350px'}, game.generateRandomValue(500, 1000)); //The fastest \
+                // bus would take 500 milliseconds to arrive at the stop, and the slowest 1 second.
             }, whenToStartRunning);
         },
-        generateRandomMilliseconds: function() {
-            return (Math.random() * 2000); //From 0 up to 2000 milliseconds so as not to have \
-            // the user waiting too long for the buses to show up.
+        generateRandomValue: function (minValToGenerate, maxValToGenerate) {
+            return Math.floor((Math.random() * (((maxValToGenerate - minValToGenerate) + 1)
+            + minValToGenerate)));
         }
     };
 });
