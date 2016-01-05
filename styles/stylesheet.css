@@ -191,6 +191,12 @@ main {
     z-index: 100;
 }
 
+
+#socialmedia .social-button-wrapper {
+    padding-left:136px;
+    transition: margin 0.3s ease;
+}
+
 #socialmedia .social-button {
     width: 64px;
     height: 64px;
@@ -199,8 +205,8 @@ main {
     background-size: 64px 64px;
     border-radius: 3px;
     background: no-repeat center center;
-    transition: margin-left 0.3s ease;
 }
+
 
 #socialmedia .social-button-facebook {
     background-image: url('../images/icon-socialmedia-facebook.png');
@@ -217,7 +223,7 @@ main {
     background-color: #55ACEE;
 }
 
-#socialmedia .social-button:hover {
+#socialmedia .social-button-wrapper:hover {
     margin-left: -52px;
 }
 
