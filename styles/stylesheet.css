@@ -3,8 +3,8 @@
     display: none;
 }
 
-#easterEgg {
-    position: fixed;
+#easterEgg, #easterEggIntro {
+    position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
@@ -31,6 +31,7 @@
     color: white;
     text-shadow: black 0 0 0.2em;
     font-family: Arial, sans-serif;
+    z-index: 102;
 }
 
 .vehicles {
@@ -41,12 +42,41 @@
     left: -110px;
 }
 
-#vehicle2 {
+.vehicle1 {
     top: 200px;
 }
 
-#vehicle3 {
-    top: 400px;
+.vehicle2 {
+    top: 370px;
+}
+
+.vehicle3 {
+    top: 540px;
+}
+
+.infoBoards {
+    background-color: black;
+    color: orange;
+    font-family: "Courier New", monospace;
+    font-size: smaller;
+    width: 200px;
+    height: 2.5em;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    position: absolute;
+    left: 400px;
+}
+
+.infoBoard1 {
+    top: 125px;
+}
+
+.infoBoard2 {
+    top: 295px;
+}
+
+.infoBoard3 {
+    top: 465px;
 }
 /*End easter egg styles*/
 .clear {
