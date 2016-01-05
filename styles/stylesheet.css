@@ -14,8 +14,6 @@ body  {
     font-size:130%;
 }
 
-/*html, body {height:100%;}*/
-
 
 .navigationBar {
     height: 100px;
@@ -104,21 +102,12 @@ body  {
 
 
 .intro {
-    /*z-index: -1;*/
     background: url("../images/foto_background1.jpg");
     height:85vh;
-    /*width: 100%;*/
     background-size: cover;
-    /*position: fixed;*/
     -webkit-box-shadow: inset 0 -31px 40px -5px rgba(43,39,34,0.60);
     -moz-box-shadow: inset 0 -31px 40px -5px rgba(43,39,34,0.60);
     box-shadow: inset 0 -31px 40px -5px rgba(43,39,34,0.60);
-
-    /*background-repeat: repeat-y;*/
-    /*background-position: 50% 0;*/
-    /*transition: 0s linear;*/
-    /*transition-property: background-position;*/
-    /*transform: translate3d(0, 0, 0);*/
 }
 
 .introText {
@@ -227,7 +216,6 @@ main {
 /* Functions */
 #functionsSection {
     padding-top: 50px;
-    margin-top: 28px;
     margin-left: auto;
     margin-right: auto;
     width: 1000px;
