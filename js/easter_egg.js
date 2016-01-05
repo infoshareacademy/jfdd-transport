@@ -8,7 +8,7 @@ $(function () {
         if (e.which === 70) {
             pressedKeys.f = true;
         }
-        if (e.which === 52) {
+        if (e.which === 52 || e.which === 100) { //The key code for '4' on the numpad is '100'.
             pressedKeys[4] = true;
         }
     });
