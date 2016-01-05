@@ -32,6 +32,14 @@
     text-shadow: black 0 0 0.2em;
     font-family: Arial, sans-serif;
 }
+
+#vehicle1 {
+    height: 70px;
+    width: 110px;
+    background-color: #55ACEE;
+    position: fixed;
+    left: -110px;
+}
 /*End easter egg styles*/
 .clear {
     clear: both;
