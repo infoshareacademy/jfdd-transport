@@ -73,6 +73,7 @@ body  {
     box-shadow: 0px 31px 40px 8px rgba(0,0,0,0.75);
     Z-index: 2;
     position: relative;
+    background-color: white;
 }
 
 .navigationBar  nav  ul {
@@ -151,13 +152,10 @@ body  {
 }
 
 
-
 .intro {
-    z-index: 1;
-    background: url("../images/foto_background1.jpg") fixed;
+    background: url("../images/foto_background1.jpg");
     height:85vh;
     background-size: cover;
-    position: relative;
     -webkit-box-shadow: inset 0 -31px 40px -5px rgba(43,39,34,0.60);
     -moz-box-shadow: inset 0 -31px 40px -5px rgba(43,39,34,0.60);
     box-shadow: inset 0 -31px 40px -5px rgba(43,39,34,0.60);
@@ -188,7 +186,6 @@ body  {
     margin-bottom: 0;
     padding-bottom: 20px;
     padding-top: 20px;
-
 }
 
 @-moz-keyframes dropIntro {
@@ -269,7 +266,6 @@ main {
 /* Functions */
 #functionsSection {
     padding-top: 50px;
-    margin-top: 28px;
     margin-left: auto;
     margin-right: auto;
     width: 1000px;
@@ -484,6 +480,11 @@ input:focus {
     font-size: 15px;
     font-weight: normal;
 }
+
+footer span {
+    font-family: Arial sans-serif;
+}
+
 /* New paragraph for testers */
 .testersParagraph {
     height: 100px;
