@@ -1,6 +1,17 @@
 $(function () {
+    var keyPressed; //Get's assigned a string with the value of a key, if the user presses the 'f' or the '4' key. Used in event listeners.
+    //Event listeners to detect the key combination (f4, as in Fantastic 4) which opens the easter egg:
+    $(window).on('keydown', function (e) {
+        if (e.which === 70) {
+            keyPressed = 'f';
+        }
+        if (e.which === 52) {
+            keyPressed = '4';
+        }
+    });
+
     $(window).on('keyup', function (e) {
-        if (e.ctrlKey && (e.which === 88)) { //88 is the 'x' key
+        if ((keyPressed === 'f' && e.which === 52) || (keyPressed === '4' && e.which === 70)) {
             $('#easterEgg').removeClass('hide');
         }
     });
@@ -10,19 +21,17 @@ $(function () {
     });
 
     $('#startEasterEggGame').on('click', function () {
-        gamePlay.startGame();
+        playGame();
     });
 
-    var gameDisplay = {
-        hideGameIntro: function () {
-            $('#easterEggIntro').addClass('hide');
-        }
+    var playGame = function () {
+        game.hideGameIntro();
+        console.log('Bring it on!');
     };
 
-    var gamePlay = {
-        startGame: function () {
-            gameDisplay.hideGameIntro();
-            console.log('Bring it on!');
+    var game = {
+        hideGameIntro: function () {
+            $('#easterEggIntro').addClass('hide');
         }
     };
 });
