@@ -33,12 +33,20 @@
     font-family: Arial, sans-serif;
 }
 
-#vehicle1 {
+.vehicles {
     height: 70px;
     width: 110px;
     background-color: #55ACEE;
     position: fixed;
     left: -110px;
+}
+
+#vehicle2 {
+    top: 200px;
+}
+
+#vehicle3 {
+    top: 400px;
 }
 /*End easter egg styles*/
 .clear {

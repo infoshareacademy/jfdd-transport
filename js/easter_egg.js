@@ -40,6 +40,8 @@ $(function () {
         },
         runBuses: function () {
             $('#vehicle1').animate({left: '50px'}, 250);
+            $('#vehicle2').animate({left: '50px'}, 250);
+            $('#vehicle3').animate({left: '50px'}, 250);
         }
     };
 });
