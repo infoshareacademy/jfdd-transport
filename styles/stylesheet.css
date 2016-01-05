@@ -187,7 +187,7 @@ main {
 
 
 #socialmedia .social-button-wrapper {
-    padding-left:136px;
+    padding-left:50px;
     transition: margin 0.3s ease;
 }
 
@@ -462,3 +462,75 @@ footer span {
     font-style: italic;
     color: red;
 }
+
+.fadeInUpLite {
+    -webkit-animation-name: fadeInUpLite;
+    animation-name: fadeInUpLite;
+}
+.transparent {
+    opacity: 0;
+    -moz-opacity: 0;
+}
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+
+
+/* Animation */
+
+@-webkit-keyframes fadeInUpLite {
+
+    0% {
+
+        opacity:0;
+
+        -webkit-transform:translate3d(0, 10%, 0);
+
+        transform:translate3d(0, 10%, 0)
+
+    }
+
+    100% {
+
+        opacity:1;
+
+        -webkit-transform:none;
+
+        transform:none
+
+    }
+
+}
+
+@keyframes fadeInUpLite {
+
+    0% {
+
+        opacity:0;
+
+        -webkit-transform:translate3d(0, 10%, 0);
+
+        -ms-transform:translate3d(0, 10%, 0);
+
+        transform:translate3d(0, 10%, 0)
+
+    }
+
+    100% {
+
+        opacity:1;
+
+        -webkit-transform:none;
+
+        -ms-transform:none;
+
+        transform:none
+
+    }
+
+}
+
