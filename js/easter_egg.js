@@ -37,7 +37,7 @@ $(function () {
 
     //GAMEPLAY
     var playGame = function () {
-        game.generateBuses(3);
+        game.generateBuses(3, [1, 2, 3]);
         $('.vehicles').each(function (index, element) {
             game.runABus(element, generateRandomValue(0, 2000), 350); //From 0 up to 2000 milliseconds \
             // so as not to have the user waiting too long for the buses to show up at the start \
@@ -52,12 +52,11 @@ $(function () {
         runABus: function (whichBus, whenToStartRunning, whereToGo) {
             var busTimer = window.setTimeout(function () {
                 $(whichBus).animate({left: whereToGo + 'px'}, generateRandomValue(800, 2000), function () {
-                    /*game.pickUpPassengers(whichBus);*/
                     if ($(whichBus).hasClass('inService')) {
-                        console.log('picking up passengers');
                         game.pickUpPassengers(whichBus);
                     } else {
                         $(whichBus).remove();
+                        game.rerunBus(whichBus);
                     }
                 });
                 //The fastest bus would take 800 milliseconds to arrive at the stop, \
@@ -68,12 +67,13 @@ $(function () {
         generateDestination: function () {
             console.log('Autobus jedzie do...');//todo
         },
-        generateBuses: function (howManyToGenerate) {
+        generateBuses: function (howManyToGenerate, indexes) {
             for (var i = 1; ; i++) {
                 var $bus = $('<div>');
                 var $doorLeft = $('<div>');
                 var $doorRight = $('<div>');
-                $bus.addClass('inService vehicles vehicle' + i);//A bus that's 'in service' can pick up passengers
+                $bus.addClass('inService vehicles vehicle' + indexes[i - 1]);
+                //A bus that's 'inService' can pick up passengers.
                 $doorLeft
                     .addClass('vehicleDoor vehicleDoorLeft')
                     .appendTo($bus);
@@ -81,7 +81,7 @@ $(function () {
                     .addClass('vehicleDoor vehicleDoorRight')
                     .appendTo($bus);
 
-                $($('p.infoBoard' + i))
+                $($('p.infoBoard' + indexes[i - 1]))
                     .after($bus);
                 howManyToGenerate--;
                 if (howManyToGenerate === 0) {
@@ -112,8 +112,16 @@ $(function () {
             var doorTimer = window.setTimeout(function () {
                 game.closeDoor(whichBus);
                 //todo Disable the onclick event handler
-                game.runABus(whichBus, 0, 600);
+                game.runABus(whichBus, 0, 1000);
             }, generateRandomValue(2500, 4000));
+        },
+        rerunBus: function(whichBusToRerun) {
+            var indexOfBusToRerun = whichBusToRerun.className;
+            indexOfBusToRerun = indexOfBusToRerun.slice(-1);
+
+            game.generateBuses(1, [indexOfBusToRerun]);
+            var busToRerun = document.getElementsByClassName('vehicle' + indexOfBusToRerun)[0];
+            game.runABus(busToRerun, generateRandomValue(500, 3000), 350);
         }
     };
 
