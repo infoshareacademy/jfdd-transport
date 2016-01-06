@@ -3,10 +3,15 @@ $(document).ready(function () {
         $('.intro').css('background-position-y', $(window).scrollTop() * -.7);
     });
 
-    $('a[href^=#]:not([href=#])').on('click', function () {
-        var element = $($(this).attr('href'));
-        console.log(element.offset().top);
-        $('html,body').animate({ scrollTop: element.offset().top },'normal', 'swing');
+
+    var $root = $('html, body');
+    $('a').click(function() {
+        var href = $.attr(this, 'href');
+        $root.animate({
+            scrollTop: $(href).offset().top
+        }, 600, function () {
+            window.location.hash = href;
+        });
         return false;
     });
 });
