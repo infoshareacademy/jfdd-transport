@@ -50,31 +50,41 @@ $(function () {
             $('#easterEggIntro').addClass('hide');
         },
         runABus: function (whichBus, whenToStartRunning, whereToGo) {
-            var busTimer = window.setTimeout(function () {
-                $(whichBus).animate({left: whereToGo + 'px'}, generateRandomValue(400, 2000), function () {
+            var drivingSpeed = generateRandomValue(400, 1500);
+            window.setTimeout(function () {
+                $(whichBus).animate({left: whereToGo + 'px'}, drivingSpeed, function () {
+                    console.log('drivingSpeed is ' + drivingSpeed); //TODO Remove after testing
                     if ($(whichBus).hasClass('inService')) {
                         game.generateDestination(whichBus);
                         game.pickUpPassengers(whichBus);
                     } else {
-                        /*game.removeDestination(whichBus);*/
                         $(whichBus).remove();
                         game.rerunBus(whichBus);
                     }
                 });
-                //The fastest bus would take 800 milliseconds to arrive at the stop, \
-                // and the slowest 2 seconds. When the animation ends, the bus arrives \
-                // at its stop and opens the door to let passengers in.
             }, whenToStartRunning);
         },
         generateDestination: function (whichBus) {
-            /*var indexOfBoard = whichBus.className;
-            indexOfBoard = indexOfBoard.slice(-1);*/
+            var destinations = ['110 Wrzeszcz PKP', '113 Orunia Gościnna', '116 Matemblewo',
+                '127 Jasień PKM', '130 Dworzec Główny', '136 Niedźwiednik', '139 Oliwa PKP',
+                '168 Kiełpino Górne', '179 Owczarnia', '199 Suchanino', '227 Chełm Cienista',
+                '262 Jaworzniaków', '283 Politechnika SKM', '315 Hucisko', '574 Otomin',
+                '512 Sobieszewo', '269 Osiedle Barniewice', '267 Bysewo', '212 Przegalina'];
             var boardIndex = game.getBusIndex(whichBus);
-            $('.infoBoard' + boardIndex).text('OBC');
+            var destination = function () {
+                var text = '';
+                if (generateRandomValue(0, 1)) { //There's fifty-fifty chance of the bus going to OBC. \
+                    // If parameter is 'true' - the destination is OBC.
+                    text += '4 Olivia Business Center';
+                } else {
+                    text += destinations[generateRandomValue(0, (destinations.length - 1))]; //Get a random \
+                    // destination from the destinations array
+                }
+                return text;
+            };
+            $('.infoBoard' + boardIndex).text(destination());
         },
-        removeDestination: function(whichBus) {
-            /*var indexOfBoard = whichBus.className;
-            indexOfBoard = indexOfBoard.slice(-1);*/
+        removeDestination: function (whichBus) {
             var boardIndex = game.getBusIndex(whichBus);
             $('.infoBoard' + boardIndex).text('');
         },
@@ -117,47 +127,47 @@ $(function () {
             thisBus.find('div.vehicleDoorRight.vehicleDoorOpen').removeClass('vehicleDoorOpen');
         },
         pickUpPassengers: function (whichBus) {
-            game.openDoorLeft(whichBus);
-            game.openDoorRight(whichBus);
+            //TODO Add onclick event handler
 
-            var $busWithOpenDoor = $('.vehicleDoorOpen');
-            $busWithOpenDoor.on('click', function () {
-                console.log('Można wsiadać.');//todo Enable clicking
-            });
+            var leftDoorDelay = generateRandomValue(200, 2000);
+            var rightDoorDelay = generateRandomValue(200, 2000);
 
-            var leftDoorTimeout = generateRandomValue(2000, 5000);
-            var rightDoorTimeout = generateRandomValue(2000, 5000);
-            var longerTimeout = Math.max(leftDoorTimeout, rightDoorTimeout) + 1000;
+            window.setTimeout(function () {
+                game.openDoorLeft(whichBus);
+            }, leftDoorDelay);
+            window.setTimeout(function () {
+                game.openDoorRight(whichBus);
+            }, rightDoorDelay);
 
-            var leftDoorTimer = window.setTimeout(function() {
+            var leftDoorOpeningTime = generateRandomValue(2000, 5000);
+            var rightDoorOpeningTime = generateRandomValue(2000, 5000);
+            var totalTimeAtBusStop = Math.max(leftDoorDelay + leftDoorOpeningTime,
+                    rightDoorDelay + rightDoorOpeningTime) + 1000;
+
+            window.setTimeout(function () {
                 game.closeDoorLeft(whichBus);
-            }, leftDoorTimeout);
-
-            var rightDoorTimer = window.setTimeout(function() {
+            }, leftDoorDelay + leftDoorOpeningTime);
+            window.setTimeout(function () {
                 game.closeDoorRight(whichBus);
-            }, rightDoorTimeout);
+            }, rightDoorDelay + rightDoorOpeningTime);
 
-            var longerTimer = window.setTimeout(function () {
-                //todo Disable the onclick event handler
+            window.setTimeout(function () {
+                //TODO Disable the onclick event handler
                 game.runABus(whichBus, 0, 1000);
                 $(whichBus).removeClass('inService');
                 game.removeDestination(whichBus);
-            }, longerTimeout);
+            }, totalTimeAtBusStop);
         },
-        rerunBus: function(whichBusToRerun) {
-            /*var indexOfBusToRerun = whichBusToRerun.className;
-            indexOfBusToRerun = indexOfBusToRerun.slice(-1);*/
+        rerunBus: function (whichBusToRerun) {
             var indexOfBusToRerun = game.getBusIndex(whichBusToRerun);
 
             game.generateBuses(1, [indexOfBusToRerun]);
             var busToRerun = document.getElementsByClassName('vehicle' + indexOfBusToRerun)[0];
             game.runABus(busToRerun, generateRandomValue(500, 3000), 350);
         },
-        getBusIndex: function(fromWhichBus) {
+        getBusIndex: function (fromWhichBus) {
             var busIndex = fromWhichBus.className;
-            console.log('przed ' + busIndex);
             busIndex = busIndex.slice(-1);
-            console.log(busIndex);
             return busIndex;
         }
     };
@@ -166,9 +176,4 @@ $(function () {
     function generateRandomValue(minValToGenerate, maxValToGenerate) {
         return Math.floor((Math.random() * (maxValToGenerate - minValToGenerate + 1)) + minValToGenerate);
     }
-
-    /*function getBusIndex(whichBus) {
-        var busIndex = whichBus.className;
-        busIndex = busIndex.slice(-1);
-    }*/
 });
