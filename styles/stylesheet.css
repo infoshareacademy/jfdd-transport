@@ -48,15 +48,15 @@ button {
 }
 
 
-/*.vehicles {*/
-    /*height: 50px;*/
-    /*width: 90px;*/
-    /*padding-left: 20px;*/
-    /*padding-right: 20px;*/
-    /*background-color: #55ACEE;*/
-    /*position: fixed;*/
-    /*left: -150px;*/
-/*}*/
+.vehicles {
+    height: 50px;
+    width: 90px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #55ACEE;
+    position: fixed;
+    left: -150px;
+}
 
 
 /*.vehicle1 {*/
