@@ -39,7 +39,7 @@ $(function () {
     var playGame = function () {
         game.generateBuses(3, [1, 2, 3]);
         $('.vehicles').each(function (index, element) {
-            game.runABus(element, generateRandomValue(0, 2000), 350); //From 0 up to 2000 milliseconds \
+            game.runABus(element, generateRandomValue(0, 1500), 350); //From 0 up to 1500 milliseconds \
             // so as not to have the user waiting too long for the buses to show up at the start \
             // of the game.
         });
@@ -53,7 +53,6 @@ $(function () {
             var drivingSpeed = generateRandomValue(400, 1500);
             window.setTimeout(function () {
                 $(whichBus).animate({left: whereToGo + 'px'}, drivingSpeed, function () {
-                    console.log('drivingSpeed is ' + drivingSpeed); //TODO Remove after testing
                     if ($(whichBus).hasClass('inService')) {
                         game.generateDestination(whichBus);
                         game.pickUpPassengers(whichBus);
@@ -89,11 +88,11 @@ $(function () {
             $('.infoBoard' + boardIndex).text('');
         },
         generateBuses: function (howManyToGenerate, indexes) {
-            for (var i = 1; ; i++) {
+            for (var i = 0; ; i++) {
                 var $bus = $('<div>');
                 var $doorLeft = $('<div>');
                 var $doorRight = $('<div>');
-                $bus.addClass('inService vehicles vehicle' + indexes[i - 1]);
+                $bus.addClass('inService vehicles vehicle' + indexes[i]);
                 //A bus that's 'inService' can pick up passengers.
                 $doorLeft
                     .addClass('vehicleDoor vehicleDoorLeft')
@@ -102,7 +101,7 @@ $(function () {
                     .addClass('vehicleDoor vehicleDoorRight')
                     .appendTo($bus);
 
-                $($('p.infoBoard' + indexes[i - 1]))
+                $($('p.infoBoard' + indexes[i]))
                     .after($bus);
                 howManyToGenerate--;
                 if (howManyToGenerate === 0) {
@@ -142,7 +141,7 @@ $(function () {
             var leftDoorOpeningTime = generateRandomValue(2000, 5000);
             var rightDoorOpeningTime = generateRandomValue(2000, 5000);
             var totalTimeAtBusStop = Math.max(leftDoorDelay + leftDoorOpeningTime,
-                    rightDoorDelay + rightDoorOpeningTime) + 1000;
+                    rightDoorDelay + rightDoorOpeningTime) + 500;
 
             window.setTimeout(function () {
                 game.closeDoorLeft(whichBus);
@@ -163,7 +162,7 @@ $(function () {
 
             game.generateBuses(1, [indexOfBusToRerun]);
             var busToRerun = document.getElementsByClassName('vehicle' + indexOfBusToRerun)[0];
-            game.runABus(busToRerun, generateRandomValue(500, 3000), 350);
+            game.runABus(busToRerun, generateRandomValue(100, 1000), 350);
         },
         getBusIndex: function (fromWhichBus) {
             var busIndex = fromWhichBus.className;
