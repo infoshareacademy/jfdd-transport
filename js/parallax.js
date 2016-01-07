@@ -1,6 +1,6 @@
 $(document).ready(function () {
     $(window).on('scroll', function () {
-        $('.intro').css('background-position-y', $(window).scrollTop() * -.7);
+        $('.intro').css('background-position-y', $(window).scrollTop() * -.4);
     });
 
 
