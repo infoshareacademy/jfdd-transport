@@ -247,6 +247,29 @@ main {
 
 /* end Functions */
 
+/*additional Functions*/
+.additionalFunctionsSection {
+    margin-top: 50px;
+    margin-left:auto;
+    margin-right: auto;
+    width: 1000px;
+}
+
+.additionalFunctionsSectionTopRow div{
+    float:left;
+    width: 310px;
+    margin-bottom: 30px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.additionalFunctionsSectionBottomRow div{
+    float:left;
+    width: 310px;
+    text-align: center;
+    margin-right: 10px;
+}
+
 /**
 * Contact form styles
 */
