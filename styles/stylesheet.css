@@ -7,23 +7,20 @@ border: solid 3px darkgrey;
 border-radius: 8px;
     position: relative;
     height: 400px;
-    /*padding: 5px;*/
+    margin: auto;
+    margin-top: 50px;
+    width: 90%;
 }
 
 #easterEgg2Intro {
+    margin: auto;
+    width: 90%;
+    background-color: white;
     font-size: 20px;
     text-align: justify;
-    /*padding: 5px;*/
 }
 #easterEgg2 h1, h4  {
     text-align: center;
-}
-
-#easterEgg2, #easterEgg2Intro {
-    margin: auto;
-    margin-top: 10px;
-    width: 90%;
-    background-color: white;
 }
 
 #closeEasterEgg2 {
@@ -45,6 +42,31 @@ button {
     height: 50px;
     width: 135px;
     padding: 10px;
+}
+
+.gameBackground {
+    background-color: #282828;
+}
+
+#gameScore {
+    color: white;
+    text-align: left;
+    margin-left: 5px;
+}
+
+#gameScore h5 {
+    color: white;
+    text-align: left;
+    margin-left: 5px;
+    line-height: 10px;
+}
+
+#gameScore p {
+    font-size: 15px;
+    color: white;
+    text-align: left;
+    margin-left: 5px;
+    line-height: 5px;
 }
 
 
