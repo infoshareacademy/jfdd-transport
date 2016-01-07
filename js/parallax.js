@@ -1,7 +1,9 @@
 $(document).ready(function () {
-    $(window).on('scroll', function () {
-        $('.intro').css('background-position-y', $(window).scrollTop() * -.4);
-    });
+    function setBackgroundPosition() {
+        $('.intro').css('background-position-y', 100 + $(window).scrollTop() * -.4);
+    }
+
+    $(window).on('load scroll', setBackgroundPosition);
 
 
     var $root = $('html, body');
