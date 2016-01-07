@@ -59,30 +59,30 @@ button {
 }
 
 
-/*.vehicle1 {*/
-    /*top: 200px;*/
-/*}*/
+.vehicle1 {
+    top: 200px;
+}
 
-/*.vehicle2 {*/
-    /*top: 370px;*/
-/*}*/
+.vehicle2 {
+    top: 370px;
+}
 
-/*.vehicle3 {*/
-    /*top: 540px;*/
-/*}*/
+.vehicle3 {
+    top: 540px;
+}
 
-/*.direction {*/
-    /*background-color: black;*/
-    /*color: orange;*/
-    /*font-family: "Courier New", monospace;*/
-    /*font-size: smaller;*/
-    /*width: 80px;*/
-    /*height: 30px;*/
-    /*text-overflow: ellipsis;*/
-    /*vertical-align: middle;*/
-    /*position: absolute;*/
-    /*left: 400px;*/
-/*}*/
+.direction {
+    background-color: black;
+    color: orange;
+    font-family: "Courier New", monospace;
+    font-size: smaller;
+    width: 80px;
+    height: 30px;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    position: absolute;
+    left: 400px;
+}
 
 /*End easter egg styles*/
 
