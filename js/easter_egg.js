@@ -53,8 +53,10 @@ $(function () {
             var busTimer = window.setTimeout(function () {
                 $(whichBus).animate({left: whereToGo + 'px'}, generateRandomValue(400, 2000), function () {
                     if ($(whichBus).hasClass('inService')) {
+                        game.generateDestination(whichBus);
                         game.pickUpPassengers(whichBus);
                     } else {
+                        /*game.removeDestination(whichBus);*/
                         $(whichBus).remove();
                         game.rerunBus(whichBus);
                     }
@@ -64,8 +66,17 @@ $(function () {
                 // at its stop and opens the door to let passengers in.
             }, whenToStartRunning);
         },
-        generateDestination: function () {
-            console.log('Autobus jedzie do...');//todo
+        generateDestination: function (whichBus) {
+            /*var indexOfBoard = whichBus.className;
+            indexOfBoard = indexOfBoard.slice(-1);*/
+            var boardIndex = game.getBusIndex(whichBus);
+            $('.infoBoard' + boardIndex).text('OBC');
+        },
+        removeDestination: function(whichBus) {
+            /*var indexOfBoard = whichBus.className;
+            indexOfBoard = indexOfBoard.slice(-1);*/
+            var boardIndex = game.getBusIndex(whichBus);
+            $('.infoBoard' + boardIndex).text('');
         },
         generateBuses: function (howManyToGenerate, indexes) {
             for (var i = 1; ; i++) {
@@ -116,7 +127,6 @@ $(function () {
 
             var leftDoorTimeout = generateRandomValue(2000, 5000);
             var rightDoorTimeout = generateRandomValue(2000, 5000);
-            console.log('lewe: ' + leftDoorTimeout + ' prawe: ' + rightDoorTimeout);
             var longerTimeout = Math.max(leftDoorTimeout, rightDoorTimeout) + 1000;
 
             var leftDoorTimer = window.setTimeout(function() {
@@ -131,20 +141,34 @@ $(function () {
                 //todo Disable the onclick event handler
                 game.runABus(whichBus, 0, 1000);
                 $(whichBus).removeClass('inService');
+                game.removeDestination(whichBus);
             }, longerTimeout);
         },
         rerunBus: function(whichBusToRerun) {
-            var indexOfBusToRerun = whichBusToRerun.className;
-            indexOfBusToRerun = indexOfBusToRerun.slice(-1);
+            /*var indexOfBusToRerun = whichBusToRerun.className;
+            indexOfBusToRerun = indexOfBusToRerun.slice(-1);*/
+            var indexOfBusToRerun = game.getBusIndex(whichBusToRerun);
 
             game.generateBuses(1, [indexOfBusToRerun]);
             var busToRerun = document.getElementsByClassName('vehicle' + indexOfBusToRerun)[0];
             game.runABus(busToRerun, generateRandomValue(500, 3000), 350);
+        },
+        getBusIndex: function(fromWhichBus) {
+            var busIndex = fromWhichBus.className;
+            console.log('przed ' + busIndex);
+            busIndex = busIndex.slice(-1);
+            console.log(busIndex);
+            return busIndex;
         }
     };
 
-    //Helper function
+    //Helper functions
     function generateRandomValue(minValToGenerate, maxValToGenerate) {
         return Math.floor((Math.random() * (maxValToGenerate - minValToGenerate + 1)) + minValToGenerate);
     }
+
+    /*function getBusIndex(whichBus) {
+        var busIndex = whichBus.className;
+        busIndex = busIndex.slice(-1);
+    }*/
 });
