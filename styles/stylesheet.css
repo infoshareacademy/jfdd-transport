@@ -70,7 +70,8 @@ body {
 }
 
 .more_info_button {
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 25vh;
     background-color: rgba(250, 250, 250, 0.5);
     width: 220px;
@@ -99,11 +100,10 @@ body {
 
 .intro {
     background: url("../images/foto_background1.jpg");
+    background-repeat: no-repeat;
     height: 85vh;
-    background-size: cover;
-    -webkit-box-shadow: inset 0 -31px 40px -5px rgba(43, 39, 34, 0.60);
-    -moz-box-shadow: inset 0 -31px 40px -5px rgba(43, 39, 34, 0.60);
-    box-shadow: inset 0 -31px 40px -5px rgba(43, 39, 34, 0.60);
+    background-size: 2000px;
+    background-position: center top;
 }
 
 .introText {
@@ -425,6 +425,7 @@ input:focus {
     -moz-filter: invert(100%);
     -o-filter: invert(100%);
     -ms-filter: invert(100%);
+    filter: invert(100%);
 }
 
 .footer_style p {
