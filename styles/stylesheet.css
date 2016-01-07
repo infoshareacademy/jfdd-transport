@@ -17,11 +17,13 @@ body  {
 
 .navigationBar {
     height: 100px;
+    width: 100%;
     -webkit-box-shadow: 0 31px 40px 8px rgba(0,0,0,0.75);
     -moz-box-shadow: 0 31px 40px 8px rgba(0,0,0,0.75);
     box-shadow: 0 31px 40px 8px rgba(0,0,0,0.75);
     Z-index: 2;
-    position: relative;
+    position: fixed;
+    background-color: white;
 }
 
 .navigationBar  nav  ul {
@@ -78,6 +80,7 @@ body  {
     height: 80px;
     border: 2px solid #0f1214;
     border-radius: 7px;
+    position: absolute;
 }
 
 
@@ -128,7 +131,7 @@ body  {
     animation-timing-function: ease-in;
     animation-duration: 0.8s;
 
-    margin-top: 15vh;
+    margin-top: 65vh;
     background-color: rgba(255,255,255,0.4);
     color: black;
     letter-spacing: 3px;
@@ -137,7 +140,7 @@ body  {
     margin-bottom: 0;
     padding-bottom: 20px;
     padding-top: 20px;
-
+    width: 100%;
 }
 
 @-moz-keyframes dropIntro {
@@ -436,7 +439,6 @@ input:focus {
 /* New paragraph for testers */
 .testersParagraph {
     height: 100px;
-    /*font-family: Michroma, sans-serif;*/
     padding-top:50px;
     text-align: center;
     margin-bottom: 0;
