@@ -73,18 +73,17 @@ body  {
 
 
 .more_info_button {
-    margin:auto;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 25vh;
     background-color: rgba(250, 250, 250, 0.5);
     width: 220px;
     height: 80px;
     border: 2px solid #0f1214;
     border-radius: 7px;
-    position: absolute;
 }
 
-
-.more_info_button a{
+.more_info_button a {
     color: #0f1214;
     text-decoration: none;
     font-size: 14px;
@@ -102,17 +101,12 @@ body  {
     transition: background-color 1000ms ease-out;
 }
 
-
-
 .intro {
-    z-index: 1;
-    background: url("../images/foto_background1.jpg") fixed;
-    height:85vh;
-    background-size: cover;
-    position: relative;
-    -webkit-box-shadow: inset 0 -31px 40px -5px rgba(43,39,34,0.60);
-    -moz-box-shadow: inset 0 -31px 40px -5px rgba(43,39,34,0.60);
-    box-shadow: inset 0 -31px 40px -5px rgba(43,39,34,0.60);
+    background: url("../images/foto_background1.jpg");
+    background-repeat: no-repeat;
+    height: 85vh;
+    background-size: 2000px;
+    background-position: center top;
 }
 
 .introText {
@@ -151,6 +145,7 @@ body  {
         -moz-transform: translateY(0);
     }
 }
+
 @-webkit-keyframes dropIntro {
     0% {
         -webkit-transform: translateY(40px);
@@ -159,6 +154,7 @@ body  {
         -webkit-transform: translateY(0);
     }
 }
+
 @keyframes dropIntro {
     0% {
         transform: translateY(40px);
@@ -179,13 +175,18 @@ main {
     position: relative;
 }
 
-
 #socialmedia {
     position: fixed;
     right: -52px;
     top: 50%;
     margin-top: -102px;
     z-index: 100;
+}
+
+
+#socialmedia .social-button-wrapper {
+    padding-left:50px;
+    transition: margin 0.3s ease;
 }
 
 #socialmedia .social-button {
@@ -196,7 +197,6 @@ main {
     background-size: 64px 64px;
     border-radius: 3px;
     background: no-repeat center center;
-    transition: margin-left 0.3s ease;
 }
 
 #socialmedia .social-button-facebook {
@@ -214,35 +214,40 @@ main {
     background-color: #55ACEE;
 }
 
-#socialmedia .social-button:hover {
+#socialmedia .social-button-wrapper:hover {
     margin-left: -52px;
 }
 
 /* Functions */
 #functionsSection {
     padding-top: 50px;
-    margin-top: 28px;
     margin-left: auto;
     margin-right: auto;
     width: 1000px;
 }
+
 .function {
     opacity:0.8;
     text-align: center;
 }
+
 .function:hover {
     opacity: 1.0;
 }
+
 .function1 {
     float: left;
 }
+
 .function2, .function3 {
     float: left;
     margin-left: 70px;
 }
+
 .function p {
     font-size: smaller;
 }
+
 /* end Functions */
 
 /**
@@ -261,37 +266,37 @@ main {
 }
 
 #form-div {
-    background-color:rgba(120,120,120,0.4) ;
-    padding-left:35px;
-    padding-right:35px;
-    padding-bottom:50px;
+    background-color: rgba(120, 120, 120, 0.4);
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 50px;
     width: 450px;
     float: left;
     left: 50%;
-    margin-top:30px;
+    margin-top: 30px;
     -moz-border-radius: 7px;
     -webkit-border-radius: 7px;
 }
 
 .feedback-input {
-    color:darkgrey;
+    color: darkgrey;
     font-family: Jura, sans-serif;
-    font-weight:500;
+    font-weight: 500;
     font-size: 18px;
     border-radius: 0;
     line-height: 22px;
     background-color: #fbfbfb;
     padding: 13px 13px 13px 54px;
     margin-bottom: 10px;
-    width:100%;
+    width: 100%;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
     box-sizing: border-box;
-    border: 3px solid rgba(0,0,0,0);
+    border: 3px solid rgba(0, 0, 0, 0);
 }
 
-.feedback-input:focus{
+.feedback-input:focus {
     background: #fff;
     box-shadow: 0;
     border: 3px solid #282828;
@@ -300,9 +305,9 @@ main {
     padding: 13px 13px 13px 54px;
 }
 
-.focused{
-    color:#30aed6;
-    border:#30aed6 solid 3px;
+.focused {
+    color: #30aed6;
+    border: #30aed6 solid 3px;
 }
 
 #formField {
@@ -311,35 +316,35 @@ main {
 }
 
 /* Icons ---------------------------------- */
-#name{
+#name {
     background-image: url("../images/1450052825_icon-ios7-person.svg");
     background-size: 30px 30px;
     background-position: 11px 8px; /**/
     background-repeat: no-repeat;
 }
 
-#name:focus{
+#name:focus {
     background-image: url("../images/1450052825_icon-ios7-person.svg");
     background-size: 30px 30px;
     background-position: 11px 8px;
     background-repeat: no-repeat;
 }
 
-#email{
+#email {
     background-image: url("../images/1450072401_Mail.svg");
     background-size: 30px 30px;
     background-position: 11px 8px;
     background-repeat: no-repeat;
 }
 
-#email:focus{
+#email:focus {
     background-image: url("../images/1450072401_Mail.svg");
     background-size: 30px 30px;
     background-position: 11px 8px;
     background-repeat: no-repeat;
 }
 
-#phone{
+#phone {
     background-image: url("../images/1450052574_phone.svg");
     background-size: 30px 30px;
     background-position: 11px 8px;
@@ -348,29 +353,29 @@ main {
 
 input:hover,
 input:focus {
-    background-color:white;
+    background-color: white;
 }
 
-#button-gray{
+#button-gray {
     font-family: Jura, sans-serif;
-    float:left; /**/
+    float: left; /**/
     width: 100%; /**/
     border: #282828 solid 4px;
-    cursor:pointer; /* check*/
+    cursor: pointer; /* check*/
     background-color: #282828;
-    color:white;
-    font-size:24px;
-    padding-top:22px;
-    padding-bottom:22px;
+    color: white;
+    font-size: 24px;
+    padding-top: 22px;
+    padding-bottom: 22px;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
-    margin-top:-4px;
-    font-weight:700;
+    margin-top: -4px;
+    font-weight: 700;
 }
 
-#button-gray:hover{
-    background-color: rgba(0,0,0,0);
+#button-gray:hover {
+    background-color: rgba(0, 0, 0, 0);
     color: #282828;
 }
 
@@ -385,13 +390,13 @@ input:focus {
     transition: .3s ease;
 }
 
-.submit:hover .ease{
-    width:100%;
-    background-color:white;
+.submit:hover .ease {
+    width: 100%;
+    background-color: white;
 }
 
 @media only screen and (max-width: 580px) {
-    #form-div{
+    #form-div {
         left: 3%;
         margin-right: 3%;
         width: 88%;
@@ -404,7 +409,6 @@ input:focus {
 /*
 * end of contact form styles
 */
-
 
 .footer_style {
     margin-top: 60px;
@@ -426,9 +430,10 @@ input:focus {
     -moz-filter: invert(100%);
     -o-filter: invert(100%);
     -ms-filter: invert(100%);
+    filter: invert(100%);
 }
 
-.footer_style p{
+.footer_style p {
     padding-top: 50px;
     text-align: center;
     color: white;
@@ -436,16 +441,24 @@ input:focus {
     font-size: 15px;
     font-weight: normal;
 }
+
+footer span {
+    font-family: Arial sans-serif;
+}
+
 /* New paragraph for testers */
 .testersParagraph {
     height: 100px;
+    padding-top: 50px;
     padding-top:50px;
     text-align: center;
     margin-bottom: 0;
 }
+
 .testersParagraph hr {
     width: 684px;
 }
+
 /* end New paragraph tor testers */
 
 .validationTip {
