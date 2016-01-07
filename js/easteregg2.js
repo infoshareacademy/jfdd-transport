@@ -27,71 +27,47 @@ $(document).ready(function () {
 
     };
 
-    var game =  {
-            hideGameIntro: function () {
-                $('#easterEggIntro2').addClass('hide');
-            },
-            runABus: function (whichBus, whenToStartRunning, whereToGo) {
-                var busTimer = window.setTimeout(function () {
-                    $(whichBus).animate({left: whereToGo + 'px'}, generateRandomValue(400, 2000), function () {
-                        if ($(whichBus).hasClass('inService')) {
-                            game.generateDestination(whichBus);
-                            game.pickUpPassengers(whichBus);
-                        } else {
-                            /*game.removeDestination(whichBus);*/
-                            $(whichBus).remove();
-                            game.rerunBus(whichBus);
+                var game = {
+                    hideGameIntro: function () {
+                        $('#easterEgg2Intro').addClass('hide');
+                    },
+
+                    generateBuses: function (howManyToGenerate, indexes) {
+                        for (var i = 1; ; i++) {
+                            var $bus = $('<div>');
+                            $bus.addClass('vehicles vehicle' + indexes[i - 1]);
+
                         }
+                    },
 
-                    })
-                    });
+                    rerunBus: function(whichBusToRerun) {
+                        /*var indexOfBusToRerun = whichBusToRerun.className;
+                         indexOfBusToRerun = indexOfBusToRerun.slice(-1);*/
+                        var indexOfBusToRerun = game.getBusIndex(whichBusToRerun);
 
-//// The fastest bus would take 800 milliseconds to arrive at the stop, \
-////            // and the slowest 2 seconds. When the animation ends, the bus arrives \
-////            // at its stop and opens the door to let passengers in.
-//
-//    generateDestination: function (whichBus) {
-//        /*var indexOfBoard = whichBus.className;
-//         indexOfBoard = indexOfBoard.slice(-1);*/
-//        var boardIndex = game.getBusIndex(whichBus);
-//        $('.infoBoard' + boardIndex).text('OBC');
-//    },
-//    removeDestination: function (whichBus) {
-//        /*var indexOfBoard = whichBus.className;
-//         indexOfBoard = indexOfBoard.slice(-1);*/
-//        var boardIndex = game.getBusIndex(whichBus);
-//        $('.infoBoard' + boardIndex).text('');
-//    },
-//    generateBuses: function (howManyToGenerate, indexes) {
-//        for (var i = 1; ; i++) {
-//            var $bus = $('<div>');
-//            var $doorLeft = $('<div>');
-//            var $doorRight = $('<div>');
-//            $bus.addClass('inService vehicles vehicle' + indexes[i - 1]);
-//            //A bus that's 'inService' can pick up passengers.
-//            $doorLeft
-//                .addClass('vehicleDoor vehicleDoorLeft')
-//                .appendTo($bus);
-//            $doorRight
-//                .addClass('vehicleDoor vehicleDoorRight')
-//                .appendTo($bus);
-//
-//            $($('p.infoBoard' + indexes[i - 1]))
-//                .after($bus);
-//            howManyToGenerate--;
-//            if (howManyToGenerate === 0) {
-//                break;
-//            }
-//        }
-//    },
-//}
-//
-////Helper functions
-//function generateRandomValue(minValToGenerate, maxValToGenerate) {
-//    return Math.floor((Math.random() * (maxValToGenerate - minValToGenerate + 1)) + minValToGenerate);
-//}
+                        game.generateBuses(1, [indexOfBusToRerun]);
+                        var busToRerun = document.getElementsByClassName('vehicle' + indexOfBusToRerun)[0];
+                        game.runABus(busToRerun, generateRandomValue(500, 3000), 350);
+                    },
+                    getBusIndex: function(fromWhichBus) {
+                        var busIndex = fromWhichBus.className;
+                        console.log('przed ' + busIndex);
+                        busIndex = busIndex.slice(-1);
+                        console.log(busIndex);
+                        return busIndex;
+                    }
+                };
 
+                //Helper functions
+                function generateRandomValue(minValToGenerate, maxValToGenerate) {
+                    return Math.floor((Math.random() * (maxValToGenerate - minValToGenerate + 1)) + minValToGenerate);
+                }
 
+                /*function getBusIndex(whichBus) {
+                 var busIndex = whichBus.className;
+                 busIndex = busIndex.slice(-1);
+                 }*/
+            });
 
 
 
