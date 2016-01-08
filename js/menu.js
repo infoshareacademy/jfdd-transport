@@ -2,15 +2,15 @@
  * Created by anna on 08.01.16.
  */
 $(function(){
-    $('#navigationBar').data('size','big');
+    $('.navigationBar').data('size','big');
 });
 
 $(window).scroll(function(){
-    var $nav = $('#navigationBar');
+    var $nav = $('.navigationBar');
     if ($('body').scrollTop() > 0) {
         if ($nav.data('size') == 'big') {
             $nav.data('size','small').stop().animate({
-                height:'40px'
+                height:'80px'
             }, 600);
         }
     } else {
