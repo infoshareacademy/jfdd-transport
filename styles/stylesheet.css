@@ -179,9 +179,8 @@ main {
     z-index: 100;
 }
 
-
 #socialmedia .social-button-wrapper {
-    padding-left:50px;
+    padding-left: 50px;
     transition: margin 0.3s ease;
 }
 
@@ -194,7 +193,6 @@ main {
     border-radius: 3px;
     background: no-repeat center center;
 }
-
 
 #socialmedia .social-button-facebook {
     background-image: url('../images/icon-socialmedia-facebook.png');
@@ -250,14 +248,14 @@ main {
 /*additional Functions*/
 .additionalFunctionsSection {
     margin-top: 50px;
-    margin-left:auto;
+    margin-left: auto;
     margin-right: auto;
     width: 1000px;
     font-size: 20px;
 }
 
-.additionalFunctionsSection div{
-    float:left;
+.additionalFunctionsSection div {
+    float: left;
     width: 310px;
     margin-bottom: 20px;
     text-align: center;
@@ -265,20 +263,20 @@ main {
 }
 
 .additionalFunction img {
-    -moz-transition:all 0.4s ease;
-    -webkit-transition:all 0.4s ease;
-    -ms-transition:all 0.4s ease;
-    -o-transition:all 0.4s ease;
-    transition:all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
 }
 
 .additionalFunction:hover img {
-    -moz-transform:scale(1.15);
-    -webkit-transform:scale(1.15);
-    -o-transform:scale(1.15);
-    -ms-transform:scale(1.15);
-    transform:scale(1.15);
-    z-index:2;
+    -moz-transform: scale(1.15);
+    -webkit-transform: scale(1.15);
+    -o-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    transform: scale(1.15);
+    z-index: 2;
 }
 
 /**
