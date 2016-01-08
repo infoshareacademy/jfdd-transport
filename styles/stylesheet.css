@@ -552,3 +552,9 @@ footer span {
 .hide {
     visibility: hidden;
 }
+.cookieInfo {
+    text-align: center;
+    padding:10px;
+    background-color: lightblue;
+    border: 2px solid #30aed6;
+}

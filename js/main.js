@@ -1,14 +1,24 @@
 $(document).ready(function () {
 
-    Cookies.set('displayCookieInfo', 'true');
+    var hideCookieInfo = function () {
+        $('.cookieInfo').hide();
+    }
+
     console.log(Cookies.get('displayCookieInfo'));
-    if (Cookies.get('displayCookieInfo')) {
-        displayCookieInfo();
+    if (Cookies.get('displayCookieInfo') === undefined) {
+        Cookies.set('displayCookieInfo', true);
+
+
+    } else if (Cookies.get('displayCookieInfo') == "false") {
+        hideCookieInfo();
     }
 
-    var displayCookieInfo = function () {
 
-    }
+    $('.cookieInfo').click(function () {
+        $('.cookieInfo').hide();
+        Cookies.set('displayCookieInfo', false  );
+        console.log(Cookies.get('displayCookieInfo'));
+    });
     /**
      * Minimum time that must take a user from initiating the form completion
      * to the form submission in order for the submission to completed.
