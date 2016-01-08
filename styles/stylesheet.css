@@ -98,6 +98,10 @@
 .infoBoard3 {
     top: 465px;
 }
+
+#currentScore {
+    background-color: brown;
+}
 /*End easter egg styles*/
 .clear {
     clear: both;
