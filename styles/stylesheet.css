@@ -1,3 +1,104 @@
+/*Start easter egg styles*/
+.hide {
+    display: none;
+}
+
+#easterEgg, #easterEggIntro {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: darkorange;
+    z-index: 101;/*Social media buttons use '100'*/
+}
+
+#closeEasterEgg {
+    float: right;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    color: white;
+    text-align: center;
+    background: red;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#easterEggIntro {
+    color: white;
+    text-shadow: black 0 0 0.2em;
+    font-family: Arial, sans-serif;
+    z-index: 102;
+}
+
+.vehicles {
+    height: 70px;
+    width: 110px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #55ACEE;
+    position: fixed;
+    left: -150px;
+}
+
+.vehicle1 {
+    top: 200px;
+}
+
+.vehicle2 {
+    top: 370px;
+}
+
+.vehicle3 {
+    top: 540px;
+}
+
+.vehicleDoor {
+    height: 50px;
+    width: 20px;
+    background-color: #282828;
+}
+
+.vehicleDoorLeft {
+    float: left;
+}
+
+.vehicleDoorRight {
+    float: right;
+}
+
+.vehicleDoorOpen {
+    background-color: #fafafa;
+}
+
+.infoBoards {
+    background-color: black;
+    color: orange;
+    font-family: "Courier New", monospace;
+    font-size: smaller;
+    width: 200px;
+    height: 2.5em;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    position: absolute;
+    left: 400px;
+}
+
+.infoBoard1 {
+    top: 125px;
+}
+
+.infoBoard2 {
+    top: 295px;
+}
+
+.infoBoard3 {
+    top: 465px;
+}
+/*End easter egg styles*/
 .clear {
     clear: both;
 }
