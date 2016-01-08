@@ -75,9 +75,11 @@ $(function () {
                 if (generateRandomValue(0, 1)) { //There's fifty-fifty chance of the bus going to OBC. \
                     // If parameter is 'true' - the destination is OBC.
                     text += '4 Olivia Business Center';
+                    whichBus.setAttribute('data-destination', 'obc');
                 } else {
                     text += destinations[generateRandomValue(0, (destinations.length - 1))]; //Get a random \
                     // destination from the destinations array
+                    whichBus.removeAttribute('data-destination');
                 }
                 return text;
             };
@@ -86,6 +88,7 @@ $(function () {
         removeDestination: function (whichBus) {
             var boardIndex = game.getBusIndex(whichBus);
             $('.infoBoard' + boardIndex).text('');
+            $(whichBus).removeAttr('data-destination');
         },
         generateBuses: function (howManyToGenerate, indexes) {
             for (var i = 0; ; i++) {
@@ -126,7 +129,18 @@ $(function () {
             thisBus.find('div.vehicleDoorRight.vehicleDoorOpen').removeClass('vehicleDoorOpen');
         },
         pickUpPassengers: function (whichBus) {
-            //TODO Add onclick event handler
+            var thisBus = $(whichBus);
+            var goesToObc = (thisBus.attr('data-destination') === 'obc');
+            var clickCounterForObc = 0;
+
+            thisBus.on('click dblclick', function () {
+                if (goesToObc) {
+                    clickCounterForObc += 1;
+                    console.log('Pasażerowie do obc' + clickCounterForObc);
+                } else {
+                    console.log('Pasażerowie gdzieś indziej' + clickCounterForObc);
+                }
+            });
 
             var leftDoorDelay = generateRandomValue(200, 2000);
             var rightDoorDelay = generateRandomValue(200, 2000);
@@ -138,8 +152,8 @@ $(function () {
                 game.openDoorRight(whichBus);
             }, rightDoorDelay);
 
-            var leftDoorOpeningTime = generateRandomValue(2000, 5000);
-            var rightDoorOpeningTime = generateRandomValue(2000, 5000);
+            var leftDoorOpeningTime = generateRandomValue(15000, 15000);//Original value 2000, 5000. Setting a diff val for testing//todo change back
+            var rightDoorOpeningTime = generateRandomValue(15000, 15000);//Original value 2000, 5000. Setting a diff val for testing//todo change back
             var totalTimeAtBusStop = Math.max(leftDoorDelay + leftDoorOpeningTime,
                     rightDoorDelay + rightDoorOpeningTime) + 500;
 
