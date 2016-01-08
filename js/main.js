@@ -1,24 +1,4 @@
 $(document).ready(function () {
-
-    var hideCookieInfo = function () {
-        $('.cookieInfo').hide();
-    }
-
-    console.log(Cookies.get('displayCookieInfo'));
-    if (Cookies.get('displayCookieInfo') === undefined) {
-        Cookies.set('displayCookieInfo', true);
-
-
-    } else if (Cookies.get('displayCookieInfo') == "false") {
-        hideCookieInfo();
-    }
-
-
-    $('.cookieInfo').click(function () {
-        $('.cookieInfo').hide();
-        Cookies.set('displayCookieInfo', false  );
-        console.log(Cookies.get('displayCookieInfo'));
-    });
     /**
      * Minimum time that must take a user from initiating the form completion
      * to the form submission in order for the submission to completed.
@@ -74,4 +54,32 @@ $(document).ready(function () {
             }
         });
     });
+
+    /**
+     * Handling cookies to display information about cookies ;)
+     */
+    var $elem = jQuery('<div/>', { 'class': "cookieInfo" }).append($('<p/>', {text : 'Ciastka!\nddd'}));
+    $('body').prepend($elem);
+    var hideCookieInfo = function () {
+        $('.cookieInfo').hide();
+    }
+
+    if (Cookies.get('displayCookieInfo') === undefined) {
+        Cookies.set('displayCookieInfo', true);
+    } else if (Cookies.get('displayCookieInfo') == "false") {
+        hideCookieInfo();
+    }
+
+    $('.cookieInfo').click(function () {
+        $('.cookieInfo').hide();
+        Cookies.set('displayCookieInfo', false  );
+    });
+
 });
+
+/*
+* Ciastka!
+
+ Strona korzysta z plików cookies w celu realizacji usług i zgodnie z Polityką Plików Cookies. Możesz określić warunki przechowywania lub dostępu do plików cookies w Twojej przeglądarce.
+*
+* */
