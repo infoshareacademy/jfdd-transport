@@ -1,6 +1,7 @@
 $(function () {
     //EVENT HANDLERS to detect the key combination which opens the easter egg ('f' + '4'):
     var $easterEgg = $('#easterEgg');
+    var gameover = false;
 
     var pressedKeys = {
         f: false,
@@ -25,6 +26,8 @@ $(function () {
         pressedKeys[4] = false;
     });
 
+    var gameTimeouts = [];
+
     //EVENT HANDLERS to start and end the easter egg game:
     $('#startEasterEggGame').on('click', function () {
         game.hideGameIntro();
@@ -38,8 +41,10 @@ $(function () {
     //GAMEPLAY
     var playGame = function () {
         //TODO turn off the $('#startEasterEggGame') event handler
+        gameover = false;
+        gameTimeouts = [];
 
-        game.startGameCountdown(15); //Passing in number of seconds
+        game.startGameCountdown(30); //Passing in number of seconds
 
         game.generateBuses(3, [1, 2, 3]);
         $('.vehicles').each(function (index, element) {
@@ -49,6 +54,15 @@ $(function () {
         });
 
         game.countClicks();
+    };
+
+    var stopGame = function () {
+        $('#easterEgg').off(); //Turns off the handler for counting clicks.
+        gameover = true;
+
+        console.log(gameTimeouts);
+        game.clearGameTimeouts();
+
     };
 
     var game = {
@@ -61,6 +75,7 @@ $(function () {
                 $gameCountdownEl.text(seconds);
                 if (seconds < 1) {
                     clearInterval(startCounter);
+                    stopGame();
                 }
             };
 
@@ -90,8 +105,14 @@ $(function () {
             $('#easterEggIntro').addClass('hide');
         },
         runABus: function (whichBus, whenToStartRunning, whereToGo) {
+            if(gameover) {
+                return;
+            }
+
             var drivingSpeed = generateRandomValue(400, 1500);
-            window.setTimeout(function () {
+            //Record timeout ID to the gameTimeouts array so that the timeout can be\
+            //be stopped at the end of the game. (Same for all the timeouts).
+            gameTimeouts[0] = window.setTimeout(function () {
                 $(whichBus).animate({left: whereToGo + 'px'}, drivingSpeed, function () {
                     if ($(whichBus).hasClass('inService')) {
                         game.generateDestination(whichBus);
@@ -170,29 +191,33 @@ $(function () {
             thisBus.find('div.vehicleDoorRight.vehicleDoorOpen').removeClass('vehicleDoorOpen');
         },
         pickUpPassengers: function (whichBus) {
+            if(gameover) {
+                return;
+            }
+
             var leftDoorDelay = generateRandomValue(200, 2000);
             var rightDoorDelay = generateRandomValue(200, 2000);
 
-            window.setTimeout(function () {
+            gameTimeouts[1] = window.setTimeout(function () {
                 game.openDoorLeft(whichBus);
             }, leftDoorDelay);
-            window.setTimeout(function () {
+            gameTimeouts[2] = window.setTimeout(function () {
                 game.openDoorRight(whichBus);
             }, rightDoorDelay);
 
-            var leftDoorOpeningTime = generateRandomValue(15000, 15000);//Original value 2000, 5000. Setting a diff val for testing//todo change back
-            var rightDoorOpeningTime = generateRandomValue(15000, 15000);//Original value 2000, 5000. Setting a diff val for testing//todo change back
+            var leftDoorOpeningTime = generateRandomValue(2000, 5000);
+            var rightDoorOpeningTime = generateRandomValue(2000, 5000);
             var totalTimeAtBusStop = Math.max(leftDoorDelay + leftDoorOpeningTime,
                     rightDoorDelay + rightDoorOpeningTime) + 500;
 
-            window.setTimeout(function () {
+            gameTimeouts[3] = window.setTimeout(function () {
                 game.closeDoorLeft(whichBus);
             }, leftDoorDelay + leftDoorOpeningTime);
-            window.setTimeout(function () {
+            gameTimeouts[4] = window.setTimeout(function () {
                 game.closeDoorRight(whichBus);
             }, rightDoorDelay + rightDoorOpeningTime);
 
-            window.setTimeout(function () {
+            gameTimeouts[5] = window.setTimeout(function () {
                 //TODO Disable the onclick event handler
                 game.runABus(whichBus, 0, 1000);
                 $(whichBus).removeClass('inService');
@@ -200,6 +225,10 @@ $(function () {
             }, totalTimeAtBusStop);
         },
         rerunBus: function (whichBusToRerun) {
+            if(gameover) {
+                return;
+            }
+
             var indexOfBusToRerun = game.getBusIndex(whichBusToRerun);
 
             game.generateBuses(1, [indexOfBusToRerun]);
@@ -210,6 +239,12 @@ $(function () {
             var busIndex = fromWhichBus.className;
             busIndex = busIndex.slice(-1);
             return busIndex;
+        },
+        clearGameTimeouts: function() {
+            for (var i = 0; i < gameTimeouts.length; i++) {
+                clearTimeout(gameTimeouts[i]);
+                console.log('clearing timeout ' + gameTimeouts[i]);
+            }
         }
     };
 
