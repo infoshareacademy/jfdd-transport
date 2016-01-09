@@ -35,13 +35,22 @@
 }
 
 .vehicles {
-    height: 70px;
-    width: 110px;
-    padding-left: 20px;
-    padding-right: 20px;
-    background-color: #55ACEE;
+    height: 96px;
+    width: 281px;
     position: fixed;
-    left: -150px;
+    left: -281px;
+    background-color: #55ACEE;
+    border-radius: 5px;
+}
+
+.vehicles::before {
+    content: " ";
+    position: absolute;
+    height: 111px;
+    width: 281px;
+    z-index: -1;
+    background-image: url("../images/easter_egg.png");
+    background-position-y: -1px;
 }
 
 .vehicle1 {
@@ -57,21 +66,35 @@
 }
 
 .vehicleDoor {
-    height: 50px;
-    width: 20px;
+    position: absolute;
     background-color: #282828;
+    height: 72px;
+    top: 19px;
+    border-radius: 5px;
 }
 
 .vehicleDoorLeft {
-    float: left;
+    left: 112px;
+    width: 58px;
+    background: url("../images/easter_egg.png") 290px 164px;
 }
 
 .vehicleDoorRight {
-    float: right;
+    width: 30px;
+    left: 233px;
+    background: url("../images/easter_egg.png") 159px 164px;
 }
 
 .vehicleDoorOpen {
     background-color: blanchedalmond;
+}
+
+.vehicleDoorOpenLeft {
+    background: url("../images/easter_egg.png") 228px 164px;
+}
+
+.vehicleDoorOpenRight {
+    background: url("../images/easter_egg.png") 121px 164px;
 }
 
 .infoBoards {

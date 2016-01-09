@@ -45,7 +45,7 @@ $(function () {
         gameover = false;
         gameTimeouts = [];
 
-        game.startGameCountdown(5); //Passing in number of seconds
+        game.startGameCountdown(30); //Passing in number of seconds
 
         game.generateBuses(3, [1, 2, 3]);
         $('.vehicles').each(function (index, element) {
@@ -187,7 +187,7 @@ $(function () {
             }
 
             var $openDoorLeft = $(whichBus).find('div.vehicleDoorLeft');
-            $openDoorLeft.addClass('vehicleDoorOpen');
+            $openDoorLeft.addClass('vehicleDoorOpenLeft vehicleDoorOpen');
         },
         openDoorRight: function (whichBus) {
             if(gameover) {
@@ -195,7 +195,7 @@ $(function () {
             }
 
             var $openDoorRight = $(whichBus).find('div.vehicleDoorRight');
-            $openDoorRight.addClass('vehicleDoorOpen');
+            $openDoorRight.addClass('vehicleDoorOpenRight vehicleDoorOpen');
         },
         closeDoorLeft: function (whichBus) {
             if(gameover) {
@@ -203,7 +203,8 @@ $(function () {
             }
 
             var thisBus = $(whichBus);
-            thisBus.find('div.vehicleDoorLeft.vehicleDoorOpen').removeClass('vehicleDoorOpen');
+            thisBus.find('div.vehicleDoorLeft.vehicleDoorOpen')
+                .removeClass('vehicleDoorOpenLeft vehicleDoorOpen');
         },
         closeDoorRight: function (whichBus) {
             if(gameover) {
@@ -211,7 +212,8 @@ $(function () {
             }
 
             var thisBus = $(whichBus);
-            thisBus.find('div.vehicleDoorRight.vehicleDoorOpen').removeClass('vehicleDoorOpen');
+            thisBus.find('div.vehicleDoorRight.vehicleDoorOpen')
+                .removeClass('vehicleDoorOpenRight vehicleDoorOpen');
         },
         pickUpPassengers: function (whichBus) {
             if(gameover) {
