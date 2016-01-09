@@ -10,7 +10,8 @@
     left: 0;
     right: 0;
     background-color: darkorange;
-    z-index: 101; /*Social media buttons use '100'*/
+    font-family: Arial, sans-serif;
+    z-index: 110; /*Social media buttons use '100'*/
 }
 
 #closeEasterEgg {
@@ -30,8 +31,7 @@
 #easterEggIntro {
     color: white;
     text-shadow: black 0 0 0.2em;
-    font-family: Arial, sans-serif;
-    z-index: 102;
+    z-index: 120;
 }
 
 .vehicles {
@@ -123,6 +123,22 @@
     font-size: 50px;
 }
 
+#endOfGameInfo {
+    font-weight: bold;
+    font-size: 150px;
+    color: #E02F2F;
+    position: absolute;
+    left: 400px;
+    background-color: rgba(34, 34, 34, 0.77);
+}
+
+#gameResults {
+    position: absolute;
+    background-color: darkorange;
+    left: 400px;
+    width: 200px;
+    height: 200px;
+}
 /*End easter egg styles*/
 .clear {
     clear: both;

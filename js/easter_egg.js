@@ -2,6 +2,7 @@ $(function () {
     //EVENT HANDLERS to detect the key combination which opens the easter egg ('f' + '4'):
     var $easterEgg = $('#easterEgg');
     var gameover = false;
+    var result = 0;
 
     var pressedKeys = {
         f: false,
@@ -44,7 +45,7 @@ $(function () {
         gameover = false;
         gameTimeouts = [];
 
-        game.startGameCountdown(30); //Passing in number of seconds
+        game.startGameCountdown(5); //Passing in number of seconds
 
         game.generateBuses(3, [1, 2, 3]);
         $('.vehicles').each(function (index, element) {
@@ -63,6 +64,7 @@ $(function () {
         console.log(gameTimeouts);
         game.clearGameTimeouts();
 
+        $('#endOfGameInfo').removeClass('hide').hide().fadeIn(2500, game.showResults);
     };
 
     var game = {
@@ -82,23 +84,20 @@ $(function () {
             var startCounter = setInterval(decrementCountdown, 1000);
         },
         countClicks: function () {
-            var clickCounter = 0;
-
             $('#easterEgg').on('click dblclick', '.vehicleDoorOpen', function (e) {
                 var busDestination = $(e.target).parent().attr('data-destination'); //The 'data-destination' \
                 // attribute holds information about the bus destination. The div where the bus sits is a \
                 // parent of the door div.
                 if (busDestination === 'obc') {
-                    clickCounter += 1;
+                    result += 1;
                 } else {
-                    clickCounter -= 10;
-                    clickCounter = Math.max(0, clickCounter); //The counter doesn't go below zero, \
+                    result -= 10;
+                    result = Math.max(0, result); //The counter doesn't go below zero, \
                     // so the user never gets a negative value score. If they lose all the points \
                     // by clicking the wrong buses, the counter will get reset to zero (the max method will \
                     // return zero for a negative value) and counting will start all over again.
                 }
-                console.log(clickCounter);
-                $('#currentScore').text(clickCounter);
+                $('#currentScore').text(result);
             });
         },
         hideGameIntro: function () {
@@ -125,6 +124,10 @@ $(function () {
             }, whenToStartRunning);
         },
         generateDestination: function (whichBus) {
+            if(gameover) {
+                return;
+            }
+
             var destinations = ['110 Wrzeszcz PKP', '113 Orunia Gościnna', '116 Matemblewo',
                 '127 Jasień PKM', '130 Dworzec Główny', '136 Niedźwiednik', '139 Oliwa PKP',
                 '168 Kiełpino Górne', '179 Owczarnia', '199 Suchanino', '227 Chełm Cienista',
@@ -148,6 +151,10 @@ $(function () {
             $('.infoBoard' + boardIndex).text(destination());
         },
         removeDestination: function (whichBus) {
+            if(gameover) {
+                return;
+            }
+
             var boardIndex = game.getBusIndex(whichBus);
             $('.infoBoard' + boardIndex).text('');
             $(whichBus).removeAttr('data-destination');
@@ -175,18 +182,34 @@ $(function () {
             }
         },
         openDoorLeft: function (whichBus) {
+            if(gameover) {
+                return;
+            }
+
             var $openDoorLeft = $(whichBus).find('div.vehicleDoorLeft');
             $openDoorLeft.addClass('vehicleDoorOpen');
         },
         openDoorRight: function (whichBus) {
+            if(gameover) {
+                return;
+            }
+
             var $openDoorRight = $(whichBus).find('div.vehicleDoorRight');
             $openDoorRight.addClass('vehicleDoorOpen');
         },
         closeDoorLeft: function (whichBus) {
+            if(gameover) {
+                return;
+            }
+
             var thisBus = $(whichBus);
             thisBus.find('div.vehicleDoorLeft.vehicleDoorOpen').removeClass('vehicleDoorOpen');
         },
         closeDoorRight: function (whichBus) {
+            if(gameover) {
+                return;
+            }
+
             var thisBus = $(whichBus);
             thisBus.find('div.vehicleDoorRight.vehicleDoorOpen').removeClass('vehicleDoorOpen');
         },
@@ -218,7 +241,6 @@ $(function () {
             }, rightDoorDelay + rightDoorOpeningTime);
 
             gameTimeouts[5] = window.setTimeout(function () {
-                //TODO Disable the onclick event handler
                 game.runABus(whichBus, 0, 1000);
                 $(whichBus).removeClass('inService');
                 game.removeDestination(whichBus);
@@ -245,6 +267,9 @@ $(function () {
                 clearTimeout(gameTimeouts[i]);
                 console.log('clearing timeout ' + gameTimeouts[i]);
             }
+        },
+        showResults: function() {
+            $('#gameResults').removeClass('hide').find('p').text(result);
         }
     };
 
