@@ -58,7 +58,6 @@ $(document).ready(function () {
     /**
      * Handling cookies to display information about cookies
      */
-    //var $elem = jQuery('<div/>', { 'class': "cookieInfo" }).append($('<p/>', {text : 'Ciastka!\nddd'}));
      $('body').prepend(
         $('<div/>', {'class': 'cookieInfo'}).append(
             $('<p/>', {'class': 'cookieInfoTitle', text: 'Ciastka!'})
@@ -68,9 +67,6 @@ $(document).ready(function () {
                 )
             );
 
-
-
-    //$('body').prepend($elem);
     var hideCookieInfo = function () {
         $('.cookieInfo').hide();
         $('.navigationBar').css('top', '0');
