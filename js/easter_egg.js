@@ -45,7 +45,7 @@ $(function () {
         gameover = false;
         gameTimeouts = [];
 
-        game.startGameCountdown(30); //Passing in number of seconds
+        game.startGameCountdown(30); //Passing in game duration in seconds
 
         game.generateBuses(3, [1, 2, 3]);
         $('.vehicles').each(function (index, element) {
@@ -68,11 +68,11 @@ $(function () {
     };
 
     var game = {
-        startGameCountdown: function(seconds){
+        startGameCountdown: function (seconds) {
             var $gameCountdownEl = $('#gameCountdown');
             $gameCountdownEl.text(seconds);
 
-            var decrementCountdown = function() {
+            var decrementCountdown = function () {
                 seconds -= 1;
                 $gameCountdownEl.text(seconds);
                 if (seconds < 1) {
@@ -104,7 +104,7 @@ $(function () {
             $('#easterEggIntro').addClass('hide');
         },
         runABus: function (whichBus, whenToStartRunning, whereToGo) {
-            if(gameover) {
+            if (gameover) {
                 return;
             }
 
@@ -123,16 +123,16 @@ $(function () {
                 });
             }, whenToStartRunning);
         },
+        destinations: ['110 Wrzeszcz PKP', '113 Orunia Gościnna', '116 Matemblewo',
+            '127 Jasień PKM', '130 Dworzec Główny', '136 Niedźwiednik', '139 Oliwa PKP',
+            '168 Kiełpino Górne', '179 Owczarnia', '199 Suchanino', '227 Chełm Cienista',
+            '262 Jaworzniaków', '283 Politechnika SKM', '315 Hucisko', '574 Otomin',
+            '512 Sobieszewo', '269 Osiedle Barniewice', '267 Bysewo', '212 Przegalina'],
         generateDestination: function (whichBus) {
-            if(gameover) {
+            if (gameover) {
                 return;
             }
 
-            var destinations = ['110 Wrzeszcz PKP', '113 Orunia Gościnna', '116 Matemblewo',
-                '127 Jasień PKM', '130 Dworzec Główny', '136 Niedźwiednik', '139 Oliwa PKP',
-                '168 Kiełpino Górne', '179 Owczarnia', '199 Suchanino', '227 Chełm Cienista',
-                '262 Jaworzniaków', '283 Politechnika SKM', '315 Hucisko', '574 Otomin',
-                '512 Sobieszewo', '269 Osiedle Barniewice', '267 Bysewo', '212 Przegalina'];
             var boardIndex = game.getBusIndex(whichBus);
             var destination = function () {
                 var text = '';
@@ -141,8 +141,8 @@ $(function () {
                     text += '4 Olivia Business Center';
                     whichBus.setAttribute('data-destination', 'obc');
                 } else {
-                    //Get a random destination from the destinations array:
-                    var otherDestination = destinations[generateRandomValue(0, (destinations.length - 1))];
+                    //Get a random destination from the game.destinations array:
+                    var otherDestination = game.destinations[generateRandomValue(0, (game.destinations.length - 1))];
                     text += otherDestination;
                     whichBus.setAttribute('data-destination', otherDestination);
                 }
@@ -151,7 +151,7 @@ $(function () {
             $('.infoBoard' + boardIndex).text(destination());
         },
         removeDestination: function (whichBus) {
-            if(gameover) {
+            if (gameover) {
                 return;
             }
 
@@ -159,12 +159,18 @@ $(function () {
             $('.infoBoard' + boardIndex).text('');
             $(whichBus).removeAttr('data-destination');
         },
+        busColors: ['#55ACEE', '#8B0000', '#FF0000', '#FFE229', '#483D8B', '#228B22', '#FF4500', '#FFD700'],
         generateBuses: function (howManyToGenerate, indexes) {
             for (var i = 0; ; i++) {
+                //var busColors = [];
                 var $bus = $('<div>');
                 var $doorLeft = $('<div>');
                 var $doorRight = $('<div>');
-                $bus.addClass('inService vehicles vehicle' + indexes[i]);
+                var busColor = game.busColors[generateRandomValue(0, game.busColors.length - 1)];
+
+                $bus
+                    .addClass('inService vehicles vehicle' + indexes[i])
+                    .css('background-color', busColor);
                 //A bus that's 'inService' can pick up passengers.
                 $doorLeft
                     .addClass('vehicleDoor vehicleDoorLeft')
@@ -182,7 +188,7 @@ $(function () {
             }
         },
         openDoorLeft: function (whichBus) {
-            if(gameover) {
+            if (gameover) {
                 return;
             }
 
@@ -190,7 +196,7 @@ $(function () {
             $openDoorLeft.addClass('vehicleDoorOpenLeft vehicleDoorOpen');
         },
         openDoorRight: function (whichBus) {
-            if(gameover) {
+            if (gameover) {
                 return;
             }
 
@@ -198,7 +204,7 @@ $(function () {
             $openDoorRight.addClass('vehicleDoorOpenRight vehicleDoorOpen');
         },
         closeDoorLeft: function (whichBus) {
-            if(gameover) {
+            if (gameover) {
                 return;
             }
 
@@ -207,7 +213,7 @@ $(function () {
                 .removeClass('vehicleDoorOpenLeft vehicleDoorOpen');
         },
         closeDoorRight: function (whichBus) {
-            if(gameover) {
+            if (gameover) {
                 return;
             }
 
@@ -216,7 +222,7 @@ $(function () {
                 .removeClass('vehicleDoorOpenRight vehicleDoorOpen');
         },
         pickUpPassengers: function (whichBus) {
-            if(gameover) {
+            if (gameover) {
                 return;
             }
 
@@ -249,7 +255,7 @@ $(function () {
             }, totalTimeAtBusStop);
         },
         rerunBus: function (whichBusToRerun) {
-            if(gameover) {
+            if (gameover) {
                 return;
             }
 
@@ -264,13 +270,13 @@ $(function () {
             busIndex = busIndex.slice(-1);
             return busIndex;
         },
-        clearGameTimeouts: function() {
+        clearGameTimeouts: function () {
             for (var i = 0; i < gameTimeouts.length; i++) {
                 clearTimeout(gameTimeouts[i]);
                 console.log('clearing timeout ' + gameTimeouts[i]);
             }
         },
-        showResults: function() {
+        showResults: function () {
             $('#gameResults').removeClass('hide').find('p').text(result);
         }
     };

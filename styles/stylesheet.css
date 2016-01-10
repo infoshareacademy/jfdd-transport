@@ -26,11 +26,15 @@
     font-weight: bold;
     border-radius: 50%;
     cursor: pointer;
+    z-index: 125;
+    position: absolute;
+    right: 5px;
+    top: 5px;
 }
 
 #easterEggIntro {
-    color: white;
-    text-shadow: black 0 0 0.2em;
+    color: #fafafa;
+    text-shadow: black 0 0 0.15em, black 0 0 0.15em;
     z-index: 120;
 }
 
@@ -39,7 +43,6 @@
     width: 281px;
     position: fixed;
     left: -281px;
-    background-color: #55ACEE;
     border-radius: 5px;
 }
 
@@ -48,9 +51,8 @@
     position: absolute;
     height: 111px;
     width: 281px;
-    z-index: -1;
-    background-image: url("../images/easter_egg.png");
-    background-position-y: -1px;
+    /*z-index: -1;*/
+    background: url("../images/easter_egg.png") no-repeat 0 -1px;
 }
 
 .vehicle1 {
@@ -67,10 +69,10 @@
 
 .vehicleDoor {
     position: absolute;
-    background-color: #282828;
     height: 72px;
     top: 19px;
     border-radius: 5px;
+    background-color: #282828;
 }
 
 .vehicleDoorLeft {
