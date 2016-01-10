@@ -23,16 +23,17 @@ $(function () {
     $(window).on('keyup', function (e) {
         if (pressedKeys.f === true && pressedKeys[4] === true) {
             $easterEgg.removeClass('donotdisplay');
+
+            //EVENT HANDLER for the start game button:
+            $('#startEasterEggGame').on('click', function () {
+                console.log('Start. Gameover is: ' + gameover);
+
+                game.hideGameIntro();
+                playGame();
+            });
         }
         pressedKeys.f = false;
         pressedKeys[4] = false;
-    });
-
-
-    //EVENT HANDLER for the start game button:
-    $('#startEasterEggGame').on('click', function () {
-        game.hideGameIntro();
-        playGame();
     });
 
     //EVENT HANDLER for the end game button:
@@ -45,6 +46,12 @@ $(function () {
             game.counter.id[0] = '';
         }
         console.log('Is counter running at closing: ' + game.counter.isRunning);
+
+        game.stopGame();
+        game.resetGame();
+
+        $('#easterEggIntro').removeClass('donotdisplay');
+        console.log('After closing. Gameover is: ' + gameover);
     });
 
     //GAMEPLAY
@@ -54,7 +61,7 @@ $(function () {
         gameover = false;
         gameTimeouts = [];
 
-        game.startGameCountdown(15); //Passing in game duration in seconds
+        game.startGameCountdown(game.time);
 
         game.generateBuses(3, [1, 2, 3]);
         $('.vehicles').each(function (index, element) {
@@ -66,17 +73,13 @@ $(function () {
         game.countClicks();
     };
 
-    var stopGame = function () {
-        $easterEgg.off(); //Turns off the handler for counting clicks.
-        gameover = true;
-
-        console.log(gameTimeouts);
-        game.clearGameTimeouts();
-
-        $('#endOfGameInfo').removeClass('donotdisplay').hide().fadeIn(2500, game.showResults);
+    var endGame = function () {
+        game.stopGame();
+        $('#endOfGameInfo').removeClass('hide').hide().fadeIn(2500, game.showResults);
     };
 
     var game = {
+        time: 15, //Game duration in seconds.
         startGameCountdown: function (seconds) {
             var $gameCountdownEl = $('#gameCountdown');
             $gameCountdownEl.text(seconds); //Write the initial value onto the screen.
@@ -90,7 +93,7 @@ $(function () {
                     clearInterval(game.counter.id[0]);
                     game.counter.isRunning = false;
                     console.log('Is counter running: ' + game.counter.isRunning);
-                    stopGame();
+                    endGame();
                 }
             };
 
@@ -107,10 +110,17 @@ $(function () {
                 // attribute holds information about the bus destination. The div where the bus sits is a \
                 // parent of the door div.
                 if (busDestination === 'obc') {
-                    result += 1;
-                    console.log('result ' + result);
+                    if (e.type !== 'dblclick') { //A double click is effectively counted as three clicks: \
+                        // two regular clicks plus one double click (which would give the user 3 points instead \
+                        // of 2 even though they clicked twice). Points are therefore given only for the single \
+                        // clicks that were registered as part of a double click.
+                        result += 1;
+                        console.log('result ' + result + ', event type: ' + e.type); //TODO Remove after testing.
+                    }
                 } else {
-                    result -= 10;
+                    if (e.type !== 'dblclick') {
+                        result -= 10;
+                    }
                     result = Math.max(0, result); //The counter doesn't go below zero, \
                     // so the user never gets a negative value score. If they lose all the points \
                     // by clicking the wrong buses, the counter will get reset to zero (the max method will \
@@ -301,21 +311,28 @@ $(function () {
             }
         },
         showResults: function () {
-            $('#gameResults').removeClass('donotdisplay').find('p').text(result);
+            $('#gameResults').removeClass('hide').find('p').text(result);
             $('#playAgain').on('click', game.playAgain);
         },
         resetGame: function () {
             $('#playAgain').off();
-            $('#gameResults').addClass('donotdisplay');
-            $('#endOfGameInfo').addClass('donotdisplay').fadeOut();
+            $('#gameResults').addClass('hide');
+            $('#endOfGameInfo').addClass('hide')/*.fadeOut()*/;
             $('.vehicles').remove(); //Remove existing buses.
 
             $('.infoBoards').text(''); //Clear destinations from infoboards.
             $('#currentScore').text('0'); //Clear the displayed result.
             result = 0; //Reset the variable holding current result.
         },
+        stopGame: function () {
+            $easterEgg.off(); //Turns off the handler for counting clicks.
+            gameover = true;
+
+            console.log(gameTimeouts);
+            game.clearGameTimeouts();
+        },
         playAgain: function () {
-            this.resetGame();
+            game.resetGame();
             playGame();
         }
     };
