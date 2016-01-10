@@ -1,170 +1,3 @@
-/*Start easter egg styles*/
-.donotdisplay {
-    display: none;
-}
-
-#easterEgg, #easterEggIntro {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: darkorange;
-    font-family: Arial, sans-serif;
-    z-index: 110; /*Social media buttons use '100'*/
-}
-
-#closeEasterEgg {
-    float: right;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
-    color: white;
-    text-align: center;
-    background: red;
-    font-size: 30px;
-    font-weight: bold;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 125;
-    position: absolute;
-    right: 5px;
-    top: 5px;
-}
-
-#easterEggIntro {
-    color: #fafafa;
-    text-shadow: black 0 0 0.15em, black 0 0 0.15em;
-    z-index: 120;
-}
-
-.vehicles {
-    height: 96px;
-    width: 281px;
-    position: fixed;
-    left: -281px;
-    border-radius: 5px;
-}
-
-.vehicles::before {
-    content: " ";
-    position: absolute;
-    height: 111px;
-    width: 281px;
-    /*z-index: -1;*/
-    background: url("../images/easter_egg.png") no-repeat 0 -1px;
-}
-
-.vehicle1 {
-    top: 200px;
-}
-
-.vehicle2 {
-    top: 370px;
-}
-
-.vehicle3 {
-    top: 540px;
-}
-
-.vehicleDoor {
-    position: absolute;
-    height: 72px;
-    top: 19px;
-    border-radius: 5px;
-    /*background-color: #282828;*/
-}
-
-.vehicleDoorLeft {
-    left: 112px;
-    width: 58px;
-    background: url("../images/easter_egg.png") 290px 164px;
-}
-
-.vehicleDoorRight {
-    width: 30px;
-    left: 233px;
-    background: url("../images/easter_egg.png") 159px 164px;
-}
-
-.vehicleDoorOpen {
-    background-color: blanchedalmond !important;
-}
-
-.vehicleDoorOpenLeft {
-    background: url("../images/easter_egg.png") 228px 164px;
-}
-
-.vehicleDoorOpenRight {
-    background: url("../images/easter_egg.png") 121px 164px;
-}
-
-.infoBoards {
-    background-color: black;
-    color: orange;
-    font-family: "Courier New", monospace;
-    font-size: smaller;
-    width: 200px;
-    height: 2.5em;
-    text-overflow: ellipsis;
-    vertical-align: middle;
-    position: absolute;
-    left: 400px;
-}
-
-.infoBoard1 {
-    top: 125px;
-}
-
-.infoBoard2 {
-    top: 295px;
-}
-
-.infoBoard3 {
-    top: 465px;
-}
-
-#easterEgg table, th, td {
-    border: 1px solid blanchedalmond;
-}
-
-#easterEgg th {
-    height: 60px;
-    width: 150px;
-}
-
-#easterEgg td {
-    height: 90px;
-    width: 150px;
-    text-align: center;
-}
-
-#easterEgg table {
-    border-collapse: collapse;
-    border-radius: 3px;
-}
-
-#currentScore, #gameCountdown {
-    font-size: 50px;
-}
-
-#endOfGameMask {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background-color: rgba(34, 34, 34, 0.77);
-}
-
-#gameResults {
-    position: absolute;
-    background-color: darkorange;
-    left: 400px;
-    width: 200px;
-    height: 200px;
-}
-/*End easter egg styles*/
 .clear {
     clear: both;
 }
@@ -717,3 +550,169 @@ footer span {
 .hide {
     visibility: hidden;
 }
+
+/*Start easter egg styles*/
+.donotdisplay {
+    display: none;
+}
+
+#easterEgg, #easterEggIntro {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: darkorange;
+    font-family: Arial, sans-serif;
+    color: #3f3f3f;
+    font-weight: 200;
+    font-size: 25px;
+    z-index: 110; /*Social media buttons use '100'*/
+}
+
+#closeEasterEgg {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    background: red;
+    color: #fafafa;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 125;
+}
+
+#easterEggIntro {
+    z-index: 120;
+}
+
+.vehicles {
+    height: 96px;
+    width: 281px;
+    position: fixed;
+    left: -281px;
+    border-radius: 5px;
+}
+
+.vehicles::before {
+    content: " ";
+    position: absolute;
+    height: 111px;
+    width: 281px;
+    background: url("../images/easter_egg.png") no-repeat 0 -1px;
+}
+
+.vehicle1 {
+    top: 200px;
+}
+
+.vehicle2 {
+    top: 370px;
+}
+
+.vehicle3 {
+    top: 540px;
+}
+
+.vehicleDoor {
+    position: absolute;
+    height: 72px;
+    top: 19px;
+    border-radius: 5px;
+}
+
+.vehicleDoorLeft {
+    left: 112px;
+    width: 58px;
+    background: url("../images/easter_egg.png") 290px 164px;
+}
+
+.vehicleDoorRight {
+    width: 30px;
+    left: 233px;
+    background: url("../images/easter_egg.png") 159px 164px;
+}
+
+.vehicleDoorOpen {
+    background-color: blanchedalmond !important;
+}
+
+.vehicleDoorOpenLeft {
+    background: url("../images/easter_egg.png") 228px 164px;
+}
+
+.vehicleDoorOpenRight {
+    background: url("../images/easter_egg.png") 121px 164px;
+}
+
+.infoBoards {
+    background-color: black;
+    color: orange;
+    font-family: "Courier New", monospace;
+    font-size: smaller;
+    width: 200px;
+    height: 2.5em;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    position: absolute;
+    left: 400px;
+}
+
+.infoBoard1 {
+    top: 125px;
+}
+
+.infoBoard2 {
+    top: 295px;
+}
+
+.infoBoard3 {
+    top: 465px;
+}
+
+#easterEgg table, th, td {
+    border: 1px solid blanchedalmond;
+}
+
+#easterEgg th {
+    height: 60px;
+    width: 150px;
+}
+
+#easterEgg td {
+    height: 90px;
+    width: 150px;
+    text-align: center;
+}
+
+#easterEgg table {
+    border-collapse: collapse;
+    border-radius: 3px;
+}
+
+#currentScore, #gameCountdown {
+    font-size: 50px;
+}
+
+#endOfGameMask {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(34, 34, 34, 0.77);
+}
+
+#gameResults {
+    position: absolute;
+    background-color: darkorange;
+    left: 400px;
+    width: 200px;
+    height: 200px;
+}
+/*End easter egg styles*/

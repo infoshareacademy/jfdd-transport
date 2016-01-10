@@ -4,6 +4,7 @@ $(function () {
     var gameover = false;
     var result = 0;
     var gameTimeouts = [];
+    var gameStarted = false;
 
     var pressedKeys = {
         f: false,
@@ -21,13 +22,13 @@ $(function () {
     });
 
     $(window).on('keyup', function (e) {
+        gameStarted = false;
+
         if (pressedKeys.f === true && pressedKeys[4] === true) {
             $easterEgg.removeClass('donotdisplay');
 
             //EVENT HANDLER for the start game button:
             $('#startEasterEggGame').on('click', function () {
-                console.log('Start. Gameover is: ' + gameover);
-
                 game.hideGameIntro();
                 playGame();
             });
@@ -38,34 +39,33 @@ $(function () {
 
     //EVENT HANDLER for the close game button:
     $('#closeEasterEgg').on('click', function () {
-        $('#endOfGameMask').stop();
+        if (gameStarted) {
+            $('#endOfGameMask').stop();
+            $easterEgg.addClass('donotdisplay');
 
-        $easterEgg.addClass('donotdisplay');
+            if (game.counter.isRunning) {
+                clearInterval(game.counter.id[0]);
+                game.counter.id[0] = '';
+            }
 
-        if (game.counter.isRunning) {
-            console.log('ID of the game counter: ' + game.counter.id);
-            clearInterval(game.counter.id);
-            game.counter.id[0] = '';
+            game.stopGame();
+            game.resetGame();
+            $('#easterEggIntro').removeClass('donotdisplay');
+        } else {
+            $('#startEasterEggGame').off();
+            $easterEgg.addClass('donotdisplay');
         }
-        console.log('Is counter running at closing: ' + game.counter.isRunning);
-
-        game.stopGame();
-        game.resetGame();
-
-        $('#easterEggIntro').removeClass('donotdisplay');
-        console.log('After closing. Gameover is: ' + gameover);
     });
 
     //GAMEPLAY
     var playGame = function () {
+        gameStarted = true;
         $('#startEasterEggGame').off();
-
         gameover = false;
         gameTimeouts = [];
-
         game.startGameCountdown(game.time);
-
         game.generateBuses(3, [1, 2, 3]);
+
         $('.vehicles').each(function (index, element) {
             game.runABus(element, generateRandomValue(0, 1500), 350); //From 0 up to 1500 milliseconds \
             // so as not to have the user waiting too long for the buses to show up at the start \
@@ -81,7 +81,7 @@ $(function () {
     };
 
     var game = {
-        time: 15, //Game duration in seconds.
+        time: 30, //Game duration in seconds.
         startGameCountdown: function (seconds) {
             var $gameCountdownEl = $('#gameCountdown');
             $gameCountdownEl.text(seconds); //Write the initial value onto the screen.
@@ -139,7 +139,7 @@ $(function () {
                 return;
             }
 
-            var drivingSpeed = generateRandomValue(400, 1500);
+            var drivingSpeed = generateRandomValue(400, 1200);
             //Record timeout ID to the gameTimeouts array so that the timeout can be\
             //be stopped at the end of the game. (Same for all the timeouts).
             gameTimeouts[0] = window.setTimeout(function () {
@@ -262,8 +262,8 @@ $(function () {
                 return;
             }
 
-            var leftDoorDelay = generateRandomValue(200, 2000);
-            var rightDoorDelay = generateRandomValue(200, 2000);
+            var leftDoorDelay = generateRandomValue(200, 1500);
+            var rightDoorDelay = generateRandomValue(200, 1500);
 
             gameTimeouts[1] = window.setTimeout(function () {
                 game.openDoorLeft(whichBus);
@@ -272,8 +272,8 @@ $(function () {
                 game.openDoorRight(whichBus);
             }, rightDoorDelay);
 
-            var leftDoorOpeningTime = generateRandomValue(2000, 5000);
-            var rightDoorOpeningTime = generateRandomValue(2000, 5000);
+            var leftDoorOpeningTime = generateRandomValue(2000, 4000);
+            var rightDoorOpeningTime = generateRandomValue(2000, 4000);
             var totalTimeAtBusStop = Math.max(leftDoorDelay + leftDoorOpeningTime,
                     rightDoorDelay + rightDoorOpeningTime) + 500;
 
