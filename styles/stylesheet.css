@@ -23,100 +23,100 @@ canvas {
 
 }
 
-/*#easterEgg2Intro {*/
-    /*margin: auto;*/
-    /*width: 90%;*/
-    /*background-color: white;*/
-    /*font-size: 20px;*/
-    /*text-align: justify;*/
-/*}*/
-/*#easterEgg2 h1, h4  {*/
-    /*text-align: center;*/
-/*}*/
-
-/*#closeEasterEgg2 {*/
-    /*float: right;*/
-    /*width: 50px;*/
-    /*height: 50px;*/
-    /*line-height: 50px;*/
-    /*color: black;*/
-    /*text-align: center;*/
-    /*background-color:darkgrey;*/
-    /*font-size: 30px;*/
-    /*font-weight: bold;*/
-    /*cursor: pointer;*/
-/*}*/
-
-/*button {*/
-    /*margin-left: 490px;*/
-    /*margin-right: 490px;*/
-    /*height: 50px;*/
-    /*width: 135px;*/
-    /*padding: 10px;*/
-/*}*/
-
-/*.gameBackground {*/
-    /*background-color: #282828;*/
-/*}*/
-
-/*#gameScore {*/
-    /*color: white;*/
-    /*text-align: left;*/
-    /*margin-left: 5px;*/
-/*}*/
-
-/*#gameScore h5 {*/
-    /*color: white;*/
-    /*text-align: left;*/
-    /*margin-left: 5px;*/
-    /*line-height: 10px;*/
-/*}*/
-
-/*#gameScore p {*/
-    /*font-size: 15px;*/
-    /*color: white;*/
-    /*text-align: left;*/
-    /*margin-left: 5px;*/
-    /*line-height: 5px;*/
-/*}*/
-
-
-/*.vehicles {*/
-    /*height: 50px;*/
-    /*width: 90px;*/
-    /*padding-left: 20px;*/
-    /*padding-right: 20px;*/
-    /*background-color: white;*/
-    /*position: fixed;*/
-    /*left: -150px;*/
-/*}*/
-
-
-/*.vehicle1 {*/
-    /*top: 200px;*/
-/*}*/
-
-/*.vehicle2 {*/
-    /*top: 370px;*/
-/*}*/
-
-/*.vehicle3 {*/
-    /*top: 540px;*/
-/*}*/
-
-/*.direction {*/
-    /*background-color: black;*/
-    /*color: orange;*/
-    /*font-family: "Courier New", monospace;*/
-    /*font-size: smaller;*/
-    /*width: 80px;*/
-    /*height: 30px;*/
-    /*text-overflow: ellipsis;*/
-    /*vertical-align: middle;*/
-    /*position: absolute;*/
-    /*left: 400px;*/
-/*}*/
-
+#easterEgg2Intro {
+    margin: auto;
+    width: 90%;
+    background-color: white;
+    font-size: 20px;
+    text-align: justify;
+}
+#easterEgg2 h1, h4  {
+    text-align: center;
+}
+/**/
+#closeEasterEgg2 {
+    float: right;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    color: black;
+    text-align: center;
+    background-color:darkgrey;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+/**/
+button {
+    margin-left: 490px;
+    margin-right: 490px;
+    height: 50px;
+    width: 135px;
+    padding: 10px;
+}
+/**/
+.gameBackground {
+    background-color: #282828;
+}
+/**/
+#gameScore {
+    color: white;
+    text-align: left;
+    margin-left: 5px;
+}
+/**/
+#gameScore h5 {
+    color: white;
+    text-align: left;
+    margin-left: 5px;
+    line-height: 10px;
+}
+/**/
+#gameScore p {
+    font-size: 15px;
+    color: white;
+    text-align: left;
+    margin-left: 5px;
+    line-height: 5px;
+}
+/**/
+/**/
+.vehicles {
+    height: 50px;
+    width: 90px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: white;
+    position: fixed;
+    left: -150px;
+}
+/**/
+/**/
+.vehicle1 {
+    top: 200px;
+}
+/**/
+.vehicle2 {
+    top: 370px;
+}
+/**/
+.vehicle3 {
+    top: 540px;
+}
+/**/
+.direction {
+    background-color: black;
+    color: orange;
+    font-family: "Courier New", monospace;
+    font-size: smaller;
+    width: 80px;
+    height: 30px;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    position: absolute;
+    left: 400px;
+}
+/**/
 /*End easter egg styles*/
 
 
