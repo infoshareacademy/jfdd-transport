@@ -36,8 +36,10 @@ $(function () {
         pressedKeys[4] = false;
     });
 
-    //EVENT HANDLER for the end game button:
+    //EVENT HANDLER for the close game button:
     $('#closeEasterEgg').on('click', function () {
+        $('#endOfGameInfo').stop();
+
         $easterEgg.addClass('donotdisplay');
 
         if (game.counter.isRunning) {
