@@ -40,7 +40,7 @@ $(document).ready(function () {
 
     });
 
-    /* Every time the window is scrolled ... */
+    /* Fading in elements on windows scroll */
     $(window).scroll(function () {
         /* Check the location of each desired element */
         $('#functionsSection img, #form-div ').each(function (i) {
@@ -56,12 +56,24 @@ $(document).ready(function () {
     });
 
     /**
-     * Handling cookies to display information about cookies ;)
+     * Handling cookies to display information about cookies
      */
-    var $elem = jQuery('<div/>', { 'class': "cookieInfo" }).append($('<p/>', {text : 'Ciastka!\nddd'}));
-    $('body').prepend($elem);
+    //var $elem = jQuery('<div/>', { 'class': "cookieInfo" }).append($('<p/>', {text : 'Ciastka!\nddd'}));
+     $('body').prepend(
+        $('<div/>', {'class': 'cookieInfo'}).append(
+            $('<p/>', {'class': 'cookieInfoTitle', text: 'Ciastka!'})
+            )
+            .append(
+                $('<p/>', {'class': 'cookieInfoText', text: 'Ta strona korzysta z ciasteczek. Kliknij, by zamknąć.'})
+                )
+            );
+
+
+
+    //$('body').prepend($elem);
     var hideCookieInfo = function () {
         $('.cookieInfo').hide();
+        $('.navigationBar').css('top', '0');
     }
 
     if (Cookies.get('displayCookieInfo') === undefined) {
@@ -71,7 +83,7 @@ $(document).ready(function () {
     }
 
     $('.cookieInfo').click(function () {
-        $('.cookieInfo').hide();
+        hideCookieInfo();
         Cookies.set('displayCookieInfo', false  );
     });
 
