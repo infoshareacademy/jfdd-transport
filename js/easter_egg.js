@@ -21,7 +21,7 @@ $(function () {
 
     $(window).on('keyup', function (e) {
         if (pressedKeys.f === true && pressedKeys[4] === true) {
-            $easterEgg.removeClass('hide');
+            $easterEgg.removeClass('donotdisplay');
         }
         pressedKeys.f = false;
         pressedKeys[4] = false;
@@ -36,7 +36,7 @@ $(function () {
     });
 
     $('#closeEasterEgg').on('click', function () {
-        $easterEgg.addClass('hide');
+        $easterEgg.addClass('donotdisplay');
     });
 
     //GAMEPLAY
@@ -64,7 +64,7 @@ $(function () {
         console.log(gameTimeouts);
         game.clearGameTimeouts();
 
-        $('#endOfGameInfo').removeClass('hide').hide().fadeIn(2500, game.showResults);
+        $('#endOfGameInfo').removeClass('donotdisplay').hide().fadeIn(2500, game.showResults);
     };
 
     var game = {
@@ -101,7 +101,7 @@ $(function () {
             });
         },
         hideGameIntro: function () {
-            $('#easterEggIntro').addClass('hide');
+            $('#easterEggIntro').addClass('donotdisplay');
         },
         runABus: function (whichBus, whenToStartRunning, whereToGo) {
             if (gameover) {
@@ -277,7 +277,7 @@ $(function () {
             }
         },
         showResults: function () {
-            $('#gameResults').removeClass('hide').find('p').text(result);
+            $('#gameResults').removeClass('donotdisplay').find('p').text(result);
         }
     };
 
