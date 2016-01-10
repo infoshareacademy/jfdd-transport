@@ -1,17 +1,10 @@
 
 $(document).ready(function () {
 
+    var $easterEgg2 = $('#easterEgg2');
     $('#button-gray').on('click', function () {
-        startGame();
+        $('#easterEgg2').removeClass('hide');
     });
-
-    function startGame() {
-        myGameArea.start();
-    }
-
-    var myGameArea = function (){
-        $('#easterEgg2').addClass('gameBackground');
-        };
 
     $('#closeEasterEgg2').on('click', function () {
         $easterEgg2.addClass('hide');
@@ -23,7 +16,10 @@ $(document).ready(function () {
 
     var playGame = function () {
         $('#easterEgg2Intro').addClass('hide');
-        $('#easterEgg2').addClass('gameBackground');
+        $easterEgg2.removeClass('hide');
+        //$('#easterEgg2').removeClass('hide');
+        $easterEgg2.addClass('gameBackground');
+
         $('#gameScore').removeClass('hide');
 
     }
