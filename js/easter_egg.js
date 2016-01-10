@@ -3,6 +3,7 @@ $(function () {
     var $easterEgg = $('#easterEgg');
     var gameover = false;
     var result = 0;
+    var gameTimeouts = [];
 
     var pressedKeys = {
         f: false,
@@ -27,7 +28,6 @@ $(function () {
         pressedKeys[4] = false;
     });
 
-    var gameTimeouts = [];
 
     //EVENT HANDLERS to start and end the easter egg game:
     $('#startEasterEggGame').on('click', function () {
@@ -41,11 +41,12 @@ $(function () {
 
     //GAMEPLAY
     var playGame = function () {
-        //TODO turn off the $('#startEasterEggGame') event handler
+        $('#startEasterEggGame').off();
+
         gameover = false;
         gameTimeouts = [];
 
-        game.startGameCountdown(30); //Passing in game duration in seconds
+        game.startGameCountdown(15); //Passing in game duration in seconds
 
         game.generateBuses(3, [1, 2, 3]);
         $('.vehicles').each(function (index, element) {
@@ -58,7 +59,7 @@ $(function () {
     };
 
     var stopGame = function () {
-        $('#easterEgg').off(); //Turns off the handler for counting clicks.
+        $easterEgg.off(); //Turns off the handler for counting clicks.
         gameover = true;
 
         console.log(gameTimeouts);
@@ -84,12 +85,13 @@ $(function () {
             var startCounter = setInterval(decrementCountdown, 1000);
         },
         countClicks: function () {
-            $('#easterEgg').on('click dblclick', '.vehicleDoorOpen', function (e) {
+            $easterEgg.on('click dblclick', '.vehicleDoorOpen', function (e) {
                 var busDestination = $(e.target).parent().attr('data-destination'); //The 'data-destination' \
                 // attribute holds information about the bus destination. The div where the bus sits is a \
                 // parent of the door div.
                 if (busDestination === 'obc') {
                     result += 1;
+                    console.log('result ' + result);
                 } else {
                     result -= 10;
                     result = Math.max(0, result); //The counter doesn't go below zero, \
@@ -161,6 +163,11 @@ $(function () {
         },
         busColors: ['#55ACEE', '#8B0000', '#FF0000', '#FFE229', '#483D8B', '#228B22', '#FF4500', '#FFD700'],
         generateBuses: function (howManyToGenerate, indexes) {
+            if (gameover) {
+                return;
+            }
+
+            console.log(howManyToGenerate + "; " + indexes);
             for (var i = 0; ; i++) {
                 //var busColors = [];
                 var $bus = $('<div>');
@@ -278,6 +285,21 @@ $(function () {
         },
         showResults: function () {
             $('#gameResults').removeClass('donotdisplay').find('p').text(result);
+            $('#playAgain').on('click', game.playAgain);
+        },
+        playAgain: function() {
+            $('#playAgain').off();
+
+            console.log('gram jeszcze raz');
+            $('#gameResults').addClass('donotdisplay');
+            $('#endOfGameInfo').addClass('donotdisplay').fadeOut();
+            $('.vehicles').remove(); //Remove existing buses.
+
+            $('.infoBoards').text(''); //Clear destinations from infoboards.
+            $('#currentScore').text('0'); //Clear the displayed result.
+            result = 0; //Reset the variable holding current result.
+
+            playGame();
         }
     };
 
