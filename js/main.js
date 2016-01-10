@@ -82,5 +82,4 @@ $(document).ready(function () {
         hideCookieInfo();
         Cookies.set('displayCookieInfo', false  );
     });
-
 });
