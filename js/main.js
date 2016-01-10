@@ -88,10 +88,3 @@ $(document).ready(function () {
     });
 
 });
-
-/*
-* Ciastka!
-
- Strona korzysta z plików cookies w celu realizacji usług i zgodnie z Polityką Plików Cookies. Możesz określić warunki przechowywania lub dostępu do plików cookies w Twojej przeglądarce.
-*
-* */
