@@ -38,7 +38,7 @@ $(function () {
 
     //EVENT HANDLER for the close game button:
     $('#closeEasterEgg').on('click', function () {
-        $('#endOfGameInfo').stop();
+        $('#endOfGameMask').stop();
 
         $easterEgg.addClass('donotdisplay');
 
@@ -77,7 +77,7 @@ $(function () {
 
     var endGame = function () {
         game.stopGame();
-        $('#endOfGameInfo').removeClass('hide').hide().fadeIn(2500, game.showResults);
+        $('#endOfGameMask').removeClass('hide').hide().fadeIn(2500, game.showResults);
     };
 
     var game = {
@@ -319,7 +319,7 @@ $(function () {
         resetGame: function () {
             $('#playAgain').off();
             $('#gameResults').addClass('hide');
-            $('#endOfGameInfo').addClass('hide')/*.fadeOut()*/;
+            $('#endOfGameMask').addClass('hide')/*.fadeOut()*/;
             $('.vehicles').remove(); //Remove existing buses.
 
             $('.infoBoards').text(''); //Clear destinations from infoboards.

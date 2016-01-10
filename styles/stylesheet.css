@@ -148,12 +148,12 @@
     font-size: 50px;
 }
 
-#endOfGameInfo {
-    font-weight: bold;
-    font-size: 150px;
-    color: #E02F2F;
+#endOfGameMask {
     position: absolute;
-    left: 400px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
     background-color: rgba(34, 34, 34, 0.77);
 }
 
