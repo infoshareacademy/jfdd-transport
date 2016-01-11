@@ -58,7 +58,7 @@ $(document).ready(function () {
     /**
      * Handling cookies to display information about cookies
      */
-     $('body').prepend(
+     $('footer').prepend(
         $('<div/>', {'class': 'cookieInfo'}).append(
             $('<p/>', {'class': 'cookieInfoTitle', text: 'Ciastka!'})
             )
