@@ -556,9 +556,8 @@ footer span {
 }
 
 @media (max-width:1000px) {
-
-    body {
-        width: 700px;
+    .intro {
+        width: 1000px;
     }
 
     .function img {
@@ -581,16 +580,14 @@ footer span {
     .function2, .function3 {
         margin-left: 20px;
     }
+
     .additionalFunctionsSection {
-        /*margin-top: 50px;*/
         margin-left: auto;
         margin-right: auto;
         width: 700px;
-        /*font-size: 20px;*/
     }
 
     .additionalFunctionsSection div {
-        /*float: left;*/
         width: 200px;
         margin-bottom: 20px;
         text-align: center;
@@ -600,6 +597,7 @@ footer span {
         width: 400px;
         margin: auto;
     }
+
     .testersParagraph p {
         font-size: 15px;
         width: 400px;
@@ -610,35 +608,97 @@ footer span {
     .introText {
         font-size: smaller;
     }
+
+    .footer_style {
+        width: 1000px;
+    }
+}
+
+@media (max-width:950px) {
+    .navigationBar nav ul a {
+        font-size: 20px;
+    }
+
+    .navigationBar nav ul li {
+        padding: 15px;
+    }
+
+    .logo {
+        height: 80px;
+        margin-left: 20px;
+        margin-top: 5px;
+
+    }
+
 }
 
 
+@media (max-width:750px) {
+    .intro {
+        width: 750px;
+    }
 
-/*@media (max-width:800px) {*/
+    .navigationBar nav ul a {
+        font-size: 20px;
+    }
 
-/*.navigationBar nav ul a {*/
-/*font-size: 20px;*/
-/*}*/
+    .navigationBar nav ul li {
+        padding: 5px;
+    }
 
-/*.navigationBar nav ul li {*/
-/*padding: 5px;*/
-/*}*/
-/*.functionsSection {*/
-/*min-width:400px;*/
-/*}*/
-/*.function img {*/
-/*width: 250px;*/
-/*padding-right: 100px;*/
-/*padding-left: 100px;*/
-/*}*/
-/*.function h2 {*/
-/*font-size: 20px;*/
-/*}*/
-/*.testersParagraph {*/
-/*min-width: 800px;*/
-/*margin: auto;*/
-/*}*/
-/*.testersParagraph p {*/
-/*font-size: 15px;*/
-/*}*/
-/*}*/
+    .logo {
+        height: 60px;
+        margin-left: 20px;
+        margin-top: 5px;
+    }
+
+    #functionsSection {
+    width:300px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+    .function img{
+    width: 280px;
+    margin-top: 50px;
+    }
+
+    .function2, .function3 {
+        margin-left: 0;
+    }
+
+    .function h2 {
+    font-size: 20px;
+    }
+
+    .additionalFunctionsSection {
+        margin-left: auto;
+        margin-right: auto;
+        width: 350px;
+    }
+
+    .additionalFunctionsSection div {
+        width: 140px;
+        margin-bottom: 20px;
+        text-align: center;
+        padding-left: 10px;
+        padding-right: 10px;
+        }
+
+    .testersParagraph {
+    width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+    .testersParagraph p {
+    font-size: 15px;
+    width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+    .footer_style {
+        width: 750px;
+    }
+}
