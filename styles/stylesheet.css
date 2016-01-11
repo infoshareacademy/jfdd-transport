@@ -30,7 +30,6 @@ nav {
     Z-index: 2;
     position: fixed;
     background-color: white;
-    top:89px;
 }
 
 .navigationBar  nav  ul {
@@ -489,6 +488,11 @@ input:focus {
     font-weight: normal;
 }
 
+footer {
+    margin-left:auto;
+    margin-right:auto;
+}
+
 footer span {
     font-family: Arial sans-serif;
 }
@@ -571,9 +575,9 @@ footer span {
     border: 2px solid #30aed6;
     width:100%;
     position: fixed;
-    z-index: 2;
-    height: 85px;
-    overflow-y: auto;
+    bottom:0;
+    z-index: 2000;
+    display: block;
 }
 
 .cookieInfoTitle {
