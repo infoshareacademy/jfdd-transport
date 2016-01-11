@@ -587,9 +587,19 @@ footer span {
     z-index: 125;
 }
 
-#easterEggIntro {
-    z-index: 120;
+#easterEggContainer {
+    background-color: aquamarine;
+    width: 1000px;
+    height: 800px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
+
+/*#easterEggIntro {
+    z-index: 120;
+}*/
 
 .vehicles {
     height: 96px;
