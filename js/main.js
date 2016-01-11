@@ -63,7 +63,7 @@ $(document).ready(function () {
             $('<p/>', {'class': 'cookieInfoTitle', text: 'Ciastka!'})
             )
             .append(
-                $('<p/>', {'class': 'cookieInfoText', text: 'Ta strona korzysta z ciasteczek. Kliknij, by zamknąć.'})
+                $('<p/>', {'class': 'cookieInfoText', text: 'Strona korzysta z plików cookies w celu realizacji usług i zgodnie z Polityką Plików Cookies. Możesz określić warunki przechowywania lub dostępu do plików cookies w Twojej przeglądarce. Kliknij, by zamknać.'})
                 )
             );
 
