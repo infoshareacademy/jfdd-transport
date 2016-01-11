@@ -490,9 +490,7 @@ footer span {
 
 /* New paragraph for testers */
 .testersParagraph {
-    /*height: 100px;*/
     padding-top: 50px;
-    /*padding-top:50px;*/
     text-align: center;
     margin-bottom: 0;
     min-width: 1000px;
@@ -564,9 +562,40 @@ footer span {
 
 @media (max-width:1000px) {
 
-    header {
-        width: 1000px;
+    .navigationBar {
+        width: 950px;
     }
+
+    nav {
+        padding-right: 170px;
+    }
+
+    header {
+        width: 950px;
+        height: 100px;
+    }
+    .navigationBar nav ul a {
+        font-size: 20px;
+    }
+
+    .navigationBar nav ul li {
+        padding: 15px;
+    }
+
+    .logo {
+        height: 80px;
+        margin-left: 20px;
+        margin-top: 5px;
+
+    }
+
+    .footer_style {
+        max-width: 1000px;
+    }
+
+    /*header {*/
+        /*width: 1000px;*/
+    /*}*/
 
     .intro {
         width: 1000px;
@@ -637,6 +666,7 @@ footer span {
 
     header {
         width: 950px;
+        height: 100px;
     }
     .navigationBar nav ul a {
         font-size: 20px;
@@ -654,7 +684,7 @@ footer span {
     }
 
     .footer_style {
-        max-width: 950px;
+        max-width: 1000px;
     }
 
 }
@@ -662,11 +692,20 @@ footer span {
 
 @media (max-width:780px) {
 
+    body {
+        min-width: 750px;
+    }
+
+    main {
+        width: 750px;
+    }
+
     .navigationBar {
         width: 750px;
     }
 
     nav {
+        padding-top: 20px;
         padding-right:350px;
     }
 
@@ -678,6 +717,10 @@ footer span {
         width: 750px;
     }
 
+    .introText h1 {
+        font-size: 25px;
+    }
+
     .navigationBar nav ul a {
         font-size: 18px;
     }
@@ -687,6 +730,7 @@ footer span {
     }
 
     .logo {
+        padding-top: 20px;
         height: 60px;
         margin-left: 20px;
         margin-top: 5px;
@@ -708,7 +752,12 @@ footer span {
     }
 
     .function h2 {
-    font-size: 20px;
+    font-size: 30px;
+    }
+
+
+    .function #opis1, #opis2, #opis3, p {
+        font-size: 20px;
     }
 
     .additionalFunctionsSection {
@@ -726,18 +775,21 @@ footer span {
         }
 
     .testersParagraph {
-    width: 750px;
+    min-width: 750px;
     margin-left: auto;
     margin-right: auto;
     }
 
     .testersParagraph p {
     font-size: 15px;
-    width: 750px;
+    min-width: 750px;
     margin-left: auto;
     margin-right: auto;
     }
 
+    footer {
+    width: 750px;
+}
     .footer_style {
         width: 750px;
     }
@@ -745,12 +797,25 @@ footer span {
 
 @media (max-width:600px) {
 
+
+    body {
+        min-width: 600px;
+    }
+
+    main {
+        width: 600px;
+    }
+
+    .intro {
+        width: 600px;
+    }
+
     .navigationBar {
         width: 600px;
     }
 
     nav {
-        padding-right: 550px;
+        padding-right: 520px;
     }
 
     header {
@@ -758,5 +823,29 @@ footer span {
     }
     .logo {
         display: none;
+    }
+
+    .introText h1 {
+        font-size: 20px;
+    }
+
+    .testersParagraph {
+        min-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .testersParagraph p {
+        font-size: 15px;
+        min-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    footer {
+        width: 600px;
+    }
+    .footer_style {
+        width: 600px;
     }
 }
