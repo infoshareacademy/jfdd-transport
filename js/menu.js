@@ -12,11 +12,23 @@ $(window).scroll(function(){
             $nav.data('size','small').stop().animate({
                 height:'80px'
             }, 600);
+            $nav.find('.logo').stop().animate({
+                height: '70px'
+            }, 600);
+            $nav.find('nav').stop().animate({
+                paddingTop: '-40px'
+            }, 600);
         }
     } else {
         if ($nav.data('size') == 'small') {
             $nav.data('size','big').stop().animate({
                 height:'100px'
+            }, 600);
+            $nav.find('.logo').stop().animate({
+                height: '90px'
+            }, 600);
+            $nav.find('nav').stop().animate({
+                paddingTop: '20px'
             }, 600);
         }
     }
