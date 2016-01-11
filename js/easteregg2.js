@@ -10,132 +10,109 @@ $(document).ready(function () {
         $easterEgg2.addClass('hide');
     });
 
+
     $('#startEasterEggGame2').on('click', function () {
         playGame();
+
+        Array.prototype.random = function () {
+            return this[Math.floor((Math.random()*this.length))];
+        }
+        var linie = [41, 30, 50, 84, 76, 87, 65, 32];
+
+
+        b1 = document.createElement('div');
+        $(b1).addClass('bus1 buses')
+            .html(linie.random())
+            .appendTo($("#easterEgg2"))
+            .animate({"left":"1500px"}, generateRandomValue(2500, 7000))
+            .css('left', function(){ return $(this).offset().left; })
+            .click(function () {
+                var actualPosition = $(b1).offset().left;
+                $(this).remove();
+                actualPosition = -220;
+                breRun = document.createElement('div');
+                $(breRun).addClass('bus1 buses')
+                    .html(linie.random())
+                    .appendTo($("#easterEgg2"))
+                    .css('left', function(){ return $(this).offset().left; })
+                    .animate({"left":"1500px"}, generateRandomValue(2500, 7000))
+
+
+            })
+
+
+
+        b2 = document.createElement('div');
+        $(b2).addClass('bus2 buses')
+            .html(linie.random())
+            .appendTo($("#easterEgg2"))
+            .animate({"left":"1500px"}, generateRandomValue(2500, 7000))
+            .css('left', function(){ return $(this).offset().left; })
+            .animate({"left":"1500px"}, generateRandomValue(2500, 7000))
+            .click(function () {
+                var actualPosition = $(b2).offset().left;
+                $(this).remove();
+                actualPosition = -220;
+                breRun = document.createElement('div');
+                $(breRun).addClass('bus2 buses')
+                    .html(linie.random())
+                    .appendTo($("#easterEgg2"))
+                    .css('left', function(){ return $(this).offset().left; })
+                    .animate({"left":"1500px"}, generateRandomValue(2500, 7000))
+
+            })
+        b3 = document.createElement('div');
+        $(b3).addClass('bus3 buses')
+            .html(linie.random())
+            .appendTo($("#easterEgg2"))
+            .animate({"right":"1500px"}, generateRandomValue(2500, 7000))
+            .css('right', function(){ return $(this).offset().right; })
+            .animate({"right":"1500px"}, generateRandomValue(2500, 7000))
+            .click(function () {
+                var actualPosition = $(b3).offset().left;
+                $(this).remove();
+                actualPosition = -220;
+                breRun = document.createElement('div');
+                $(breRun).addClass('bus3 buses')
+                    .html(linie.random())
+                    .appendTo($("#easterEgg2"))
+                    .css('right', function(){ return $(this).offset().right; })
+                    .animate({"right":"1500px"}, generateRandomValue(2500, 7000))
+            })
+        b4 = document.createElement('div');
+        $(b4).addClass('bus4 buses')
+            .html(linie.random())
+            .appendTo($("#easterEgg2"))
+            .css('right', function(){ return $(this).offset().right; })
+            .animate({"right":"1500px"}, generateRandomValue(2500, 7000))
+            .click(function () {
+                var actualPosition = $(b4).offset().left;
+                $(this).remove();
+                actualPosition = -220;
+                breRun = document.createElement('div');
+                $(breRun).addClass('bus4 buses')
+                    .html(linie.random())
+                    .appendTo($("#easterEgg2"))
+                    .css('right', function(){ return $(this).offset().right; })
+                    .animate({"right":"1500px"}, generateRandomValue(2500, 7000))
+            })
     });
 
     var playGame = function () {
         $('#easterEgg2Intro').addClass('hide');
         $easterEgg2.removeClass('hide');
-        //$('#easterEgg2').removeClass('hide');
         $easterEgg2.addClass('gameBackground');
-
         $('#gameScore').removeClass('hide');
-
+        grass = document.createElement('div');
+        $(grass).addClass('grass')
+            .appendTo($("#easterEgg2"))
     }
+
 });
-//
-//
-////
-//            });
 
 
-//    var firstBus, secondBus, thirdBus, forthBus;
-//    function startGame() {
-//        $("#myCanvas").removeClass("hide");
-//        myGameArea.start();
-//        firstBus = new component1(100, 50, "black", 1, 20);
-//        secondBus = new component2(100, 50, "black", 1, 120);
-//        thirdBus = new component3(100, 50, "black", 900, 230);
-//        forthBus = new component4(100, 50, "black", 900, 330);
-//    }
-//
-//    var myGameArea = {
-//        canvas: document.createElement("canvas"),
-//        start: function () {
-//            this.canvas.width = 1000;
-//            this.canvas.height = 400;
-//            this.context = this.canvas.getContext("2d");
-//            document.body.insertBefore(this.canvas, document.body.childNodes[6]);
-//            this.frameNo = 0;
-//            this.interval = setInterval(updateGameArea, 20);
-//        },
-//        stop : function() {
-//            clearInterval(this.interval);
-//        },
-//        clear : function() {
-//            this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
-//        }
-//    }
-//
-//    function component1(width, height, color, x, y) {
-//        //this.type = type;
-//        this.width = width;
-//        this.height = height;
-//        //this.angle = 0;
-//        //this.speed = 1;
-//        this.x = x;
-//        this.y = y;
-//        this.update = function() {
-//            ctx = myGameArea.context;
-//            //ctx.save();
-//            //ctx.translate(this.x, this.y);
-//            //ctx.rotate(this.angle);
-//            ctx.fillStyle = color;
-//            ctx.fillRect(this.x, this.y, this.width, this.height);
-//            //ctx.restore();
-//        }
-//        //this.newPos = function() {
-//        //    this.x += this.speed * Math.sin(this.angle);
-//        //    this.y -= this.speed * Math.cos(this.angle);
-//        //}
-//    }
-//
-//function component2(width, height, color, x, y) {
-//    this.width = width;
-//    this.height = height;
-//    this.x = x;
-//    this.y = y;
-//    this.update = function() {
-//        ctx = myGameArea.context;
-//        ctx.fillStyle = color;
-//        ctx.fillRect(this.x, this.y, this.width, this.height);
-//    }
-//}
-//
-//function component3(width, height, color, x, y) {
-//    this.width = width;
-//    this.height = height;
-//    this.x = x;
-//    this.y = y;
-//    this.update = function() {
-//        ctx = myGameArea.context;
-//        ctx.fillStyle = color;
-//        ctx.fillRect(this.x, this.y, this.width, this.height);
-//    }
-//}
-//
-//function component4(width, height, color, x, y) {
-//    this.width = width;
-//    this.height = height;
-//    this.x = x;
-//    this.y = y;
-//    this.update = function() {
-//        ctx = myGameArea.context;
-//        ctx.fillStyle = color;
-//        ctx.fillRect(this.x, this.y, this.width, this.height);
-//    }
-//}
-//function updateGameArea() {
-//    myGameArea.clear();
-//    //firstBus.x += 1;
-//    //secondBus.x +=2;
-//    //thirdBus.x -=1;
-//    //forthBus.x -=2;
-//    //firstBus.newPos();
-//    //secondBus.newPos();
-//    //thirdBus.newPos();
-//    //forthBus.newPos();
-//    firstBus.update();
-//    secondBus.update();
-//    thirdBus.update();
-//    forthBus.update();
-//}
-////});
-
-//
-//
-
-
-
+//Helper functions from AgMo
+function generateRandomValue(minValToGenerate, maxValToGenerate) {
+    return Math.floor((Math.random() * (maxValToGenerate - minValToGenerate + 1)) + minValToGenerate);
+}
 
