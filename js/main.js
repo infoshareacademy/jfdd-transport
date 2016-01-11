@@ -58,13 +58,12 @@ $(document).ready(function () {
     /**
      * Handling cookies to display information about cookies
      */
-    //var $elem = jQuery('<div/>', { 'class': "cookieInfo" }).append($('<p/>', {text : 'Ciastka!\nddd'}));
      $('body').prepend(
         $('<div/>', {'class': 'cookieInfo'}).append(
             $('<p/>', {'class': 'cookieInfoTitle', text: 'Ciastka!'})
             )
             .append(
-                $('<p/>', {'class': 'cookieInfoText', text: 'Ta strona korzysta z ciasteczek. Kliknij, by zamknąć.'})
+                $('<p/>', {'class': 'cookieInfoText', text: 'Strona korzysta z plików cookies w celu realizacji usług i zgodnie z Polityką Plików Cookies. Możesz określić warunki przechowywania lub dostępu do plików cookies w Twojej przeglądarce. Kliknij, by zamknać.'})
                 )
             );
 
