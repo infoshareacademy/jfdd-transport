@@ -10,7 +10,7 @@ $(document).ready(function () {
     $('a').click(function () {
         var href = $.attr(this, 'href');
         $root.animate({
-            scrollTop: $(href).offset().top -$('.navigationBar').outerHeight()
+            scrollTop: $(href).offset().top - $('.navigationBar').outerHeight()
         }, 600, function () {
             window.location.hash = href;
         });
@@ -34,7 +34,13 @@ $(document).ready(function () {
                 $('.navigationBar > nav > ul > li > a[href=' + href + ']').addClass('active');
             }
 
-            if($(window).scrollTop() + $(window).height() == $(document).height()) {
+            //if($(window).scrollTop() + $(window).height() == $(document).height()) {
+            //    $('.navigationBar > nav > ul > li > a').removeClass('active');
+            //    $('.navigationBar > nav > ul > li > a[href=' + href + ']').addClass('active');
+            //}
+
+            var endOfFunctionsSection = $('.additionalFunctionsSection').offset().top;
+            if (position >= endOfFunctionsSection) {
                 $('.navigationBar > nav > ul > li > a').removeClass('active');
                 $('.navigationBar > nav > ul > li > a[href=' + href + ']').addClass('active');
             }
