@@ -563,7 +563,7 @@ footer span {
 @media (max-width:1000px) {
 
     .navigationBar {
-        width: 950px;
+        width: 1000px;
     }
 
     nav {
@@ -571,7 +571,7 @@ footer span {
     }
 
     header {
-        width: 950px;
+        min-width: 1000px;
         height: 100px;
     }
     .navigationBar nav ul a {
@@ -586,19 +586,6 @@ footer span {
         height: 80px;
         margin-left: 20px;
         margin-top: 5px;
-
-    }
-
-    .footer_style {
-        max-width: 1000px;
-    }
-
-    /*header {*/
-        /*width: 1000px;*/
-    /*}*/
-
-    .intro {
-        width: 1000px;
     }
 
     .introText {
@@ -617,7 +604,7 @@ footer span {
     }
 
     #functionsSection {
-        width:800px;
+        width:700px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -627,66 +614,35 @@ footer span {
     }
 
     .additionalFunctionsSection {
-        margin-left: auto;
+        margin-left: 220px;
         margin-right: auto;
-        width: 700px;
+        width: 620px;
     }
 
     .additionalFunctionsSection div {
-        width: 200px;
+        width: 190px;
         margin-bottom: 20px;
         text-align: center;
         margin-right: 5px;
     }
     .testersParagraph {
-        width: 400px;
-        margin: auto;
+        min-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .testersParagraph hr {
+        width: 600px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .testersParagraph p {
-        font-size: 15px;
-        width: 400px;
-        margin: auto;
-    }
-
-    .footer_style {
-        width: 1000px;
-    }
-}
-
-@media (max-width:950px) {
-
-    .navigationBar {
-        width: 950px;
-    }
-
-    nav {
-        padding-right: 170px;
-    }
-
-    header {
-        width: 950px;
-        height: 100px;
-    }
-    .navigationBar nav ul a {
+        margin-left: auto;
+        margin-right: auto;
+        width: 600px;
         font-size: 20px;
     }
-
-    .navigationBar nav ul li {
-        padding: 15px;
-    }
-
-    .logo {
-        height: 80px;
-        margin-left: 20px;
-        margin-top: 5px;
-
-    }
-
-    .footer_style {
-        max-width: 1000px;
-    }
-
 }
 
 
@@ -696,29 +652,13 @@ footer span {
         min-width: 750px;
     }
 
-    main {
-        width: 750px;
-    }
-
-    .navigationBar {
-        width: 750px;
-    }
-
     nav {
         padding-top: 20px;
         padding-right:350px;
     }
 
-    header {
+    .navigationBar {
         width: 750px;
-    }
-
-    .intro {
-        width: 750px;
-    }
-
-    .introText h1 {
-        font-size: 25px;
     }
 
     .navigationBar nav ul a {
@@ -729,11 +669,19 @@ footer span {
         padding: 5px;
     }
 
+    header {
+        width: 750px;
+    }
+
     .logo {
         padding-top: 20px;
         height: 60px;
         margin-left: 20px;
         margin-top: 5px;
+    }
+
+    .introText h1 {
+        font-size: 25px;
     }
 
     #functionsSection {
@@ -755,7 +703,6 @@ footer span {
     font-size: 30px;
     }
 
-
     .function #opis1, #opis2, #opis3, p {
         font-size: 20px;
     }
@@ -775,39 +722,29 @@ footer span {
         }
 
     .testersParagraph {
-    min-width: 750px;
-    margin-left: auto;
-    margin-right: auto;
+        min-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .testersParagraph hr {
+        width: 600px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .testersParagraph p {
-    font-size: 15px;
-    min-width: 750px;
-    margin-left: auto;
-    margin-right: auto;
-    }
-
-    footer {
-    width: 750px;
-}
-    .footer_style {
-        width: 750px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 400px;
+        font-size: 15px;
     }
 }
 
 @media (max-width:600px) {
 
-
     body {
         min-width: 600px;
-    }
-
-    main {
-        width: 600px;
-    }
-
-    .intro {
-        width: 600px;
     }
 
     .navigationBar {
@@ -835,17 +772,9 @@ footer span {
         margin-right: auto;
     }
 
-    .testersParagraph p {
-        font-size: 15px;
-        min-width: 600px;
+    .testersParagraph hr {
+        width: 600px;
         margin-left: auto;
         margin-right: auto;
-    }
-
-    footer {
-        width: 600px;
-    }
-    .footer_style {
-        width: 600px;
     }
 }
