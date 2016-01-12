@@ -723,6 +723,12 @@ footer span {
     border: 1px solid blanchedalmond;
 }
 
+#easterEgg table {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
 #easterEgg th {
     height: 60px;
     width: 150px;
@@ -764,10 +770,12 @@ footer span {
 
 #gameResults {
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 400px;
     background-color: darkorange;
-    left: 400px;
-    width: 200px;
-    height: 200px;
     z-index: 124;
 }
 
@@ -782,4 +790,28 @@ footer span {
     font-family: bold Arial, sans-serif;
 }
 
+.passengers {
+    position: absolute;
+    left: 314px;
+    height: 87px;
+    z-index: 120;
+}
+
+.passengerGroup2 {
+    width: 99px;
+    top: 467px;
+    background: url("../images/easter_egg.png") 218px 88px;
+}
+
+.passengerGroup1 {
+    width: 70px;
+    top: 297px;
+    background: url("../images/easter_egg.png") 287px 88px;
+}
+
+.passengerGroup3 {
+    width: 105px;
+    top: 637px;
+    background: url("../images/easter_egg.png") 119px 88px;
+}
 /*End easter egg styles*/
