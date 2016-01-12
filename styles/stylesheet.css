@@ -556,13 +556,13 @@ footer span {
     display: none;
 }
 
-#easterEgg, #easterEggIntro {
+#easterEgg {
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: darkorange;
+    background-color: rgba(0,0,0,0.7);
     font-family: Arial, sans-serif;
     color: #3f3f3f;
     font-weight: 200;
@@ -570,14 +570,17 @@ footer span {
     z-index: 110; /*Social media buttons use '100'*/
 }
 
+
+
 #easterEggIntro {
-    background-color: beige;
+    background-color: darkorange;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 1000px;
     height: 800px;
+    z-index: 110;
 }
 
 #closeEasterEgg {
@@ -597,20 +600,19 @@ footer span {
     z-index: 125;
 }
 
-#easterEggContainer {
-    background-color: aquamarine;
+#easterEggContainerOuter, #easterEggContainerInner {
     width: 1000px;
     height: 800px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    clip: rect(0, auto, auto, 0);
 }
 
-/*#easterEggIntro {
-    z-index: 120;
-}*/
+#easterEggContainerInner {
+    background-color: darkorange;
+    clip: rect(0, auto, auto, 0);
+}
 
 .vehicles {
     height: 96px;
@@ -696,8 +698,6 @@ footer span {
     top: 465px;
 }
 
-
-
 #easterEgg table, th, td {
     border: 1px solid blanchedalmond;
 }
@@ -716,6 +716,15 @@ footer span {
 #easterEgg table {
     border-collapse: collapse;
     border-radius: 3px;
+}
+
+#easterEgg h1, p {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+#easterEgg p {
+    text-align: justify;
 }
 
 #currentScore, #gameCountdown {
@@ -738,4 +747,5 @@ footer span {
     width: 200px;
     height: 200px;
 }
+
 /*End easter egg styles*/
