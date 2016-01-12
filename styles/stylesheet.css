@@ -388,7 +388,7 @@ input:focus {
     background-color: white;
 }
 
-#button-gray, #startEasterEggGame {
+#button-gray {
     font-family: Jura, sans-serif;
     float: left; /**/
     width: 100%; /**/
@@ -406,7 +406,7 @@ input:focus {
     font-weight: 700;
 }
 
-#button-gray:hover, #startEasterEggGame:hover {
+#button-gray:hover {
     background-color: rgba(0, 0, 0, 0);
     color: #282828;
 }
@@ -581,6 +581,15 @@ footer span {
     z-index: 110;
 }
 
+#easterEgg #easterEggIntro>h1, #easterEgg #easterEggIntro>p {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+#easterEgg #easterEggIntro p {
+    text-align: justify;
+}
+
 #closeEasterEgg {
     width: 50px;
     height: 50px;
@@ -745,15 +754,6 @@ footer span {
     border-radius: 3px;
 }
 
-#easterEgg #easterEggIntro h1, #easterEgg #easterEggIntro p {
-    margin-left: 100px;
-    margin-right: 100px;
-}
-
-#easterEgg #easterEggIntro p {
-    text-align: justify;
-}
-
 #currentScore, #gameCountdown {
     font-size: 50px;
 }
@@ -779,14 +779,18 @@ footer span {
     z-index: 124;
 }
 
-#startEasterEggGameWrapper {
-    width: 200px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 120px;
+#gameResults>h3, #gameResults>p {
+    text-align: center;
 }
 
-#startEasterEggGame {
+#gameResults>p {
+    font-weight: bold;
+    font-size: 100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#startEasterEggGame, #playAgain {
     font-family: bold Arial, sans-serif;
 }
 
@@ -813,5 +817,23 @@ footer span {
     width: 105px;
     top: 637px;
     background: url("../images/easter_egg.png") 119px 88px;
+}
+
+#startEasterEggGame, #playAgain {
+    padding: 22px;
+    color: blanchedalmond;
+    background-color: #3f3f3f;
+    font-weight: bold;
+    font-size: 30px;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    display: block;
+    cursor: pointer;
+}
+
+#playAgain {
+    margin-top: 50px;
 }
 /*End easter egg styles*/
