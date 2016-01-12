@@ -96,6 +96,22 @@ $(document).ready(function () {
                     .css('right', function(){ return $(this).offset().right; })
                     .animate({"right":"1500px"}, generateRandomValue(2500, 7000))
             })
+
+
+        var counter = 10;
+        var newCounter = document.createElement("div");
+        newCounter.innerHTML = "Time left: 10 seconds.";
+        $(newCounter).addClass('counter');
+        var id;
+
+        id = setInterval(function() {
+            counter--;
+            if(counter < 0) {
+                clearInterval(id);
+            } else {
+                newCounter.innerHTML = "Time left: " + counter.toString() + " seconds.";
+            }
+        }, 1000);
     });
 
     var playGame = function () {
@@ -144,32 +160,54 @@ $(document).ready(function () {
     //            clearInterval(timer);
     //        };
     //    }
+
     //
+    };
+
+    //var downloadButton = document.getElementById("download");
+    //var counter = 10;
+    //var newElement = document.createElement("div");
+    //newElement.innerHTML = "Time left: 10 seconds.";
+    //$(newElement).addClass('counter');
+    //var id;
     //
-    }
+    //downloadButton.parentNode.replaceChild(newElement, downloadButton);
 
+    //id = setInterval(function() {
+    //    counter--;
+    //    if(counter < 0) {
+    //        newElement.parentNode.replaceChild(downloadButton, newElement);
+            //clearInterval(id);
+        //} else {
+        //    newElement.innerHTML = "Time left: " + counter.toString() + " seconds.";
+        //}
+    //}, 1000);
 
-
-    function countdown(seconds) {
-        var miliseconds = 1000;
-        var secs = seconds;
-        function tick() {
-            //This script expects an element with an ID = "counter". You can change that to what ever you want.
-            var counter = document.getElementById("counter");
-            var current_seconds = secs-1
-            miliseconds--;
-            counter.innerHTML = current_seconds.toString() + ":" + (miliseconds < 10 ? "0" : "") + String(miliseconds);
-            if( miliseconds > 0 ) {
-                setTimeout(tick, 8000);
-            } else {
-                if(seconds > 1){
-                    countdown(secs-1);
-                }
-            }
-        }
-        tick();
-    }
-
+    //function countdown(seconds) {
+    //    var miliseconds = 1000;
+    //    var secs = seconds;
+    //    function tick() {
+    //        var counter = document.getElementById("counter");
+    //        var current_seconds = secs-1;
+    //        miliseconds--;
+    //        counter.innerHTML = current_seconds.toString();
+    //        if( miliseconds > 0 ) {
+    //            setTimeout(tick, 1000);
+    //
+    //        } else {
+    //            if(seconds > 1){
+    //                countdown(secs-1);
+    //            }
+    //            else {if(seconds=0)
+    //                alert("Hello");}
+            //}
+        //
+        //}
+        //tick();
+    //}
+    //
+    //countdown(5);
+//
 });
 
 
