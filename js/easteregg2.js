@@ -106,6 +106,17 @@ $(document).ready(function () {
         grass = document.createElement('div');
         $(grass).addClass('grass')
             .appendTo($("#easterEgg2"))
+
+
+        var sec = 10
+        var timer = setInterval(function() {
+            $('#gameScore span').text(sec--);
+            if (sec == -1) {
+                $('#gameScore').fadeOut('fast');
+                clearInterval(timer);
+            }
+        }, 1000);
+
     }
 
 });

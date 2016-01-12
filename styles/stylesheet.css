@@ -60,18 +60,18 @@ button {
 
 }
 
-/*#gameScore {*/
-    /*color: white;*/
-    /*text-align: left;*/
-    /*margin-left: 5px;*/
-/*}*/
-
-/*#gameScore h5 {*/
-    /*color: white;*/
-    /*text-align: left;*/
-    /*margin-left: 5px;*/
-    /*line-height: 10px;*/
-/*}*/
+#gameScore {
+    color: white;
+    text-align: left;
+    margin-left: 5px;
+}
+/**/
+#gameScore h5 {
+    color: white;
+    text-align: left;
+    margin-left: 5px;
+    line-height: 10px;
+}
 
 /*#gameScore p {*/
     /*font-size: 15px;*/
