@@ -629,15 +629,15 @@ footer span {
 }
 
 .vehicle1 {
-    top: 200px;
+    top: 260px;
 }
 
 .vehicle2 {
-    top: 370px;
+    top: 430px;
 }
 
 .vehicle3 {
-    top: 540px;
+    top: 600px;
 }
 
 .vehicleDoor {
@@ -671,6 +671,27 @@ footer span {
     background: url("../images/easter_egg.png") 121px 164px;
 }
 
+.infoBoardStands {
+    position: absolute;
+    left: 290px;
+    width: 15px;
+    height: 155px;
+    background-color: black;
+    z-index: 120;
+}
+
+.infoBoardStand1 {
+    top: 221px;
+}
+
+.infoBoardStand2 {
+    top: 391px;
+}
+
+.infoBoardStand3 {
+    top: 561px;
+}
+
 .infoBoards {
     background-color: black;
     color: orange;
@@ -681,19 +702,21 @@ footer span {
     text-overflow: ellipsis;
     vertical-align: middle;
     position: absolute;
-    left: 400px;
+    left: 305px;
+    margin: 0;
+    z-index: 120;
 }
 
 .infoBoard1 {
-    top: 125px;
+    top: 221px;
 }
 
 .infoBoard2 {
-    top: 295px;
+    top: 391px;
 }
 
 .infoBoard3 {
-    top: 465px;
+    top: 561px;
 }
 
 #easterEgg table, th, td {
@@ -716,12 +739,12 @@ footer span {
     border-radius: 3px;
 }
 
-#easterEgg h1, #easterEgg p {
+#easterEgg #easterEggIntro h1, #easterEgg #easterEggIntro p {
     margin-left: 100px;
     margin-right: 100px;
 }
 
-#easterEgg p {
+#easterEgg #easterEggIntro p {
     text-align: justify;
 }
 
@@ -736,6 +759,7 @@ footer span {
     top: 0;
     bottom: 0;
     background-color: rgba(34, 34, 34, 0.77);
+    z-index: 123;
 }
 
 #gameResults {
@@ -744,6 +768,7 @@ footer span {
     left: 400px;
     width: 200px;
     height: 200px;
+    z-index: 124;
 }
 
 #startEasterEggGameWrapper {
