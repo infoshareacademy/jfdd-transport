@@ -68,7 +68,7 @@ $(function () {
         game.generateBuses(3, [1, 2, 3]);
 
         $('.vehicles').each(function () {
-            game.runABus(this, generateRandomValue(0, 1500), 350); //From 0 up to 1500 milliseconds \
+            game.runABus(this, generateRandomValue(0, 1500), 400); //From 0 up to 1500 milliseconds \
             // so as not to have the user waiting too long for the buses to show up at the start \
             // of the game.
         });
@@ -297,7 +297,7 @@ $(function () {
 
             game.generateBuses(1, [indexOfBusToRerun]);
             var busToRerun = document.getElementsByClassName('vehicle' + indexOfBusToRerun)[0];
-            game.runABus(busToRerun, generateRandomValue(100, 1000), 350);
+            game.runABus(busToRerun, generateRandomValue(100, 1000), 400);
         },
         getBusIndex: function (fromWhichBus) {
             var busIndex = fromWhichBus.className;
