@@ -106,6 +106,68 @@ $(document).ready(function () {
         grass = document.createElement('div');
         $(grass).addClass('grass')
             .appendTo($("#easterEgg2"))
+
+    //    var myCounter = new Countdown({
+    //        seconds:5,  // number of seconds to count down
+    //        onUpdateStatus: function(sec){$(grass).append(sec);},
+    //        onCounterEnd: function(){ alert('End of a game!');}
+    //
+    //
+    //    });
+    //
+    //    myCounter.start();
+    //
+    //    function Countdown(options) {
+    //        var timer,
+    //            instance = this,
+    //            seconds = options.seconds || 10,
+    //            updateStatus = options.onUpdateStatus || function () {},
+    //            counterEnd = options.onCounterEnd || function () {};
+    //
+    //        function decrementCounter() {
+    //            updateStatus(seconds);
+    //            if (seconds === 0) {
+    //                counterEnd();
+    //                instance.stop();
+    //            }
+    //            seconds--;
+    //        }
+    //
+    //        this.start = function () {
+    //            clearInterval(timer);
+    //            timer = 0;
+    //            seconds = options.seconds;
+    //            timer = setInterval(decrementCounter, 1000);
+    //        };
+    //
+    //        this.stop = function () {
+    //            clearInterval(timer);
+    //        };
+    //    }
+    //
+    //
+    }
+
+
+
+    function countdown(seconds) {
+        var miliseconds = 1000;
+        var secs = seconds;
+        function tick() {
+            //This script expects an element with an ID = "counter". You can change that to what ever you want.
+            var counter = document.getElementById("counter");
+            var current_seconds = secs-1
+            miliseconds--;
+            counter.innerHTML = current_seconds.toString() + ":" + (miliseconds < 10 ? "0" : "") + String(miliseconds);
+            if( miliseconds > 0 ) {
+                setTimeout(tick, 8000);
+            } else {
+                if(seconds > 1){
+                    countdown(secs-1);
+                }
+            }
+        }
+        tick();
     }
 
 });
