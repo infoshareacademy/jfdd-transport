@@ -595,6 +595,7 @@ footer span {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    clip: rect(0, auto, auto, 0);
 }
 
 /*#easterEggIntro {
@@ -684,6 +685,8 @@ footer span {
 .infoBoard3 {
     top: 465px;
 }
+
+
 
 #easterEgg table, th, td {
     border: 1px solid blanchedalmond;
