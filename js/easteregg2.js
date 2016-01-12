@@ -10,6 +10,26 @@ $(document).ready(function () {
         $easterEgg2.addClass('hide');
     });
 
+    var playGame = function () {
+        $('#easterEgg2Intro').addClass('hide');
+        $easterEgg2.removeClass('hide');
+        $easterEgg2.addClass('gameBackground');
+        $('#gameScore').removeClass('hide');
+        grass = document.createElement('div');
+        $(grass).addClass('grass')
+            .appendTo($("#easterEgg2"))
+
+
+        var sec = 10;
+        var timer = setInterval(function() {
+            $('#gameScore span').text(sec--);
+            if (sec == -1) {
+                $('#gameScore').fadeOut('fast');
+                clearInterval(timer);
+            }
+        }, 1000);
+
+    }
 
     $('#startEasterEggGame2').on('click', function () {
         playGame();
@@ -18,8 +38,9 @@ $(document).ready(function () {
             return this[Math.floor((Math.random()*this.length))];
         }
         var linie = [41, 30, 50, 84, 76, 87, 65, 32];
+        var x=1;
 
-
+        do{;
         b1 = document.createElement('div');
         $(b1).addClass('bus1 buses')
             .html(linie.random())
@@ -36,11 +57,10 @@ $(document).ready(function () {
                     .appendTo($("#easterEgg2"))
                     .css('left', function(){ return $(this).offset().left; })
                     .animate({"left":"1500px"}, generateRandomValue(2500, 7000))
+            });
 
-
-            })
-
-
+        ;x++;
+        } while (sec>0)
 
         b2 = document.createElement('div');
         $(b2).addClass('bus2 buses')
@@ -59,8 +79,8 @@ $(document).ready(function () {
                     .appendTo($("#easterEgg2"))
                     .css('left', function(){ return $(this).offset().left; })
                     .animate({"left":"1500px"}, generateRandomValue(2500, 7000))
-
             })
+
         b3 = document.createElement('div');
         $(b3).addClass('bus3 buses')
             .html(linie.random())
@@ -79,6 +99,7 @@ $(document).ready(function () {
                     .css('right', function(){ return $(this).offset().right; })
                     .animate({"right":"1500px"}, generateRandomValue(2500, 7000))
             })
+
         b4 = document.createElement('div');
         $(b4).addClass('bus4 buses')
             .html(linie.random())
@@ -96,28 +117,11 @@ $(document).ready(function () {
                     .css('right', function(){ return $(this).offset().right; })
                     .animate({"right":"1500px"}, generateRandomValue(2500, 7000))
             })
+
+
     });
 
-    var playGame = function () {
-        $('#easterEgg2Intro').addClass('hide');
-        $easterEgg2.removeClass('hide');
-        $easterEgg2.addClass('gameBackground');
-        $('#gameScore').removeClass('hide');
-        grass = document.createElement('div');
-        $(grass).addClass('grass')
-            .appendTo($("#easterEgg2"))
 
-
-        var sec = 10
-        var timer = setInterval(function() {
-            $('#gameScore span').text(sec--);
-            if (sec == -1) {
-                $('#gameScore').fadeOut('fast');
-                clearInterval(timer);
-            }
-        }, 1000);
-
-    }
 
 });
 
