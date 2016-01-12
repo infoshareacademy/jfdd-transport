@@ -26,7 +26,7 @@ nav {
     width: 100%;
     -webkit-box-shadow: 0 31px 40px 8px rgba(0,0,0,0.75);
     -moz-box-shadow: 0 31px 40px 8px rgba(0,0,0,0.75);
-    box-shadow: 0 31px 40px 8px rgba(0,0,0,0.75);
+    box-shadow: 0 5px 40px 8px rgba(0,0,0,0.75);
     Z-index: 2;
     position: fixed;
     background-color: white;
