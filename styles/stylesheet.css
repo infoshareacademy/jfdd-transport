@@ -718,7 +718,7 @@ footer span {
     border-radius: 3px;
 }
 
-#easterEgg h1, p {
+#easterEgg h1, #easterEgg p {
     margin-left: 100px;
     margin-right: 100px;
 }
