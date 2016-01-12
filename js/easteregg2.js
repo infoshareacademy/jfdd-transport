@@ -1,4 +1,4 @@
-
+var linie = [41, 30, 50, 84, 76, 87, 65, 32];
 $(document).ready(function () {
 
     var $easterEgg2 = $('#easterEgg2');
@@ -15,12 +15,14 @@ $(document).ready(function () {
         $easterEgg2.removeClass('hide');
         $easterEgg2.addClass('gameBackground');
         $('#gameScore').removeClass('hide');
+
         grass = document.createElement('div');
         $(grass).addClass('grass')
-            .appendTo($("#easterEgg2"))
+            .appendTo($("#easterEgg2"));
 
 
         var sec = 10;
+        var running = true;
         var timer = setInterval(function() {
             $('#gameScore span').text(sec--);
             if (sec == -1) {
@@ -29,94 +31,99 @@ $(document).ready(function () {
             }
         }, 1000);
 
-    }
+    };
 
-    $('#startEasterEggGame2').on('click', function () {
-        playGame();
-
-        Array.prototype.random = function () {
-            return this[Math.floor((Math.random()*this.length))];
-        }
-        var linie = [41, 30, 50, 84, 76, 87, 65, 32];
-        var x=1;
-
-        do{;
-        b1 = document.createElement('div');
+    var runBus = function (){
+        var b1 = document.createElement('div');
         $(b1).addClass('bus1 buses')
             .html(linie.random())
             .appendTo($("#easterEgg2"))
-            .animate({"left":"1500px"}, generateRandomValue(2500, 7000))
-            .css('left', function(){ return $(this).offset().left; })
+            .animate({"left": "1500px"}, generateRandomValue(2500, 7000))
+            .css('left', function () {
+                return $(this).offset().left;
+            })
             .click(function () {
                 var actualPosition = $(b1).offset().left;
                 $(this).remove();
-                actualPosition = -220;
-                breRun = document.createElement('div');
-                $(breRun).addClass('bus1 buses')
-                    .html(linie.random())
-                    .appendTo($("#easterEgg2"))
-                    .css('left', function(){ return $(this).offset().left; })
-                    .animate({"left":"1500px"}, generateRandomValue(2500, 7000))
+                //actualPosition = -220;
+                //breRun = document.createElement('div');
+                //$(breRun).addClass('bus1 buses')
+                //    .html(linie.random())
+                //    .appendTo($("#easterEgg2"))
+                //    .css('left', function () {
+                //        return $(this).offset().left;
+                //    })
+                //    .animate({"left": "1500px"}, generateRandomValue(2500, 7000))
             });
+    };
 
-        ;x++;
-        } while (sec>0)
+    Array.prototype.random = function () {
+        return this[Math.floor((Math.random()*this.length))];
+    };
 
-        b2 = document.createElement('div');
-        $(b2).addClass('bus2 buses')
-            .html(linie.random())
-            .appendTo($("#easterEgg2"))
-            .animate({"left":"1500px"}, generateRandomValue(2500, 7000))
-            .css('left', function(){ return $(this).offset().left; })
-            .animate({"left":"1500px"}, generateRandomValue(2500, 7000))
-            .click(function () {
-                var actualPosition = $(b2).offset().left;
-                $(this).remove();
-                actualPosition = -220;
-                breRun = document.createElement('div');
-                $(breRun).addClass('bus2 buses')
-                    .html(linie.random())
-                    .appendTo($("#easterEgg2"))
-                    .css('left', function(){ return $(this).offset().left; })
-                    .animate({"left":"1500px"}, generateRandomValue(2500, 7000))
-            })
+    $('#startEasterEggGame2').on('click', function () {
+        playGame();
+        runBus();
 
-        b3 = document.createElement('div');
-        $(b3).addClass('bus3 buses')
-            .html(linie.random())
-            .appendTo($("#easterEgg2"))
-            .animate({"right":"1500px"}, generateRandomValue(2500, 7000))
-            .css('right', function(){ return $(this).offset().right; })
-            .animate({"right":"1500px"}, generateRandomValue(2500, 7000))
-            .click(function () {
-                var actualPosition = $(b3).offset().left;
-                $(this).remove();
-                actualPosition = -220;
-                breRun = document.createElement('div');
-                $(breRun).addClass('bus3 buses')
-                    .html(linie.random())
-                    .appendTo($("#easterEgg2"))
-                    .css('right', function(){ return $(this).offset().right; })
-                    .animate({"right":"1500px"}, generateRandomValue(2500, 7000))
-            })
 
-        b4 = document.createElement('div');
-        $(b4).addClass('bus4 buses')
-            .html(linie.random())
-            .appendTo($("#easterEgg2"))
-            .css('right', function(){ return $(this).offset().right; })
-            .animate({"right":"1500px"}, generateRandomValue(2500, 7000))
-            .click(function () {
-                var actualPosition = $(b4).offset().left;
-                $(this).remove();
-                actualPosition = -220;
-                breRun = document.createElement('div');
-                $(breRun).addClass('bus4 buses')
-                    .html(linie.random())
-                    .appendTo($("#easterEgg2"))
-                    .css('right', function(){ return $(this).offset().right; })
-                    .animate({"right":"1500px"}, generateRandomValue(2500, 7000))
-            })
+
+
+
+        //b2 = document.createElement('div');
+        //$(b2).addClass('bus2 buses')
+        //    .html(linie.random())
+        //    .appendTo($("#easterEgg2"))
+        //    .animate({"left":"1500px"}, generateRandomValue(2500, 7000))
+        //    .css('left', function(){ return $(this).offset().left; })
+        //    .animate({"left":"1500px"}, generateRandomValue(2500, 7000))
+        //    .click(function () {
+        //        var actualPosition = $(b2).offset().left;
+        //        $(this).remove();
+        //        actualPosition = -220;
+        //        breRun = document.createElement('div');
+        //        $(breRun).addClass('bus2 buses')
+        //            .html(linie.random())
+        //            .appendTo($("#easterEgg2"))
+        //            .css('left', function(){ return $(this).offset().left; })
+        //            .animate({"left":"1500px"}, generateRandomValue(2500, 7000))
+        //    })
+        //
+        //b3 = document.createElement('div');
+        //$(b3).addClass('bus3 buses')
+        //    .html(linie.random())
+        //    .appendTo($("#easterEgg2"))
+        //    .animate({"right":"1500px"}, generateRandomValue(2500, 7000))
+        //    .css('right', function(){ return $(this).offset().right; })
+        //    .animate({"right":"1500px"}, generateRandomValue(2500, 7000))
+        //    .click(function () {
+        //        var actualPosition = $(b3).offset().left;
+        //        $(this).remove();
+        //        actualPosition = -220;
+        //        breRun = document.createElement('div');
+        //        $(breRun).addClass('bus3 buses')
+        //            .html(linie.random())
+        //            .appendTo($("#easterEgg2"))
+        //            .css('right', function(){ return $(this).offset().right; })
+        //            .animate({"right":"1500px"}, generateRandomValue(2500, 7000))
+        //    })
+        //
+        //b4 = document.createElement('div');
+        //$(b4).addClass('bus4 buses')
+        //    .html(linie.random())
+        //    .appendTo($("#easterEgg2"))
+        //    .css('right', function(){ return $(this).offset().right; })
+        //    .animate({"right":"1500px"}, generateRandomValue(2500, 7000))
+        //    .click(function () {
+        //        var actualPosition = $(b4).offset().left;
+        //        $(this).remove();
+        //        actualPosition = -220;
+        //        breRun = document.createElement('div');
+        //        $(breRun).addClass('bus4 buses')
+        //            .html(linie.random())
+        //            .appendTo($("#easterEgg2"))
+        //            .css('right', function(){ return $(this).offset().right; })
+        //            .animate({"right":"1500px"}, generateRandomValue(2500, 7000))
+        //    })
 
 
     });
