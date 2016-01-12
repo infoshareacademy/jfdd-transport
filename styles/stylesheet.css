@@ -388,7 +388,7 @@ input:focus {
     background-color: white;
 }
 
-#button-gray {
+#button-gray, #startEasterEggGame {
     font-family: Jura, sans-serif;
     float: left; /**/
     width: 100%; /**/
@@ -406,7 +406,7 @@ input:focus {
     font-weight: 700;
 }
 
-#button-gray:hover {
+#button-gray:hover, #startEasterEggGame:hover {
     background-color: rgba(0, 0, 0, 0);
     color: #282828;
 }
@@ -569,8 +569,6 @@ footer span {
     font-size: 25px;
     z-index: 110; /*Social media buttons use '100'*/
 }
-
-
 
 #easterEggIntro {
     background-color: darkorange;
@@ -746,6 +744,17 @@ footer span {
     left: 400px;
     width: 200px;
     height: 200px;
+}
+
+#startEasterEggGameWrapper {
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 120px;
+}
+
+#startEasterEggGame {
+    font-family: bold Arial, sans-serif;
 }
 
 /*End easter egg styles*/
