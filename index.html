@@ -102,19 +102,19 @@
                     <!--Accept small and capital letters (including Polish diacritics),
                     spaces and hyphens (for hyphenated surnames):-->
                     <p class="name">
-                        <input name="name" type="text" class="feedback-input" placeholder="Imię i nazwisko" id="name" maxlength="150"
+                        <input name="name" type="text" autocomplete="off" class="feedback-input" placeholder="Imię i nazwisko" id="name" maxlength="150"
                                pattern="[A-Za-ząćęłńóśźżĄĆĘŁŃÓŚŹŻ -]+"/>
                     </p>
 
                     <!--Use standard HTML5 validation:-->
                     <p class="email">
-                        <input name="email" type="email" class="feedback-input" id="email" placeholder="E-mail" maxlength="50" />
+                        <input name="email" type="email" autocomplete="off" class="feedback-input" id="email" placeholder="E-mail" maxlength="50" />
                     </p>
 
                     <!--Accept Polish phone numbers, optionally with the area code of +48,
                     with optional spaces and/or hyphens between digits:-->
                     <p class="text">
-                        <input name="phoneNumber" type="tel" class="feedback-input" id="phone" placeholder="Telefon" maxlength="20"
+                        <input name="phoneNumber" type="tel" autocomplete="off"  class="feedback-input" id="phone" placeholder="Telefon" maxlength="20"
                                pattern="^(\+48)? ?[1-9]( |-)?\d( |-)?\d( |-)?\d( |-)?\d( |-)?\d( |-)?\d( |-)?\d( |-)?\d( |-)?"/>
                     </p>
 
