@@ -34,13 +34,8 @@ $(document).ready(function () {
                 $('.navigationBar > nav > ul > li > a[href=' + href + ']').addClass('active');
             }
 
-            //if($(window).scrollTop() + $(window).height() == $(document).height()) {
-            //    $('.navigationBar > nav > ul > li > a').removeClass('active');
-            //    $('.navigationBar > nav > ul > li > a[href=' + href + ']').addClass('active');
-            //}
-
-            var endOfFunctionsSection = $('.additionalFunctionsSection').offset().top;
-            if (position >= endOfFunctionsSection) {
+            var endOfAdditionalFunctionsSection = $('.additionalFunctionsSection').offset().top + $('.additionalFunctionsSection').outerHeight() ;
+            if (position >= endOfAdditionalFunctionsSection) {
                 $('.navigationBar > nav > ul > li > a').removeClass('active');
                 $('.navigationBar > nav > ul > li > a[href=' + href + ']').addClass('active');
             }
