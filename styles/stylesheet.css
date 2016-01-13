@@ -577,7 +577,7 @@ footer span {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 1000px;
-    height: 800px;
+    height: 650px;
     z-index: 110;
 }
 
@@ -609,7 +609,7 @@ footer span {
 
 #easterEggContainerOuter, #easterEggContainerInner {
     width: 1000px;
-    height: 800px;
+    height: 650px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -638,15 +638,15 @@ footer span {
 }
 
 .vehicle1 {
-    top: 260px;
+    top: 195px;
 }
 
 .vehicle2 {
-    top: 430px;
+    top: 355px;
 }
 
 .vehicle3 {
-    top: 600px;
+    top: 525px;
 }
 
 .vehicleDoor {
@@ -690,15 +690,15 @@ footer span {
 }
 
 .infoBoardStand1 {
-    top: 221px;
+    top: 146px;
 }
 
 .infoBoardStand2 {
-    top: 391px;
+    top: 316px;
 }
 
 .infoBoardStand3 {
-    top: 561px;
+    top: 486px;
 }
 
 .infoBoards {
@@ -717,35 +717,35 @@ footer span {
 }
 
 .infoBoard1 {
-    top: 221px;
+    top: 146px;
 }
 
 .infoBoard2 {
-    top: 391px;
+    top: 316px;
 }
 
 .infoBoard3 {
-    top: 561px;
+    top: 486px;
 }
 
-#easterEgg table, th, td {
+#easterEgg table, #easterEgg th, #easterEgg td {
     border: 1px solid blanchedalmond;
 }
 
 #easterEgg table {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 #easterEgg th {
-    height: 60px;
-    width: 150px;
+    height: 45px;
+    width: 140px;
 }
 
 #easterEgg td {
-    height: 90px;
-    width: 150px;
+    height: 70px;
+    width: 140px;
     text-align: center;
 }
 
@@ -801,21 +801,21 @@ footer span {
     z-index: 120;
 }
 
-.passengerGroup2 {
-    width: 99px;
-    top: 467px;
-    background: url("../images/easter_egg.png") 218px 88px;
-}
-
 .passengerGroup1 {
     width: 70px;
-    top: 297px;
+    top: 222px;
     background: url("../images/easter_egg.png") 287px 88px;
+}
+
+.passengerGroup2 {
+    width: 99px;
+    top: 392px;
+    background: url("../images/easter_egg.png") 218px 88px;
 }
 
 .passengerGroup3 {
     width: 105px;
-    top: 637px;
+    top: 562px;
     background: url("../images/easter_egg.png") 119px 88px;
 }
 
