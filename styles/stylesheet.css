@@ -60,13 +60,13 @@ button {
 
 }
 
-.counter {
+#gameScore {
     color: white;
     text-align: left;
     margin-left: 5px;
 }
 /**/
-.counter {
+#gameScore h5 {
     color: white;
     text-align: left;
     margin-left: 5px;
@@ -104,22 +104,22 @@ button {
 }
 
 .bus1 {
-    left: -220px;
+    left: -180px;
     top: 70px;
 }
 
 .bus2{
-    left: -220px;
+    left: -180px;
     top: 180px;
 }
 
 .bus3 {
-    right: -220px;
+    right: -180px;
     top: 420px;
 }
 
 .bus4 {
-   right: -220px;
+   right: -180px;
     top: 530px;
 }
 
