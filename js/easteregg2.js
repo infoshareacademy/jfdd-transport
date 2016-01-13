@@ -52,7 +52,7 @@ $(document).ready(function () {
             var b1 = document.createElement('div');
                     $(b1).addClass('bus1 buses')
                         .html(linie.random())
-                        .appendTo($("#easterEgg2")
+                        .appendTo$("#easterEgg2")
                         .animate({"left": "1800px"}, RandomValue(2000, 6500))
                         .css('left', function () {
                             return $(this).offset().left;
