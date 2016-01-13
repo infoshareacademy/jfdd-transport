@@ -34,6 +34,7 @@
 
     <div class="introText">
         <h1> Statystyki komunikacji miejskiej</h1>
+
         <p>Z nami nie będziesz czekać!</p>
 
     </div>
@@ -43,20 +44,26 @@
     <!--functions-->
     <div id="functionsSection">
         <div class="function function1"><img class="hide" src="images/bus_stop_function1.png" alt="Autobus">
+
             <div id="opis1">
                 <h2>Mój przystanek</h2>
+
                 <p>Sprawdź, jak wygląda sytuacja <br>na Twoim przystanku.</p>
             </div>
         </div>
         <div class="function function2"><img class="hide" src="images/clock.png" alt="Zegar">
+
             <div id="opis2">
                 <h2>Statystyki spóźnień</h2>
+
                 <p>Dowiedz się, jakie są statystyki <br> dla wybranego przystanku.</p>
             </div>
         </div>
         <div class="function function3"><img class="hide" src="images/map.png" alt="Mapa">
+
             <div id="opis3">
                 <h2>Sprawdź na mapie</h2>
+
                 <p>Zobacz, gdzie jest w tej chwili <br> Twój środek transportu.</p>
             </div>
         </div>
@@ -64,21 +71,27 @@
     </div>
     <div class="additionalFunctionsSection">
         <div class="additionalFunction"><img src="images/ikonka%20robocza2.png" alt="robocza2">
+
             <p>Polecane</p>
         </div>
         <div class="additionalFunction"><img src="images/ikonka%20robocza1.png" alt="robocza1">
+
             <p>Schematy komunikacji</p>
         </div>
         <div class="additionalFunction"><img src="images/ikonka%20robocza3.png" alt="robocza3">
+
             <p>Ceny biletów</p>
         </div>
         <div class="additionalFunction"><img src="images/ikonka%20robocza5.png" alt="robocza5">
+
             <p>Przydatne linki</p>
         </div>
         <div class="additionalFunction"><img src="images/ikonka%20robocza4.png" alt="robocza4">
+
             <p>Wyszukaj przystanek</p>
         </div>
         <div class="additionalFunction"><img src="images/ikonka%20robocza6.png" alt="robocza6">
+
             <p>Aktualności</p>
         </div>
     </div>
@@ -101,6 +114,7 @@
 
         <div id="form-div" class="hide">
             <p class="contact_form_header">Skontaktuj się z nami!</p>
+
             <form class="form" id="form1" method="post" action="http://jfdd.infoshareaca.nazwa.pl/mailer.php">
                 <!--Accept small and capital letters (including Polish diacritics),
                 spaces and hyphens (for hyphenated surnames):-->
@@ -126,8 +140,10 @@
 
                 <input type="hidden" name="receiver" value="wojciech.makurat@infoshareacademy.com">
                 <input type="text" id="formField" placeholder="Leave this field blank.">
+
                 <div class="submit">
                     <input type="submit" value="WYŚLIJ" id="button-gray"/>
+
                     <div class="ease"></div>
                 </div>
             </form>
@@ -162,42 +178,56 @@
 </div>
 
 <div id="easterEgg" class="donotdisplay">
-    <span id="closeEasterEgg">x</span>
-    <div id="easterEggIntro">
-        <h1>Kolorowe autobusy</h1>
-        <h2>Jak grać?</h2>
-        <p>
-            Ludzie czekający na przystanku chcą dojechać do Olivia Business Center.
-            Gdy tylko podjedzie właściwy autobus, klikaj dowolne z jego otwartych drzwi,
-            aby wsiadło jak najwięcej osób. Za każdego pasażera, którego umieścisz we
-            właściwym autobusie, dostajesz 1 punkt. Uważaj: za każdą osobę umieszczoną
-            w autobusie jadącym w inne miejsce, dostaniesz minus 10 punktów. Masz 30 sekund.
-            Powodzenia :-)
-        </p>
-        <button type="button" id="startEasterEggGame">Gram!</button>
-    </div>
-    <table>
-        <tr>
-            <th>Wynik</th>
-            <th>Czas</th>
-        </tr>
-        <tr>
-            <td>
-                <span id="currentScore">0</span>
-            </td>
-            <td>
-                <span id="gameCountdown"></span>
-            </td>
-        </tr>
-    </table>
-    <p class="infoBoards infoBoard1"></p>
-    <p class="infoBoards infoBoard2"></p>
-    <p class="infoBoards infoBoard3"></p>
-    <div id="endOfGameMask" class="hide"></div>
-    <div id="gameResults" class="hide">
-        <h3>Twój wynik:</h3>
-        <p></p>
-        <button type="button" id="playAgain">Zagraj jeszcze raz</button>
+    <div id="easterEggContainerOuter">
+        <span id="closeEasterEgg">x</span>
+
+        <div id="easterEggIntro">
+            <h1>Jak grać?</h1>
+
+            <p>
+                Ludzie czekający na przystanku chcą dojechać do Olivia Business Center.
+                Gdy tylko podjedzie właściwy autobus, klikaj dowolne z jego otwartych drzwi,
+                aby wsiadło jak najwięcej osób. Za każdego pasażera, którego umieścisz we
+                właściwym autobusie, dostajesz 1 punkt. <br>Uważaj: za każdą osobę umieszczoną
+                w autobusie jadącym w inne miejsce dostaniesz minus 10 punktów. Masz 30 sekund.
+                <br>Powodzenia :-)
+            </p>
+            <button type="button" id="startEasterEggGame">Gram!</button>
+        </div>
+        <div id="easterEggContainerInner">
+            <table>
+                <tr>
+                    <th>Wynik</th>
+                    <th>Czas</th>
+                </tr>
+                <tr>
+                    <td>
+                        <span id="currentScore">0</span>
+                    </td>
+                    <td>
+                        <span id="gameCountdown"></span>
+                    </td>
+                </tr>
+            </table>
+            <div id="infoBoardContainer">
+                <div class="passengers passengerGroup1"></div>
+                <div class="infoBoardStands infoBoardStand1"></div>
+                <p class="infoBoards infoBoard1"></p>
+                <div class="passengers passengerGroup2"></div>
+                <div class="infoBoardStands infoBoardStand2"></div>
+                <p class="infoBoards infoBoard2"></p>
+                <div class="passengers passengerGroup3"></div>
+                <div class="infoBoardStands infoBoardStand3"></div>
+                <p class="infoBoards infoBoard3"></p>
+            </div>
+            <div id="endOfGameMask" class="hide"></div>
+            <div id="gameResults" class="hide">
+                <h3>Twój wynik:</h3>
+
+                <p></p>
+                <button type="button" id="playAgain">Zagraj jeszcze raz</button>
+            </div>
+        </div>
     </div>
 </div>
 
