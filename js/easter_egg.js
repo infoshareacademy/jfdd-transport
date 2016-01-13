@@ -316,7 +316,7 @@ $(function () {
         resetGame: function () {
             $('#playAgain').off();
             $('#gameResults').addClass('hide');
-            $('#endOfGameMask').addClass('hide')/*.fadeOut()*/;
+            $('#endOfGameMask').addClass('hide');
             $('.vehicles').remove(); //Remove existing buses.
             $('.infoBoards').text(''); //Clear destinations from infoboards.
             $('#currentScore').text('0'); //Clear the displayed result.
