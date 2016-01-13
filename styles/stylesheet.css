@@ -635,16 +635,28 @@ footer span {
     }
 
     .additionalFunctionsSection {
-        margin-left: 220px;
+        width: 700px;
+        margin-left:auto;
         margin-right: auto;
-        width: 620px;
+        /*margin-left: 220px;*/
+        /*margin-right: auto;*/
+        /*width: 620px;*/
+    }
+
+    .additionalFunctionsSection .additionalFunction {
+
+        /*float: left;*/
+        width:220px;
+        margin-bottom: 20px;
+        text-align: center;
+        /*margin-right: 10px;*/
     }
 
     .additionalFunctionsSection div {
         width: 190px;
         margin-bottom: 20px;
         text-align: center;
-        margin-right: 5px;
+        /*margin-right: 5px;*/
     }
 
     .testersParagraph {
@@ -675,7 +687,7 @@ footer span {
     }
 
     .navigationBar nav ul a {
-        font-size: 20px;
+        font-size: 17px;
     }
 
     .navigationBar nav ul li {
@@ -683,7 +695,7 @@ footer span {
     }
 
     .logo {
-        padding-top: 20px;
+        /*padding-top: 20px;*/
         height: 60px;
         margin-left: 20px;
     }
@@ -717,6 +729,15 @@ footer span {
         width: 350px;
     }
 
+    .additionalFunctionsSection .additionalFunction {
+
+    float: left;
+    width: 140px;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-right: 10px;
+}
+
     .additionalFunctionsSection div {
         width: 140px;
         text-align: center;
@@ -738,33 +759,33 @@ footer span {
     }
 }
 
-@media (max-width: 600px) {
-
-    body {
-        min-width: 600px;
-    }
-
-    .navigationBar {
-        width: 600px;
-    }
-
-    nav {
-        padding-right: 520px;
-    }
-
-    .logo {
-        display: none;
-    }
-
-    .introText h1 {
-        font-size: 20px;
-    }
-
-    .testersParagraph {
-        min-width: 600px;
-    }
-
-    .testersParagraph hr {
-        width: 600px;
-    }
-}
+/*@media (max-width: 600px) {*/
+/**/
+    /*body {*/
+        /*min-width: 600px;*/
+    /*}*/
+    /**/
+    /*.navigationBar {*/
+        /*width: 600px;*/
+    /*}*/
+    /**/
+    /*nav {*/
+        /*padding-right: 520px;*/
+    /*}*/
+    /**/
+    /*.logo {*/
+        /*display: none;*/
+    /*}*/
+    /**/
+    /*.introText h1 {*/
+        /*font-size: 20px;*/
+    /*}*/
+    /**/
+    /*.testersParagraph {*/
+        /*min-width: 600px;*/
+    /*}*/
+    /**/
+    /*.testersParagraph hr {*/
+        /*width: 600px;*/
+    /*}*/
+/*}*/
