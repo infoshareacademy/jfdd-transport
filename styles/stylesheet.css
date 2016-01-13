@@ -1,4 +1,3 @@
-
 /*easteregg2 style*/
 .hide {
     display: none;
@@ -23,6 +22,7 @@
     padding-left: 0;
     padding-right: 0;
     margin-top: 0;
+    position:fixed;
 
 }
 #easterEgg2 h1, h4  {
@@ -44,83 +44,81 @@
 
 button {
     margin-left: 560px;
-
     height: 50px;
     width: 135px;
     padding: 10px;
+    cursor: pointer;
 }
 
 .gameBackground {
+    background: url('../images/Road.jpg');
+    background-repeat: no-repeat;
     background-color: #282828;
     border: solid 3px darkgrey;
     margin-left: auto;
     margin-right: auto;
     padding-left: 0;
     padding-right: 0;
+}
 
+#prawaAutorskie a {
+    margin-top: 500px;
+    margin-left: 80%;
+    color: darkgrey;
+    font-size: 15px;
 }
 
 #gameScore {
+    margin-top: 30px;
     color: white;
     text-align: left;
     margin-left: 5px;
-}
-/**/
-#gameScore h5 {
-    color: white;
-    text-align: left;
-    margin-left: 5px;
-    line-height: 10px;
+    font-weight: bold;
 }
 
-/*#gameScore p {*/
-    /*font-size: 15px;*/
-    /*color: white;*/
-    /*text-align: left;*/
-    /*margin-left: 5px;*/
-    /*line-height: 5px;*/
-/*}*/
 
-.grass {
-    position: fixed;
-    width: 100%;
-    top: 295px;
-    height: 70px;
-    border-top: 16px solid darkgray;
-    border-bottom: 16px solid darkgray;
-    background-color: yellowgreen;
-}
 .buses {
-    background-color: red;
     width: 180px;
     height: 80px;
-    border: 3px solid white;
     position: fixed;
     font-size: 40px;
     font-family: Jura, sans-serif;
     font-weight: bold;
     text-align: center;
-    color: white;
+    color: darkred;
+    cursor: pointer;
 }
 
 .bus1 {
+    background: url('../images/rightvan.png');
+    background-size: cover;
+    background-repeat: no-repeat;
     left: -180px;
     top: 70px;
 }
 
 .bus2{
+    background: url('../images/rightvan.png');
+    background-size: cover;
+    background-repeat: no-repeat;
     left: -180px;
     top: 180px;
 }
 
 .bus3 {
+    background: url('../images/leftvan.png');
+    background-size: cover;
+    background-repeat: no-repeat;
     right: -180px;
-    top: 420px;
+    top: 370px;
 }
 
 .bus4 {
+    background: url('../images/leftvan.png');
+    background-size: cover;
+    background-repeat: no-repeat;
    right: -180px;
-    top: 530px;
+    top: 480px;
 }
 
 /*End easteregg2*/
@@ -545,6 +543,7 @@ input:focus {
 }
 
 .footer_image {
+    cursor: pointer;
     height: 10px;
     text-align: center;
     padding-bottom: 5px;
