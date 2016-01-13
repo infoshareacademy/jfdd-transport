@@ -52,7 +52,7 @@ $(document).ready(function () {
             var b1 = document.createElement('div');
                     $(b1).addClass('bus1 buses')
                         .html(linie.random())
-                        .appendTo($("#easterEgg2"))
+                        .appendTo($("#easterEgg2")
                         .animate({"left": "1800px"}, RandomValue(2000, 6500))
                         .css('left', function () {
                             return $(this).offset().left;
@@ -70,7 +70,7 @@ $(document).ready(function () {
             b2 = document.createElement('div');
             $(b2).addClass('bus2 buses')
                 .html(linie.random())
-                .appendTo($("#easterEgg2"))
+                .appendTo$("#easterEgg2")
                 .css('left', function(){ return $(this).offset().left; })
                 .animate({"left":"1800px"}, RandomValue(2000, 6500))
                 .click(function () {
@@ -81,7 +81,7 @@ $(document).ready(function () {
             b3 = document.createElement('div');
             $(b3).addClass('bus3 buses')
                 .html(linie.random())
-                .appendTo($("#easterEgg2"))
+                .appendTo$("#easterEgg2")
                 .css('right', function(){ return $(this).offset().right; })
                 .animate({"right":"1800px"}, RandomValue(2000, 6500))
                 .click(function () {
@@ -97,7 +97,7 @@ $(document).ready(function () {
             b4 = document.createElement('div');
             $(b4).addClass('bus4 buses')
                 .html(linie.random())
-                .appendTo($("#easterEgg2"))
+                .appendTo$("#easterEgg2")
                 .css('right', function(){ return $(this).offset().right; })
                 .animate({"right":"1800px"}, RandomValue(2000, 6500))
                 .click(function () {
