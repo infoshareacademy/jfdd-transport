@@ -1,6 +1,4 @@
 var linie = [41, 47, 14,];
-var points = [];
-
 $(document).ready(function () {
 
     var $easterEgg2 = $('#easterEgg2');
@@ -35,6 +33,41 @@ $(document).ready(function () {
 
     };
 
+    //var runBus = function (timeOut) {
+    //
+    //    for (var i = 1; ; i++) {
+    //        var b1 = document.createElement('div');
+    //        $(b1).addClass('bus1 buses')
+    //            .html(linie.random())
+    //            .appendTo($("#easterEgg2"))
+    //            .animate({"left": "1500px"}, generateRandomValue(2500, 7000))
+    //            .css('left', function () {
+    //                return $(this).offset().left;
+    //            })
+    //            .click(function () {
+    //                var actualPosition = $(b1).offset().left;
+    //                $(this).remove();
+    //                actualPosition = -220;
+                    //breRun = document.createElement('div');
+                    //$(breRun).addClass('bus1 buses')
+                    //    .html(linie.random())
+                    //    .appendTo($("#easterEgg2"))
+                    //    .css('left', function () {
+                    //        return $(this).offset().left;
+                    //    })
+                    //    .animate({"left": "1500px"}, generateRandomValue(2500, 7000))
+                //});
+
+            //timeOut--;
+            //if (timeOut === 0) {
+            //    break;
+            //
+            //}
+        //
+        //}
+    //
+    //};
+    var points = [];
     var busOnGo = function(){
         setInterval(function() {
 
@@ -52,8 +85,6 @@ $(document).ready(function () {
                             if (linie.random()== 41) {
                                 $(this).click(points.push(1))
                             } else {points.push(-10)}
-
-
                         });
 
             b2 = document.createElement('div');
@@ -66,6 +97,13 @@ $(document).ready(function () {
                 .click(function () {
                     var actualPosition = $(b2).offset().left;
                     $(this).remove();
+                    //actualPosition = -220;
+                    //breRun = document.createElement('div');
+                    //$(breRun).addClass('bus2 buses')
+                    //    .html(linie.random())
+                    //    .appendTo($("#easterEgg2"))
+                    //    .css('left', function(){ return $(this).offset().left; })
+                    //    .animate({"left":"1500px"}, generateRandomValue(2500, 7000))
                 })
 
             b3 = document.createElement('div');
@@ -78,6 +116,13 @@ $(document).ready(function () {
                 .click(function () {
                     var actualPosition = $(b3).offset().left;
                     $(this).remove();
+                    //actualPosition = -220;
+                    //breRun = document.createElement('div');
+                    //$(breRun).addClass('bus3 buses')
+                    //    .html(linie.random())
+                    //    .appendTo($("#easterEgg2"))
+                    //    .css('right', function(){ return $(this).offset().right; })
+                    //    .animate({"right":"1500px"}, generateRandomValue(2500, 7000))
                 })
 
             b4 = document.createElement('div');
@@ -89,6 +134,13 @@ $(document).ready(function () {
                 .click(function () {
                     var actualPosition = $(b4).offset().left;
                     $(this).remove();
+                    //actualPosition = -220;
+                    //breRun = document.createElement('div');
+                    //$(breRun).addClass('bus4 buses')
+                    //    .html(linie.random())
+                    //    .appendTo($("#easterEgg2"))
+                    //    .css('right', function(){ return $(this).offset().right; })
+                    //    .animate({"right":"1500px"}, generateRandomValue(2500, 7000))
                 })
 
 
@@ -96,26 +148,81 @@ $(document).ready(function () {
     }
 
 
+
     Array.prototype.random = function () {
         return this[Math.floor((Math.random()*this.length))];
     };
-
-    var sumArray = function(points) {
-        for (var index = 0,
-               length = points.length,
-               sum = 0;
-            index < length;
-            sum += points[index++]
-        );
-        return sum;
-    };
-
 
     $('#startEasterEggGame2').on('click', function () {
         playGame();
         //runBus(6);
         busOnGo();
+
+
+
+
+
+        //b2 = document.createElement('div');
+        //$(b2).addClass('bus2 buses')
+        //    .html(linie.random())
+        //    .appendTo($("#easterEgg2"))
+        //    .animate({"left":"1500px"}, generateRandomValue(2500, 7000))
+        //    .css('left', function(){ return $(this).offset().left; })
+        //    .animate({"left":"1500px"}, generateRandomValue(2500, 7000))
+        //    .click(function () {
+        //        var actualPosition = $(b2).offset().left;
+        //        $(this).remove();
+        //        actualPosition = -220;
+        //        breRun = document.createElement('div');
+        //        $(breRun).addClass('bus2 buses')
+        //            .html(linie.random())
+        //            .appendTo($("#easterEgg2"))
+        //            .css('left', function(){ return $(this).offset().left; })
+        //            .animate({"left":"1500px"}, generateRandomValue(2500, 7000))
+        //    })
+        //
+        //b3 = document.createElement('div');
+        //$(b3).addClass('bus3 buses')
+        //    .html(linie.random())
+        //    .appendTo($("#easterEgg2"))
+        //    .animate({"right":"1500px"}, generateRandomValue(2500, 7000))
+        //    .css('right', function(){ return $(this).offset().right; })
+        //    .animate({"right":"1500px"}, generateRandomValue(2500, 7000))
+        //    .click(function () {
+        //        var actualPosition = $(b3).offset().left;
+        //        $(this).remove();
+        //        actualPosition = -220;
+        //        breRun = document.createElement('div');
+        //        $(breRun).addClass('bus3 buses')
+        //            .html(linie.random())
+        //            .appendTo($("#easterEgg2"))
+        //            .css('right', function(){ return $(this).offset().right; })
+        //            .animate({"right":"1500px"}, generateRandomValue(2500, 7000))
+        //    })
+        //
+        //b4 = document.createElement('div');
+        //$(b4).addClass('bus4 buses')
+        //    .html(linie.random())
+        //    .appendTo($("#easterEgg2"))
+        //    .css('right', function(){ return $(this).offset().right; })
+        //    .animate({"right":"1500px"}, generateRandomValue(2500, 7000))
+        //    .click(function () {
+        //        var actualPosition = $(b4).offset().left;
+        //        $(this).remove();
+        //        actualPosition = -220;
+        //        breRun = document.createElement('div');
+        //        $(breRun).addClass('bus4 buses')
+        //            .html(linie.random())
+        //            .appendTo($("#easterEgg2"))
+        //            .css('right', function(){ return $(this).offset().right; })
+        //            .animate({"right":"1500px"}, generateRandomValue(2500, 7000))
+        //    })
+
+
     });
+
+
+
 });
 
 
