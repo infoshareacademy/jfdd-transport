@@ -21,6 +21,7 @@ $(document).ready(function () {
     var closeGame = function () {
         $('#easterEgg2').addClass('hide');
         $('#okButton').addClass('hide');
+        $('#gameOver').addClass('hide');
         $('#gameScore').addClass('hide');
 
 
@@ -35,14 +36,15 @@ $(document).ready(function () {
 
         myVar = setInterval(function () {
             busOnGo()
-        }, 3000);
+        }, 2600);
 
-        var sec = 5;
+        var sec = 20;
         var running = true;
         timer = setInterval(function () {
             $('#gameScore span').text(sec--);
             if (sec == -1) {
-
+                $('#okButton')
+                    .removeClass('hide');
                 $('#gameOver')
                     .removeClass('hide')
                     .find('span')
@@ -52,6 +54,10 @@ $(document).ready(function () {
                 clearInterval(timer);
                 clearInterval(myVar);
             }
+
+            //if (sec < 0) {
+            //    $('#gameScore span').addClass('hide');
+            //}
         }, 1000);
     };
 
@@ -60,7 +66,7 @@ $(document).ready(function () {
                     $(bus1).addClass('bus1 buses')
                         .html(lines.random())
                         .appendTo($("#easterEgg2"))
-                        .animate({"left": "1800px"}, RandomValue(2500, 6500))
+                        .animate({"left": "1800px"}, RandomValue(2500, 7000))
                         .css('left', function () {
                             return $(this).offset().left;
                         })
@@ -79,7 +85,7 @@ $(document).ready(function () {
                 .html(lines.random())
                 .appendTo($("#easterEgg2"))
                 .css('left', function(){ return $(this).offset().left; })
-                .animate({"left":"1800px"}, RandomValue(2500, 6500))
+                .animate({"left":"1800px"}, RandomValue(2500, 7000))
                 .click(function () {
                     $(this).remove();
                     if ($(this).html()== 41) {
@@ -94,7 +100,7 @@ $(document).ready(function () {
                 .html(lines.random())
                 .appendTo($("#easterEgg2"))
                 .css('right', function(){ return $(this).offset().right; })
-                .animate({"right":"1800px"}, RandomValue(2500, 6500))
+                .animate({"right":"1800px"}, RandomValue(2500, 7000))
                 .click(function () {
                     $(this).remove();
                     if ($(this).html()== 41) {
@@ -109,7 +115,7 @@ $(document).ready(function () {
                 .html(lines.random())
                 .appendTo($("#easterEgg2"))
                 .css('right', function(){ return $(this).offset().right; })
-                .animate({"right":"1800px"}, RandomValue(2500, 6500))
+                .animate({"right":"1800px"}, RandomValue(2500, 7000))
                 .click(function () {
                     $(this).remove();
                     if ($(this).html()== 41) {

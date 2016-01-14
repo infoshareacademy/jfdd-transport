@@ -7,6 +7,7 @@
     <meta name="author" content="Fantastic4">
     <meta name="keywords" content="Fantastic4, statystyki komunikacji miejskiej">
     <link rel="stylesheet" href="styles/stylesheet.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
     <title>Statystyki Komunikacji Miejskiej</title>
 </head>
@@ -118,7 +119,7 @@
         <div id="easterEgg2" class="gameBackground hide">
             <div id="gameOver" class="hide">
                 Koniec Gry! </br> Twój wynik: <span></span>
-                <button type="button" id="okButton">OK</button>
+                <button type="button" id="okButton" class="gameButtons">OK</button>
             </div>
             <div id="close">x</div>
             <div id="gameIntro" class="hide">
@@ -134,14 +135,14 @@
                      - tracisz punktów 10!
                     </br>Czas trwania gry - 20 sekund.
                 </p>
-                <button type="button" id="startGame">Gram!</button>
+                <button type="button" id="startGame" class = "gameButtons">Gram!</button>
             </div>
             <div id="gameScore" class="Hide">
                 Czas: <span>20</span>
             </div>
 
             <div id="prawaAutorskie">
-            <a href='http://www.freepik.com/free-vector/road-vector-template_724937.htm'>Designed by Freepik</a>
+            <a href='http://www.freepik.com/free-vector/road-vector-template_724937.htm'>Image designed by Freepik</a>
             </div>
         </div>
 </main>
@@ -168,6 +169,8 @@
 
 <script src="js/js.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <script src="js/main.js"></script>
 <script src="js/parallax.js"></script>
 <script src="js/easteregg2.js"></script>
