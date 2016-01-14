@@ -14,11 +14,11 @@ function startGame() {
 var myGameArea = {
     canvas: document.createElement("canvas"),
     start: function () {
-        this.canvas.width = 465;
+        this.canvas.width = 400;
         this.canvas.height = 270;
         this.context = this.canvas.getContext("2d");
         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
-        this.interval = setInterval(updateGameArea, 20);
+        this.interval = setInterval(updateGameArea, 10);
         window.addEventListener('keydown', function (e) {
             myGameArea.key = e.keyCode;
         });
@@ -101,7 +101,7 @@ function updateGameArea() {
         myGameArea.stop();
     } else {
         myGameArea.clear();
-        myBackground.speedX = -1;
+        myBackground.speedX = -2;
         myBackground.newPos();
         myBackground.update();
         myObstacle.speedX = -1;
@@ -148,4 +148,17 @@ function moveright() {
 function stopMove() {
     myGamePiece.speedX = 0;
     myGamePiece.speedY = 0;
+}
+
+function triggerFunctionAtRandom(min, max, f) {
+
+    setInterval(doSomething(), randomInterval(50,3000));
+}
+
+function randomInterval(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function doSomething() {
+    alert();
 }
