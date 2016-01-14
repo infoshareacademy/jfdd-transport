@@ -58,14 +58,14 @@ $(document).ready(function () {
     /**
      * Handling cookies to display information about cookies
      */
-     $('footer').prepend(
+    $('footer').prepend(
         $('<div/>', {'class': 'cookieInfo'}).append(
             $('<p/>', {'class': 'cookieInfoTitle', text: 'Ciastka!'})
             )
             .append(
                 $('<p/>', {'class': 'cookieInfoText', text: 'Strona korzysta z cookies w celu realizacji usług i zgodnie z Polityką Cookies. Możesz określić warunki używania cookies w Twojej przeglądarce. Kliknij, aby zamknąć.'})
-                )
-            );
+            )
+    );
 
 
 
