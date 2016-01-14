@@ -15,10 +15,13 @@ $(document).ready(function () {
             $('#easterEgg2').removeClass('hide');
             $('#close').removeClass('hide');
             $('#gameIntro').removeClass('hide');
+
     };
 
     var closeGame = function () {
         $('#easterEgg2').addClass('hide');
+        $('#okButton').addClass('hide');
+        $('#gameScore').addClass('hide');
 
 
     };
@@ -39,20 +42,15 @@ $(document).ready(function () {
         timer = setInterval(function () {
             $('#gameScore span').text(sec--);
             if (sec == -1) {
-                clearInterval(timer);
-                clearInterval(myVar);
 
-                //alert(
-                //        "Koniec gry! \nTwój wynik: " +
-                //        reduce
-                //    );
                 $('#gameOver')
                     .removeClass('hide')
                     .find('span')
                     .text(points.reduce(function (aktualnyWynik, kolejnyPunkt) {
                         return aktualnyWynik + kolejnyPunkt;
                     }, 0));
-
+                clearInterval(timer);
+                clearInterval(myVar);
             }
         }, 1000);
     };
