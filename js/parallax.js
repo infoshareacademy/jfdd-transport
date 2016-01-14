@@ -7,6 +7,11 @@ $(document).ready(function () {
     function setBackgroundPosition() {
         $('.intro').css('background-position-y', 60 + $(window).scrollTop() * .5);
     }
+    var navigationBarheight;
+
+    function updatenavigationBarHeight() {
+        navigationBarheight = $('.navigationBar').outerHeight();
+    }
 
     $(window).on('load scroll', setBackgroundPosition);
 
@@ -18,7 +23,7 @@ $(document).ready(function () {
     $('a').click(function () {
         var href = $.attr(this, 'href');
         $root.animate({
-            scrollTop: $(href).offset().top - $('.navigationBar').outerHeight()
+            scrollTop: $(href).offset().top - navigationBarheight
         }, 600, function () {
             window.location.hash = href;
         });
@@ -30,9 +35,8 @@ $(document).ready(function () {
      * Code responsible for highlighting menu items on scroll
      */
     $(window).scroll(function() {
-
-        var position = $(this).scrollTop() + $('.navigationBar').outerHeight();
-
+        updatenavigationBarHeight();
+        var position = $(this).scrollTop() + navigationBarheight;
         $('.navigationBar > nav > ul > li > a').each(function() {
             var href = $(this).attr('href');
             var target = $(href).offset().top;
