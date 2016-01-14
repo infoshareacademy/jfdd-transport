@@ -13,14 +13,15 @@
 }
 
 #gameIntro {
-    height: 100%;
+    height: 93%;
     background-color: #f1f1f1;
     border: solid 6px darkgrey;
     border-radius: 8px;
     margin-right: auto;
     margin-left: auto;
-    padding-left: 0;
-    padding-right: 0;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
     margin-top: 0;
     position:fixed;
 }
@@ -40,6 +41,7 @@
     font-size: 30px;
     font-weight: bold;
     cursor: pointer;
+
 }
 
 #close2 {
@@ -53,10 +55,12 @@
     font-size: 30px;
     font-weight: bold;
     cursor: pointer;
+    margin-right:-50px;
+    margin-top: -50px;
 }
 
-button {
-    margin-left: 560px;
+#startGame {
+    margin-left: 45%;
     height: 50px;
     width: 135px;
     padding: 10px;

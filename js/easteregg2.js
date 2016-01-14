@@ -1,11 +1,15 @@
-var lines = [41, 47, 14];
-var points = [];
+
 
 Array.prototype.random = function () {
     return this[Math.floor((Math.random()*this.length))];
 };
 
 $(document).ready(function () {
+
+    var lines = [41, 47, 14];
+    var points = [];
+    var myVar;
+    var timer;
 
     var iniciateGame = function () {
             $('#easterEgg2').removeClass('hide');
@@ -24,11 +28,11 @@ $(document).ready(function () {
         $('#gameScore').removeClass('hide');
         $('#prawaAutorskie a').removeClass('hide');
 
-    var myVar = setInterval(function(){ busOnGo() }, 3000);
+    myVar = setInterval(function(){ busOnGo() }, 3000);
 
     var sec = 20;
     var running = true;
-    var timer = setInterval(function() {
+    timer = setInterval(function() {
         $('#gameScore span').text(sec--);
         if (sec == -1) {
             clearInterval(timer);
@@ -122,6 +126,8 @@ $(document).ready(function () {
 
     $('#close, #close2').on('click', function () {
         closeGame();
+        clearInterval(timer);
+        clearInterval(myVar);
     });
 });
 
