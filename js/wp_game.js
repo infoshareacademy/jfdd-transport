@@ -1,14 +1,33 @@
 var myGamePiece;
 var myObstacle;
+var myObstacles = [];
 //var myScore;
 var myBackground;
+var myObstacl;
 
 function startGame() {
     myGameArea.start();
+    //myGameArea.invokeObstaclesAtRandom(1,10);
     myGamePiece = new component(100, 50, "images/Untitled.png", 10, 120, "image");
     //myScore = new component("30px", "Consolas", "black", 280, 40, "text");
-    myObstacle = new component(100, 50, "images/Untitled.png", 50, 200 , "obstacle");
+    myObstacle = new component(100, 50, "images/Untitled.png", 50, 200, "obstacle");
+    //myObstacl = new component(100, 50, "images/Untitled.png", 60, 220 , "obstacle");
     myBackground = new component(456, 270, "images/threelane.png", 0, 0, "background");
+
+    for (var i = 0; i < 20; i++) {
+        var yCoordinatesForLanes = [100, 200, 300];
+
+        var min = 3;
+        var max = 30;
+        var randomInterval = Math.floor(Math.random() * (max - min + 1)) + min;
+        setTimeout(function () {
+            console.log('dsds');
+            var rand = yCoordinatesForLanes[Math.floor(Math.random() * yCoordinatesForLanes.length)];
+            myObstacles.push(new component(100, 50, "images/Untitled.png", 500, rand, "obstacle"));
+        }, randomInterval + "000");
+
+
+    }
 }
 
 var myGameArea = {
@@ -108,6 +127,14 @@ function updateGameArea() {
         myObstacle.newPos();
         myObstacle.update();
         //myObstacle.x += -1;
+        //myObstacl.speedX = -1;
+        //myObstacl.newPos();
+        //myObstacl.update();
+
+        for (i = 0; i < myObstacles.length; i += 1) {
+            myObstacles[i].x += -1;
+            myObstacles[i].update();
+        }
 
 
         myGamePiece.speedX = 0;
@@ -148,17 +175,4 @@ function moveright() {
 function stopMove() {
     myGamePiece.speedX = 0;
     myGamePiece.speedY = 0;
-}
-
-function triggerFunctionAtRandom(min, max, f) {
-
-    setInterval(doSomething(), randomInterval(50,3000));
-}
-
-function randomInterval(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-function doSomething() {
-    alert();
 }
