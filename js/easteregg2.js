@@ -37,17 +37,15 @@ $(document).ready(function () {
         if (sec == -1) {
             clearInterval(timer);
             clearInterval(myVar);
-            alert(
-                    "Koniec gry! \nTwój wynik: " +
-                    points.reduce(function(aktualnyWynik,kolejnyPunkt){
-                    return aktualnyWynik+kolejnyPunkt;
-                    }, 0)
-                );
+
+            //alert(
+            //        "Koniec gry! \nTwój wynik: " +
+            //        points.reduce(function(aktualnyWynik,kolejnyPunkt){
+            //        return aktualnyWynik+kolejnyPunkt;
+            //        }, 0)
+            //    );
+            $('#gameOver').removeClass('hide');
             }
-//else if ($('#closeEasterEgg2, #closeEasterEgg22').click){ // not working
-//    clearInterval(timer);
-//    clearInterval(myVar);
-//}
         }, 1000);
     };
 

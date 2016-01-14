@@ -144,6 +144,17 @@
    right: -180px;
     top: 470px;
 }
+
+#gameOver {
+    margin-top: 30px;
+    color: white;
+    text-align: left;
+    margin-left: 5px;
+    font-weight: bold;
+    background-color: #E02F2F;
+    z-index: 100;
+
+}
 /*End easteregg2*/
 
 .clear {
