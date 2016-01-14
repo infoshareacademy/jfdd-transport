@@ -19,6 +19,8 @@ $(document).ready(function () {
 
     var closeGame = function () {
         $('#easterEgg2').addClass('hide');
+
+
     };
 
     var playGame = function () {
@@ -28,23 +30,29 @@ $(document).ready(function () {
         $('#gameScore').removeClass('hide');
         $('#prawaAutorskie a').removeClass('hide');
 
-    myVar = setInterval(function(){ busOnGo() }, 3000);
+        myVar = setInterval(function () {
+            busOnGo()
+        }, 3000);
 
-    var sec = 20;
-    var running = true;
-    timer = setInterval(function() {
-        $('#gameScore span').text(sec--);
-        if (sec == -1) {
-            clearInterval(timer);
-            clearInterval(myVar);
+        var sec = 5;
+        var running = true;
+        timer = setInterval(function () {
+            $('#gameScore span').text(sec--);
+            if (sec == -1) {
+                clearInterval(timer);
+                clearInterval(myVar);
 
-            //alert(
-            //        "Koniec gry! \nTwój wynik: " +
-            //        points.reduce(function(aktualnyWynik,kolejnyPunkt){
-            //        return aktualnyWynik+kolejnyPunkt;
-            //        }, 0)
-            //    );
-            $('#gameOver').removeClass('hide');
+                //alert(
+                //        "Koniec gry! \nTwój wynik: " +
+                //        reduce
+                //    );
+                $('#gameOver')
+                    .removeClass('hide')
+                    .find('span')
+                    .text(points.reduce(function (aktualnyWynik, kolejnyPunkt) {
+                        return aktualnyWynik + kolejnyPunkt;
+                    }, 0));
+
             }
         }, 1000);
     };
@@ -122,7 +130,7 @@ $(document).ready(function () {
         iniciateGame();
     });
 
-    $('#close, #close2').on('click', function () {
+    $('#close, #close2, #okButton').on('click', function () {
         closeGame();
         clearInterval(timer);
         clearInterval(myVar);

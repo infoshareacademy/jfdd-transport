@@ -67,6 +67,17 @@
     cursor: pointer;
 }
 
+#okButton {
+    position: absolute;
+    top: 130px;
+    left: 50%;
+    margin-left: -70px;
+    height: 50px;
+    width: 135px;
+    padding: 10px;
+    cursor: pointer;
+}
+
 .gameBackground {
     background: url('../images/Road.jpg');
     background-repeat: no-repeat;
@@ -146,19 +157,27 @@
 }
 
 #gameOver {
-    height: 300px;
+    height: 200px;
     width: 300px;
     position: absolute;
-    /*margin-top: 30px;*/
+    margin-top: 180px;
     color: white;
-    text-align: left;
+    /*text-align: left;*/
     margin-left: 50%;
     left: -150px;
     font-weight: bold;
-    background-color: #E02F2F;
+    background-color: darkgray;
+    border: 5px solid lightgrey;
+    border-radius: 7px;
+    text-align: center;
+    padding-top: 50px;
     z-index: 100;
-
 }
+
+#gameOver span {
+    z-index: 999;
+}
+
 /*End easteregg2*/
 
 .clear {
