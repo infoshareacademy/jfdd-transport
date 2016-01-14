@@ -115,10 +115,11 @@ nav {
 .intro {
     background: url("../images/foto_background1.jpg");
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 95vh;
     background-size: 2000px;
     background-position: center top;
     position: relative;
+    /*margin-top:-20px;*/
 }
 
 .introText {
@@ -273,7 +274,7 @@ main {
 .additionalFunctionsSection .additionalFunction {
     float: left;
     width: 310px;
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
     text-align: center;
     margin-right: 10px;
 }
