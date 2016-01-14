@@ -258,7 +258,14 @@ main {
 .function p {
     font-size: smaller;
 }
+#opis {
+    height: 200px;
+    width: 200px;
+    border: 1px solid grey;
+    margin-left: auto;
+    margin-right:auto;
 
+}
 /* end Functions */
 
 /*additional Functions*/
