@@ -1,12 +1,16 @@
 // a piece representing player
 var myGamePiece;
 var myObstacle;
+var myScore;
+var myBackground;
 
 // function startung game, and creating new player
 function startGame() {
     myGameArea.start();
-    myGamePiece = new component(30, 30, "red", 10, 120);
+    myGamePiece = new component(100, 50, "images/Untitled.png", 10, 120, "image");
+    myScore = new component("30px", "Consolas", "black", 280, 40, "text");
     myObstacle = new component(10, 200, "green", 300, 120);
+    myBackground = new component(656, 270, "images/threelane.png", 0, 0, "image");
 }
 
 // Playable canvas
@@ -37,7 +41,12 @@ var myGameArea = {
 }
 
 // constructor to create new player
-function component(width, height, color, x, y) {
+function component(width, height, color, x, y, type) {
+    this.type = type;
+    if (type == "image") {
+        this.image = new Image();
+        this.image.src = color;
+    }
     this.width = width;
     this.height = height;
     this.x = x;
@@ -47,10 +56,21 @@ function component(width, height, color, x, y) {
     this.update = function () {
         //passing canvas here
         ctx = myGameArea.context;
-        // setting fill style of draw
-        ctx.fillStyle = color;
-        //draw sth on canvas
-        ctx.fillRect(this.x, this.y, this.width, this.height);
+        if (this.type == "text") {
+            ctx.font = this.width + " " + this.height;
+            ctx.fillStyle = color;
+            ctx.fillText(this.text, this.x, this.y);
+        } else if (type == "image") {
+            ctx.drawImage(this.image,
+                this.x,
+                this.y,
+                this.width, this.height);
+        } else {
+            // setting fill style of draw
+            ctx.fillStyle = color;
+            //draw sth on canvas
+            ctx.fillRect(this.x, this.y, this.width, this.height);
+        }
         //ctx.drawImage(img, x, y, 50, 30);
     }
     this.newPos = function () {
@@ -82,6 +102,9 @@ function updateGameArea() {
         myGameArea.stop();
     } else {
         myGameArea.clear();
+        myBackground.speedX = -1;
+        myBackground.newPos();
+        myBackground.update();
         myObstacle.x += -1;
         myGamePiece.speedX = 0;
         myGamePiece.speedY = 0;
