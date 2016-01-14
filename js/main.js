@@ -40,7 +40,7 @@ $(document).ready(function () {
 
     });
 
-    /* Every time the window is scrolled ... */
+    /* Fading in elements on windows scroll */
     $(window).scroll(function () {
         /* Check the location of each desired element */
         $('#functionsSection img, #form-div ').each(function (i) {
@@ -53,5 +53,36 @@ $(document).ready(function () {
                 $(this).removeClass('hide').addClass('animated transparent fadeInUpLite');
             }
         });
+    });
+
+    /**
+     * Handling cookies to display information about cookies
+     */
+     $('footer').prepend(
+        $('<div/>', {'class': 'cookieInfo'}).append(
+            $('<p/>', {'class': 'cookieInfoTitle', text: 'Ciastka!'})
+            )
+            .append(
+                $('<p/>', {'class': 'cookieInfoText', text: 'Strona korzysta z cookies w celu realizacji usług i zgodnie z Polityką Cookies. Możesz określić warunki używania cookies w Twojej przeglądarce. Kliknij, aby zamknąć.'})
+                )
+            );
+
+
+
+    //$('body').prepend($elem);
+    var hideCookieInfo = function () {
+        $('.cookieInfo').hide();
+        $('.navigationBar').css('top', '0');
+    }
+
+    if (Cookies.get('displayCookieInfo') === undefined) {
+        Cookies.set('displayCookieInfo', true);
+    } else if (Cookies.get('displayCookieInfo') == "false") {
+        hideCookieInfo();
+    }
+
+    $('.cookieInfo').click(function () {
+        hideCookieInfo();
+        Cookies.set('displayCookieInfo', false  );
     });
 });

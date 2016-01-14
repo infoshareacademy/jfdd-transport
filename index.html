@@ -7,37 +7,37 @@
     <meta name="author" content="Fantastic4">
     <meta name="keywords" content="Fantastic4, statystyki komunikacji miejskiej">
     <link rel="stylesheet" href="styles/stylesheet.css">
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
     <title>Statystyki Komunikacji Miejskiej</title>
 </head>
 
 <body>
-<header class="navigationBar">
-    <nav>
-        <ul>
-            <li><a href="#">Strona główna</a></li>
-            <li><a href="#functionsSection">Funkcjonalności</a></li>
-            <li><a href="#form-main">Kontakt</a></li>
-        </ul>
-    </nav>
-    <a href="#intro"><img class="logo" src="images/logofinal.png" alt="logo"></a>
-
-    <div class="clear"></div>
-</header>
-
-
-        <div id="intro" class="intro">
+    <header class="navigationBar">
+        <nav>
+            <ul>
+                <li><a href="#intro">Strona główna</a></li>
+                <li><a href="#functionsSection">Funkcjonalności</a></li>
+                <li><a href="#formSection">Kontakt</a></li>
+            </ul>
             <div class="clear"></div>
-            <div class="more_info_button">
-                <a href="#functionsSection"><h2>DOWIEDZ SIĘ<br>WIĘCEJ!</h2></a>
-            </div>
+        </nav>
+        <a href="#intro"><img class="logo" src="images/logofinal.png" alt="Logo"></a>
+        <div class="clear"></div>
+    </header>
 
-            <div class="introText">
-                <h1> Statystyki komunikacji miejskiej</h1>
-                <p>Z nami nie będziesz czekać!</p>
 
-            </div>
-        </div>
+<div id="intro" class="intro">
+    <div class="clear"></div>
+    <div class="more_info_button">
+        <a href="#functionsSection"><h2>DOWIEDZ SIĘ<br>WIĘCEJ!</h2></a>
+    </div>
+
+    <div class="introText">
+        <h1> Statystyki komunikacji miejskiej</h1>
+        <p>Z nami nie będziesz czekać!</p>
+
+    </div>
+</div>
 
     <main>
         <!--functions-->
@@ -63,22 +63,22 @@
             <div class="clear"></div>
         </div>
         <div class="additionalFunctionsSection">
-            <div class="additionalFunction"><img src="images/ikonka%20robocza2.png" alt="robocza2">
+            <div class="additionalFunction"><img src="images/polecane.png" alt="Polecane">
                 <p>Polecane</p>
             </div>
-        <div class="additionalFunction"><img src="images/ikonka%20robocza1.png" alt="robocza1">
+        <div class="additionalFunction"><img src="images/schematy-komunikacji.png" alt="Schematy komunikacji">
             <p>Schematy komunikacji</p>
         </div>
-        <div class="additionalFunction"><img src="images/ikonka%20robocza3.png" alt="robocza3">
+        <div class="additionalFunction"><img src="images/ceny-biletow.png" alt="Ceny biletów">
             <p>Ceny biletów</p>
         </div>
-        <div class="additionalFunction"><img src="images/ikonka%20robocza5.png" alt="robocza5">
+        <div class="additionalFunction"><img src="images/przydatne-linki.png" alt="Przydatne linki">
             <p>Przydatne linki</p>
         </div>
-        <div class="additionalFunction"><img src="images/ikonka%20robocza4.png" alt="robocza4">
+        <div class="additionalFunction"><img src="images/wyszukaj-przystanek.png" alt="Wyszukaj przystanek">
             <p>Wyszukaj przystanek</p>
         </div>
-        <div class="additionalFunction"><img src="images/ikonka%20robocza6.png" alt="robocza6">
+        <div class="additionalFunction"><img src="images/aktualnosci.png" alt="Aktualności">
             <p>Aktualności</p>
         </div>
     </div>
@@ -97,7 +97,7 @@
     </div>
     <!-- end New paragraph for testers-->
     <!-- Contact form -->
-    <div id="form-main">
+    <div id="formSection">
 
             <div id="form-div"  class="hide">
                 <p class="contact_form_header">Skontaktuj się z nami!</p>
@@ -105,19 +105,19 @@
                     <!--Accept small and capital letters (including Polish diacritics),
                     spaces and hyphens (for hyphenated surnames):-->
                     <p class="name">
-                        <input name="name" type="text" class="feedback-input" placeholder="Imię i nazwisko" id="name" maxlength="150"
+                        <input name="name" type="text" autocomplete="off" class="feedback-input" placeholder="Imię i nazwisko" id="name" maxlength="150"
                                pattern="[A-Za-ząćęłńóśźżĄĆĘŁŃÓŚŹŻ -]+"/>
                     </p>
 
                     <!--Use standard HTML5 validation:-->
                     <p class="email">
-                        <input name="email" type="email" class="feedback-input" id="email" placeholder="E-mail" maxlength="50" />
+                        <input name="email" type="email" autocomplete="off" class="feedback-input" id="email" placeholder="E-mail" maxlength="50" />
                     </p>
 
                     <!--Accept Polish phone numbers, optionally with the area code of +48,
                     with optional spaces and/or hyphens between digits:-->
                     <p class="text">
-                        <input name="phoneNumber" type="tel" class="feedback-input" id="phone" placeholder="Telefon" maxlength="20"
+                        <input name="phoneNumber" type="tel" autocomplete="off"  class="feedback-input" id="phone" placeholder="Telefon" maxlength="20"
                                pattern="^(\+48)? ?[1-9]( |-)?\d( |-)?\d( |-)?\d( |-)?\d( |-)?\d( |-)?\d( |-)?\d( |-)?\d( |-)?"/>
                     </p>
 
@@ -133,26 +133,31 @@
         <!-- END of Contact form -->
 
         <div class="clear"></div>
+        <!-- END of Contact form -->
 
-    </main>
 
-    <footer>
+</main>
 
-        <div class="footer_style">
-            <div class="footer_image"><img src="images/logofinal.png" alt="logo" /></div>
-            <p><span>&copy;</span> 2015 by Fantastic 4</p>
-        </div>
+<footer>
 
-    </footer>
-    <div class="clear"></div>
+    <div class="footer_style">
+        <div class="footer_image"><img src="images/logofinal.png" alt="logo"/></div>
+        <p><span>&copy;</span> 2015 by Fantastic 4</p>
+    </div>
+
+</footer>
+<div class="clear"></div>
 
 <div id="socialmedia">
     <div class="social-button-wrapper"><a class="social-button social-button-facebook"
-            href="https://www.facebook.com/infoshareacademy/" title="Facebook" target="_blank"></a></div>
+                                          href="https://www.facebook.com/infoshareacademy/" title="Facebook"
+                                          target="_blank"></a></div>
     <div class="social-button-wrapper"><a class="social-button social-button-googleplus"
-            href="https://plus.google.com/+infoshare" title="Google+" target="_blank"></a></div>
+                                          href="https://plus.google.com/+infoshare" title="Google+" target="_blank"></a>
+    </div>
     <div class="social-button-wrapper"><a class="social-button social-button-twitter"
-            href="https://twitter.com/infosharepl" title="Twitter" target="_blank"></a></div>
+                                          href="https://twitter.com/infosharepl" title="Twitter" target="_blank"></a>
+    </div>
 </div>
 
     <div id="easterEgg" class="hide">
@@ -180,5 +185,7 @@
     <script src="js/main.js"></script>
     <script src="js/easter_egg.js"></script>
     <script src="js/parallax.js"></script>
+    <script src="js/js.cookie.js"></script>
+    <script src="js/menu.js"></script>
 </body>
 </html>
