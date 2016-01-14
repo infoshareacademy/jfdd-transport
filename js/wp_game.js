@@ -1,30 +1,20 @@
 var myGamePiece;
-var myObstacle;
 var myObstacles = [];
 //var myScore;
 var myBackground;
-var myObstacl;
-
+var obcBusStop;
 function startGame() {
     myGameArea.start();
-    //myGameArea.invokeObstaclesAtRandom(1,10);
     myGamePiece = new component(100, 50, "images/Untitled.png", 10, 120, "image");
-    //myScore = new component("30px", "Consolas", "black", 280, 40, "text");
-    myObstacle = new component(100, 50, "images/Untitled.png", 50, 200, "obstacle");
-    //myObstacl = new component(100, 50, "images/Untitled.png", 60, 220 , "obstacle");
     myBackground = new component(456, 270, "images/threelane.png", 0, 0, "background");
+    obcBusStop = new component(100, 50, "images/Untitled.png", 10, 120, "image");
 
-    for (var i = 0; i < 20; i++) {
-        var yCoordinatesForLanes = [100, 200, 300];
-
-        var min = 3;
-        var max = 30;
-        var randomInterval = Math.floor(Math.random() * (max - min + 1)) + min;
+    for (var i = 0; i < 3; i++) {
+        var yCoordinatesForLanes = [20, 110, 200];
         setTimeout(function () {
-            console.log('dsds');
             var rand = yCoordinatesForLanes[Math.floor(Math.random() * yCoordinatesForLanes.length)];
             myObstacles.push(new component(100, 50, "images/Untitled.png", 500, rand, "obstacle"));
-        }, randomInterval + "000");
+        }, i * 2500);
 
 
     }
@@ -116,44 +106,45 @@ function component(width, height, color, x, y, type) {
 }
 
 function updateGameArea() {
-    if (myGamePiece.crashWith(myObstacle)) {
-        myGameArea.stop();
-    } else {
-        myGameArea.clear();
-        myBackground.speedX = -2;
-        myBackground.newPos();
-        myBackground.update();
-        myObstacle.speedX = -1;
-        myObstacle.newPos();
-        myObstacle.update();
-        //myObstacle.x += -1;
-        //myObstacl.speedX = -1;
-        //myObstacl.newPos();
-        //myObstacl.update();
-
-        for (i = 0; i < myObstacles.length; i += 1) {
-            myObstacles[i].x += -1;
-            myObstacles[i].update();
+    for (i = 0; i < myObstacles.length; i++) {
+        if (myGamePiece.crashWith(myObstacles[i])) {
+            myGameArea.stop();
+            //return;
         }
-
-
-        myGamePiece.speedX = 0;
-        myGamePiece.speedY = 0;
-        if (myGameArea.key && myGameArea.key == 65) {
-            myGamePiece.speedX = -1;
-        }
-        if (myGameArea.key && myGameArea.key == 68) {
-            myGamePiece.speedX = 1;
-        }
-        if (myGameArea.key && myGameArea.key == 87) {
-            myGamePiece.speedY = -1;
-        }
-        if (myGameArea.key && myGameArea.key == 83) {
-            myGamePiece.speedY = 1;
-        }
-        myGamePiece.newPos();
-        myGamePiece.update();
     }
+    myGameArea.clear();
+
+    if (myObstacles[myObstacles.length-1].x < 0) {
+        console.log("yeppie");
+
+    }
+
+    myBackground.speedX = -2;
+    myBackground.newPos();
+    myBackground.update();
+
+    for (i = 0; i < myObstacles.length; i += 1) {
+        myObstacles[i].x += -1;
+        myObstacles[i].update();
+    }
+
+
+    myGamePiece.speedX = 0;
+    myGamePiece.speedY = 0;
+    if (myGameArea.key && myGameArea.key == 65) {
+        myGamePiece.speedX = -1;
+    }
+    if (myGameArea.key && myGameArea.key == 68) {
+        myGamePiece.speedX = 1;
+    }
+    if (myGameArea.key && myGameArea.key == 87) {
+        myGamePiece.speedY = -1;
+    }
+    if (myGameArea.key && myGameArea.key == 83) {
+        myGamePiece.speedY = 1;
+    }
+    myGamePiece.newPos();
+    myGamePiece.update();
 }
 
 function moveup() {
