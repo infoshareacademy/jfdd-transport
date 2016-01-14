@@ -12,7 +12,7 @@
     z-index: 2;
 }
 
-#easterEgg2Intro {
+#gameIntro {
     height: 100%;
     background-color: #f1f1f1;
     border: solid 6px darkgrey;
@@ -23,13 +23,26 @@
     padding-right: 0;
     margin-top: 0;
     position:fixed;
-
 }
+
 #easterEgg2 h1, h4  {
     text-align: center;
 }
 
-#closeEasterEgg2 {
+#close {
+    float: right;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    color: black;
+    text-align: center;
+    background-color:darkgrey;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#close2 {
     float: right;
     width: 50px;
     height: 50px;
@@ -59,13 +72,19 @@ button {
     margin-right: auto;
     padding-left: 0;
     padding-right: 0;
+    height: 100%;
+    position: fixed;
+    z-index: 5;
 }
 
 #prawaAutorskie a {
-    margin-top: 500px;
-    margin-left: 80%;
+    margin-left: 85%;
     color: darkgrey;
     font-size: 15px;
+}
+
+#prawaAutorskie {
+    margin-top: 540px;
 }
 
 #gameScore {
@@ -76,10 +95,9 @@ button {
     font-weight: bold;
 }
 
-
 .buses {
-    width: 180px;
-    height: 80px;
+    width: 190px;
+    height: 90px;
     position: fixed;
     font-size: 40px;
     font-family: Jura, sans-serif;
@@ -87,6 +105,8 @@ button {
     text-align: center;
     color: darkred;
     cursor: pointer;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .bus1 {
@@ -110,7 +130,7 @@ button {
     background-size: cover;
     background-repeat: no-repeat;
     right: -180px;
-    top: 370px;
+    top: 360px;
 }
 
 .bus4 {
@@ -118,12 +138,9 @@ button {
     background-size: cover;
     background-repeat: no-repeat;
    right: -180px;
-    top: 480px;
+    top: 470px;
 }
-
 /*End easteregg2*/
-
-
 
 .clear {
     clear: both;
