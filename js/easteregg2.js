@@ -64,7 +64,7 @@ $(document).ready(function () {
     var busOnGo = function(){
             var bus1 = document.createElement('div');
                     $(bus1).addClass('bus1 buses')
-                        .html(lines.random())
+                        .text(lines.random())
                         .appendTo($("#easterEgg2"))
                         .animate({"left": "1800px"}, RandomValue(2500, 7000))
                         .css('left', function () {

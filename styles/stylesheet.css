@@ -24,6 +24,7 @@
     padding-right: 50px;
     margin-top: 0;
     position:fixed;
+
 }
 
 #easterEgg2 h1, h4  {
@@ -175,7 +176,8 @@
     font-family: Jura, sans-serif;
     font-weight: bold;
     text-align: center;
-    color: darkred;
+    line-height: 118px;
+    color: brown;
     cursor: pointer;
     background-size: cover;
     background-repeat: no-repeat;
