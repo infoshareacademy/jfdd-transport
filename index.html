@@ -66,7 +66,7 @@
             <div class="additionalFunction"><img src="images/polecane.png" alt="Polecane">
                 <p>Polecane</p>
             </div>
-        <div class="additionalFunction"><img src="images/schematy-komunikacji.png" alt="Schematy komunikacj">
+        <div class="additionalFunction"><img src="images/schematy-komunikacji.png" alt="Schematy komunikacji">
             <p>Schematy komunikacji</p>
         </div>
         <div class="additionalFunction"><img src="images/ceny-biletow.png" alt="Ceny biletów">
@@ -105,23 +105,21 @@
                     <!--Accept small and capital letters (including Polish diacritics),
                     spaces and hyphens (for hyphenated surnames):-->
                     <p class="name">
-                        <input name="name" type="text" class="feedback-input" placeholder="Imię i nazwisko" id="name" maxlength="150"
+                        <input name="name" type="text" autocomplete="off" class="feedback-input" placeholder="Imię i nazwisko" id="name" maxlength="150"
                                pattern="[A-Za-ząćęłńóśźżĄĆĘŁŃÓŚŹŻ -]+"/>
                     </p>
 
-                <!--Use standard HTML5 validation:-->
-                <p class="email">
-                    <input name="email" type="email" class="feedback-input" id="email" placeholder="E-mail"
-                           maxlength="50"/>
-                </p>
+                    <!--Use standard HTML5 validation:-->
+                    <p class="email">
+                        <input name="email" type="email" autocomplete="off" class="feedback-input" id="email" placeholder="E-mail" maxlength="50" />
+                    </p>
 
-                <!--Accept Polish phone numbers, optionally with the area code of +48,
-                with optional spaces and/or hyphens between digits:-->
-                <p class="text">
-                    <input name="phoneNumber" type="tel" class="feedback-input" id="phone" placeholder="Telefon"
-                           maxlength="20"
-                           pattern="^(\+48)? ?[1-9]( |-)?\d( |-)?\d( |-)?\d( |-)?\d( |-)?\d( |-)?\d( |-)?\d( |-)?\d( |-)?"/>
-                </p>
+                    <!--Accept Polish phone numbers, optionally with the area code of +48,
+                    with optional spaces and/or hyphens between digits:-->
+                    <p class="text">
+                        <input name="phoneNumber" type="tel" autocomplete="off"  class="feedback-input" id="phone" placeholder="Telefon" maxlength="20"
+                               pattern="^(\+48)? ?[1-9]( |-)?\d( |-)?\d( |-)?\d( |-)?\d( |-)?\d( |-)?\d( |-)?\d( |-)?\d( |-)?"/>
+                    </p>
 
                     <input type="hidden" name="receiver" value="wojciech.makurat@infoshareacademy.com">
                     <input type="text" id="formField" placeholder="Leave this field blank.">
@@ -159,15 +157,68 @@
                                           href="https://twitter.com/infosharepl" title="Twitter" target="_blank"></a>
     </div>
 </div>
+<div id="easterEgg" class="donotdisplay">
+    <div id="easterEggContainerOuter">
+        <span id="closeEasterEgg">x</span>
 
-<script src="js/js.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="js/js.cookie.js"></script>
-<script src="js/main.js"></script>
-<script src="js/parallax.js"></script>
-<script src="js/menu.js"></script>
-<script src="js/wp_game.js"></script>
+        <div id="easterEggIntro">
+            <h1>Jak grać?</h1>
 
+            <p>
+                Ludzie czekający na przystanku chcą dojechać do Olivia Business Center.
+                Gdy tylko podjedzie właściwy autobus, klikaj dowolne z jego otwartych drzwi,
+                aby wsiadło jak najwięcej osób. Za każdego pasażera, którego umieścisz we
+                właściwym autobusie, dostajesz 1 punkt. <br>Uważaj: za każdą osobę umieszczoną
+                w autobusie jadącym w inne miejsce dostaniesz minus 10 punktów. Masz 30 sekund.
+                <br>Powodzenia :-)
+            </p>
+            <button type="button" id="startEasterEggGame">Gram!</button>
+        </div>
+        <div id="easterEggContainerInner">
+            <table>
+                <tr>
+                    <th>Wynik</th>
+                    <th>Czas</th>
+                </tr>
+                <tr>
+                    <td>
+                        <span id="currentScore">0</span>
+                    </td>
+                    <td>
+                        <span id="gameCountdown"></span>
+                    </td>
+                </tr>
+            </table>
+            <div id="infoBoardContainer">
+                <div class="passengers passengerGroup1"></div>
+                <div class="infoBoardStands infoBoardStand1"></div>
+                <p class="infoBoards infoBoard1"></p>
+                <div class="passengers passengerGroup2"></div>
+                <div class="infoBoardStands infoBoardStand2"></div>
+                <p class="infoBoards infoBoard2"></p>
+                <div class="passengers passengerGroup3"></div>
+                <div class="infoBoardStands infoBoardStand3"></div>
+                <p class="infoBoards infoBoard3"></p>
+            </div>
+            <div id="endOfGameMask" class="hide"></div>
+            <div id="gameResults" class="hide">
+                <h3>Twój wynik:</h3>
 
+                <p></p>
+                <button type="button" id="playAgain">Zagraj jeszcze raz</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.3.min.js"><\/script>')</script>
+    <script src="js/js.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/easter_egg.js"></script>
+    <script src="js/parallax.js"></script>
+    <script src="js/js.cookie.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/wp_game.js"></script>
 </body>
 </html>
