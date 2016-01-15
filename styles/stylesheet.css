@@ -147,6 +147,11 @@
     height: 100%;
     position: fixed;
     z-index: 5;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }
 
 #prawaAutorskie a {
@@ -181,7 +186,7 @@
     cursor: pointer;
     background-size: cover;
     background-repeat: no-repeat;
-}
+ }
 
 .bus1 {
     background: url('../images/rightvan.png');
@@ -189,6 +194,10 @@
     background-repeat: no-repeat;
     left: -170px;
     top: 70px;
+}
+
+.bus1::selection {
+    background-color: transparent;
 }
 
 .bus2{
@@ -199,6 +208,10 @@
     top: 180px;
 }
 
+.bus2::selection {
+    background-color: transparent;
+}
+
 .bus3 {
     background: url('../images/leftvan.png');
     background-size: cover;
@@ -207,12 +220,20 @@
     top: 340px;
 }
 
+.bus3::selection {
+    background-color: transparent;
+}
+
 .bus4 {
     background: url('../images/leftvan.png');
     background-size: cover;
     background-repeat: no-repeat;
    right: -170px;
     top: 450px;
+}
+
+.bus4::selection {
+    background-color: transparent;
 }
 
 #gameOver {
