@@ -15,9 +15,11 @@ body {
     min-width: 1000px;
 }
 
-canvas {
+#wp-canvas {
     border: 1px solid #d3d3d3;
     background-color: #f1f1f1;
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
 }
 
 header {

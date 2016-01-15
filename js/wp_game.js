@@ -25,8 +25,10 @@ var myGameArea = {
     start: function () {
         this.canvas.width = 400;
         this.canvas.height = 270;
+        this.canvas.setAttribute("id", "wp-canvas");
         this.context = this.canvas.getContext("2d");
-        document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+        $(".testersParagraph").prepend(this.canvas);
+        //document.body.insertBefore(this.canvas, document.body.childNodes[0]);
         this.interval = setInterval(updateGameArea, 10);
         window.addEventListener('keydown', function (e) {
             myGameArea.key = e.keyCode;
