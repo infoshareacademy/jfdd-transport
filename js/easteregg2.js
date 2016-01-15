@@ -12,27 +12,27 @@ $(document).ready(function () {
     var timer;
 
     var iniciateGame = function () {
-            $('#easterEgg2').removeClass('hide');
-            $('#close').removeClass('hide');
-            $('#gameIntro').removeClass('hide');
+            $('#easterEgg2').removeClass('hidden');
+            $('#close').removeClass('hidden');
+            $('#gameIntro').removeClass('hidden');
 
     };
 
     var closeGame = function () {
-        $('#easterEgg2').addClass('hide');
-        $('#okButton').addClass('hide');
-        $('#gameOver').addClass('hide');
-        $('#gameScore').addClass('hide');
+        $('#easterEgg2').addClass('hidden');
+        $('#okButton').addClass('hidden');
+        $('#gameOver').addClass('hidden');
+        $('#gameScore').addClass('hidden');
 
 
     };
 
     var playGame = function () {
-        $('.gameBackground').removeClass('hide');
-        $('#gameIntro').addClass('hide');
-        $('#easterEgg2').removeClass('hide');
-        $('#gameScore').removeClass('hide');
-        $('#prawaAutorskie a').removeClass('hide');
+        $('.gameBackground').removeClass('hidden');
+        $('#gameIntro').addClass('hidden');
+        $('#easterEgg2').removeClass('hidden');
+        $('#gameScore').removeClass('hidden');
+        $('#prawaAutorskie a').removeClass('hidden');
 
         myVar = setInterval(function () {
             busOnGo()
@@ -44,9 +44,9 @@ $(document).ready(function () {
             $('#gameScore span').text(sec--);
             if (sec == -1) {
                 $('#okButton')
-                    .removeClass('hide');
+                    .removeClass('hidden');
                 $('#gameOver')
-                    .removeClass('hide')
+                    .removeClass('hidden')
                     .find('span')
                     .text(points.reduce(function (aktualnyWynik, kolejnyPunkt) {
                         return aktualnyWynik + kolejnyPunkt;

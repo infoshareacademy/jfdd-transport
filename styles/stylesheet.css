@@ -1,5 +1,5 @@
 /*easteregg2 style*/
-.hide {
+.hidden {
     display: none;
 }
 
@@ -547,7 +547,7 @@ main {
 
 #formSection {
     margin-top: 30px;
-    margin-bottom: 150px;
+    margin-bottom: 50px;
 }
 
 #form-div {
@@ -994,33 +994,33 @@ footer span {
     }
 }
 
-/*@media (max-width: 600px) {*/
-/**/
-/*body {*/
-/*min-width: 600px;*/
-/*}*/
-/**/
-/*.navigationBar {*/
-/*width: 600px;*/
-/*}*/
-/**/
-/*nav {*/
-/*padding-right: 520px;*/
-/*}*/
-/**/
-/*.logo {*/
-/*display: none;*/
-/*}*/
-/**/
-/*.introText h1 {*/
-/*font-size: 20px;*/
-/*}*/
-/**/
-/*.testersParagraph {*/
-/*min-width: 600px;*/
-/*}*/
-/**/
-/*.testersParagraph hr {*/
-/*width: 600px;*/
-/*}*/
-/*}*/
+@media (max-width: 600px) {
+
+body {
+min-width: 600px;
+}
+
+.navigationBar {
+width: 600px;
+}
+
+nav {
+padding-right: 520px;
+}
+
+.logo {
+display: none;
+}
+
+.introText h1 {
+font-size: 20px;
+}
+
+.testersParagraph {
+min-width: 600px;
+}
+
+.testersParagraph hr {
+width: 600px;
+}
+}
