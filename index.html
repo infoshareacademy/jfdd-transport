@@ -161,42 +161,56 @@
 </div>
 
 <div id="easterEgg" class="donotdisplay">
-    <span id="closeEasterEgg">x</span>
-    <div id="easterEggIntro">
-        <h1>Kolorowe autobusy</h1>
-        <h2>Jak grać?</h2>
-        <p>
-            Ludzie czekający na przystanku chcą dojechać do Olivia Business Center.
-            Gdy tylko podjedzie właściwy autobus, klikaj dowolne z jego otwartych drzwi,
-            aby wsiadło jak najwięcej osób. Za każdego pasażera, którego umieścisz we
-            właściwym autobusie, dostajesz 1 punkt. Uważaj: za każdą osobę umieszczoną
-            w autobusie jadącym w inne miejsce, dostaniesz minus 10 punktów. Masz 30 sekund.
-            Powodzenia :-)
-        </p>
-        <button type="button" id="startEasterEggGame">Gram!</button>
-    </div>
-    <table>
-        <tr>
-            <th>Wynik</th>
-            <th>Czas</th>
-        </tr>
-        <tr>
-            <td>
-                <span id="currentScore">0</span>
-            </td>
-            <td>
-                <span id="gameCountdown"></span>
-            </td>
-        </tr>
-    </table>
-    <p class="infoBoards infoBoard1"></p>
-    <p class="infoBoards infoBoard2"></p>
-    <p class="infoBoards infoBoard3"></p>
-    <div id="endOfGameMask" class="hide"></div>
-    <div id="gameResults" class="hide">
-        <h3>Twój wynik:</h3>
-        <p></p>
-        <button type="button" id="playAgain">Zagraj jeszcze raz</button>
+    <div id="easterEggContainerOuter">
+        <span id="closeEasterEgg">x</span>
+
+        <div id="easterEggIntro">
+            <h1>Jak grać?</h1>
+
+            <p>
+                Ludzie czekający na przystanku chcą dojechać do Olivia Business Center.
+                Gdy tylko podjedzie właściwy autobus, klikaj dowolne z jego otwartych drzwi,
+                aby wsiadło jak najwięcej osób. Za każdego pasażera, którego umieścisz we
+                właściwym autobusie, dostajesz 1 punkt. <br>Uważaj: za każdą osobę umieszczoną
+                w autobusie jadącym w inne miejsce dostaniesz minus 10 punktów. Masz 30 sekund.
+                <br>Powodzenia :-)
+            </p>
+            <button type="button" id="startEasterEggGame">Gram!</button>
+        </div>
+        <div id="easterEggContainerInner">
+            <table>
+                <tr>
+                    <th>Wynik</th>
+                    <th>Czas</th>
+                </tr>
+                <tr>
+                    <td>
+                        <span id="currentScore">0</span>
+                    </td>
+                    <td>
+                        <span id="gameCountdown"></span>
+                    </td>
+                </tr>
+            </table>
+            <div id="infoBoardContainer">
+                <div class="passengers passengerGroup1"></div>
+                <div class="infoBoardStands infoBoardStand1"></div>
+                <p class="infoBoards infoBoard1"></p>
+                <div class="passengers passengerGroup2"></div>
+                <div class="infoBoardStands infoBoardStand2"></div>
+                <p class="infoBoards infoBoard2"></p>
+                <div class="passengers passengerGroup3"></div>
+                <div class="infoBoardStands infoBoardStand3"></div>
+                <p class="infoBoards infoBoard3"></p>
+            </div>
+            <div id="endOfGameMask" class="hide"></div>
+            <div id="gameResults" class="hide">
+                <h3>Twój wynik:</h3>
+
+                <p></p>
+                <button type="button" id="playAgain">Zagraj jeszcze raz</button>
+            </div>
+        </div>
     </div>
 </div>
 

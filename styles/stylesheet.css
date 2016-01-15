@@ -796,18 +796,38 @@ footer span {
     display: none;
 }
 
-#easterEgg, #easterEggIntro {
+#easterEgg {
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: darkorange;
+    background-color: rgba(0,0,0,0.7);
     font-family: Arial, sans-serif;
     color: #3f3f3f;
     font-weight: 200;
     font-size: 25px;
     z-index: 110; /*Social media buttons use '100'*/
+}
+
+#easterEggIntro {
+    background-color: darkorange;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    height: 650px;
+    z-index: 110;
+}
+
+#easterEgg #easterEggIntro>h1, #easterEgg #easterEggIntro>p {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+#easterEgg #easterEggIntro p {
+    text-align: justify;
 }
 
 #closeEasterEgg {
@@ -827,8 +847,18 @@ footer span {
     z-index: 125;
 }
 
-#easterEggIntro {
-    z-index: 120;
+#easterEggContainerOuter, #easterEggContainerInner {
+    width: 1000px;
+    height: 650px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#easterEggContainerInner {
+    background-color: darkorange;
+    clip: rect(0, auto, auto, 0);
 }
 
 .vehicles {
@@ -848,15 +878,15 @@ footer span {
 }
 
 .vehicle1 {
-    top: 200px;
+    top: 185px;
 }
 
 .vehicle2 {
-    top: 370px;
+    top: 355px;
 }
 
 .vehicle3 {
-    top: 540px;
+    top: 525px;
 }
 
 .vehicleDoor {
@@ -883,11 +913,32 @@ footer span {
 }
 
 .vehicleDoorOpenLeft {
-    background: url("../images/easter_egg.png") 228px 164px;
+    background: url("../images/easter_egg.png") 227px 164px;
 }
 
 .vehicleDoorOpenRight {
     background: url("../images/easter_egg.png") 121px 164px;
+}
+
+.infoBoardStands {
+    position: absolute;
+    left: 290px;
+    width: 15px;
+    height: 155px;
+    background-color: black;
+    z-index: 120;
+}
+
+.infoBoardStand1 {
+    top: 146px;
+}
+
+.infoBoardStand2 {
+    top: 316px;
+}
+
+.infoBoardStand3 {
+    top: 486px;
 }
 
 .infoBoards {
@@ -900,33 +951,41 @@ footer span {
     text-overflow: ellipsis;
     vertical-align: middle;
     position: absolute;
-    left: 400px;
+    left: 305px;
+    margin: 0;
+    z-index: 120;
 }
 
 .infoBoard1 {
-    top: 125px;
+    top: 146px;
 }
 
 .infoBoard2 {
-    top: 295px;
+    top: 316px;
 }
 
 .infoBoard3 {
-    top: 465px;
+    top: 486px;
 }
 
-#easterEgg table, th, td {
+#easterEgg table, #easterEgg th, #easterEgg td {
     border: 1px solid blanchedalmond;
 }
 
+#easterEgg table {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+}
+
 #easterEgg th {
-    height: 60px;
-    width: 150px;
+    height: 45px;
+    width: 140px;
 }
 
 #easterEgg td {
-    height: 90px;
-    width: 150px;
+    height: 70px;
+    width: 140px;
     text-align: center;
 }
 
@@ -946,13 +1005,75 @@ footer span {
     top: 0;
     bottom: 0;
     background-color: rgba(34, 34, 34, 0.77);
+    z-index: 123;
 }
 
 #gameResults {
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 400px;
     background-color: darkorange;
-    left: 400px;
-    width: 200px;
-    height: 200px;
+    z-index: 124;
+}
+
+#gameResults>h3, #gameResults>p {
+    text-align: center;
+}
+
+#gameResults>p {
+    font-weight: bold;
+    font-size: 100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#startEasterEggGame, #playAgain {
+    font-family: bold Arial, sans-serif;
+}
+
+.passengers {
+    position: absolute;
+    left: 314px;
+    height: 87px;
+    z-index: 120;
+}
+
+.passengerGroup1 {
+    width: 70px;
+    top: 222px;
+    background: url("../images/easter_egg.png") 287px 88px;
+}
+
+.passengerGroup2 {
+    width: 99px;
+    top: 392px;
+    background: url("../images/easter_egg.png") 218px 88px;
+}
+
+.passengerGroup3 {
+    width: 105px;
+    top: 562px;
+    background: url("../images/easter_egg.png") 119px 88px;
+}
+
+#startEasterEggGame, #playAgain {
+    padding: 22px;
+    color: blanchedalmond;
+    background-color: #3f3f3f;
+    font-weight: bold;
+    font-size: 30px;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    display: block;
+    cursor: pointer;
+}
+
+#playAgain {
+    margin-top: 50px;
 }
 /*End easter egg styles*/

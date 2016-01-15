@@ -60,6 +60,7 @@ $(function () {
 
     //GAMEPLAY
     var playGame = function () {
+
         gameStarted = true;
         $startGameBtn.off();
         gameover = false;
@@ -68,7 +69,7 @@ $(function () {
         game.generateBuses(3, [1, 2, 3]);
 
         $('.vehicles').each(function () {
-            game.runABus(this, generateRandomValue(0, 1500), 350); //From 0 up to 1500 milliseconds \
+            game.runABus(this, generateRandomValue(0, 1500), 400); //From 0 up to 1500 milliseconds \
             // so as not to have the user waiting too long for the buses to show up at the start \
             // of the game.
         });
@@ -143,7 +144,7 @@ $(function () {
 
             //Record timeout ID to the gameTimeouts array so that the timeout can be\
             //be stopped at the end of the game. (Same for all the timeouts and the interval).
-            gameTimeouts[0] = window.setTimeout(function () {
+            gameTimeouts.push(window.setTimeout(function () {
                 $(whichBus).animate({left: whereToGo + 'px'}, drivingSpeed, function () {
                     if ($(whichBus).hasClass('inService')) {
                         game.generateDestination(whichBus);
@@ -153,7 +154,7 @@ $(function () {
                         game.rerunBus(whichBus);
                     }
                 });
-            }, whenToStartRunning);
+            }, whenToStartRunning));
         },
         destinations: ['110 Wrzeszcz PKP', '113 Orunia Gościnna', '116 Matemblewo',
             '127 Jasień PKM', '130 Dworzec Główny', '136 Niedźwiednik', '139 Oliwa PKP',
@@ -263,30 +264,30 @@ $(function () {
             var leftDoorDelay = generateRandomValue(200, 1500);
             var rightDoorDelay = generateRandomValue(200, 1500);
 
-            gameTimeouts[1] = window.setTimeout(function () {
+            gameTimeouts.push(window.setTimeout(function () {
                 game.openDoorLeft(whichBus);
-            }, leftDoorDelay);
-            gameTimeouts[2] = window.setTimeout(function () {
+            }, leftDoorDelay));
+            gameTimeouts.push(window.setTimeout(function () {
                 game.openDoorRight(whichBus);
-            }, rightDoorDelay);
+            }, rightDoorDelay));
 
             var leftDoorOpeningTime = generateRandomValue(2000, 4000);
             var rightDoorOpeningTime = generateRandomValue(2000, 4000);
             var totalTimeAtBusStop = Math.max(leftDoorDelay + leftDoorOpeningTime,
                     rightDoorDelay + rightDoorOpeningTime) + 500;
 
-            gameTimeouts[3] = window.setTimeout(function () {
+            gameTimeouts.push(window.setTimeout(function () {
                 game.closeDoorLeft(whichBus);
-            }, leftDoorDelay + leftDoorOpeningTime);
-            gameTimeouts[4] = window.setTimeout(function () {
+            }, leftDoorDelay + leftDoorOpeningTime));
+            gameTimeouts.push(window.setTimeout(function () {
                 game.closeDoorRight(whichBus);
-            }, rightDoorDelay + rightDoorOpeningTime);
+            }, rightDoorDelay + rightDoorOpeningTime));
 
-            gameTimeouts[5] = window.setTimeout(function () {
+            gameTimeouts.push(window.setTimeout(function () {
                 game.runABus(whichBus, 0, 1000);
                 $(whichBus).removeClass('inService');
                 game.removeDestination(whichBus);
-            }, totalTimeAtBusStop);
+            }, totalTimeAtBusStop));
         },
         rerunBus: function (whichBusToRerun) {
             if (gameover) {
@@ -297,7 +298,7 @@ $(function () {
 
             game.generateBuses(1, [indexOfBusToRerun]);
             var busToRerun = document.getElementsByClassName('vehicle' + indexOfBusToRerun)[0];
-            game.runABus(busToRerun, generateRandomValue(100, 1000), 350);
+            game.runABus(busToRerun, generateRandomValue(100, 1000), 400);
         },
         getBusIndex: function (fromWhichBus) {
             var busIndex = fromWhichBus.className;
@@ -316,7 +317,7 @@ $(function () {
         resetGame: function () {
             $('#playAgain').off();
             $('#gameResults').addClass('hide');
-            $('#endOfGameMask').addClass('hide')/*.fadeOut()*/;
+            $('#endOfGameMask').addClass('hide');
             $('.vehicles').remove(); //Remove existing buses.
             $('.infoBoards').text(''); //Clear destinations from infoboards.
             $('#currentScore').text('0'); //Clear the displayed result.
