@@ -60,8 +60,8 @@ $('a').click(function () {
  * Code responsible for highlighting menu items on scroll
  */
 $(window).scroll(function() {
-    updatenavigationBarHeight();
-    var position = $(this).scrollTop() + navigationBarheight;
+    //updatenavigationBarHeight();
+    var position = $(this).scrollTop() + 61;
     $('.navigationBar > nav > ul > li > a').each(function() {
         var href = $(this).attr('href');
         var target = $(href).offset().top;
