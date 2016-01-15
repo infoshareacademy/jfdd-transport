@@ -7,7 +7,7 @@ $(document).ready(function() {
 
     var functionsContents = {
         busStop: "Wybierz z listy swój przystanek i dowiedz się o aktualnej sytuacji.",
-        delayStats: "Informacje odnośnie opóźnień dla wybranego przystanku.",
+        delayStats: "Informacje o opóźnieniach dla wybranego przystanku.",
         checkMap: "Zlokalizuj swój pojazd na mapie."
     };
 
