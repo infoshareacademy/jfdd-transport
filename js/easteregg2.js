@@ -36,7 +36,7 @@ $(document).ready(function () {
 
         myVar = setInterval(function () {
             busOnGo()
-        }, 2800);
+        }, 3000);
 
         var sec = 20;
         var running = true;
@@ -66,7 +66,7 @@ $(document).ready(function () {
                     $(bus1).addClass('bus1 buses')
                         .text(lines.random())
                         .appendTo($("#easterEgg2"))
-                        .animate({"left": "1820px"}, RandomValue(3000, 7300))
+                        .animate({"left": "1870px"}, RandomValue(3000, 7300))
                         .css('left', function () {
                             return $(this).offset().left;
                         })
@@ -85,7 +85,7 @@ $(document).ready(function () {
                 .html(lines.random())
                 .appendTo($("#easterEgg2"))
                 .css('left', function(){ return $(this).offset().left; })
-                .animate({"left":"1820px"}, RandomValue(3000, 7300))
+                .animate({"left":"1870px"}, RandomValue(3000, 7300))
                 .click(function () {
                     $(this).remove();
                     if ($(this).html()== 41) {
@@ -100,7 +100,7 @@ $(document).ready(function () {
                 .html(lines.random())
                 .appendTo($("#easterEgg2"))
                 .css('right', function(){ return $(this).offset().right; })
-                .animate({"right":"1820px"}, RandomValue(3000, 7300))
+                .animate({"right":"1870px"}, RandomValue(3000, 7300))
                 .click(function () {
                     $(this).remove();
                     if ($(this).html()== 41) {
@@ -115,7 +115,7 @@ $(document).ready(function () {
                 .html(lines.random())
                 .appendTo($("#easterEgg2"))
                 .css('right', function(){ return $(this).offset().right; })
-                .animate({"right":"1820px"}, RandomValue(3000, 7300))
+                .animate({"right":"1870px"}, RandomValue(3000, 7300))
                 .click(function () {
                     $(this).remove();
                     if ($(this).html()== 41) {
