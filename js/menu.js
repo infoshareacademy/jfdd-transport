@@ -18,9 +18,10 @@ $(window).scroll(function(){
             $nav.find('ul').stop().animate({
                 marginTop: '0px',
                 marginBottom: '0px'
+
             }, 600);
         }
-    } else {
+
         if ($nav.data('size') == 'small') {
             $nav.data('size','big').stop().animate({
                 height:'100px'

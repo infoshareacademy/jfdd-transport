@@ -292,6 +292,10 @@ nav {
     float: right;
 }
 
+#menu {
+    display: none;
+}
+
 .navigationBar {
     width: 100%;
     -webkit-box-shadow: 0 31px 40px 8px rgba(0, 0, 0, 0.75);
@@ -856,201 +860,107 @@ footer span {
     font-size: 70%;
 }
 
+#menu {
+    display: none;
+}
+
 @media (max-width: 1000px) {
 
-    nav {
-        padding-right: 170px;
-    }
+    nav{
+        /*margin-right: 20px;*/
+        min-width: 600px;
 
-    header {
-        height: 100px;
     }
-
     .navigationBar nav ul a {
         font-size: 20px;
     }
 
     .navigationBar nav ul li {
-        padding: 15px;
-    }
-
-    .logo {
-        height: 80px;
-        margin-left: 20px;
-        margin-top: 5px;
-    }
-
-    .introText {
-        font-size: smaller;
-    }
-
-    .function img {
-        width: 120px;
-    }
-
-    .function h2 {
-        font-size: 20px;
-    }
-
-    .function #opis1, #opis2, #opis3, p {
-        font-size: 18px;
-    }
-
-    #functionsSection {
-        width: 700px;
-    }
-
-    .function2, .function3 {
-        margin-left: 20px;
-    }
-
-    .additionalFunctionsSection {
-        width: 700px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .additionalFunctionsSection .additionalFunction {
-        width: 220px;
-        margin-bottom: 20px;
-        text-align: center;
-
-    }
-
-    .additionalFunctionsSection div {
-        width: 190px;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-
-    .testersParagraph {
-        min-width: 600px;
-    }
-
-    .testersParagraph hr {
-        width: 600px;
-    }
-
-    .testersParagraph p {
-        margin-left: auto;
-        margin-right: auto;
-        width: 600px;
-        font-size: 20px;
-    }
-}
-
-@media (max-width: 780px) {
-
-    body {
-        min-width: 750px;
-    }
-
-    nav {
+        padding-left: 5px;
+        padding-right: 5px;
         padding-top: 20px;
-        padding-right: 350px;
     }
+}
 
+@media (max-width: 910px) {
+
+   nav #navList{
+        /*margin-right: 20px;*/
+        min-width: 700px;
+
+    }
     .navigationBar nav ul a {
-        font-size: 17px;
-    }
-
-    .navigationBar nav ul li {
-        padding: 5px;
-    }
-
-    .logo {
-        height: 60px;
-        margin-left: 20px;
-    }
-
-    .introText h1 {
-        font-size: 25px;
-    }
-
-    #functionsSection {
-        width: 300px;
-    }
-
-    .function img {
-        width: 280px;
-        margin-top: 50px;
-    }
-
-    .function2, .function3 {
-        margin-left: 0;
-    }
-
-    .function h2 {
-        font-size: 30px;
-    }
-
-    .function #opis1, #opis2, #opis3, p {
         font-size: 20px;
     }
 
-    .additionalFunctionsSection {
-        width: 350px;
-    }
-
-    .additionalFunctionsSection .additionalFunction {
-
-        float: left;
-        width: 140px;
-        margin-bottom: 20px;
-        text-align: center;
-        margin-right: 10px;
-    }
-
-    .additionalFunctionsSection div {
-        width: 140px;
-        text-align: center;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
-    .testersParagraph {
-        min-width: 600px;
-    }
-
-    .testersParagraph hr {
-        width: 600px;
-    }
-
-    .testersParagraph p {
-        width: 400px;
-        font-size: 15px;
+    .navigationBar nav ul li {
+        padding-left: 2px;
+        padding-right: 2px;
+        padding-top: 20px;
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 810px){
 
-body {
-min-width: 600px;
+    nav#navList {
+       padding-top: 2%;
+    }
+
+    #nav.js {
+        display: none;
+    }
+
+    #menu {
+        display: block;
+        color: black;
+
+        margin-right: 20%;
+        font-size: 40px;
+        min-width: 300px;
+        float:right;
+    }
 }
 
-.navigationBar {
-width: 600px;
+@media (max-width: 620px){
+    #nav.js {
+        display: none;
+    }
+
+    #menu {
+        display: block;
+        color: black;
+        /*padding-top: 20px;*/
+        margin-right: 40%;
+        font-size: 40px;
+        min-width: 300px;
+        float:right;
+    }
 }
 
-nav {
-padding-right: 520px;
-}
+@media (max-width: 475px){
 
-.logo {
-display: none;
-}
+    #navList{
+        /*margin-right: 20px;*/
+        min-width: 200px;
 
-.introText h1 {
-font-size: 20px;
-}
+    }
+    .navigationBar {
+        min-width: 475px;
+    }
 
-.testersParagraph {
-min-width: 600px;
-}
+    #nav.js {
+        display: none;
+    }
 
-.testersParagraph hr {
-width: 600px;
-}
+    #menu {
+        display: block;
+        color: black;
+        /*padding-top: 20px;*/
+        margin-right: 40%;
+        font-size: 40px;
+        min-width: 100px;
+        float:right;
+    }
 }
 
 /*Start easter egg styles*/
