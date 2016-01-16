@@ -2,12 +2,12 @@ var myGamePiece;
 var myObstacles = [];
 //var myScore;
 var myBackground;
-var obcBusStop;
+var obcBuilding;
 function startGame() {
     myGameArea.start();
     myGamePiece = new component(145, 50, "images/wp-game/bus.svg", 10, 120, "image");
     myBackground = new component(456, 270, "images/wp-game/threelane.svg", 0, 0, "background");
-    obcBusStop = new component(100, 50, "images/Untitled.png", 10, 120, "image");
+    obcBuilding = new component(100, 50, "images/wp-game/building.svg", 20, 500, "image");
 
     for (var i = 0; i < 3; i++) {
         var yCoordinatesForLanes = [20, 110, 200];
@@ -120,8 +120,9 @@ function updateGameArea() {
 
     if (myObstacles[myObstacles.length-1].x < 0) {
         console.log("yeppie");
-        myGameArea.stop();
-
+        //myGameArea.stop();
+        //obcBuilding.newPos();
+        //obcBuilding.update();
     }
 
     myBackground.speedX = -2;
