@@ -10,7 +10,7 @@ $(window).scroll(function(){
 
     if ($('body').scrollTop() > 0) {
 
-        if(window.innerWidth < 890) {
+        if(window.innerWidth < 750) {
             $("#nav").hide();
         }
 

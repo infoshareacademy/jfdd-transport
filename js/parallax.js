@@ -5,7 +5,8 @@ $(document).ready(function () {
      */
 
     function setBackgroundPosition() {
-        $('.intro').css('background-position-y', 60 + $(window).scrollTop() * .5);
+
+        $('.intro').css('background-position-y', 60 + $(window).scrollTop() * .6);
     }
 
     $(window).on('load scroll', setBackgroundPosition);
@@ -50,31 +51,27 @@ $(document).ready(function () {
         });
     });
 
+    /**
+     * RWD CODE----------------------------------------------------
+     */
+
 
     $("#nav").addClass("js");
     $("#nav").addClass("js").before('<div id="menu">☰</div>');
     $("#menu").click(function(){
-        //$('.logo').animate({
-        //    float:'right'
-        //}, 600);
         $("#nav").toggle();
         $(window).resize(function(){
-            if(window.innerWidth < 890) {
+            if(window.innerWidth < 700) {
                 $("#nav").removeAttr("style");
-
+            }
+            if(window.innerWidth > 700) {
+                $("#nav").attr("style");
             }
         });
-        //$("#menu").click(function() {
-        //    $('#navigationBar').animate({
-        //        height:'300px'},600);
     });
-
-    //$("#menu").click(function() {
-    //    $('.logo').animate({
-    //        height: '60px',
-    //        marginLeft:'700px'
-    //    }, 600);
-    //});
+    $("#menu").click(function() {
+        $('.logo').hide()
+    });
 });
 
 
