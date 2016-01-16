@@ -54,13 +54,27 @@ $(document).ready(function () {
     $("#nav").addClass("js");
     $("#nav").addClass("js").before('<div id="menu">☰</div>');
     $("#menu").click(function(){
+        //$('.logo').animate({
+        //    float:'right'
+        //}, 600);
         $("#nav").toggle();
         $(window).resize(function(){
-            if(window.innerWidth < 810) {
+            if(window.innerWidth < 890) {
                 $("#nav").removeAttr("style");
+
             }
         });
+        //$("#menu").click(function() {
+        //    $('#navigationBar').animate({
+        //        height:'300px'},600);
     });
+
+    //$("#menu").click(function() {
+    //    $('.logo').animate({
+    //        height: '60px',
+    //        marginLeft:'700px'
+    //    }, 600);
+    //});
 });
 
 
