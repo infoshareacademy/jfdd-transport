@@ -20,6 +20,9 @@ $(window).scroll(function(){
                 marginBottom: '0px'
 
             }, 600);
+            $nav.find('#menu').stop().animate({
+                paddingTop: '20px'
+            }, 600);
         }
 
         if ($nav.data('size') == 'small') {
@@ -32,6 +35,9 @@ $(window).scroll(function(){
             $nav.find('ul').stop().animate({
                 marginTop: '20px',
                 marginBottom: '20px'
+            }, 600);
+            $nav.find('#menu').stop().animate({
+                paddingTop: '0'
             }, 600);
         }
     }

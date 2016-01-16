@@ -885,9 +885,7 @@ footer span {
 @media (max-width: 910px) {
 
    nav #navList{
-        /*margin-right: 20px;*/
         min-width: 700px;
-
     }
     .navigationBar nav ul a {
         font-size: 20px;
@@ -902,18 +900,14 @@ footer span {
 
 @media (max-width: 810px){
 
-    nav#navList {
-       padding-top: 2%;
-    }
-
     #nav.js {
         display: none;
     }
 
     #menu {
+        padding-top: 20px;
         display: block;
         color: black;
-
         margin-right: 20%;
         font-size: 40px;
         min-width: 300px;
@@ -927,6 +921,7 @@ footer span {
     }
 
     #menu {
+        padding-top: 20px;
         display: block;
         color: black;
         /*padding-top: 20px;*/
@@ -955,7 +950,7 @@ footer span {
     #menu {
         display: block;
         color: black;
-        /*padding-top: 20px;*/
+        padding-top: 20px;
         margin-right: 40%;
         font-size: 40px;
         min-width: 100px;
