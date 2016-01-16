@@ -1,13 +1,12 @@
 var myGamePiece;
 var myObstacles = [];
-//var myScore;
-var myBackground;
 var obcBuilding;
+var myBackground;
 function startGame() {
     myGameArea.start();
     myGamePiece = new component(145, 50, "images/wp-game/bus.svg", 10, 120, "image");
+    obcBuilding = new component(186*2, 276*2, "images/wp-game/building.svg", 500, -276, "image");
     myBackground = new component(456, 270, "images/wp-game/threelane.svg", 0, 0, "background");
-    obcBuilding = new component(100, 50, "images/wp-game/building.svg", 20, 500, "image");
 
     for (var i = 0; i < 3; i++) {
         var yCoordinatesForLanes = [20, 110, 200];
@@ -106,7 +105,16 @@ function component(width, height, color, x, y, type) {
             crash = false;
         }
         return crash;
-    }
+    };
+    this.arriveAtDestination = function (otherobj) {
+        var myleft = this.x;
+        var otherleft = otherobj.x;
+        var arrive = true;
+        if (myleft < otherleft) {
+            arrive = false;
+        }
+        return arrive;
+    };
 }
 
 function updateGameArea() {
@@ -118,14 +126,13 @@ function updateGameArea() {
     }
     myGameArea.clear();
 
-    if (myObstacles[myObstacles.length-1].x < 0) {
-        console.log("yeppie");
-        //myGameArea.stop();
-        //obcBuilding.newPos();
-        //obcBuilding.update();
-    }
+
 
     myBackground.speedX = -2;
+
+
+
+
     myBackground.newPos();
     myBackground.update();
 
@@ -133,6 +140,8 @@ function updateGameArea() {
         myObstacles[i].x += -1;
         myObstacles[i].update();
     }
+
+
 
 
     myGamePiece.speedX = 0;
@@ -151,6 +160,17 @@ function updateGameArea() {
     }
     myGamePiece.newPos();
     myGamePiece.update();
+
+    if (myObstacles[myObstacles.length-1].x < 0) {
+        //myGameArea.stop();
+        obcBuilding.speedX = -2;
+        obcBuilding.newPos();
+        obcBuilding.update();
+        if (myGamePiece.arriveAtDestination(obcBuilding)) {
+            myGameArea.stop();
+        }
+    }
+
 }
 
 function moveup() {
