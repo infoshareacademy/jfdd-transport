@@ -5,15 +5,17 @@ var myBackground;
 var obcBusStop;
 function startGame() {
     myGameArea.start();
-    myGamePiece = new component(100, 50, "images/Untitled.png", 10, 120, "image");
-    myBackground = new component(456, 270, "images/threelane.png", 0, 0, "background");
+    myGamePiece = new component(145, 50, "images/wp-game/bus.svg", 10, 120, "image");
+    myBackground = new component(456, 270, "images/wp-game/threelane.svg", 0, 0, "background");
     obcBusStop = new component(100, 50, "images/Untitled.png", 10, 120, "image");
 
     for (var i = 0; i < 3; i++) {
         var yCoordinatesForLanes = [20, 110, 200];
+        var otherVehicleTextures = ["car1.svg", "car2.svg", "car3.svg"];
         setTimeout(function () {
-            var rand = yCoordinatesForLanes[Math.floor(Math.random() * yCoordinatesForLanes.length)];
-            myObstacles.push(new component(100, 50, "images/Untitled.png", 500, rand, "obstacle"));
+            var randomLaneYCoordinate = yCoordinatesForLanes[Math.floor(Math.random() * yCoordinatesForLanes.length)];
+            var randomVehicleFileName = otherVehicleTextures[Math.floor(Math.random() * otherVehicleTextures.length)];
+            myObstacles.push(new component(60, 33, "images/wp-game/" + randomVehicleFileName, 500, randomLaneYCoordinate, "obstacle"));
         }, i * 2500);
 
 
@@ -118,6 +120,7 @@ function updateGameArea() {
 
     if (myObstacles[myObstacles.length-1].x < 0) {
         console.log("yeppie");
+        myGameArea.stop();
 
     }
 
