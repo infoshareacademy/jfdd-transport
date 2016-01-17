@@ -6,13 +6,15 @@ $(document).ready(function() {
     var oldSelection = null;
 
     var functionsContents = {
-        busStop: "Wybierz z listy swój przystanek i dowiedz się o aktualnej sytuacji.",
-        delayStats: "Informacje odnośnie opóźnień dla wybranego przystanku.",
-        checkMap: "Zlokalizuj swój pojazd na mapie."
+        busStop_pl: "Wybierz z listy swój przystanek i dowiedz się o aktualnej sytuacji.",
+        delayStats_pl: "Informacje odnośnie opóźnień dla wybranego przystanku.",
+        checkMap_pl: "Zlokalizuj swój pojazd na mapie.",
+        busStop_en: "Choose your stop from a list and get all the current information you need.",
+        delayStats_en: "Choose a stop and get all the information about delays.",
+        checkMap_en: "Locate your bus or tram on the map."
     };
 
-    $('nav a, .logo').click(function(){
-
+    $('nav a, .logo, .languageNavItem').click(function(){
         clearFunctionSelecion();
     });
 
@@ -33,7 +35,7 @@ $(document).ready(function() {
                     scrollTop: $('#functionsSection').offset().top - 60
                 }, 100);
 
-                functionContainer.html(functionsContents[self.data('functionname')])
+                functionContainer.html(functionsContents[self.data('functionname') + '_' + getAppLanguage()])
             }
         }
         else {
@@ -48,7 +50,7 @@ $(document).ready(function() {
             // show additional functions
             $('.additionalFunctionsSection').slideUp(200);
 
-            functionContainer.html(functionsContents[self.data('functionname')])
+            functionContainer.html(functionsContents[self.data('functionname') + '_' + getAppLanguage()])
             // show function container
             functionContainer.slideDown(200);
         }
