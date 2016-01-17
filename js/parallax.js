@@ -55,7 +55,6 @@ $(document).ready(function () {
      * RWD CODE----------------------------------------------------
      */
 
-
     $("#nav").addClass("js");
     $("#nav").addClass("js").before('<div id="menu">☰</div>');
     $("#menu").click(function(){
@@ -64,14 +63,12 @@ $(document).ready(function () {
             if(window.innerWidth < 700) {
                 $("#nav").removeAttr("style");
             }
-            if(window.innerWidth > 700) {
-                $("#nav").attr("style");
-            }
         });
     });
-    $("#menu").click(function() {
-        $('.logo').hide()
-    });
+
+    if(window.innerWidth > 700) {
+        $("#nav").attr("style");
+    }
 });
 
 
