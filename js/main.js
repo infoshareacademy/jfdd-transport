@@ -7,7 +7,7 @@ $(document).ready(function () {
      * minimumAcceptedFormFillingTime, the sumbission will be prevented.
      * @type {number}
      */
-    var minimumAcceptedFormFillingTime = 100;
+    var minimumAcceptedFormFillingTime = 1000;
 
     /**
      * Hidden honeypot field.
@@ -37,7 +37,7 @@ $(document).ready(function () {
         var formFillingDurationInMilliseconds = Date.now() - formFillingStartTimeInMilliseconds;
         var formFieldValue = $("#formField").val();
         isHiddenFormFieldEmpty = formFieldValue == "";
-        if (formFillingDurationInMilliseconds < minimumAcceptedFormFillingTime && !isHiddenFormFieldEmpty) {
+        if (formFillingDurationInMilliseconds < minimumAcceptedFormFillingTime || !isHiddenFormFieldEmpty || formFillingStartTimeInMilliseconds === null) {
             event.preventDefault();
             formFillingStartTimeInMilliseconds = null;
             console.log("Form submission prevented.");
