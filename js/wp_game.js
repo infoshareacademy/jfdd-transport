@@ -2,6 +2,7 @@ var myGamePiece;
 var myObstacles = [];
 var obcBuilding;
 var myBackground;
+
 function startGame() {
     myGameArea.start();
     myGamePiece = new component(145, 50, "images/wp-game/bus.svg", 10, 120, "image");
@@ -28,7 +29,9 @@ var myGameArea = {
         this.canvas.height = 270;
         this.canvas.setAttribute("id", "wp-canvas");
         this.context = this.canvas.getContext("2d");
-        $(".testersParagraph").prepend(this.canvas);
+        var gameDiv = $('<div/>').attr({id: 'wp-game'});
+        $(".testersParagraph").prepend(gameDiv);
+        $("#gameDiv").prepend(this.canvas);
         //document.body.insertBefore(this.canvas, document.body.childNodes[0]);
         this.interval = setInterval(updateGameArea, 10);
         window.addEventListener('keydown', function (e) {
@@ -121,7 +124,6 @@ function updateGameArea() {
     for (i = 0; i < myObstacles.length; i++) {
         if (myGamePiece.crashWith(myObstacles[i])) {
             myGameArea.stop();
-            //return;
         }
     }
     myGameArea.clear();

@@ -72,9 +72,6 @@ $(document).ready(function () {
                 )
             );
 
-
-
-    //$('body').prepend($elem);
     var hideCookieInfo = function () {
         $('.cookieInfo').hide();
         $('.navigationBar').css('top', '0');
