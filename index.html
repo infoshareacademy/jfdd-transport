@@ -132,10 +132,43 @@
         </div>
         <!-- END of Contact form -->
         <div class="clear"></div>
+        <!-- END of Contact form -->
+
+
+
+        <div id="easterEgg2" class="gameBackground hidden">
+            <div id="gameOver" class="hidden">
+                Koniec Gry! </br> Twój wynik: <span></span>
+                <button type="button" id="okButton" class="gameButtons">OK</button>
+            </div>
+            <div id="close">x</div>
+            <div id="gameIntro" class="hidden">
+                <div id="close2">x</div>
+                <h1>Brawo, odkryłeś naszą niespodziankę!</h1>
+                <h4>Masz ochotę na trochę rozrywki? Zagraj z nami!</h4>
+                <p>
+                    Zasady:gry:
+                    Po ruchliwej ulicy pędzą autobusy.
+                    Chcesz złapać te, które jadą do <b>Olivia Business Center (linia 41)</b>.
+                    Żeby złapać autobus, musisz w niego kliknąć.
+                    Za każdy złapany autobus otrzymujesz <b>1 punkt</b>.
+                    Ale uważaj, jeśli złapiesz autobus jadący w kierunku innym niż OBC
+                     - tracisz <b>punktów 10</b>!
+                    </br>Czas trwania gry - <b>20 sekund</b>.
+                </p>
+                <button type="button" id="startGame" class = "gameButtons">Gram!</button>
+            </div>
+            <div id="gameScore" class="hidden">
+                Czas: <span>20</span>
+            </div>
+
+            <div id="prawaAutorskie">
+            <a href='http://www.freepik.com/free-vector/road-vector-template_724937.htm'>Image designed by Freepik</a>
+            </div>
+        </div>
 </main>
 
 <footer>
-
     <div class="footer_style">
         <div class="footer_image"><img src="images/logofinal.png" alt="logo"/></div>
         <p><span>&copy;</span> 2015 by Fantastic 4</p>
@@ -155,7 +188,6 @@
                                           href="https://twitter.com/infosharepl" title="Twitter" target="_blank"></a>
     </div>
 </div>
-
 <div id="easterEgg" class="donotdisplay">
     <div id="easterEggContainerOuter">
         <span id="closeEasterEgg">x</span>
@@ -218,5 +250,7 @@
     <script src="js/parallax.js"></script>
     <script src="js/js.cookie.js"></script>
     <script src="js/menu.js"></script>
+    <script src="js/wp_game.js"></script>
+    <script src="js/easteregg2.js"></script>
 </body>
 </html>

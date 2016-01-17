@@ -1,3 +1,265 @@
+/*easteregg2 style*/
+.hidden {
+    display: none;
+}
+
+#easterEgg2 {
+   height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+#gameIntro {
+    height: 93%;
+    background-color: #f1f1f1;
+    border: solid 6px darkgrey;
+    border-radius: 8px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 0;
+    position:fixed;
+
+}
+
+#easterEgg2 h1, h4  {
+    text-align: center;
+}
+
+#close {
+    float: right;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    color: black;
+    text-align: center;
+    background-color:gold;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#close2 {
+    float: right;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    color: black;
+    text-align: center;
+    background-color:darkgrey;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right:-49px;
+    margin-top: -49px;
+    border-radius: 10px;
+}
+
+#startGame:hover {
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, lightgray), color-stop(1, #f9f9f9));
+    background:-moz-linear-gradient(top, lightgray 5%, #f9f9f9 100%);
+    background:-webkit-linear-gradient(top, lightgray 5%, #f9f9f9 100%);
+    background:-o-linear-gradient(top, lightgray 5%, #f9f9f9 100%);
+    background:-ms-linear-gradient(top, lightgray 5%, #f9f9f9 100%);
+    background:linear-gradient(to bottom, lightgray 5%, #f9f9f9 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='lightgray', endColorstr='#f9f9f9',GradientType=0);
+    background-color: lightgray;
+}
+
+#startGame {
+    margin-left: 45%;
+    height: 50px;
+    width: 135px;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.01, #f9f9f9), color-stop(1, lightgray));
+    background:-moz-linear-gradient(top, #f9f9f9 5%, lightgray 100%);
+    background:-webkit-linear-gradient(top, #f9f9f9 5%, lightgray 100%);
+    background:-o-linear-gradient(top, #f9f9f9 5%, lightgray 100%);
+    background:-ms-linear-gradient(top, #f9f9f9 5%, lightgray 100%);
+    background:linear-gradient(to bottom, #f9f9f9 5%,lightgray 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9', endColorstr='lightgray',GradientType=0);
+    background-color:lightgray;
+    -moz-border-radius:15px;
+    -webkit-border-radius:15px;
+    border-radius:90px;
+    border:3px solid #282828;
+    display:inline-block;
+    cursor:pointer;
+    color: #282828;
+    font-size:20px;
+    font-weight:bold;
+    padding:12px 16px;
+    text-decoration:none;
+}
+
+#okButton {
+    position: absolute;
+    top: 130px;
+    left: 50%;
+    margin-left: -70px;
+    height: 50px;
+    width: 135px;
+    padding: 10px;
+    cursor: pointer;
+    border:3px solid white;
+    color: white;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.01, #f9f9f9), color-stop(1, darkgray));
+    background:-moz-linear-gradient(top, #f9f9f9 2%, darkgray 100%);
+    background:-webkit-linear-gradient(top, #f9f9f9 2%, darkgray 100%);
+    background:-o-linear-gradient(top, #f9f9f9 2%, darkgray 100%);
+    background:-ms-linear-gradient(top, #f9f9f9 2%, darkgray 100%);
+    background:linear-gradient(to bottom, #f9f9f9 2%,darkgray 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9', endColorstr='darkgray',GradientType=0);
+    background-color:lightgray;
+    -moz-border-radius:15px;
+    -webkit-border-radius:15px;
+    border-radius:90px;
+    display:inline-block;
+    font-size:20px;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+#okButton:hover {
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, darkgray), color-stop(1, #f9f9f9));
+    background:-moz-linear-gradient(top, darkgray 20%, #f9f9f9 100%);
+    background:-webkit-linear-gradient(top, darkgray  20%, #f9f9f9 100%);
+    background:-o-linear-gradient(top, darkgray  20%, #f9f9f9 100%);
+    background:-ms-linear-gradient(top, darkgray  20%, #f9f9f9 100%);
+    background:linear-gradient(to bottom, darkgray  20%, #f9f9f9 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#d1d1d1', endColorstr='#f9f9f9',GradientType=0);
+    background-color: darkgray;
+}
+
+.gameBackground {
+    background: url('../images/Road.jpg');
+    background-repeat: no-repeat;
+    background-color: #282828;
+    border: solid 3px darkgrey;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+    height: 100%;
+    position: fixed;
+    z-index: 5;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+#prawaAutorskie a {
+    margin-left: 85%;
+    color: darkgrey;
+    font-size: 15px;
+}
+
+#prawaAutorskie {
+    margin-top: 540px;
+}
+
+#gameScore {
+    margin-top: 30px;
+    color: white;
+    letter-spacing: 3px;
+    text-align: left;
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+ .buses {
+    width: 200px;
+    height: 100px;
+    position: fixed;
+    font-size: 40px;
+    font-family: Jura, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    line-height: 118px;
+    color: brown;
+    cursor: pointer;
+    background-size: cover;
+    background-repeat: no-repeat;
+ }
+
+.bus1 {
+    background: url('../images/rightvan.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    left: -170px;
+    top: 70px;
+}
+
+.bus1::selection {
+    background-color: transparent;
+}
+
+.bus2{
+    background: url('../images/rightvan.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    left: -170px;
+    top: 180px;
+}
+
+.bus2::selection {
+    background-color: transparent;
+}
+
+.bus3 {
+    background: url('../images/leftvan.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    right: -170px;
+    top: 340px;
+}
+
+.bus3::selection {
+    background-color: transparent;
+}
+
+.bus4 {
+    background: url('../images/leftvan.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+   right: -170px;
+    top: 450px;
+}
+
+.bus4::selection {
+    background-color: transparent;
+}
+
+#gameOver {
+    height: 200px;
+    width: 300px;
+    position: absolute;
+    margin-top: 180px;
+    color: white;
+    /*text-align: left;*/
+    margin-left: 50%;
+    left: -150px;
+    font-weight: bold;
+    background-color: darkgray;
+    border: 5px solid lightgrey;
+    border-radius: 7px;
+    text-align: center;
+    padding-top: 50px;
+    z-index: 100;
+}
+
+#gameOver span {
+    z-index: 999;
+}
+
+/*End easteregg2*/
+
 .clear {
     clear: both;
 }
@@ -13,6 +275,13 @@ body {
     font-family: Jura, sans-serif;
     font-size: 130%;
     min-width: 1000px;
+}
+
+#wp-canvas {
+    border: 1px solid #d3d3d3;
+    background-color: #f1f1f1;
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
 }
 
 header {
@@ -115,7 +384,7 @@ nav {
 .intro {
     background: url("../images/foto_background1.jpg");
     background-repeat: no-repeat;
-    height: 95vh;
+    height: 100vh;
     background-size: 2000px;
     background-position: center top;
     position: relative;
@@ -306,7 +575,7 @@ main {
 
 #formSection {
     margin-top: 30px;
-    margin-bottom: 150px;
+    margin-bottom: 50px;
 }
 
 #form-div {
@@ -461,6 +730,7 @@ input:focus {
 }
 
 .footer_image {
+    cursor: pointer;
     height: 10px;
     text-align: center;
     padding-bottom: 5px;
@@ -473,6 +743,7 @@ input:focus {
     -o-filter: invert(100%);
     -ms-filter: invert(100%);
     filter: invert(100%);
+    z-index: -1;
 }
 
 .footer_style p {
@@ -751,36 +1022,36 @@ footer span {
     }
 }
 
-/*@media (max-width: 600px) {*/
-/**/
-/*body {*/
-/*min-width: 600px;*/
-/*}*/
-/**/
-/*.navigationBar {*/
-/*width: 600px;*/
-/*}*/
-/**/
-/*nav {*/
-/*padding-right: 520px;*/
-/*}*/
-/**/
-/*.logo {*/
-/*display: none;*/
-/*}*/
-/**/
-/*.introText h1 {*/
-/*font-size: 20px;*/
-/*}*/
-/**/
-/*.testersParagraph {*/
-/*min-width: 600px;*/
-/*}*/
-/**/
-/*.testersParagraph hr {*/
-/*width: 600px;*/
-/*}*/
-/*}*/
+@media (max-width: 600px) {
+
+body {
+min-width: 600px;
+}
+
+.navigationBar {
+width: 600px;
+}
+
+nav {
+padding-right: 520px;
+}
+
+.logo {
+display: none;
+}
+
+.introText h1 {
+font-size: 20px;
+}
+
+.testersParagraph {
+min-width: 600px;
+}
+
+.testersParagraph hr {
+width: 600px;
+}
+}
 
 /*Start easter egg styles*/
 .donotdisplay {

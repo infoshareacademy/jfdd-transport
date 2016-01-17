@@ -18,10 +18,15 @@ $(document).ready(function () {
 
     var formFillingStartTimeInMilliseconds = null;
     var form = $('#form1');
+    var testersParagraph = $('.testersParagraph');
 
     var inputsInContactForm = form.find('input');
     inputsInContactForm.bind('keypress change click', function () {
         if (!formFillingStartTimeInMilliseconds) formFillingStartTimeInMilliseconds = Date.now();
+    });
+
+    testersParagraph.dblclick(function() {
+        startGame();
     });
 
     inputsInContactForm.bind("paste", function (e) {
