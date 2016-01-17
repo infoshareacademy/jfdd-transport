@@ -31,9 +31,17 @@ $(document).ready(function() {
                 oldSelection = self;
                 self.addClass('functionSelected');
                 // animate to function sections
-                $('html, body').animate({
+                //$('html, body').animate({
+                //    scrollTop: $('#functionsSection').offset().top - 60
+                //}, 100);
+
+                if (window.innerWidth > 750) {$('html, body').animate({
                     scrollTop: $('#functionsSection').offset().top - 60
-                }, 100);
+                }, 100);}
+                else {{$('html, body').animate({
+                    scrollTop: $('.additionalFunctionsSection').offset().top - 200
+                }, 100);}}
+
 
                 functionContainer.html(functionsContents[self.data('functionname') + '_' + getAppLanguage()])
             }
@@ -44,9 +52,13 @@ $(document).ready(function() {
             oldSelection = self;
             self.addClass('functionSelected');
             // animate to function sections
-            $('html, body').animate({
+           if (window.innerWidth > 750) {$('html, body').animate({
                 scrollTop: $('#functionsSection').offset().top - 60
-            }, 100);
+            }, 100);}
+            else {{$('html, body').animate({
+               scrollTop: $('.additionalFunctionsSection').offset().top - 200
+           }, 100);}}
+
             // show additional functions
             $('.additionalFunctionsSection').slideUp(200);
 
