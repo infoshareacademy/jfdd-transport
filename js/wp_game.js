@@ -4,14 +4,17 @@ var obcBuilding;
 var myBackground;
 var gameOver;
 
-    function startGame() {
+function startGame() {
     myGameArea.start();
-    myGamePiece = new component(145, 50, "images/wp-game/bus.svg", 10, 120, "image");
+    myGamePiece = new component(145, 50, "images/wp-game/bus.svg", 10, 105, "image");
     obcBuilding = new component(186 * 2, 276 * 2, "images/wp-game/building.svg", 500, -276, "image");
     myBackground = new component(456, 270, "images/wp-game/threelane.svg", 0, 0, "background");
+    gameOver = new component(400, 270, "images/wp-game/game-over.png", 5, 0, "image");
+    var snd = new Audio("wp-game/pacman_dies_y.wav"); // buffers automatically when created
+    snd.play();
 
     for (var i = 0; i < 7; i++) {
-        var yCoordinatesForLanes = [20, 110, 200];
+        var yCoordinatesForLanes = [45, 110, 180];
         var otherVehicleTextures = ["car1.svg", "car2.svg", "car3.svg"];
         setTimeout(function () {
             var randomLaneYCoordinate = yCoordinatesForLanes[Math.floor(Math.random() * yCoordinatesForLanes.length)];
@@ -152,7 +155,6 @@ function updateGameArea() {
     for (i = 0; i < myObstacles.length; i++) {
         if (myGamePiece.crashWith(myObstacles[i])) {
             myGameArea.stop();
-            gameOver = new component(145, 50, "images/wp-game/game-over.svg", 10, 120, "image");
             gameOver.update();
         }
     }
