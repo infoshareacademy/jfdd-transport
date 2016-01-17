@@ -309,13 +309,14 @@ nav#navList {
 
 .navigationBar nav ul {
     position: absolute;
-    width: 650px;
+    width: 760px;
     margin-top: 10px;
     margin-bottom: 10px;
     font-size: 17px;
     float: right;
     top: 0;
     right: 0;
+    text-align: right;
 }
 
 .navigationBar nav ul li {

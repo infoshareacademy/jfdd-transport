@@ -23,7 +23,6 @@ $(document).ready(function() {
 
 
     $(".languageNavItem").click(function(){
-        debugger;
         var self = $(this);
         var currentLanguage = self.data("lang");
         selectLanguage(currentLanguage);
