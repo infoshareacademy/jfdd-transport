@@ -1,3 +1,265 @@
+/*easteregg2 style*/
+.hidden {
+    display: none;
+}
+
+#easterEgg2 {
+   height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+#gameIntro {
+    height: 93%;
+    background-color: #f1f1f1;
+    border: solid 6px darkgrey;
+    border-radius: 8px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 0;
+    position:fixed;
+
+}
+
+#easterEgg2 h1, h4  {
+    text-align: center;
+}
+
+#close {
+    float: right;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    color: black;
+    text-align: center;
+    background-color:gold;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#close2 {
+    float: right;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    color: black;
+    text-align: center;
+    background-color:darkgrey;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right:-49px;
+    margin-top: -49px;
+    border-radius: 10px;
+}
+
+#startGame:hover {
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, lightgray), color-stop(1, #f9f9f9));
+    background:-moz-linear-gradient(top, lightgray 5%, #f9f9f9 100%);
+    background:-webkit-linear-gradient(top, lightgray 5%, #f9f9f9 100%);
+    background:-o-linear-gradient(top, lightgray 5%, #f9f9f9 100%);
+    background:-ms-linear-gradient(top, lightgray 5%, #f9f9f9 100%);
+    background:linear-gradient(to bottom, lightgray 5%, #f9f9f9 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='lightgray', endColorstr='#f9f9f9',GradientType=0);
+    background-color: lightgray;
+}
+
+#startGame {
+    margin-left: 45%;
+    height: 50px;
+    width: 135px;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.01, #f9f9f9), color-stop(1, lightgray));
+    background:-moz-linear-gradient(top, #f9f9f9 5%, lightgray 100%);
+    background:-webkit-linear-gradient(top, #f9f9f9 5%, lightgray 100%);
+    background:-o-linear-gradient(top, #f9f9f9 5%, lightgray 100%);
+    background:-ms-linear-gradient(top, #f9f9f9 5%, lightgray 100%);
+    background:linear-gradient(to bottom, #f9f9f9 5%,lightgray 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9', endColorstr='lightgray',GradientType=0);
+    background-color:lightgray;
+    -moz-border-radius:15px;
+    -webkit-border-radius:15px;
+    border-radius:90px;
+    border:3px solid #282828;
+    display:inline-block;
+    cursor:pointer;
+    color: #282828;
+    font-size:20px;
+    font-weight:bold;
+    padding:12px 16px;
+    text-decoration:none;
+}
+
+#okButton {
+    position: absolute;
+    top: 130px;
+    left: 50%;
+    margin-left: -70px;
+    height: 50px;
+    width: 135px;
+    padding: 10px;
+    cursor: pointer;
+    border:3px solid white;
+    color: white;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.01, #f9f9f9), color-stop(1, darkgray));
+    background:-moz-linear-gradient(top, #f9f9f9 2%, darkgray 100%);
+    background:-webkit-linear-gradient(top, #f9f9f9 2%, darkgray 100%);
+    background:-o-linear-gradient(top, #f9f9f9 2%, darkgray 100%);
+    background:-ms-linear-gradient(top, #f9f9f9 2%, darkgray 100%);
+    background:linear-gradient(to bottom, #f9f9f9 2%,darkgray 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9', endColorstr='darkgray',GradientType=0);
+    background-color:lightgray;
+    -moz-border-radius:15px;
+    -webkit-border-radius:15px;
+    border-radius:90px;
+    display:inline-block;
+    font-size:20px;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+#okButton:hover {
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, darkgray), color-stop(1, #f9f9f9));
+    background:-moz-linear-gradient(top, darkgray 20%, #f9f9f9 100%);
+    background:-webkit-linear-gradient(top, darkgray  20%, #f9f9f9 100%);
+    background:-o-linear-gradient(top, darkgray  20%, #f9f9f9 100%);
+    background:-ms-linear-gradient(top, darkgray  20%, #f9f9f9 100%);
+    background:linear-gradient(to bottom, darkgray  20%, #f9f9f9 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#d1d1d1', endColorstr='#f9f9f9',GradientType=0);
+    background-color: darkgray;
+}
+
+.gameBackground {
+    background: url('../images/Road.jpg');
+    background-repeat: no-repeat;
+    background-color: #282828;
+    border: solid 3px darkgrey;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+    height: 100%;
+    position: fixed;
+    z-index: 5;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+#prawaAutorskie a {
+    margin-left: 85%;
+    color: darkgrey;
+    font-size: 15px;
+}
+
+#prawaAutorskie {
+    margin-top: 540px;
+}
+
+#gameScore {
+    margin-top: 30px;
+    color: white;
+    letter-spacing: 3px;
+    text-align: left;
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+ .buses {
+    width: 200px;
+    height: 100px;
+    position: fixed;
+    font-size: 40px;
+    font-family: Jura, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    line-height: 118px;
+    color: brown;
+    cursor: pointer;
+    background-size: cover;
+    background-repeat: no-repeat;
+ }
+
+.bus1 {
+    background: url('../images/rightvan.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    left: -170px;
+    top: 70px;
+}
+
+.bus1::selection {
+    background-color: transparent;
+}
+
+.bus2{
+    background: url('../images/rightvan.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    left: -170px;
+    top: 180px;
+}
+
+.bus2::selection {
+    background-color: transparent;
+}
+
+.bus3 {
+    background: url('../images/leftvan.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    right: -170px;
+    top: 340px;
+}
+
+.bus3::selection {
+    background-color: transparent;
+}
+
+.bus4 {
+    background: url('../images/leftvan.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+   right: -170px;
+    top: 450px;
+}
+
+.bus4::selection {
+    background-color: transparent;
+}
+
+#gameOver {
+    height: 200px;
+    width: 300px;
+    position: absolute;
+    margin-top: 180px;
+    color: white;
+    /*text-align: left;*/
+    margin-left: 50%;
+    left: -150px;
+    font-weight: bold;
+    background-color: darkgray;
+    border: 5px solid lightgrey;
+    border-radius: 7px;
+    text-align: center;
+    padding-top: 50px;
+    z-index: 100;
+}
+
+#gameOver span {
+    z-index: 999;
+}
+
+/*End easteregg2*/
+
 .clear {
     clear: both;
 }
@@ -27,14 +289,14 @@ header {
 }
 
 nav {
-    float:right;
+    float: right;
 }
 
 .navigationBar {
     width: 100%;
-    -webkit-box-shadow: 0 31px 40px 8px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0 31px 40px 8px rgba(0,0,0,0.75);
-    box-shadow: 0 5px 40px 8px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0 31px 40px 8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0 31px 40px 8px rgba(0, 0, 0, 0.75);
+    box-shadow: 0 5px 40px 8px rgba(0, 0, 0, 0.75);
     Z-index: 2;
     position: fixed;
     background-color: white;
@@ -86,7 +348,7 @@ nav {
 }
 
 .logo:hover {
-    opacity:1;
+    opacity: 1;
 }
 
 .more_info_button {
@@ -112,7 +374,7 @@ nav {
 
 .more_info_button:hover {
     text-decoration: none;
-    background-color: rgba(250,250,250,0.2);
+    background-color: rgba(250, 250, 250, 0.2);
     -webkit-transition: background-color 1000ms ease-out;
     -moz-transition: background-color 1000ms ease-out;
     -o-transition: background-color 1000ms ease-out;
@@ -145,7 +407,7 @@ nav {
     animation-duration: 0.8s;
 
     margin-top: 65vh;
-    background-color: rgba(255,255,255,0.4);
+    background-color: rgba(255, 255, 255, 0.4);
     color: black;
     letter-spacing: 3px;
     text-align: center;
@@ -243,9 +505,12 @@ main {
     margin-right: auto;
     width: 1000px;
 }
-
+.function img {
+    width: 200px;
+    height: 200px;
+}
 .function {
-    opacity:0.8;
+    opacity:0.6;
     text-align: center;
 }
 
@@ -253,11 +518,27 @@ main {
     opacity: 1.0;
 }
 
-.function1 {
+.functionSelected {
+    opacity: 1.0;
+}
+
+.functionContainer {
+    background-color: rgba(120, 120, 120, 0.4);
+    padding: 20px;
+    width: 77%;
+    margin-left:auto;
+    margin-right: auto;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.busStopFeature {
     float: left;
 }
 
-.function2, .function3 {
+.delayStatsFeature, .checkMapFeature {
     float: left;
     margin-left: 70px;
 }
@@ -280,7 +561,6 @@ main {
 .additionalFunctionsSection .additionalFunction {
     float: left;
     width: 310px;
-    margin-bottom: 20px;
     text-align: center;
     margin-right: 10px;
 }
@@ -309,12 +589,12 @@ main {
 .contact_form_header {
     text-align: center;
     font-size: 30px;
-    padding-top:20px;
+    padding-top: 20px;
 }
 
-#formSection{
+#formSection {
     margin-top: 30px;
-    margin-bottom:150px;
+    margin-bottom: 50px;
 }
 
 #form-div {
@@ -323,7 +603,7 @@ main {
     padding-right: 35px;
     padding-bottom: 50px;
     width: 450px;
-    margin-left:auto;
+    margin-left: auto;
     margin-right: auto;
     -moz-border-radius: 7px;
     -webkit-border-radius: 7px;
@@ -469,6 +749,7 @@ input:focus {
 }
 
 .footer_image {
+    cursor: pointer;
     height: 10px;
     text-align: center;
     padding-bottom: 5px;
@@ -481,6 +762,7 @@ input:focus {
     -o-filter: invert(100%);
     -ms-filter: invert(100%);
     filter: invert(100%);
+    z-index: -1;
 }
 
 .footer_style p {
@@ -493,8 +775,8 @@ input:focus {
 }
 
 footer {
-    margin-left:auto;
-    margin-right:auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 footer span {
@@ -513,7 +795,7 @@ footer span {
     width: 684px;
 }
 
-/* end New paragraph tor testers */
+/* end New paragraph for testers */
 
 .validationTip {
     font-size: small;
@@ -577,20 +859,20 @@ footer span {
     text-align: center;
     background-color: lightblue;
     border: 2px solid #30aed6;
-    width:100%;
+    width: 100%;
     position: fixed;
-    bottom:0;
+    bottom: 0;
     z-index: 2000;
     display: block;
 }
 
 .cookieInfoTitle {
-    padding-top:15px;
-    margin:0;
+    padding-top: 15px;
+    margin: 0;
 }
 
 .cookieInfoText {
-    font-size:70% ;
+    font-size: 70%;
 }
 
 @media (max-width: 1000px) {
@@ -623,6 +905,7 @@ footer span {
 
     .function img {
         width: 120px;
+        height: 120px;
     }
 
     .function h2 {
@@ -637,33 +920,27 @@ footer span {
         width: 700px;
     }
 
-    .function2, .function3 {
+    .delayStatsFeature, .checkMapFeature {
         margin-left: 20px;
     }
 
     .additionalFunctionsSection {
         width: 700px;
-        margin-left:auto;
+        margin-left: auto;
         margin-right: auto;
-        /*margin-left: 220px;*/
-        /*margin-right: auto;*/
-        /*width: 620px;*/
     }
 
     .additionalFunctionsSection .additionalFunction {
-
-        /*float: left;*/
-        width:220px;
+        width: 220px;
         margin-bottom: 20px;
         text-align: center;
-        /*margin-right: 10px;*/
+
     }
 
     .additionalFunctionsSection div {
         width: 190px;
         margin-bottom: 20px;
         text-align: center;
-        /*margin-right: 5px;*/
     }
 
     .testersParagraph {
@@ -702,7 +979,6 @@ footer span {
     }
 
     .logo {
-        /*padding-top: 20px;*/
         height: 60px;
         margin-left: 20px;
     }
@@ -716,11 +992,12 @@ footer span {
     }
 
     .function img {
-        width: 280px;
+        width: 200px;
+        height: 200px;
         margin-top: 50px;
     }
 
-    .function2, .function3 {
+    .delayStatsFeature, .checkMapFeature {
         margin-left: 0;
     }
 
@@ -738,12 +1015,12 @@ footer span {
 
     .additionalFunctionsSection .additionalFunction {
 
-    float: left;
-    width: 140px;
-    margin-bottom: 20px;
-    text-align: center;
-    margin-right: 10px;
-}
+        float: left;
+        width: 140px;
+        margin-bottom: 20px;
+        text-align: center;
+        margin-right: 10px;
+    }
 
     .additionalFunctionsSection div {
         width: 140px;
@@ -766,33 +1043,320 @@ footer span {
     }
 }
 
-/*@media (max-width: 600px) {*/
-/**/
-    /*body {*/
-        /*min-width: 600px;*/
-    /*}*/
-    /**/
-    /*.navigationBar {*/
-        /*width: 600px;*/
-    /*}*/
-    /**/
-    /*nav {*/
-        /*padding-right: 520px;*/
-    /*}*/
-    /**/
-    /*.logo {*/
-        /*display: none;*/
-    /*}*/
-    /**/
-    /*.introText h1 {*/
-        /*font-size: 20px;*/
-    /*}*/
-    /**/
-    /*.testersParagraph {*/
-        /*min-width: 600px;*/
-    /*}*/
-    /**/
-    /*.testersParagraph hr {*/
-        /*width: 600px;*/
-    /*}*/
-/*}*/
+@media (max-width: 600px) {
+
+body {
+min-width: 600px;
+}
+
+.navigationBar {
+width: 600px;
+}
+
+nav {
+padding-right: 520px;
+}
+
+.logo {
+display: none;
+}
+
+.introText h1 {
+font-size: 20px;
+}
+
+.testersParagraph {
+min-width: 600px;
+}
+
+.testersParagraph hr {
+width: 600px;
+}
+}
+
+/*Start easter egg styles*/
+.donotdisplay {
+    display: none;
+}
+
+#easterEgg {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.7);
+    font-family: Arial, sans-serif;
+    color: #3f3f3f;
+    font-weight: 200;
+    font-size: 25px;
+    z-index: 110; /*Social media buttons use '100'*/
+}
+
+#easterEggIntro {
+    background-color: darkorange;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    height: 650px;
+    z-index: 110;
+}
+
+#easterEgg #easterEggIntro>h1, #easterEgg #easterEggIntro>p {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+#easterEgg #easterEggIntro p {
+    text-align: justify;
+}
+
+#closeEasterEgg {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    background: red;
+    color: #fafafa;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 125;
+}
+
+#easterEggContainerOuter, #easterEggContainerInner {
+    width: 1000px;
+    height: 650px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#easterEggContainerInner {
+    background-color: darkorange;
+    clip: rect(0, auto, auto, 0);
+}
+
+.vehicles {
+    height: 96px;
+    width: 281px;
+    position: fixed;
+    left: -281px;
+    border-radius: 5px;
+}
+
+.vehicles::before {
+    content: " ";
+    position: absolute;
+    height: 111px;
+    width: 281px;
+    background: url("../images/easter_egg.png") no-repeat 0 -1px;
+}
+
+.vehicle1 {
+    top: 185px;
+}
+
+.vehicle2 {
+    top: 355px;
+}
+
+.vehicle3 {
+    top: 525px;
+}
+
+.vehicleDoor {
+    position: absolute;
+    height: 72px;
+    top: 19px;
+    border-radius: 5px;
+}
+
+.vehicleDoorLeft {
+    left: 112px;
+    width: 58px;
+    background: url("../images/easter_egg.png") 290px 164px;
+}
+
+.vehicleDoorRight {
+    width: 30px;
+    left: 233px;
+    background: url("../images/easter_egg.png") 159px 164px;
+}
+
+.vehicleDoorOpen {
+    background-color: blanchedalmond !important;
+}
+
+.vehicleDoorOpenLeft {
+    background: url("../images/easter_egg.png") 227px 164px;
+}
+
+.vehicleDoorOpenRight {
+    background: url("../images/easter_egg.png") 121px 164px;
+}
+
+.infoBoardStands {
+    position: absolute;
+    left: 290px;
+    width: 15px;
+    height: 155px;
+    background-color: black;
+    z-index: 120;
+}
+
+.infoBoardStand1 {
+    top: 146px;
+}
+
+.infoBoardStand2 {
+    top: 316px;
+}
+
+.infoBoardStand3 {
+    top: 486px;
+}
+
+.infoBoards {
+    background-color: black;
+    color: orange;
+    font-family: "Courier New", monospace;
+    font-size: smaller;
+    width: 200px;
+    height: 2.5em;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    position: absolute;
+    left: 305px;
+    margin: 0;
+    z-index: 120;
+}
+
+.infoBoard1 {
+    top: 146px;
+}
+
+.infoBoard2 {
+    top: 316px;
+}
+
+.infoBoard3 {
+    top: 486px;
+}
+
+#easterEgg table, #easterEgg th, #easterEgg td {
+    border: 1px solid blanchedalmond;
+}
+
+#easterEgg table {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+}
+
+#easterEgg th {
+    height: 45px;
+    width: 140px;
+}
+
+#easterEgg td {
+    height: 70px;
+    width: 140px;
+    text-align: center;
+}
+
+#easterEgg table {
+    border-collapse: collapse;
+    border-radius: 3px;
+}
+
+#currentScore, #gameCountdown {
+    font-size: 50px;
+}
+
+#endOfGameMask {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(34, 34, 34, 0.77);
+    z-index: 123;
+}
+
+#gameResults {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 400px;
+    background-color: darkorange;
+    z-index: 124;
+}
+
+#gameResults>h3, #gameResults>p {
+    text-align: center;
+}
+
+#gameResults>p {
+    font-weight: bold;
+    font-size: 100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#startEasterEggGame, #playAgain {
+    font-family: bold Arial, sans-serif;
+}
+
+.passengers {
+    position: absolute;
+    left: 314px;
+    height: 87px;
+    z-index: 120;
+}
+
+.passengerGroup1 {
+    width: 70px;
+    top: 222px;
+    background: url("../images/easter_egg.png") 287px 88px;
+}
+
+.passengerGroup2 {
+    width: 99px;
+    top: 392px;
+    background: url("../images/easter_egg.png") 218px 88px;
+}
+
+.passengerGroup3 {
+    width: 105px;
+    top: 562px;
+    background: url("../images/easter_egg.png") 119px 88px;
+}
+
+#startEasterEggGame, #playAgain {
+    padding: 22px;
+    color: blanchedalmond;
+    background-color: #3f3f3f;
+    font-weight: bold;
+    font-size: 30px;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    display: block;
+    cursor: pointer;
+}
+
+#playAgain {
+    margin-top: 50px;
+}
+/*End easter egg styles*/

@@ -15,7 +15,7 @@
     <header class="navigationBar">
         <nav>
             <ul>
-                <li><a href="#intro">Strona główna</a></li>
+                <li><a href="#intro" class="active">Strona główna</a></li>
                 <li><a href="#functionsSection">Funkcjonalności</a></li>
                 <li><a href="#formSection">Kontakt</a></li>
             </ul>
@@ -39,33 +39,35 @@
     </div>
 </div>
 
-    <main>
-        <!--functions-->
-        <div id="functionsSection">
-            <div class="function function1"><img class="hide" src="images/bus_stop_function1.png" alt="Autobus">
-                <div id="opis1">
-                    <h2>Mój przystanek</h2>
-                    <p>Sprawdź, jak wygląda sytuacja <br>na Twoim przystanku.</p>
-                </div>
+<main>
+    <!--functions-->
+    <div id="functionsSection">
+        <div class="function busStopFeature" data-functionname="busStop"><img class="hide" src="images/bus_stop_function1.png" alt="Autobus">
+            <div id="opis1">
+                <h2>Mój przystanek</h2>
+                <p>Sprawdź, jak wygląda sytuacja <br>na Twoim przystanku.</p>
             </div>
-            <div class="function function2"><img class="hide" src="images/clock.png" alt="Zegar">
-                <div id="opis2">
-                    <h2>Statystyki spóźnień</h2>
-                    <p>Dowiedz się, jakie są statystyki <br> dla wybranego przystanku.</p>
-                </div>
-            </div>
-            <div class="function function3"><img class="hide" src="images/map.png" alt="Mapa">
-                <div id="opis3">
-                    <h2>Sprawdź na mapie</h2>
-                    <p>Zobacz, gdzie jest w tej chwili <br> Twój środek transportu.</p>
-                </div>
-            </div>
-            <div class="clear"></div>
         </div>
-        <div class="additionalFunctionsSection">
-            <div class="additionalFunction"><img src="images/polecane.png" alt="Polecane">
-                <p>Polecane</p>
+        <div class="function delayStatsFeature" data-functionname="delayStats"><img class="hide" src="images/clock.png" alt="Zegar">
+            <div id="opis2">
+                <h2>Statystyki spóźnień</h2>
+                <p>Dowiedz się, jakie są statystyki <br> dla wybranego przystanku.</p>
             </div>
+        </div>
+        <div class="function checkMapFeature" data-functionname="checkMap"><img class="hide" src="images/map.png" alt="Mapa">
+            <div id="opis3">
+                <h2>Sprawdź na mapie</h2>
+                <p>Zobacz, gdzie jest w tej chwili <br> Twój środek transportu.</p>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="functionContainer">
+    </div>
+    <div class="additionalFunctionsSection">
+        <div class="additionalFunction"><img src="images/polecane.png" alt="Polecane">
+            <p>Polecane</p>
+        </div>
         <div class="additionalFunction"><img src="images/schematy-komunikacji.png" alt="Schematy komunikacj">
             <p>Schematy komunikacji</p>
         </div>
@@ -85,9 +87,8 @@
     </div>
     <div class="clear"></div>
     </div>
-
-
     <!--end functions-->
+
     <!-- New paragraph for testers-->
     <div class="testersParagraph">
         <hr>
@@ -96,6 +97,7 @@
         <hr>
     </div>
     <!-- end New paragraph for testers-->
+
     <!-- Contact form -->
     <div id="formSection">
 
@@ -105,23 +107,21 @@
                     <!--Accept small and capital letters (including Polish diacritics),
                     spaces and hyphens (for hyphenated surnames):-->
                     <p class="name">
-                        <input name="name" type="text" class="feedback-input" placeholder="Imię i nazwisko" id="name" maxlength="150"
+                        <input name="name" type="text" autocomplete="off" class="feedback-input" placeholder="Imię i nazwisko" id="name" maxlength="150"
                                pattern="[A-Za-ząćęłńóśźżĄĆĘŁŃÓŚŹŻ -]+"/>
                     </p>
 
-                <!--Use standard HTML5 validation:-->
-                <p class="email">
-                    <input name="email" type="email" class="feedback-input" id="email" placeholder="E-mail"
-                           maxlength="50"/>
-                </p>
+                    <!--Use standard HTML5 validation:-->
+                    <p class="email">
+                        <input name="email" type="email" autocomplete="off" class="feedback-input" id="email" placeholder="E-mail" maxlength="50" />
+                    </p>
 
-                <!--Accept Polish phone numbers, optionally with the area code of +48,
-                with optional spaces and/or hyphens between digits:-->
-                <p class="text">
-                    <input name="phoneNumber" type="tel" class="feedback-input" id="phone" placeholder="Telefon"
-                           maxlength="20"
-                           pattern="^(\+48)? ?[1-9]( |-)?\d( |-)?\d( |-)?\d( |-)?\d( |-)?\d( |-)?\d( |-)?\d( |-)?\d( |-)?"/>
-                </p>
+                    <!--Accept Polish phone numbers, optionally with the area code of +48,
+                    with optional spaces and/or hyphens between digits:-->
+                    <p class="text">
+                        <input name="phoneNumber" type="tel" autocomplete="off"  class="feedback-input" id="phone" placeholder="Telefon" maxlength="20"
+                               pattern="^(\+48)? ?[1-9]( |-)?\d( |-)?\d( |-)?\d( |-)?\d( |-)?\d( |-)?\d( |-)?\d( |-)?\d( |-)?"/>
+                    </p>
 
                     <input type="hidden" name="receiver" value="wojciech.makurat@infoshareacademy.com">
                     <input type="text" id="formField" placeholder="Leave this field blank.">
@@ -132,14 +132,45 @@
                 </form>
             </div>
         </div>
+        <!-- END of Contact form -->
         <div class="clear"></div>
         <!-- END of Contact form -->
 
 
+
+        <div id="easterEgg2" class="gameBackground hidden">
+            <div id="gameOver" class="hidden">
+                Koniec Gry! </br> Twój wynik: <span></span>
+                <button type="button" id="okButton" class="gameButtons">OK</button>
+            </div>
+            <div id="close">x</div>
+            <div id="gameIntro" class="hidden">
+                <div id="close2">x</div>
+                <h1>Brawo, odkryłeś naszą niespodziankę!</h1>
+                <h4>Masz ochotę na trochę rozrywki? Zagraj z nami!</h4>
+                <p>
+                    Zasady:gry:
+                    Po ruchliwej ulicy pędzą autobusy.
+                    Chcesz złapać te, które jadą do <b>Olivia Business Center (linia 41)</b>.
+                    Żeby złapać autobus, musisz w niego kliknąć.
+                    Za każdy złapany autobus otrzymujesz <b>1 punkt</b>.
+                    Ale uważaj, jeśli złapiesz autobus jadący w kierunku innym niż OBC
+                     - tracisz <b>punktów 10</b>!
+                    </br>Czas trwania gry - <b>20 sekund</b>.
+                </p>
+                <button type="button" id="startGame" class = "gameButtons">Gram!</button>
+            </div>
+            <div id="gameScore" class="hidden">
+                Czas: <span>20</span>
+            </div>
+
+            <div id="prawaAutorskie">
+            <a href='http://www.freepik.com/free-vector/road-vector-template_724937.htm'>Image designed by Freepik</a>
+            </div>
+        </div>
 </main>
 
 <footer>
-
     <div class="footer_style">
         <div class="footer_image"><img src="images/logofinal.png" alt="logo"/></div>
         <p><span>&copy;</span> 2015 by Fantastic 4</p>
@@ -159,15 +190,70 @@
                                           href="https://twitter.com/infosharepl" title="Twitter" target="_blank"></a>
     </div>
 </div>
+<div id="easterEgg" class="donotdisplay">
+    <div id="easterEggContainerOuter">
+        <span id="closeEasterEgg">x</span>
 
-<script src="js/js.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="js/js.cookie.js"></script>
-<script src="js/main.js"></script>
-<script src="js/parallax.js"></script>
-<script src="js/menu.js"></script>
-<script src="js/wp_game.js"></script>
+        <div id="easterEggIntro">
+            <h1>Jak grać?</h1>
 
+            <p>
+                Ludzie czekający na przystanku chcą dojechać do Olivia Business Center.
+                Gdy tylko podjedzie właściwy autobus, klikaj dowolne z jego otwartych drzwi,
+                aby wsiadło jak najwięcej osób. Za każdego pasażera, którego umieścisz we
+                właściwym autobusie, dostajesz 1 punkt. <br>Uważaj: za każdą osobę umieszczoną
+                w autobusie jadącym w inne miejsce dostaniesz minus 10 punktów. Masz 30 sekund.
+                <br>Powodzenia :-)
+            </p>
+            <button type="button" id="startEasterEggGame">Gram!</button>
+        </div>
+        <div id="easterEggContainerInner">
+            <table>
+                <tr>
+                    <th>Wynik</th>
+                    <th>Czas</th>
+                </tr>
+                <tr>
+                    <td>
+                        <span id="currentScore">0</span>
+                    </td>
+                    <td>
+                        <span id="gameCountdown"></span>
+                    </td>
+                </tr>
+            </table>
+            <div id="infoBoardContainer">
+                <div class="passengers passengerGroup1"></div>
+                <div class="infoBoardStands infoBoardStand1"></div>
+                <p class="infoBoards infoBoard1"></p>
+                <div class="passengers passengerGroup2"></div>
+                <div class="infoBoardStands infoBoardStand2"></div>
+                <p class="infoBoards infoBoard2"></p>
+                <div class="passengers passengerGroup3"></div>
+                <div class="infoBoardStands infoBoardStand3"></div>
+                <p class="infoBoards infoBoard3"></p>
+            </div>
+            <div id="endOfGameMask" class="hide"></div>
+            <div id="gameResults" class="hide">
+                <h3>Twój wynik:</h3>
 
+                <p></p>
+                <button type="button" id="playAgain">Zagraj jeszcze raz</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.3.min.js"><\/script>')</script>
+    <script src="js/js.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/easter_egg.js"></script>
+    <script src="js/parallax.js"></script>
+    <script src="js/js.cookie.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/wp_game.js"></script>
+    <script src="js/easteregg2.js"></script>
 </body>
 </html>
