@@ -7,7 +7,8 @@ $(window).scroll(function(){
     if ($('body').scrollTop() > 0) {
         if(window.innerWidth < 750) {
             $("#nav").hide();
-        }
+        }else {$("#nav").show();}
+
         if ($nav.data('size') == 'big') {
             $nav.data('size','small').stop().animate({
                 height:'60px'
@@ -25,14 +26,13 @@ $(window).scroll(function(){
     } else {
         if ($nav.data('size') == 'small') {
             $nav.data('size','big').stop().animate({
-                height:'100px'
+                height:'90px'
             }, 600);
             $nav.find('.logo').stop().animate({
-                height: '85px'
+                height: '90px'
             }, 600);
             $nav.find('li').stop().animate({
                 paddingTop: '30px'
-                //marginBottom: '20px'
             }, 600);
             $nav.find('#menu').stop().animate({
                 paddingTop: '20px'
