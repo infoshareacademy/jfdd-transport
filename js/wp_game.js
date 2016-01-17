@@ -9,7 +9,7 @@ function startGame() {
     obcBuilding = new component(186*2, 276*2, "images/wp-game/building.svg", 500, -276, "image");
     myBackground = new component(456, 270, "images/wp-game/threelane.svg", 0, 0, "background");
 
-    for (var i = 0; i < 3; i++) {
+    for (var i = 0; i < 7; i++) {
         var yCoordinatesForLanes = [20, 110, 200];
         var otherVehicleTextures = ["car1.svg", "car2.svg", "car3.svg"];
         setTimeout(function () {
@@ -29,10 +29,9 @@ var myGameArea = {
         this.canvas.height = 270;
         this.canvas.setAttribute("id", "wp-canvas");
         this.context = this.canvas.getContext("2d");
-        var gameDiv = $('<div/>').attr({id: 'wp-game'});
-        $(".testersParagraph").prepend(gameDiv);
-        $("#gameDiv").prepend(this.canvas);
-        //document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+        alert("Znalazłeś ukrytą grę. Dojedź do infoShare Academy, sterując klawiszami: W, S, A, D. Omijaj inne pojazdy!");
+        $('.testersParagraph').prepend(this.canvas);
+        $('.testersParagraph').prepend()
         this.interval = setInterval(updateGameArea, 10);
         window.addEventListener('keydown', function (e) {
             myGameArea.key = e.keyCode;
