@@ -38,7 +38,7 @@ $(document).ready(function () {
 
         myVar = setInterval(function () {
             busOnGo()
-        }, 3000);
+        }, 2800);
 
         var sec = 20;
         var running = true;
