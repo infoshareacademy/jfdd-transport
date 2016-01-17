@@ -17,7 +17,7 @@ $(window).scroll(function(){
                 height: '60px'
             }, 600);
             $nav.find('li').stop().animate({
-                paddingTop: '15px'
+                paddingTop: '10px'
             }, 600);
             $nav.find('#menu').stop().animate({
                 paddingTop: '5px'
