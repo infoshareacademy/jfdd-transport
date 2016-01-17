@@ -23,6 +23,9 @@ $(document).ready(function () {
         $('#okButton').addClass('hidden');
         $('#gameOver').addClass('hidden');
         $('#gameScore').addClass('hidden');
+        points = $.map(points, function() {
+            return 0;
+        });
 
 
     };
