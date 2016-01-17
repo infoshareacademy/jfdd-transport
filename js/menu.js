@@ -1,6 +1,3 @@
-/**
- * Created by anna on 08.01.16.
- */
 $(function(){
     $('.navigationBar').data('size','big');
 });
