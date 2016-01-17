@@ -22,7 +22,6 @@ $(document).ready(function () {
         $('#easterEgg2').addClass('hidden');
         $('#okButton').addClass('hidden');
         $('#gameOver').addClass('hidden');
-        $('#gameScore').addClass('hidden');
         points = $.map(points, function() {
             return 0;
         });

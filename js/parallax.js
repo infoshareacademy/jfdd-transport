@@ -54,21 +54,20 @@ $(document).ready(function () {
     /**
      * RWD CODE----------------------------------------------------
      */
+    if(window.innerWidth > 750) {
+        $("#nav").attr("style");
+    }
 
     $("#nav").addClass("js");
     $("#nav").addClass("js").before('<div id="menu">☰</div>');
     $("#menu").click(function(){
         $("#nav").toggle();
         $(window).resize(function(){
-            if(window.innerWidth < 700) {
+            if(window.innerWidth < 750) {
                 $("#nav").removeAttr("style");
             }
         });
     });
-
-    if(window.innerWidth > 700) {
-        $("#nav").attr("style");
-    }
 });
 
 
