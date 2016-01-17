@@ -24,17 +24,17 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1920"
-     inkscape:window-height="1052"
+     inkscape:window-width="1366"
+     inkscape:window-height="713"
      id="namedview1000"
      showgrid="false"
-     inkscape:zoom="2.9946939"
-     inkscape:cx="176.79585"
-     inkscape:cy="83.444256"
-     inkscape:window-x="1366"
-     inkscape:window-y="0"
+     inkscape:zoom="5.25169"
+     inkscape:cx="99.672739"
+     inkscape:cy="37.744681"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g3" />
+     inkscape:current-layer="svg9462" />
   <defs
      id="defs9464">
     <clipPath
@@ -4435,4 +4435,27 @@
          id="path43" />
     </g>
   </g>
+  <text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+     x="32.560947"
+     y="288.37613"
+     id="text3998"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan4000"
+       x="32.560947"
+       y="288.37613" /></text>
+  <text
+     xml:space="preserve"
+     style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+     x="46.980621"
+     y="247.74187"
+     id="text4002"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan4004"
+       x="46.980621"
+       y="247.74187"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch">You win!</tspan></text>
 </svg>
