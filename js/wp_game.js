@@ -20,7 +20,7 @@ function startGame() {
             var randomLaneYCoordinate = yCoordinatesForLanes[Math.floor(Math.random() * yCoordinatesForLanes.length)];
             var randomVehicleFileName = otherVehicleTextures[Math.floor(Math.random() * otherVehicleTextures.length)];
             myObstacles.push(new component(60, 33, "images/wp-game/" + randomVehicleFileName, 500, randomLaneYCoordinate, "obstacle"));
-        }, i * 2500);
+        }, i * 3000);
 
 
     }
