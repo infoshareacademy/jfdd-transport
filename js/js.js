@@ -31,7 +31,6 @@ var initFormValidation = function () {
         userPhoneNumber.addEventListener('blur', checkPhone, false);
 
         function checkName() {
-            debugger;
             isNameValid = true; //Used to reset the value back to true if user clears rejected input.
             clearValidationMessage(userName);
 
