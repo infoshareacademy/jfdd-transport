@@ -291,9 +291,6 @@ header {
 nav#navList {
     width:100%;
     background-color: white;
-    /*margin:0;*/
-    /*top:0;*/
-    /*margin-top: -20px;*/
 }
 
 #menu {
@@ -314,14 +311,11 @@ nav#navList {
     position: absolute;
     width: 650px;
     margin-top: 10px;
-    /*margin-left: -50px;*/
     margin-bottom: 10px;
     font-size: 17px;
-    /*width: 100%;*/
     float: right;
-    /*margin-left: 50%;*/
-    top: 0px;
-    right: 0px;
+    top: 0;
+    right: 0;
 }
 
 .navigationBar nav ul li {
@@ -329,13 +323,8 @@ nav#navList {
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 30px;
-
-    /*float: right;*/
 }
 
-.navigationBar nav ul li:nth-child(2) {
-    /*margin-left: 30%;*/
-}
 .navigationBar nav ul a {
     text-decoration: none;
     color: rgba(16, 16, 16, 0.9);
@@ -365,12 +354,9 @@ nav#navList {
 .logo {
     height: 90px;
     margin-left: 20px;
-    /*padding-bottom: 10px;*/
-    /*padding-top: 10px;*/
     opacity: 0.8;
     display: inline-block;
     float:left;
-
 }
 
 .logo:hover {
@@ -998,7 +984,6 @@ footer span {
 
     #navList {
         min-width: 180px;
-        /*padding-top: 20px;*/
     }
 
     #nav.js {

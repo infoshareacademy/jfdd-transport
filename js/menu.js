@@ -2,16 +2,18 @@ $(function(){
     $('.navigationBar').data('size','big');
 });
 
-$(window).scroll(function(){
+
+$(window).scroll(function () {
     var $nav = $('.navigationBar');
     if ($('body').scrollTop() > 0) {
-        if(window.innerWidth < 750) {
+        if (window.innerWidth < 750) {
             $("#nav").hide();
-        }else {$("#nav").show();}
-
+        } else {
+            $("#nav").show();
+        }
         if ($nav.data('size') == 'big') {
-            $nav.data('size','small').stop().animate({
-                height:'60px'
+            $nav.data('size', 'small').stop().animate({
+                height: '60px'
             }, 600);
             $nav.find('.logo').stop().animate({
                 height: '60px'
@@ -25,8 +27,8 @@ $(window).scroll(function(){
         }
     } else {
         if ($nav.data('size') == 'small') {
-            $nav.data('size','big').stop().animate({
-                height:'90px'
+            $nav.data('size', 'big').stop().animate({
+                height: '90px'
             }, 600);
             $nav.find('.logo').stop().animate({
                 height: '90px'
@@ -40,9 +42,6 @@ $(window).scroll(function(){
         }
     }
 });
-
-
-
 
 function updatenavigationBarHeight() {
     navigationBarheight = $('.navigationBar').outerHeight();
