@@ -2,11 +2,12 @@ var myGamePiece;
 var myObstacles = [];
 var obcBuilding;
 var myBackground;
+var gameOver;
 
-function startGame() {
+    function startGame() {
     myGameArea.start();
     myGamePiece = new component(145, 50, "images/wp-game/bus.svg", 10, 120, "image");
-    obcBuilding = new component(186*2, 276*2, "images/wp-game/building.svg", 500, -276, "image");
+    obcBuilding = new component(186 * 2, 276 * 2, "images/wp-game/building.svg", 500, -276, "image");
     myBackground = new component(456, 270, "images/wp-game/threelane.svg", 0, 0, "background");
 
     for (var i = 0; i < 7; i++) {
@@ -120,29 +121,16 @@ function component(width, height, color, x, y, type) {
 }
 
 function updateGameArea() {
-    for (i = 0; i < myObstacles.length; i++) {
-        if (myGamePiece.crashWith(myObstacles[i])) {
-            myGameArea.stop();
-        }
-    }
     myGameArea.clear();
-
-
-
     myBackground.speedX = -2;
-
-
-
-
     myBackground.newPos();
     myBackground.update();
+
 
     for (i = 0; i < myObstacles.length; i += 1) {
         myObstacles[i].x += -1;
         myObstacles[i].update();
     }
-
-
 
 
     myGamePiece.speedX = 0;
@@ -161,9 +149,15 @@ function updateGameArea() {
     }
     myGamePiece.newPos();
     myGamePiece.update();
+    for (i = 0; i < myObstacles.length; i++) {
+        if (myGamePiece.crashWith(myObstacles[i])) {
+            myGameArea.stop();
+            gameOver = new component(145, 50, "images/wp-game/game-over.svg", 10, 120, "image");
+            gameOver.update();
+        }
+    }
 
-    if (myObstacles[myObstacles.length-1].x < 0) {
-        //myGameArea.stop();
+    if (myObstacles[myObstacles.length - 1].x < 0) {
         obcBuilding.speedX = -2;
         obcBuilding.newPos();
         obcBuilding.update();
@@ -174,23 +168,3 @@ function updateGameArea() {
 
 }
 
-function moveup() {
-    myGamePiece.speedY -= 1;
-}
-
-function movedown() {
-    myGamePiece.speedY += 1;
-}
-
-function moveleft() {
-    myGamePiece.speedX -= 1;
-}
-
-function moveright() {
-    myGamePiece.speedX += 1;
-}
-
-function stopMove() {
-    myGamePiece.speedX = 0;
-    myGamePiece.speedY = 0;
-}
