@@ -27,6 +27,7 @@ $(document).ready(function () {
 
     testersParagraph.dblclick(function() {
         startGame();
+        testersParagraph.unbind('dblclick');
     });
 
     inputsInContactForm.bind("paste", function (e) {
