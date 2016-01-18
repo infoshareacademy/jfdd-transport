@@ -3,7 +3,7 @@ $(function(){
 });
 
 
-$(window).scroll(function () {
+$(window).on('scroll resize', function () {
     var $nav = $('.navigationBar');
     if ($('body').scrollTop() > 0) {
         if (window.innerWidth < 750) {
