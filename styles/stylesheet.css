@@ -374,7 +374,7 @@ nav#navList {
     left: 50%;
     margin-left: -110px;
     margin-top: 40vh;
-    background-color: rgba(250, 250, 250, 0.6);
+    background-color: rgba(250, 250, 250, 0.7);
     width: 220px;
     height: 80px;
     border: 2px solid #0f1214;
@@ -425,7 +425,7 @@ nav#navList {
     animation-duration: 0.8s;
 
     margin-top: 65vh;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.7);
     color: black;
     letter-spacing: 3px;
     text-align: center;

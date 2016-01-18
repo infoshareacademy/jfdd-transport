@@ -32,4 +32,4 @@ $(document).ready(function() {
 var selectedLanguage = null;
 var getAppLanguage = function() {
     return selectedLanguage;
-}
+};

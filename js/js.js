@@ -14,7 +14,7 @@ var initFormValidation = function () {
             phone_en: 'Enter a mobile or home phone number.',
             submit_pl: 'Podaj adres e-mail lub numer telefonu.',
             submit_en: 'Enter your e-mail address or mobile number.'
-        }
+        };
 
         //Disable HTML5 validation
         form = document.getElementById('form1');
