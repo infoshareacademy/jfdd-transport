@@ -1,13 +1,8 @@
 $(document).ready(function () {
-
-    /**
-     * Code responsible for parallax
-     */
-
     function setBackgroundPosition() {
-        $('.intro').css('background-position-y', 60 + $(window).scrollTop() * .5);
-    }
 
+        $('.intro').css('background-position-y', 60 + $(window).scrollTop() * .6);
+    }
     $(window).on('load scroll', setBackgroundPosition);
 
     /**
@@ -50,6 +45,23 @@ $(document).ready(function () {
         });
     });
 
+    /**
+     * RWD CODE----------------------------------------------------
+     */
+    if(window.innerWidth > 750) {
+        $("#nav").attr("style");
+    }
+
+    $("#nav").addClass("js");
+    $("#nav").addClass("js").before('<div id="menu">☰</div>');
+    $("#menu").click(function(){
+        $("#nav").toggle();
+        $(window).resize(function(){
+            if(window.innerWidth < 750) {
+                $("#nav").removeAttr("style");
+            } else { $("#nav").attr("style");}
+        });
+    });
 });
 
 

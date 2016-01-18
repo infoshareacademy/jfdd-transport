@@ -13,60 +13,63 @@
 
 <body>
     <header class="navigationBar">
-        <nav>
-            <ul>
+        <nav id="navList">
+            <a href="#intro"><img class="logo" src="images/logofinal.png" alt="Logo"></a>
+            <div class="clear"></div>
+            <ul id = "nav">
                 <li><a href="#intro">Strona główna</a></li>
                 <li><a href="#functionsSection">Funkcjonalności</a></li>
                 <li><a href="#formSection">Kontakt</a></li>
             </ul>
             <div class="clear"></div>
         </nav>
-        <a href="#intro"><img class="logo" src="images/logofinal.png" alt="Logo"></a>
-        <div class="clear"></div>
+
     </header>
 
 
 <div id="intro" class="intro">
     <div class="clear"></div>
     <div class="more_info_button">
-        <a href="#functionsSection"><h2>DOWIEDZ SIĘ<br>WIĘCEJ!</h2></a>
+        <a href="#"><h1>ZALOGUJ</h1></a>
     </div>
 
     <div class="introText">
         <h1> Statystyki komunikacji miejskiej</h1>
-        <p>Z nami nie będziesz czekać!</p>
+        <p>Z NAMI NIE BĘDZIESZ CZEKAĆ!</p>
 
     </div>
 </div>
 
-    <main>
-        <!--functions-->
-        <div id="functionsSection">
-            <div class="function function1"><img class="hide" src="images/bus_stop_function1.png" alt="Autobus">
-                <div id="opis1">
-                    <h2>Mój przystanek</h2>
-                    <p>Sprawdź, jak wygląda sytuacja <br>na Twoim przystanku.</p>
-                </div>
+<main>
+    <!--functions-->
+    <div id="functionsSection">
+        <div class="function busStopFeature" data-functionname="busStop"><img class="hide" src="images/bus_stop_function1.png" alt="Autobus">
+            <div id="opis1">
+                <h2>Mój przystanek</h2>
+                <p>Sprawdź, jak wygląda sytuacja <br>na Twoim przystanku.</p>
             </div>
-            <div class="function function2"><img class="hide" src="images/clock.png" alt="Zegar">
-                <div id="opis2">
-                    <h2>Statystyki spóźnień</h2>
-                    <p>Dowiedz się, jakie są statystyki <br> dla wybranego przystanku.</p>
-                </div>
-            </div>
-            <div class="function function3"><img class="hide" src="images/map.png" alt="Mapa">
-                <div id="opis3">
-                    <h2>Sprawdź na mapie</h2>
-                    <p>Zobacz, gdzie jest w tej chwili <br> Twój środek transportu.</p>
-                </div>
-            </div>
-            <div class="clear"></div>
         </div>
-        <div class="additionalFunctionsSection">
-            <div class="additionalFunction"><img src="images/polecane.png" alt="Polecane">
-                <p>Polecane</p>
+        <div class="function delayStatsFeature" data-functionname="delayStats"><img class="hide" src="images/clock.png" alt="Zegar">
+            <div id="opis2">
+                <h2>Statystyki spóźnień</h2>
+                <p>Dowiedz się, jakie są statystyki <br> dla wybranego przystanku.</p>
             </div>
-        <div class="additionalFunction"><img src="images/schematy-komunikacji.png" alt="Schematy komunikacji">
+        </div>
+        <div class="function checkMapFeature" data-functionname="checkMap"><img class="hide" src="images/map.png" alt="Mapa">
+            <div id="opis3">
+                <h2>Sprawdź na mapie</h2>
+                <p>Zobacz, gdzie jest w tej chwili <br> Twój środek transportu.</p>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="functionContainer">
+    </div>
+    <div class="additionalFunctionsSection">
+        <div class="additionalFunction"><img src="images/polecane.png" alt="Polecane">
+            <p>Polecane</p>
+        </div>
+        <div class="additionalFunction"><img src="images/schematy-komunikacji.png" alt="Schematy komunikacj">
             <p>Schematy komunikacji</p>
         </div>
         <div class="additionalFunction"><img src="images/ceny-biletow.png" alt="Ceny biletów">
@@ -85,9 +88,8 @@
     </div>
     <div class="clear"></div>
     </div>
-
-
     <!--end functions-->
+
     <!-- New paragraph for testers-->
     <div class="testersParagraph">
         <hr>
@@ -96,6 +98,7 @@
         <hr>
     </div>
     <!-- end New paragraph for testers-->
+
     <!-- Contact form -->
     <div id="formSection">
 
@@ -131,7 +134,6 @@
             </div>
         </div>
         <!-- END of Contact form -->
-
         <div class="clear"></div>
         <!-- END of Contact form -->
 
@@ -251,6 +253,7 @@
     <script src="js/parallax.js"></script>
     <script src="js/js.cookie.js"></script>
     <script src="js/menu.js"></script>
+    <script src="js/functions.js"></script>
     <script src="js/wp_game.js"></script>
     <script src="js/easteregg2.js"></script>
 </body>
