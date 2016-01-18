@@ -10,7 +10,7 @@ $(document).ready(function () {
      */
 
     var $root = $('html, body');
-    $('a').click(function () {
+    $('a').not('.js-langSwitch').click(function () {
         var href = $.attr(this, 'href');
         $root.animate({
             scrollTop: $(href).offset().top - $('.navigationBar').outerHeight()
@@ -28,19 +28,19 @@ $(document).ready(function () {
 
         var position = $(this).scrollTop() + $('.navigationBar').outerHeight();
 
-        $('.navigationBar > nav > ul > li > a').each(function() {
+        $('#nav a').not('.js-langSwitch').each(function() {
             var href = $(this).attr('href');
             var target = $(href).offset().top;
 
             if (position >= target) {
-                $('.navigationBar > nav > ul > li > a').removeClass('active');
-                $('.navigationBar > nav > ul > li > a[href=' + href + ']').addClass('active');
+                $('#nav a').removeClass('active');
+                $('#nav a[href=' + href + ']').addClass('active');
             }
 
             var endOfAdditionalFunctionsSection = $('.additionalFunctionsSection').offset().top + $('.additionalFunctionsSection').outerHeight() ;
             if (position >= endOfAdditionalFunctionsSection) {
-                $('.navigationBar > nav > ul > li > a').removeClass('active');
-                $('.navigationBar > nav > ul > li > a[href=' + href + ']').addClass('active');
+                $('#nav a').removeClass('active');
+                $('#nav a[href=' + href + ']').addClass('active');
             }
         });
     });
