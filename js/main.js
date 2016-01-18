@@ -27,6 +27,7 @@ $(document).ready(function () {
 
     testersParagraph.dblclick(function() {
         startGame();
+        testersParagraph.unbind('dblclick');
     });
 
     inputsInContactForm.bind("paste", function (e) {
@@ -57,9 +58,6 @@ $(document).ready(function () {
             )
     );
 
-
-
-    //$('body').prepend($elem);
     var hideCookieInfo = function () {
         $('.cookieInfo').hide();
         $('.navigationBar').css('top', '0');
