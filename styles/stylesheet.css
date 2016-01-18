@@ -505,9 +505,12 @@ main {
     margin-right: auto;
     width: 1000px;
 }
-
+.function img {
+    width: 200px;
+    height: 200px;
+}
 .function {
-    opacity: 0.8;
+    opacity:0.6;
     text-align: center;
 }
 
@@ -515,11 +518,27 @@ main {
     opacity: 1.0;
 }
 
-.function1 {
+.functionSelected {
+    opacity: 1.0;
+}
+
+.functionContainer {
+    background-color: rgba(120, 120, 120, 0.4);
+    padding: 20px;
+    width: 77%;
+    margin-left:auto;
+    margin-right: auto;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.busStopFeature {
     float: left;
 }
 
-.function2, .function3 {
+.delayStatsFeature, .checkMapFeature {
     float: left;
     margin-left: 70px;
 }
@@ -776,7 +795,7 @@ footer span {
     width: 684px;
 }
 
-/* end New paragraph tor testers */
+/* end New paragraph for testers */
 
 .validationTip {
     font-size: small;
@@ -886,6 +905,7 @@ footer span {
 
     .function img {
         width: 120px;
+        height: 120px;
     }
 
     .function h2 {
@@ -900,7 +920,7 @@ footer span {
         width: 700px;
     }
 
-    .function2, .function3 {
+    .delayStatsFeature, .checkMapFeature {
         margin-left: 20px;
     }
 
@@ -972,11 +992,12 @@ footer span {
     }
 
     .function img {
-        width: 280px;
+        width: 200px;
+        height: 200px;
         margin-top: 50px;
     }
 
-    .function2, .function3 {
+    .delayStatsFeature, .checkMapFeature {
         margin-left: 0;
     }
 
