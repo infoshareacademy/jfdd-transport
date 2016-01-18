@@ -3,7 +3,7 @@ $(function(){
 });
 
 
-$(window).scroll(function () {
+$(window).on('scroll resize', function () {
     var $nav = $('.navigationBar');
     if ($('body').scrollTop() > 0) {
         if (window.innerWidth < 750) {
@@ -49,7 +49,7 @@ function updatenavigationBarHeight() {
 
 
 var $root = $('html, body');
-$('a').click(function () {
+$('a').not('.js-langSwitch').click(function () {
     var href = $.attr(this, 'href');
     $root.animate({
         scrollTop: $(href).offset().top  - 60
@@ -66,19 +66,19 @@ $('a').click(function () {
 $(window).scroll(function() {
     //updatenavigationBarHeight();
     var position = $(this).scrollTop() + 61;
-    $('.navigationBar > nav > ul > li > a').each(function() {
+    $('#nav a').not('.js-langSwitch').each(function() {
         var href = $(this).attr('href');
         var target = $(href).offset().top;
 
         if (position >= target) {
-            $('.navigationBar > nav > ul > li > a').removeClass('active');
-            $('.navigationBar > nav > ul > li > a[href=' + href + ']').addClass('active');
+            $('#nav a').removeClass('active');
+            $('#nav a[href=' + href + ']').addClass('active');
         }
 
         var endOfAdditionalFunctionsSection = $('.additionalFunctionsSection').offset().top + $('.additionalFunctionsSection').outerHeight() ;
         if (position >= endOfAdditionalFunctionsSection) {
-            $('.navigationBar > nav > ul > li > a').removeClass('active');
-            $('.navigationBar > nav > ul > li > a[href=' + href + ']').addClass('active');
+            $('#nav a').removeClass('active');
+            $('#nav a[href=' + href + ']').addClass('active');
         }
     });
 });
